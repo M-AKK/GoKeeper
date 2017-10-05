@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: akk6881385
+    url: jdbc:mysql://127.0.0.1/gokeeper?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  #配置了这个就不会返回为NULL的参数
+  jackson:
+    default-property-inclusion: non_null
+
+#server:
+  #context-path: /gokeeper
+
+projectUrl:
+  wechatMpAuthorize: http://www.akakakaka.cn:8080
+  sell: http://www.akakakaka.cn:8080

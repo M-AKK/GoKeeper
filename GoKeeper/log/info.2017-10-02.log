@@ -1,0 +1,731 @@
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2369 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 10:49:55 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: com.gokeeper.dataobject.TtpDetail
+
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2374 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:51:32 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:51:32 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.446 seconds (JVM running for 5.071)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:51:32 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2380 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:53:14 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:53:14 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.13 seconds (JVM running for 4.72)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:53:14 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2382 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:53:54 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:53:54 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.404 seconds (JVM running for 5.006)
+SQL Error: 1048, SQLState: 23000
+HHH000010: On release of batch it still contained JDBC statements
+Closing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:53:54 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2406 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:57:34 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:57:34 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.306 seconds (JVM running for 4.939)
+SQL Error: 1048, SQLState: 23000
+HHH000010: On release of batch it still contained JDBC statements
+Closing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:57:34 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2416 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:58:32 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:58:32 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.36 seconds (JVM running for 5.026)
+SQL Error: 1452, SQLState: 23000
+HHH000010: On release of batch it still contained JDBC statements
+Closing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:58:32 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2423 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:59:14 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:59:14 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.21 seconds (JVM running for 4.889)
+SQL Error: 1452, SQLState: 23000
+HHH000010: On release of batch it still contained JDBC statements
+Closing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:59:14 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2428 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:59:32 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:59:32 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.378 seconds (JVM running for 5.032)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Mon Oct 02 10:59:32 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2444 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:01:25 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:01:25 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.451 seconds (JVM running for 5.06)
+SQL Error: 1062, SQLState: 23000
+HHH000010: On release of batch it still contained JDBC statements
+Closing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:01:25 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2449 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:02:04 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:02:04 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.235 seconds (JVM running for 4.854)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:02:04 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2536 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:11:56 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:11:56 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.206 seconds (JVM running for 4.811)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:11:56 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2658 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:26:13 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:26:13 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.175 seconds (JVM running for 4.785)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:26:13 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2682 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:28:29 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:28:29 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.476 seconds (JVM running for 5.135)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:28:29 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2689 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:29:27 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:29:27 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.343 seconds (JVM running for 4.976)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:29:27 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2709 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:31:39 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:31:39 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.472 seconds (JVM running for 5.101)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:31:39 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2713 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:33:08 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:33:08 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.4 seconds (JVM running for 5.027)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:33:08 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2721 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:35:30 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:35:30 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.402 seconds (JVM running for 5.11)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 11:35:30 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2852 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:24:01 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:24:01 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.537 seconds (JVM running for 5.135)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:24:01 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2862 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:25:35 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:25:35 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.455 seconds (JVM running for 5.12)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:25:35 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2889 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:29:06 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:29:06 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.311 seconds (JVM running for 4.931)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:29:06 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2920 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:30:44 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:30:44 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.451 seconds (JVM running for 5.056)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:30:44 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2968 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:40:09 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:40:09 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.296 seconds (JVM running for 4.894)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:40:09 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 2988 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:43:03 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:43:03 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.387 seconds (JVM running for 4.991)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:43:03 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 3012 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:44:55 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:44:55 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.646 seconds (JVM running for 5.311)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:44:55 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 3031 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:46:35 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:46:35 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.285 seconds (JVM running for 4.884)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:46:35 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting TTpRepositoryTest on Akk-mbp.local with PID 3051 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:52:21 CST 2017]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.5.Final
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:52:21 CST 2017]; root of context hierarchy
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Started TTpRepositoryTest in 4.427 seconds (JVM running for 5.026)
+Closing org.springframework.web.context.support.GenericWebApplicationContext@65f8f5ae: startup date [Mon Oct 02 12:52:21 CST 2017]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
