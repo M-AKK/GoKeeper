@@ -1,0 +1,1191 @@
+2017-10-06 12:43:03,596 - Starting FaqiServiceImplTest on Akk-mbp.lan with PID 1935 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 12:43:03,596 - No active profile set, falling back to default profiles: default
+2017-10-06 12:43:03,637 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3cce5371: startup date [Fri Oct 06 12:43:03 CST 2017]; root of context hierarchy
+2017-10-06 12:43:04,022 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 12:43:04,406 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 12:43:04,492 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 12:43:04,519 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 12:43:04,520 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 12:43:04,521 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 12:43:04,522 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 12:43:05,738 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 12:43:05,755 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 12:43:05,843 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 12:43:05,845 - HHH000206: hibernate.properties not found
+2017-10-06 12:43:05,846 - HHH000021: Bytecode provider name : javassist
+2017-10-06 12:43:05,894 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 12:43:06,047 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 12:43:06,591 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 12:43:07,017 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 12:43:07,072 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 12:43:07,072 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 12:43:07,540 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3cce5371: startup date [Fri Oct 06 12:43:03 CST 2017]; root of context hierarchy
+2017-10-06 12:43:07,608 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 12:43:07,609 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 12:43:07,611 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 12:43:07,613 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String)
+2017-10-06 12:43:07,613 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 12:43:07,614 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 12:43:07,615 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 12:43:07,636 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 12:43:07,636 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 12:43:07,649 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 12:43:07,673 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 12:43:07,952 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 12:43:08,089 - Starting beans in phase 2147483647
+2017-10-06 12:43:08,100 - Started FaqiServiceImplTest in 5.028 seconds (JVM running for 5.814)
+2017-10-06 12:43:08,262 - Closing org.springframework.web.context.support.GenericWebApplicationContext@3cce5371: startup date [Fri Oct 06 12:43:03 CST 2017]; root of context hierarchy
+2017-10-06 12:43:08,263 - Stopping beans in phase 2147483647
+2017-10-06 12:43:08,266 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 12:43:08,268 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:21:54,425 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 16:21:59,109 - Starting UserRecordRepositoryTest on Akk-mbp.local with PID 1033 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 16:21:59,110 - No active profile set, falling back to default profiles: default
+2017-10-06 16:21:59,149 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Fri Oct 06 16:21:59 CST 2017]; root of context hierarchy
+2017-10-06 16:21:59,717 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 16:21:59,787 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 16:21:59,814 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 16:21:59,816 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 16:21:59,817 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 16:21:59,817 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 16:22:00,968 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:22:00,987 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 16:22:01,074 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 16:22:01,075 - HHH000206: hibernate.properties not found
+2017-10-06 16:22:01,077 - HHH000021: Bytecode provider name : javassist
+2017-10-06 16:22:01,124 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 16:22:01,274 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 16:22:01,868 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:22:07,289 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 16:22:07,354 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 16:22:07,354 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 16:22:07,960 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Fri Oct 06 16:21:59 CST 2017]; root of context hierarchy
+2017-10-06 16:22:08,025 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 16:22:08,026 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 16:22:08,028 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 16:22:08,030 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 16:22:08,030 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 16:22:08,033 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 16:22:08,034 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 16:22:08,058 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:22:08,058 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:22:08,071 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 16:22:08,089 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:22:08,420 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 16:22:08,587 - Starting beans in phase 2147483647
+2017-10-06 16:22:08,599 - Started UserRecordRepositoryTest in 25.117 seconds (JVM running for 26.057)
+2017-10-06 16:22:08,672 - HHH000397: Using ASTQueryTranslatorFactory
+2017-10-06 16:22:08,841 - Closing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Fri Oct 06 16:21:59 CST 2017]; root of context hierarchy
+2017-10-06 16:22:08,843 - Stopping beans in phase 2147483647
+2017-10-06 16:22:08,846 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 16:22:08,848 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:25:20,296 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 16:25:25,049 - Starting UserRecordRepositoryTest on Akk-mbp.local with PID 1042 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 16:25:25,050 - No active profile set, falling back to default profiles: default
+2017-10-06 16:25:25,085 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Fri Oct 06 16:25:25 CST 2017]; root of context hierarchy
+2017-10-06 16:25:25,577 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 16:25:25,641 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 16:25:25,666 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 16:25:25,668 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 16:25:25,668 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 16:25:25,669 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 16:25:26,688 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:25:26,704 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 16:25:26,778 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 16:25:26,779 - HHH000206: hibernate.properties not found
+2017-10-06 16:25:26,780 - HHH000021: Bytecode provider name : javassist
+2017-10-06 16:25:26,815 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 16:25:26,916 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 16:25:27,384 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:25:32,762 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 16:25:32,805 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 16:25:32,806 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 16:25:33,245 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Fri Oct 06 16:25:25 CST 2017]; root of context hierarchy
+2017-10-06 16:25:33,307 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 16:25:33,307 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 16:25:33,311 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 16:25:33,313 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 16:25:33,313 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 16:25:33,314 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 16:25:33,315 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 16:25:33,338 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:25:33,338 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:25:33,350 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 16:25:33,368 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:25:33,601 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 16:25:33,733 - Starting beans in phase 2147483647
+2017-10-06 16:25:33,743 - Started UserRecordRepositoryTest in 24.101 seconds (JVM running for 24.714)
+2017-10-06 16:25:33,854 - Closing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Fri Oct 06 16:25:25 CST 2017]; root of context hierarchy
+2017-10-06 16:25:33,856 - Stopping beans in phase 2147483647
+2017-10-06 16:25:33,858 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 16:25:33,860 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:27:52,471 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 16:27:57,225 - Starting UserRecordRepositoryTest on Akk-mbp.local with PID 1046 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 16:27:57,226 - No active profile set, falling back to default profiles: default
+2017-10-06 16:27:57,261 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Fri Oct 06 16:27:57 CST 2017]; root of context hierarchy
+2017-10-06 16:27:57,743 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 16:27:57,802 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 16:27:57,823 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 16:27:57,824 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 16:27:57,825 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 16:27:57,826 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 16:27:58,879 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:27:58,899 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 16:27:58,963 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 16:27:58,965 - HHH000206: hibernate.properties not found
+2017-10-06 16:27:58,966 - HHH000021: Bytecode provider name : javassist
+2017-10-06 16:27:59,003 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 16:27:59,110 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 16:27:59,608 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:28:04,971 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 16:28:05,023 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 16:28:05,024 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 16:28:05,479 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Fri Oct 06 16:27:57 CST 2017]; root of context hierarchy
+2017-10-06 16:28:05,540 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 16:28:05,541 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 16:28:05,543 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 16:28:05,544 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 16:28:05,545 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 16:28:05,546 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 16:28:05,547 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 16:28:05,567 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:28:05,567 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:28:05,582 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 16:28:05,602 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:28:05,839 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 16:28:05,971 - Starting beans in phase 2147483647
+2017-10-06 16:28:05,981 - Started UserRecordRepositoryTest in 24.139 seconds (JVM running for 24.774)
+2017-10-06 16:28:06,100 - Closing org.springframework.web.context.support.GenericWebApplicationContext@5fb759d6: startup date [Fri Oct 06 16:27:57 CST 2017]; root of context hierarchy
+2017-10-06 16:28:06,103 - Stopping beans in phase 2147483647
+2017-10-06 16:28:06,105 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 16:28:06,107 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:44:04,621 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 16:44:09,384 - Starting GoServiceImplTest on Akk-mbp.local with PID 1095 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 16:44:09,385 - No active profile set, falling back to default profiles: default
+2017-10-06 16:44:09,418 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@17bffc17: startup date [Fri Oct 06 16:44:09 CST 2017]; root of context hierarchy
+2017-10-06 16:44:09,908 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 16:44:09,970 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 16:44:09,993 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 16:44:09,994 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 16:44:09,994 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 16:44:09,995 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 16:44:11,027 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:44:11,045 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 16:44:11,108 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 16:44:11,110 - HHH000206: hibernate.properties not found
+2017-10-06 16:44:11,111 - HHH000021: Bytecode provider name : javassist
+2017-10-06 16:44:11,150 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 16:44:11,256 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 16:44:11,768 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:44:17,148 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 16:44:17,197 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 16:44:17,198 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 16:44:17,633 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@17bffc17: startup date [Fri Oct 06 16:44:09 CST 2017]; root of context hierarchy
+2017-10-06 16:44:17,699 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 16:44:17,700 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 16:44:17,702 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 16:44:17,703 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 16:44:17,704 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 16:44:17,705 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 16:44:17,705 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 16:44:17,728 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:44:17,728 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:44:17,744 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 16:44:17,763 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:44:18,004 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 16:44:18,129 - Starting beans in phase 2147483647
+2017-10-06 16:44:18,139 - Started GoServiceImplTest in 24.142 seconds (JVM running for 24.769)
+2017-10-06 16:44:18,188 - HHH000397: Using ASTQueryTranslatorFactory
+2017-10-06 16:44:18,335 - Closing org.springframework.web.context.support.GenericWebApplicationContext@17bffc17: startup date [Fri Oct 06 16:44:09 CST 2017]; root of context hierarchy
+2017-10-06 16:44:18,337 - Stopping beans in phase 2147483647
+2017-10-06 16:44:18,339 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 16:44:18,340 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:47:48,613 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 16:47:53,368 - Starting GoServiceImplTest on Akk-mbp.local with PID 1102 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 16:47:53,370 - No active profile set, falling back to default profiles: default
+2017-10-06 16:47:53,405 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@17bffc17: startup date [Fri Oct 06 16:47:53 CST 2017]; root of context hierarchy
+2017-10-06 16:47:53,908 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 16:47:53,975 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 16:47:54,000 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 16:47:54,001 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 16:47:54,002 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 16:47:54,002 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 16:47:55,016 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:47:55,043 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 16:47:55,102 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 16:47:55,103 - HHH000206: hibernate.properties not found
+2017-10-06 16:47:55,104 - HHH000021: Bytecode provider name : javassist
+2017-10-06 16:47:55,140 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 16:47:55,244 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 16:47:55,714 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:48:01,084 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 16:48:01,127 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 16:48:01,127 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 16:48:01,568 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@17bffc17: startup date [Fri Oct 06 16:47:53 CST 2017]; root of context hierarchy
+2017-10-06 16:48:01,627 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 16:48:01,628 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 16:48:01,630 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 16:48:01,632 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 16:48:01,632 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 16:48:01,634 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 16:48:01,634 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 16:48:01,653 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:48:01,654 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:48:01,667 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 16:48:01,688 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:48:01,921 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 16:48:02,051 - Starting beans in phase 2147483647
+2017-10-06 16:48:02,061 - Started GoServiceImplTest in 24.086 seconds (JVM running for 24.722)
+2017-10-06 16:48:02,112 - HHH000397: Using ASTQueryTranslatorFactory
+2017-10-06 16:48:02,260 - Closing org.springframework.web.context.support.GenericWebApplicationContext@17bffc17: startup date [Fri Oct 06 16:47:53 CST 2017]; root of context hierarchy
+2017-10-06 16:48:02,262 - Stopping beans in phase 2147483647
+2017-10-06 16:48:02,264 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 16:48:02,266 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:49:44,574 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 16:49:49,335 - Starting GoServiceImplTest on Akk-mbp.local with PID 1104 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 16:49:49,336 - No active profile set, falling back to default profiles: default
+2017-10-06 16:49:49,369 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@17bffc17: startup date [Fri Oct 06 16:49:49 CST 2017]; root of context hierarchy
+2017-10-06 16:49:49,856 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 16:49:49,918 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 16:49:49,946 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 16:49:49,947 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 16:49:49,948 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 16:49:49,948 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 16:49:51,012 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:49:51,028 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 16:49:51,091 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 16:49:51,092 - HHH000206: hibernate.properties not found
+2017-10-06 16:49:51,094 - HHH000021: Bytecode provider name : javassist
+2017-10-06 16:49:51,128 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 16:49:51,231 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 16:49:51,732 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:49:57,112 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 16:49:57,163 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 16:49:57,163 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 16:49:57,604 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@17bffc17: startup date [Fri Oct 06 16:49:49 CST 2017]; root of context hierarchy
+2017-10-06 16:49:57,662 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 16:49:57,663 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 16:49:57,665 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 16:49:57,667 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 16:49:57,667 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 16:49:57,668 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 16:49:57,668 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 16:49:57,690 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:49:57,690 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:49:57,705 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 16:49:57,721 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:49:57,961 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 16:49:58,100 - Starting beans in phase 2147483647
+2017-10-06 16:49:58,110 - Started GoServiceImplTest in 24.179 seconds (JVM running for 24.828)
+2017-10-06 16:49:58,156 - HHH000397: Using ASTQueryTranslatorFactory
+2017-10-06 16:49:58,303 - Closing org.springframework.web.context.support.GenericWebApplicationContext@17bffc17: startup date [Fri Oct 06 16:49:49 CST 2017]; root of context hierarchy
+2017-10-06 16:49:58,305 - Stopping beans in phase 2147483647
+2017-10-06 16:49:58,307 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 16:49:58,309 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:53:33,341 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 16:53:38,098 - Starting GoServiceImplTest on Akk-mbp.local with PID 1120 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 16:53:38,099 - No active profile set, falling back to default profiles: default
+2017-10-06 16:53:38,131 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@17bffc17: startup date [Fri Oct 06 16:53:38 CST 2017]; root of context hierarchy
+2017-10-06 16:53:38,619 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 16:53:38,692 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 16:53:38,717 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 16:53:38,719 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 16:53:38,720 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 16:53:38,720 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 16:53:39,758 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:53:39,773 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 16:53:39,849 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 16:53:39,850 - HHH000206: hibernate.properties not found
+2017-10-06 16:53:39,852 - HHH000021: Bytecode provider name : javassist
+2017-10-06 16:53:39,891 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 16:53:39,990 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 16:53:40,453 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 16:53:45,832 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 16:53:45,880 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 16:53:45,880 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 16:53:46,304 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@17bffc17: startup date [Fri Oct 06 16:53:38 CST 2017]; root of context hierarchy
+2017-10-06 16:53:46,382 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 16:53:46,383 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 16:53:46,385 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 16:53:46,386 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 16:53:46,387 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 16:53:46,390 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 16:53:46,391 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 16:53:46,413 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:53:46,414 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:53:46,428 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 16:53:46,447 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 16:53:46,686 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 16:53:46,818 - Starting beans in phase 2147483647
+2017-10-06 16:53:46,827 - Started GoServiceImplTest in 24.153 seconds (JVM running for 24.8)
+2017-10-06 16:53:46,873 - HHH000397: Using ASTQueryTranslatorFactory
+2017-10-06 16:53:47,019 - Closing org.springframework.web.context.support.GenericWebApplicationContext@17bffc17: startup date [Fri Oct 06 16:53:38 CST 2017]; root of context hierarchy
+2017-10-06 16:53:47,021 - Stopping beans in phase 2147483647
+2017-10-06 16:53:47,023 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 16:53:47,024 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 17:25:14,654 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 17:25:19,412 - Starting GoServiceImplTest on Akk-mbp.local with PID 1259 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 17:25:19,413 - No active profile set, falling back to default profiles: default
+2017-10-06 17:25:19,446 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@17bffc17: startup date [Fri Oct 06 17:25:19 CST 2017]; root of context hierarchy
+2017-10-06 17:25:19,985 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 17:25:20,084 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 17:25:20,115 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 17:25:20,117 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 17:25:20,118 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 17:25:20,118 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 17:25:21,246 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 17:25:21,262 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 17:25:21,327 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 17:25:21,328 - HHH000206: hibernate.properties not found
+2017-10-06 17:25:21,329 - HHH000021: Bytecode provider name : javassist
+2017-10-06 17:25:21,365 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 17:25:21,471 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 17:25:22,000 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 17:25:27,420 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 17:25:27,472 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 17:25:27,472 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 17:25:27,905 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@17bffc17: startup date [Fri Oct 06 17:25:19 CST 2017]; root of context hierarchy
+2017-10-06 17:25:27,960 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 17:25:27,961 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 17:25:27,964 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 17:25:27,966 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 17:25:27,967 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 17:25:27,968 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 17:25:27,969 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 17:25:27,994 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 17:25:27,994 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 17:25:28,008 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 17:25:28,025 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 17:25:28,254 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 17:25:28,388 - Starting beans in phase 2147483647
+2017-10-06 17:25:28,398 - Started GoServiceImplTest in 24.378 seconds (JVM running for 24.998)
+2017-10-06 17:25:28,444 - HHH000397: Using ASTQueryTranslatorFactory
+2017-10-06 17:25:28,612 - [创建订单] result=[GoVo(userName=akk, userIcon=http://www.xxx.com/xxx.jpg, ttpName=测试ttp, startTime=2017/10/01 21:08, finishTime=2017/10/08 21:08, userTotalBouns=0.00, ttpSchedule=0, ttpTarget=每日跑1.0公里, joinMoney=1200.00, leaveNotesNums=5, leaveNotes=0, ifQuit=允许中途退出, ifJoin=允许中途加入, ifOpen=不公开, userRecordList=[UserRecordVo(days=2017/10/01, dayStatus=未完成), UserRecordVo(days=2017/10/02, dayStatus=完成), UserRecordVo(days=2017/10/03, dayStatus=完成), UserRecordVo(days=2017/10/04, dayStatus=完成), UserRecordVo(days=2017/10/05, dayStatus=完成), UserRecordVo(days=2017/10/06, dayStatus=完成), UserRecordVo(days=2017/10/07, dayStatus=完成), UserRecordVo(days=2017/10/08, dayStatus=完成)], othersRecordList=[OthersRecordVo(username=akk, finishTime=16:03)])]
+2017-10-06 17:25:28,617 - Closing org.springframework.web.context.support.GenericWebApplicationContext@17bffc17: startup date [Fri Oct 06 17:25:19 CST 2017]; root of context hierarchy
+2017-10-06 17:25:28,619 - Stopping beans in phase 2147483647
+2017-10-06 17:25:28,621 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 17:25:28,622 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 17:28:45,119 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 17:28:49,871 - Starting GoServiceImplTest on Akk-mbp.local with PID 1279 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 17:28:49,872 - No active profile set, falling back to default profiles: default
+2017-10-06 17:28:49,907 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 17:28:49 CST 2017]; root of context hierarchy
+2017-10-06 17:28:50,397 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 17:28:50,462 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 17:28:50,485 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 17:28:50,488 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 17:28:50,488 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 17:28:50,489 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 17:28:51,507 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 17:28:51,524 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 17:28:51,601 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 17:28:51,602 - HHH000206: hibernate.properties not found
+2017-10-06 17:28:51,604 - HHH000021: Bytecode provider name : javassist
+2017-10-06 17:28:51,641 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 17:28:51,741 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 17:28:52,206 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 17:28:57,589 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 17:28:57,639 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 17:28:57,639 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 17:28:58,328 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 17:28:49 CST 2017]; root of context hierarchy
+2017-10-06 17:28:58,451 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 17:28:58,452 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 17:28:58,455 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 17:28:58,458 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 17:28:58,459 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 17:28:58,461 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 17:28:58,462 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 17:28:58,505 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 17:28:58,506 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 17:28:58,538 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 17:28:58,566 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 17:28:58,920 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 17:28:59,211 - Starting beans in phase 2147483647
+2017-10-06 17:28:59,228 - Started GoServiceImplTest in 24.759 seconds (JVM running for 25.374)
+2017-10-06 17:28:59,309 - HHH000397: Using ASTQueryTranslatorFactory
+2017-10-06 17:28:59,539 - 【o界面信息展示，包括详情页面的信息】 result=[
+  {
+    "userName": "akk",
+    "userIcon": "http://www.xxx.com/xxx.jpg",
+    "ttpName": "测试ttp",
+    "startTime": "2017/10/01 21:08",
+    "finishTime": "2017/10/08 21:08",
+    "userTotalBouns": 0.00,
+    "ttpSchedule": 0,
+    "ttpTarget": "每日跑1.0公里",
+    "joinMoney": 1200.00,
+    "leaveNotesNums": 5,
+    "leaveNotes": 0,
+    "ifQuit": "允许中途退出",
+    "ifJoin": "允许中途加入",
+    "ifOpen": "不公开",
+    "userRecordList": [
+      {
+        "days": "2017/10/01",
+        "dayStatus": "未完成"
+      },
+      {
+        "days": "2017/10/02",
+        "dayStatus": "完成"
+      },
+      {
+        "days": "2017/10/03",
+        "dayStatus": "完成"
+      },
+      {
+        "days": "2017/10/04",
+        "dayStatus": "完成"
+      },
+      {
+        "days": "2017/10/05",
+        "dayStatus": "完成"
+      },
+      {
+        "days": "2017/10/06",
+        "dayStatus": "完成"
+      },
+      {
+        "days": "2017/10/07",
+        "dayStatus": "完成"
+      },
+      {
+        "days": "2017/10/08",
+        "dayStatus": "完成"
+      }
+    ],
+    "othersRecordList": [
+      {
+        "username": "akk",
+        "finishTime": "16:03"
+      }
+    ]
+  }
+]
+2017-10-06 17:28:59,544 - Closing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 17:28:49 CST 2017]; root of context hierarchy
+2017-10-06 17:28:59,546 - Stopping beans in phase 2147483647
+2017-10-06 17:28:59,548 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 17:28:59,549 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 18:21:08,116 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 18:21:12,860 - Starting GoServiceImplTest on Akk-mbp.local with PID 1428 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 18:21:12,861 - No active profile set, falling back to default profiles: default
+2017-10-06 18:21:12,901 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 18:21:12 CST 2017]; root of context hierarchy
+2017-10-06 18:21:13,524 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 18:21:13,601 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 18:21:13,627 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 18:21:13,629 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 18:21:13,630 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 18:21:13,630 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 18:21:14,771 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 18:21:14,793 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 18:21:14,881 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 18:21:14,883 - HHH000206: hibernate.properties not found
+2017-10-06 18:21:14,885 - HHH000021: Bytecode provider name : javassist
+2017-10-06 18:21:14,933 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 18:21:15,071 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 18:21:15,637 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 18:21:21,057 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 18:21:21,113 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 18:21:21,113 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 18:21:21,616 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 18:21:12 CST 2017]; root of context hierarchy
+2017-10-06 18:21:21,681 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 18:21:21,682 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 18:21:21,684 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 18:21:21,686 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 18:21:21,687 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 18:21:21,688 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 18:21:21,689 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 18:21:21,715 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 18:21:21,716 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 18:21:21,729 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 18:21:21,746 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 18:21:22,049 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 18:21:22,183 - Starting beans in phase 2147483647
+2017-10-06 18:21:22,193 - Started GoServiceImplTest in 24.797 seconds (JVM running for 25.464)
+2017-10-06 18:21:22,257 - HHH000397: Using ASTQueryTranslatorFactory
+2017-10-06 18:21:22,471 - Closing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 18:21:12 CST 2017]; root of context hierarchy
+2017-10-06 18:21:22,473 - Stopping beans in phase 2147483647
+2017-10-06 18:21:22,475 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 18:21:22,478 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 18:22:33,299 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 18:22:38,037 - Starting GoServiceImplTest on Akk-mbp.local with PID 1456 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 18:22:38,038 - No active profile set, falling back to default profiles: default
+2017-10-06 18:22:38,070 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 18:22:38 CST 2017]; root of context hierarchy
+2017-10-06 18:22:38,559 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 18:22:38,627 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 18:22:38,649 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 18:22:38,651 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 18:22:38,651 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 18:22:38,652 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 18:22:39,723 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 18:22:39,738 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 18:22:39,802 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 18:22:39,804 - HHH000206: hibernate.properties not found
+2017-10-06 18:22:39,806 - HHH000021: Bytecode provider name : javassist
+2017-10-06 18:22:39,843 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 18:22:39,981 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 18:22:40,577 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 18:22:46,001 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 18:22:46,053 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 18:22:46,053 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 18:22:46,512 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 18:22:38 CST 2017]; root of context hierarchy
+2017-10-06 18:22:46,585 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 18:22:46,586 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 18:22:46,588 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 18:22:46,589 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 18:22:46,590 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 18:22:46,591 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 18:22:46,592 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 18:22:46,614 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 18:22:46,615 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 18:22:46,631 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 18:22:46,650 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 18:22:46,924 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 18:22:47,053 - Starting beans in phase 2147483647
+2017-10-06 18:22:47,062 - Started GoServiceImplTest in 24.448 seconds (JVM running for 25.139)
+2017-10-06 18:22:47,108 - HHH000397: Using ASTQueryTranslatorFactory
+2017-10-06 18:22:47,293 - Closing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 18:22:38 CST 2017]; root of context hierarchy
+2017-10-06 18:22:47,294 - Stopping beans in phase 2147483647
+2017-10-06 18:22:47,296 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 18:22:47,298 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 18:32:10,677 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 18:32:15,433 - Starting GoServiceImplTest on Akk-mbp.local with PID 1501 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 18:32:15,436 - No active profile set, falling back to default profiles: default
+2017-10-06 18:32:15,468 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 18:32:15 CST 2017]; root of context hierarchy
+2017-10-06 18:32:15,958 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 18:32:16,015 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 18:32:16,041 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 18:32:16,043 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 18:32:16,043 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 18:32:16,044 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 18:32:17,099 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 18:32:17,116 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 18:32:17,177 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 18:32:17,179 - HHH000206: hibernate.properties not found
+2017-10-06 18:32:17,180 - HHH000021: Bytecode provider name : javassist
+2017-10-06 18:32:17,222 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 18:32:17,331 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 18:32:17,833 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 18:32:23,209 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 18:32:23,258 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 18:32:23,258 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 18:32:23,686 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 18:32:15 CST 2017]; root of context hierarchy
+2017-10-06 18:32:23,747 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 18:32:23,748 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 18:32:23,750 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 18:32:23,752 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 18:32:23,752 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 18:32:23,753 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 18:32:23,753 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 18:32:23,775 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 18:32:23,775 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 18:32:23,789 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 18:32:23,806 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 18:32:24,093 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 18:32:24,227 - Starting beans in phase 2147483647
+2017-10-06 18:32:24,237 - Started GoServiceImplTest in 24.182 seconds (JVM running for 24.789)
+2017-10-06 18:32:24,288 - HHH000397: Using ASTQueryTranslatorFactory
+2017-10-06 18:32:24,476 - Closing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 18:32:15 CST 2017]; root of context hierarchy
+2017-10-06 18:32:24,478 - Stopping beans in phase 2147483647
+2017-10-06 18:32:24,480 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 18:32:24,483 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 18:35:27,977 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 18:35:32,739 - Starting GoServiceImplTest on Akk-mbp.local with PID 1506 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 18:35:32,740 - No active profile set, falling back to default profiles: default
+2017-10-06 18:35:32,773 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 18:35:32 CST 2017]; root of context hierarchy
+2017-10-06 18:35:33,262 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 18:35:33,321 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 18:35:33,342 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 18:35:33,344 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 18:35:33,345 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 18:35:33,345 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 18:35:34,400 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 18:35:34,415 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 18:35:34,476 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 18:35:34,477 - HHH000206: hibernate.properties not found
+2017-10-06 18:35:34,478 - HHH000021: Bytecode provider name : javassist
+2017-10-06 18:35:34,515 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 18:35:34,613 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 18:35:35,117 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 18:35:40,500 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 18:35:40,550 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 18:35:40,550 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 18:35:40,987 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 18:35:32 CST 2017]; root of context hierarchy
+2017-10-06 18:35:41,054 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 18:35:41,055 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 18:35:41,057 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 18:35:41,058 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 18:35:41,059 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 18:35:41,061 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 18:35:41,061 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 18:35:41,084 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 18:35:41,084 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 18:35:41,099 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 18:35:41,120 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 18:35:41,405 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 18:35:41,533 - Starting beans in phase 2147483647
+2017-10-06 18:35:41,544 - Started GoServiceImplTest in 24.182 seconds (JVM running for 24.786)
+2017-10-06 18:35:41,596 - HHH000397: Using ASTQueryTranslatorFactory
+2017-10-06 18:35:41,779 - Closing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 18:35:32 CST 2017]; root of context hierarchy
+2017-10-06 18:35:41,781 - Stopping beans in phase 2147483647
+2017-10-06 18:35:41,782 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 18:35:41,784 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:01:20,906 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 19:01:25,666 - Starting UserRecordRepositoryTest on Akk-mbp.local with PID 1520 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 19:01:25,667 - No active profile set, falling back to default profiles: default
+2017-10-06 19:01:25,700 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5e7cd6cc: startup date [Fri Oct 06 19:01:25 CST 2017]; root of context hierarchy
+2017-10-06 19:01:26,186 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 19:01:26,247 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 19:01:26,268 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 19:01:26,269 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 19:01:26,270 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 19:01:26,270 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 19:01:27,296 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:01:27,313 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 19:01:27,379 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 19:01:27,380 - HHH000206: hibernate.properties not found
+2017-10-06 19:01:27,381 - HHH000021: Bytecode provider name : javassist
+2017-10-06 19:01:27,419 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 19:01:27,525 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 19:01:28,039 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:01:33,417 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 19:01:33,469 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 19:01:33,469 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 19:01:33,900 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5e7cd6cc: startup date [Fri Oct 06 19:01:25 CST 2017]; root of context hierarchy
+2017-10-06 19:01:33,964 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 19:01:33,964 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 19:01:33,966 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 19:01:33,968 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 19:01:33,968 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 19:01:33,969 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 19:01:33,970 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 19:01:33,989 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:01:33,989 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:01:34,002 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 19:01:34,019 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:01:34,307 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 19:01:34,443 - Starting beans in phase 2147483647
+2017-10-06 19:01:34,455 - Started UserRecordRepositoryTest in 24.203 seconds (JVM running for 24.871)
+2017-10-06 19:01:34,567 - Closing org.springframework.web.context.support.GenericWebApplicationContext@5e7cd6cc: startup date [Fri Oct 06 19:01:25 CST 2017]; root of context hierarchy
+2017-10-06 19:01:34,569 - Stopping beans in phase 2147483647
+2017-10-06 19:01:34,570 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 19:01:34,572 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:03:06,614 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 19:03:11,373 - Starting GoServiceImplTest on Akk-mbp.local with PID 1522 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 19:03:11,374 - No active profile set, falling back to default profiles: default
+2017-10-06 19:03:11,408 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 19:03:11 CST 2017]; root of context hierarchy
+2017-10-06 19:03:11,912 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 19:03:11,978 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 19:03:12,004 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 19:03:12,006 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 19:03:12,007 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 19:03:12,008 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 19:03:13,069 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:03:13,085 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 19:03:13,166 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 19:03:13,167 - HHH000206: hibernate.properties not found
+2017-10-06 19:03:13,168 - HHH000021: Bytecode provider name : javassist
+2017-10-06 19:03:13,207 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 19:03:13,305 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 19:03:13,781 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:03:19,150 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 19:03:19,198 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 19:03:19,198 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 19:03:19,621 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 19:03:11 CST 2017]; root of context hierarchy
+2017-10-06 19:03:19,698 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 19:03:19,699 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 19:03:19,701 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 19:03:19,702 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 19:03:19,703 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 19:03:19,704 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 19:03:19,704 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 19:03:19,731 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:03:19,731 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:03:19,746 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 19:03:19,764 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:03:20,043 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 19:03:20,176 - Starting beans in phase 2147483647
+2017-10-06 19:03:20,186 - Started GoServiceImplTest in 24.213 seconds (JVM running for 24.825)
+2017-10-06 19:03:20,236 - HHH000397: Using ASTQueryTranslatorFactory
+2017-10-06 19:03:20,422 - Closing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 19:03:11 CST 2017]; root of context hierarchy
+2017-10-06 19:03:20,425 - Stopping beans in phase 2147483647
+2017-10-06 19:03:20,428 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 19:03:20,429 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:07:00,327 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 19:07:05,088 - Starting GoServiceImplTest on Akk-mbp.local with PID 1543 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 19:07:05,091 - No active profile set, falling back to default profiles: default
+2017-10-06 19:07:05,123 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 19:07:05 CST 2017]; root of context hierarchy
+2017-10-06 19:07:05,615 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 19:07:05,676 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 19:07:05,697 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 19:07:05,699 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 19:07:05,699 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 19:07:05,699 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 19:07:06,726 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:07:06,740 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 19:07:06,801 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 19:07:06,802 - HHH000206: hibernate.properties not found
+2017-10-06 19:07:06,804 - HHH000021: Bytecode provider name : javassist
+2017-10-06 19:07:06,842 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 19:07:06,944 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 19:07:07,446 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:07:12,828 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 19:07:12,876 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 19:07:12,876 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 19:07:13,301 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 19:07:05 CST 2017]; root of context hierarchy
+2017-10-06 19:07:13,359 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 19:07:13,360 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 19:07:13,362 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 19:07:13,364 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 19:07:13,365 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 19:07:13,367 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 19:07:13,367 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 19:07:13,390 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:07:13,390 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:07:13,402 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 19:07:13,421 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:07:13,693 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 19:07:13,823 - Starting beans in phase 2147483647
+2017-10-06 19:07:13,832 - Started GoServiceImplTest in 24.129 seconds (JVM running for 24.763)
+2017-10-06 19:07:13,882 - HHH000397: Using ASTQueryTranslatorFactory
+2017-10-06 19:07:14,066 - Closing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 19:07:05 CST 2017]; root of context hierarchy
+2017-10-06 19:07:14,067 - Stopping beans in phase 2147483647
+2017-10-06 19:07:14,070 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 19:07:14,072 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:08:07,747 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 19:08:12,507 - Starting GoServiceImplTest on Akk-mbp.local with PID 1556 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 19:08:12,508 - No active profile set, falling back to default profiles: default
+2017-10-06 19:08:12,542 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 19:08:12 CST 2017]; root of context hierarchy
+2017-10-06 19:08:13,034 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 19:08:13,102 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 19:08:13,123 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 19:08:13,124 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 19:08:13,125 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 19:08:13,125 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 19:08:14,170 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:08:14,186 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 19:08:14,246 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 19:08:14,247 - HHH000206: hibernate.properties not found
+2017-10-06 19:08:14,248 - HHH000021: Bytecode provider name : javassist
+2017-10-06 19:08:14,283 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 19:08:14,383 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 19:08:14,892 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:08:20,281 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 19:08:20,331 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 19:08:20,331 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 19:08:20,764 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 19:08:12 CST 2017]; root of context hierarchy
+2017-10-06 19:08:20,825 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 19:08:20,826 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 19:08:20,828 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 19:08:20,829 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 19:08:20,829 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 19:08:20,831 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 19:08:20,831 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 19:08:20,853 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:08:20,853 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:08:20,872 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 19:08:20,889 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:08:21,160 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 19:08:21,288 - Starting beans in phase 2147483647
+2017-10-06 19:08:21,297 - Started GoServiceImplTest in 24.185 seconds (JVM running for 24.818)
+2017-10-06 19:08:21,344 - HHH000397: Using ASTQueryTranslatorFactory
+2017-10-06 19:08:21,526 - Closing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 19:08:12 CST 2017]; root of context hierarchy
+2017-10-06 19:08:21,527 - Stopping beans in phase 2147483647
+2017-10-06 19:08:21,530 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 19:08:21,531 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:09:07,325 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 19:09:12,088 - Starting GoServiceImplTest on Akk-mbp.local with PID 1563 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 19:09:12,089 - No active profile set, falling back to default profiles: default
+2017-10-06 19:09:12,122 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 19:09:12 CST 2017]; root of context hierarchy
+2017-10-06 19:09:12,619 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 19:09:12,685 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 19:09:12,712 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 19:09:12,713 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 19:09:12,714 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 19:09:12,714 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 19:09:13,746 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:09:13,762 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 19:09:13,840 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 19:09:13,842 - HHH000206: hibernate.properties not found
+2017-10-06 19:09:13,843 - HHH000021: Bytecode provider name : javassist
+2017-10-06 19:09:13,882 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 19:09:13,983 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 19:09:14,441 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:09:19,813 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 19:09:19,859 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 19:09:19,859 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 19:09:20,296 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 19:09:12 CST 2017]; root of context hierarchy
+2017-10-06 19:09:20,370 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 19:09:20,370 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 19:09:20,372 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 19:09:20,374 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 19:09:20,374 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 19:09:20,375 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 19:09:20,376 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 19:09:20,401 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:09:20,402 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:09:20,421 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 19:09:20,439 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:09:20,708 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 19:09:20,833 - Starting beans in phase 2147483647
+2017-10-06 19:09:20,843 - Started GoServiceImplTest in 24.231 seconds (JVM running for 24.915)
+2017-10-06 19:09:20,891 - HHH000397: Using ASTQueryTranslatorFactory
+2017-10-06 19:09:21,078 - 【Go界面信息展示，包括详情页面的信息】 result=[
+  {
+    "userName": "akk",
+    "userIcon": "http://www.xxx.com/xxx.jpg",
+    "ttpName": "测试ttp",
+    "startTime": "2017/10/01 21:08",
+    "finishTime": "2017/10/08 21:08",
+    "userTotalBouns": 0.00,
+    "ttpSchedule": 0,
+    "ttpTarget": "每日跑1.0公里",
+    "joinMoney": 1200.00,
+    "leaveNotesNums": 5,
+    "leaveNotes": 0,
+    "ifQuit": "允许中途退出",
+    "ifJoin": "允许中途加入",
+    "ifOpen": "不公开",
+    "userRecordList": [
+      {
+        "days": "2017/10/01",
+        "dayStatus": "完成"
+      },
+      {
+        "days": "2017/10/02",
+        "dayStatus": "未完成"
+      },
+      {
+        "days": "2017/10/03",
+        "dayStatus": "未完成"
+      },
+      {
+        "days": "2017/10/04",
+        "dayStatus": "未完成"
+      },
+      {
+        "days": "2017/10/05",
+        "dayStatus": "未完成"
+      },
+      {
+        "days": "2017/10/06",
+        "dayStatus": "未完成"
+      },
+      {
+        "days": "2017/10/07",
+        "dayStatus": "未完成"
+      },
+      {
+        "days": "2017/10/08",
+        "dayStatus": "未完成"
+      }
+    ],
+    "othersfinishList": [
+      {
+        "username": "akk",
+        "dayStatus": "16:03"
+      },
+      {
+        "username": "田俊",
+        "dayStatus": "未完成"
+      }
+    ],
+    "othersnofinishList": []
+  }
+]
+2017-10-06 19:09:21,082 - Closing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 19:09:12 CST 2017]; root of context hierarchy
+2017-10-06 19:09:21,084 - Stopping beans in phase 2147483647
+2017-10-06 19:09:21,086 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 19:09:21,088 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:17:00,198 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 19:17:04,939 - Starting GoServiceImplTest on Akk-mbp.local with PID 1572 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 19:17:04,940 - No active profile set, falling back to default profiles: default
+2017-10-06 19:17:04,973 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 19:17:04 CST 2017]; root of context hierarchy
+2017-10-06 19:17:05,474 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 19:17:05,532 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 19:17:05,556 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 19:17:05,557 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 19:17:05,557 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 19:17:05,558 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 19:17:06,598 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:17:06,615 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 19:17:06,688 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 19:17:06,689 - HHH000206: hibernate.properties not found
+2017-10-06 19:17:06,691 - HHH000021: Bytecode provider name : javassist
+2017-10-06 19:17:06,731 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 19:17:06,840 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 19:17:07,343 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:17:12,726 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 19:17:12,778 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 19:17:12,778 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 19:17:13,208 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 19:17:04 CST 2017]; root of context hierarchy
+2017-10-06 19:17:13,277 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 19:17:13,278 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 19:17:13,280 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 19:17:13,282 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 19:17:13,282 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 19:17:13,284 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 19:17:13,284 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 19:17:13,304 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:17:13,304 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:17:13,317 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 19:17:13,338 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:17:13,610 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 19:17:13,736 - Starting beans in phase 2147483647
+2017-10-06 19:17:13,745 - Started GoServiceImplTest in 25.606 seconds (JVM running for 24.867)
+2017-10-06 19:17:13,794 - HHH000397: Using ASTQueryTranslatorFactory
+2017-10-06 19:17:13,986 - 【Go界面信息展示，包括详情页面的信息】 result=[
+  {
+    "userName": "akk",
+    "userIcon": "http://www.xxx.com/xxx.jpg",
+    "ttpName": "测试ttp",
+    "startTime": "2017/10/01 21:08",
+    "finishTime": "2017/10/08 21:08",
+    "userTotalBouns": 0.00,
+    "ttpSchedule": 0,
+    "ttpTarget": "每日跑1.0公里",
+    "joinMoney": 1200.00,
+    "leaveNotesNums": 5,
+    "leaveNotes": 0,
+    "ifQuit": "允许中途退出",
+    "ifJoin": "允许中途加入",
+    "ifOpen": "不公开",
+    "userRecordList": [
+      {
+        "days": "2017/10/01",
+        "dayStatus": "完成"
+      },
+      {
+        "days": "2017/10/02",
+        "dayStatus": "未完成"
+      },
+      {
+        "days": "2017/10/03",
+        "dayStatus": "未完成"
+      },
+      {
+        "days": "2017/10/04",
+        "dayStatus": "未完成"
+      },
+      {
+        "days": "2017/10/05",
+        "dayStatus": "未完成"
+      },
+      {
+        "days": "2017/10/06",
+        "dayStatus": "未完成"
+      },
+      {
+        "days": "2017/10/07",
+        "dayStatus": "未完成"
+      },
+      {
+        "days": "2017/10/08",
+        "dayStatus": "未完成"
+      }
+    ],
+    "othersfinishList": [
+      {
+        "username": "akk",
+        "dayStatus": "16:03"
+      }
+    ],
+    "othersnofinishList": [
+      {
+        "username": "田俊",
+        "dayStatus": "未完成"
+      }
+    ]
+  }
+]
+2017-10-06 19:17:13,990 - Closing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 19:17:04 CST 2017]; root of context hierarchy
+2017-10-06 19:17:13,992 - Stopping beans in phase 2147483647
+2017-10-06 19:17:13,994 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 19:17:13,996 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:18:39,015 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 19:18:43,712 - Starting GoServiceImplTest on Akk-mbp.local with PID 1587 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 19:18:43,713 - No active profile set, falling back to default profiles: default
+2017-10-06 19:18:43,749 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 19:18:43 CST 2017]; root of context hierarchy
+2017-10-06 19:18:44,504 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 19:18:44,576 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 19:18:44,598 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 19:18:44,600 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 19:18:44,600 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 19:18:44,601 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 19:18:45,919 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:18:45,935 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 19:18:45,994 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 19:18:45,995 - HHH000206: hibernate.properties not found
+2017-10-06 19:18:45,996 - HHH000021: Bytecode provider name : javassist
+2017-10-06 19:18:46,034 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 19:18:46,143 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 19:18:46,654 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 19:18:52,053 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 19:18:52,099 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 19:18:52,099 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 19:18:52,508 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 19:18:43 CST 2017]; root of context hierarchy
+2017-10-06 19:18:52,599 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 19:18:52,600 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 19:18:52,603 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 19:18:52,605 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.util.Date)
+2017-10-06 19:18:52,606 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 19:18:52,608 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 19:18:52,608 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 19:18:52,636 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:18:52,636 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:18:52,656 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 19:18:52,679 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 19:18:53,036 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 19:18:53,182 - Starting beans in phase 2147483647
+2017-10-06 19:18:53,192 - Started GoServiceImplTest in 24.931 seconds (JVM running for 25.529)
+2017-10-06 19:18:53,241 - HHH000397: Using ASTQueryTranslatorFactory
+2017-10-06 19:18:53,431 - 【Go界面信息展示，包括详情页面的信息】 result=[
+  {
+    "userName": "akk",
+    "userIcon": "http://www.xxx.com/xxx.jpg",
+    "ttpName": "测试ttp",
+    "startTime": "2017/10/01 21:08",
+    "finishTime": "2017/10/08 21:08",
+    "userTotalBouns": 0.00,
+    "ttpSchedule": 0,
+    "ttpTarget": "每日跑1.0公里",
+    "joinMoney": 1200.00,
+    "leaveNotesNums": 5,
+    "leaveNotes": 0,
+    "ifQuit": "允许中途退出",
+    "ifJoin": "允许中途加入",
+    "ifOpen": "不公开",
+    "userRecordList": [
+      {
+        "days": "2017/10/01",
+        "dayStatus": "完成"
+      },
+      {
+        "days": "2017/10/02",
+        "dayStatus": "未完成"
+      },
+      {
+        "days": "2017/10/03",
+        "dayStatus": "未完成"
+      },
+      {
+        "days": "2017/10/04",
+        "dayStatus": "未完成"
+      },
+      {
+        "days": "2017/10/05",
+        "dayStatus": "未完成"
+      },
+      {
+        "days": "2017/10/06",
+        "dayStatus": "未完成"
+      },
+      {
+        "days": "2017/10/07",
+        "dayStatus": "未完成"
+      },
+      {
+        "days": "2017/10/08",
+        "dayStatus": "未完成"
+      }
+    ],
+    "othersfinishList": [
+      {
+        "username": "akk",
+        "dayStatus": "16:03"
+      }
+    ],
+    "othersnofinishList": [
+      {
+        "username": "田俊",
+        "dayStatus": ""
+      }
+    ]
+  }
+]
+2017-10-06 19:18:53,435 - Closing org.springframework.web.context.support.GenericWebApplicationContext@15a34df2: startup date [Fri Oct 06 19:18:43 CST 2017]; root of context hierarchy
+2017-10-06 19:18:53,437 - Stopping beans in phase 2147483647
+2017-10-06 19:18:53,439 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 19:18:53,440 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 21:03:03,523 - HV000001: Hibernate Validator 5.3.5.Final
+2017-10-06 21:03:08,277 - Starting UserRecordRepositoryTest on Akk-mbp.local with PID 1894 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringBoot项目/GoKeeper)
+2017-10-06 21:03:08,278 - No active profile set, falling back to default profiles: default
+2017-10-06 21:03:08,313 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5e7cd6cc: startup date [Fri Oct 06 21:03:08 CST 2017]; root of context hierarchy
+2017-10-06 21:03:08,809 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 21:03:08,865 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-06 21:03:08,886 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpRepository.
+2017-10-06 21:03:08,888 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-10-06 21:03:08,888 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-10-06 21:03:08,889 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-10-06 21:03:09,916 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-06 21:03:09,933 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-06 21:03:09,998 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-06 21:03:09,999 - HHH000206: hibernate.properties not found
+2017-10-06 21:03:10,000 - HHH000021: Bytecode provider name : javassist
+2017-10-06 21:03:10,038 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-06 21:03:10,143 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-06 21:03:10,652 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-06 21:03:16,046 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-10-06 21:03:16,097 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-10-06 21:03:16,097 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-10-06 21:03:16,542 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5e7cd6cc: startup date [Fri Oct 06 21:03:08 CST 2017]; root of context hierarchy
+2017-10-06 21:03:16,602 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+2017-10-06 21:03:16,603 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-10-06 21:03:16,606 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+2017-10-06 21:03:16,608 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.GoController.faqilist(java.lang.String,java.lang.String)
+2017-10-06 21:03:16,608 - Mapped "{[/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.login.login()
+2017-10-06 21:03:16,609 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-06 21:03:16,610 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-06 21:03:16,631 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 21:03:16,631 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 21:03:16,646 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-10-06 21:03:16,662 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-06 21:03:16,936 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-10-06 21:03:17,068 - Starting beans in phase 2147483647
+2017-10-06 21:03:17,079 - Started UserRecordRepositoryTest in 24.227 seconds (JVM running for 24.936)
+2017-10-06 21:03:17,188 - Closing org.springframework.web.context.support.GenericWebApplicationContext@5e7cd6cc: startup date [Fri Oct 06 21:03:08 CST 2017]; root of context hierarchy
+2017-10-06 21:03:17,190 - Stopping beans in phase 2147483647
+2017-10-06 21:03:17,192 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-10-06 21:03:17,193 - Closing JPA EntityManagerFactory for persistence unit 'default'

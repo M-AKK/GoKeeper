@@ -27,7 +27,7 @@ public class TtpDetail {
     private String ttpName;
 
     //活动目标。某些ttp才有
-    private Integer ttpTarget;
+    private Double ttpTarget;
 
     //请假条数量，默认为0
     private Integer leaveNotesNums;
@@ -58,8 +58,7 @@ public class TtpDetail {
     //ttp状态(0,准备开始；1，进行中；2，完结)
     private Integer ttpStatus;
 
-    //押金支付状态
-    private Integer payStatus;
+    private Date createTime;
 
     //ttp开始时间
     private Date startTime;

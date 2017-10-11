@@ -25,11 +25,6 @@ public class UserServiceImpl implements UserService {
     public String getUserId(String token) {
 
         String tokenValue = redisTemplate.opsForValue().get(String.format(RedisConstant.TOKEN_PREFIX, token));
-
-        if(StringUtils.isEmpty(tokenValue)) {
-            log.warn("【登录校验】Redis中查不到token");
-            throw new TTpException(ResultEnum.TOKEN_MISS);
-        }
         return tokenValue;
     }
 }

@@ -1,17 +1,18 @@
-package com.gokeeper.controller.buyer;
+package com.gokeeper.controller.api;
 
 import com.gokeeper.VO.ResultVO;
 import com.gokeeper.dto.TtpDetailDto;
 import com.gokeeper.enums.ResultEnum;
 import com.gokeeper.exception.TTpException;
 import com.gokeeper.form.TtpForm;
-import com.gokeeper.service.GoService;
+import com.gokeeper.service.FaqiService;
 import com.gokeeper.service.UserService;
 import com.gokeeper.utils.DateUtil;
 import com.gokeeper.utils.ResultVOUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,17 +23,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 发起界面控制层
  * Created by Akk_Mac
  * Date: 2017/10/1 10:17
  */
 @RestController
-@RequestMapping("/go")
+@RequestMapping("/ttp")
 @Slf4j
-public class BuyerGoController {
+public class FaqiController {
 
 
     @Autowired
-    private GoService goService;
+    private FaqiService faqiService;
 
     @Autowired
     private UserService userService;
@@ -46,6 +48,12 @@ public class BuyerGoController {
             throw new TTpException(ResultEnum.PARAM_ERROR.getCode(),
                     bindingResult.getFieldError().getDefaultMessage());
         }
+        //根据token获取userId,获取不到会返回错误
+        String userId = userService.getUserId(ttpForm.getToken());
+        if(StringUtils.isEmpty(userId)) {
+            log.warn("【登录校验】Redis中查不到tokenValue");
+            throw new TTpException(ResultEnum.TOKEN_MISS);
+        }
 
         //把部分属性复制到Dto，并不会复制两个时间
         TtpDetailDto detailDto = new TtpDetailDto();
@@ -53,10 +61,8 @@ public class BuyerGoController {
         //设置开始时间和结束时间
         detailDto.setStartTime(DateUtil.StringToDate(ttpForm.getStartTime()));
         detailDto.setFinishTime(DateUtil.StringToDate(ttpForm.getFinishTime()));
-
-        //根据token获取userId,获取不到会返回错误
-        detailDto.setUserId(userService.getUserId(ttpForm.getToken()));
-        TtpDetailDto ttpDetailDto = goService.create(detailDto);
+        detailDto.setUserId(userId);
+        TtpDetailDto ttpDetailDto = faqiService.create(detailDto);
 
         Map<String, String> map = new HashMap<>();
         map.put("ttpId", ttpDetailDto.getTtpId());

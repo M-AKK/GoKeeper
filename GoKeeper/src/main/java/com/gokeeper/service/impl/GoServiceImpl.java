@@ -1,92 +1,141 @@
 package com.gokeeper.service.impl;
 
+import com.gokeeper.VO.GoVo;
+import com.gokeeper.VO.OthersRecordVo;
+import com.gokeeper.VO.UserRecordVo;
 import com.gokeeper.dataobject.TtpDetail;
+import com.gokeeper.dataobject.UserInfo;
 import com.gokeeper.dataobject.UserRecord;
 import com.gokeeper.dataobject.UserTtp;
-import com.gokeeper.dto.TtpDetailDto;
-import com.gokeeper.enums.ResultEnum;
+import com.gokeeper.enums.*;
 import com.gokeeper.exception.TTpException;
 import com.gokeeper.repository.TTpRepository;
+import com.gokeeper.repository.UserInfoRepository;
 import com.gokeeper.repository.UserRecordRepository;
 import com.gokeeper.repository.UserTtpRepository;
 import com.gokeeper.service.GoService;
-import com.gokeeper.utils.DateUtil;
-import com.gokeeper.utils.KeyUtil;
+import com.gokeeper.utils.EnumUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
+import static com.gokeeper.utils.DateUtil.dateFormat2;
 
 /**
- * Go界面操作的具体实现
+ * Go（我的）界面具体操作
  * Created by Akk_Mac
- * Date: 2017/10/1 22:57
+ * Date: 2017/10/6 09:07
  */
 @Service
 @Slf4j
-public class GoServiceImpl implements GoService {
+public class GoServiceImpl implements GoService{
 
     @Autowired
-    private TTpRepository tTpRepository;
+    private UserInfoRepository userInfoRepository;
 
     @Autowired
     private UserTtpRepository userTtpRepository;
 
     @Autowired
+    private TTpRepository tTpRepository;
+
+    @Autowired
     private UserRecordRepository userRecordRepository;
 
+
     @Override
-    @Transactional//事务管理，一旦失败就回滚
-    public TtpDetailDto create(TtpDetailDto ttpDetailDto) {
-        //设置起始每日奖金总额为0
-        BigDecimal zeroBouns = new BigDecimal(BigInteger.ZERO);
+    public List<GoVo> getmyttplist(String userId, String currentDate) {
+        List<GoVo> goVoList = new ArrayList<>();
 
-        //1.设置下订单id(是个随机，这里调用了根据时间产生6位随机数的方法)
-        String ttpId = KeyUtil.genUniqueKey();
-
-        //2.把剩下的属性再设置好,ttp详情入库
-        ttpDetailDto.setTtpId(ttpId);
-        ttpDetailDto.setAllMoney(ttpDetailDto.getJoinMoney());
-        ttpDetailDto.setTtpStatus(0);
-        ttpDetailDto.setPayStatus(0);
-        TtpDetail ttpDetail = new TtpDetail();
-        BeanUtils.copyProperties(ttpDetailDto, ttpDetail);
-        tTpRepository.save(ttpDetail);
-
-        //3.user-ttp关联信息入库
-        UserTtp userTtp = new UserTtp();
-        userTtp.setUserTtpId(ttpId+ttpDetailDto.getUserId());//根据ttpid和userid生成
-        userTtp.setUserId(ttpDetailDto.getUserId());
-        userTtp.setTtpId(ttpId);
-        userTtp.setUserDayBouns(zeroBouns);
-        userTtp.setUserTotalBouns(zeroBouns);//用户个人得到的总奖金，初始也为0
-        userTtp.setTtpSchedule(0);//设置开始进度为0
-        userTtpRepository.save(userTtp);
-
-        //4.创建此ttp的用户完成情况记录表
-        try{
-            //根据开始时间和结束时间算出中间日期
-            List<String> datelist = DateUtil.getBetweenDates(ttpDetailDto.getStartTime(), ttpDetailDto.getFinishTime());
-            for(int i=0; i<datelist.size(); i++){
-                UserRecord userRecord = new UserRecord();
-                userRecord.setUserRecordId(ttpId + datelist.get(i));
-                userRecord.setUserTtpId(userTtp.getUserTtpId());
-                userRecord.setDays(DateUtil.StringToDate1(datelist.get(i)));
-                userRecord.setDayStatus(0);
-                userRecordRepository.save(userRecord);
-            }
-        } catch(ParseException e) {
-            log.error("【日期转换出问题】");
-            throw new TTpException(ResultEnum.CREATE_ERROR);
+        //1.根据userId查找所有此用户参与的ttp
+        List<UserTtp> userTtpList = userTtpRepository.findByUserId(userId);
+        if(userTtpList == null){
+            log.info("【查询我参与的所有ttp】还没有参见任何ttp");
+            return null;
         }
-
-        return ttpDetailDto;
+        //2.遍历userTtp中的各项信息
+        for(UserTtp userTtp : userTtpList){
+            GoVo goVo = new GoVo();
+            //3.根据userId查找到发起人信息
+            UserInfo faqiuser = userInfoRepository.findByUserId(userTtp.getUserId());
+            goVo.setUserName(faqiuser.getUsername());
+            goVo.setUserIcon(faqiuser.getUserIcon());
+            //4.根据ttpId查找到对用ttp信息
+            TtpDetail ttpDetail = tTpRepository.findByTtpId(userTtp.getTtpId());
+            goVo.setTtpName(ttpDetail.getTtpName());
+            //返回时间需处理下格式,转换成"2017/10/01 19:00"的字符串
+            goVo.setStartTime(dateFormat2(ttpDetail.getStartTime(), 0,16));
+            goVo.setFinishTime(dateFormat2(ttpDetail.getFinishTime(), 0,16));
+            //输入目标数，返回对应结果
+            goVo.setTtpTarget(TtpTargetEnum.runenum(ttpDetail.getTtpTarget()));
+            goVo.setJoinMoney(ttpDetail.getJoinMoney());
+            goVo.setLeaveNotesNums(ttpDetail.getLeaveNotesNums());
+            goVo.setIfQuit(EnumUtil.getByCode(ttpDetail.getIfQuit(), IfQuitEnum.class).getMessage());
+            goVo.setIfJoin(EnumUtil.getByCode(ttpDetail.getIfJoin(), IfJoinEnum.class).getMessage());
+            goVo.setIfOpen(EnumUtil.getByCode(ttpDetail.getIfOpen(), IfOpenEnum.class).getMessage());
+            //5.录入userTtp表的信息
+            goVo.setUserTotalBouns(userTtp.getUserTotalBouns());
+            goVo.setTtpSchedule(userTtp.getTtpSchedule());
+            goVo.setLeaveNotes(userTtp.getLeaveNotes());
+            //6.根据userTtpId查找此ttp的用户记录表
+            List<UserRecordVo> userRecordVoList = new ArrayList<>();
+            List<UserRecord> userRecordList = userRecordRepository.findByUserTtpId(userTtp.getUserTtpId());
+            for(UserRecord userRecord : userRecordList){
+                UserRecordVo userRecordVo = new UserRecordVo();
+                userRecordVo.setDays(dateFormat2(userRecord.getDays(), 0, 10));
+                userRecordVo.setDayStatus(EnumUtil.getByCode(userRecord.getDayStatus(), DayStatusEnum.class).getMessage());
+                userRecordVoList.add(userRecordVo);
+            }
+            goVo.setUserRecordList(userRecordVoList);
+            //7.根据ttpId查到所有参加此ttp的用户
+            List<OthersRecordVo> othersRecordVoList = new ArrayList<>();
+            List<OthersRecordVo> othersRecordVoList1 = new ArrayList<>();
+            List<UserTtp> userTtpList1 = userTtpRepository.findByTtpId(userTtp.getTtpId());
+            //依次遍历参加了此ttp的userTtp信息
+            for(UserTtp userTtp1 : userTtpList1){
+                OthersRecordVo othersRecordVo = new OthersRecordVo();
+                //根据userId查询到其中一个用户的userInfo信息，并设置一条OthersRecordVo信息
+                UserInfo userInfo = userInfoRepository.findByUserId(userTtp1.getUserId());
+                if(userInfo != null){
+                    //设置username
+                    othersRecordVo.setUsername(userInfo.getUsername());
+                    UserRecord userRecord = userRecordRepository.getfinishList(userTtp1.getUserTtpId(), currentDate);
+                    if(userRecord == null){
+                        log.error("【查询我参与的所有ttp】userRecord为空 result={}",userTtp1.getUserTtpId());
+                        throw new TTpException(ResultEnum.USER_ERROR);
+                    }
+                    //再根据userTtpId信息查找到此用户对应的ttp的所有完成记录，形参为当天日期，查询当天完成记录情况
+                    if(userRecord.getDayStatus() == DayStatusEnum.FINIS.getCode()){
+                        //说明完成了，设置finishTime录入list
+                        othersRecordVo.setDayStatus(dateFormat2(
+                                (userRecord.getUpdateTime()),
+                                11, 16));
+                        othersRecordVoList.add(othersRecordVo);
+                    } else if(userRecord.getDayStatus() == DayStatusEnum.QINGJIA.getCode()) {
+                        //请假，设置finishTime为具体信息
+                        othersRecordVo.setDayStatus(EnumUtil.getByCode(DayStatusEnum.QINGJIA.getCode(), DayStatusEnum.class).getMessage());
+                        othersRecordVoList1.add(othersRecordVo);
+                    } else {
+                        //未完成，只用显示用户名即可
+                        othersRecordVo.setDayStatus("");
+                        othersRecordVoList1.add(othersRecordVo);
+                    }
+                } else {
+                    log.error("【查询我参与的所有ttp】userRecord为空");
+                    throw new TTpException(ResultEnum.PARAM_ERROR);
+                }
+            }
+            goVo.setOthersfinishList(othersRecordVoList);
+            goVo.setOthersnofinishList(othersRecordVoList1);
+            //8.设置总的govoList
+            goVoList.add(goVo);
+        }
+        return goVoList;
     }
+
+
 }

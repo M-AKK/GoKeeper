@@ -22,7 +22,7 @@ public class TtpForm {
     private String ttpName;
 
     //ttp目标(非必填，某些ttp才有)
-    private Integer ttpTarget;
+    private Float ttpTarget;
 
     //活动地点(非必填，某些活动才有)
     private String address;

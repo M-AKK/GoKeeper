@@ -17,7 +17,7 @@ HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
 HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 Initialized JPA EntityManagerFactory for persistence unit 'default'
 Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6e535154: startup date [Tue Oct 03 10:41:10 CST 2017]; root of context hierarchy
-Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult)
 Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
 Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
@@ -48,7 +48,7 @@ HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
 HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 Initialized JPA EntityManagerFactory for persistence unit 'default'
 Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5b38c1ec: startup date [Tue Oct 03 13:14:55 CST 2017]; root of context hierarchy
-Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
 Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
 Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
@@ -79,7 +79,7 @@ HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
 HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 Initialized JPA EntityManagerFactory for persistence unit 'default'
 Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5b38c1ec: startup date [Tue Oct 03 13:20:39 CST 2017]; root of context hierarchy
-Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
 Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
 Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
@@ -110,7 +110,7 @@ HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
 HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 Initialized JPA EntityManagerFactory for persistence unit 'default'
 Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5b38c1ec: startup date [Tue Oct 03 13:55:51 CST 2017]; root of context hierarchy
-Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
 Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
 Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
@@ -141,7 +141,7 @@ HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
 HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 Initialized JPA EntityManagerFactory for persistence unit 'default'
 Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5b38c1ec: startup date [Tue Oct 03 13:57:24 CST 2017]; root of context hierarchy
-Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
 Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
 Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
@@ -172,7 +172,7 @@ HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
 HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 Initialized JPA EntityManagerFactory for persistence unit 'default'
 Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5b38c1ec: startup date [Tue Oct 03 14:05:45 CST 2017]; root of context hierarchy
-Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.buyer.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
+Mapped "{[/go/create],methods=[POST]}" onto public com.gokeeper.VO.ResultVO com.gokeeper.controller.api.BuyerGoController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult) throws java.lang.Exception
 Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
 Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]

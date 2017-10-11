@@ -1,25 +1,15 @@
 package com.gokeeper.controller;
 
-import com.gokeeper.dataobject.ServerMessage;
 import com.gokeeper.handler.WebSocketPushHandler;
-import com.gokeeper.service.WebSocket;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.messaging.simp.SimpMessagingTemplate;
-import org.springframework.messaging.simp.user.SimpUser;
-import org.springframework.messaging.simp.user.SimpUserRegistry;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.socket.TextMessage;
 
-import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.websocket.Session;
 import java.util.Map;
 
 /**
@@ -30,8 +20,6 @@ import java.util.Map;
 @Slf4j
 public class WebsocketController {
 
-    @Autowired
-    private WebSocket webSocket;
 
     @RequestMapping("/websocket/login")
     public ModelAndView login(HttpServletRequest request, Map<String, String> map) throws Exception {

@@ -10,12 +10,15 @@ import java.util.*;
 
 public class DateUtil {
 
-    /*public static void main(String args[])throws Exception{
+    public static void main(String args[])throws Exception{
         List<String> result = getBetweenDates(DateUtil.StringToDate("2017-10-1 21:08"),DateUtil.StringToDate("2017-10-8 21:08"));
         for(int i=0; i<result.size(); i++){
             System.out.println(result.get(i));
         }
-    }*/
+
+        String str = dateFormat2(DateUtil.StringToDate("2017-10-1 21:08"), 11,16);//16或者10
+        System.out.println(str);
+    }
 
     /**
      * date类型进行格式化输出
@@ -26,6 +29,20 @@ public class DateUtil {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String dateString = formatter.format(date);
         return dateString;
+    }
+
+    /**
+     * 现将date转成字符串
+     * 再将"2017-10-01 21:08:00"型字符串转换成"2017/10/01"型字符串或者自定义区域
+     * @param date
+     * @return
+     */
+    public static String dateFormat2(Date date, int start, int end) {
+        //1.首先把date转成string
+        String str = (dateFormat(date)).substring(start, end);
+        String str1 = str.replace("-", "/");
+
+        return str1;
     }
 
     /**

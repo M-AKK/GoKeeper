@@ -31,6 +31,11 @@ public class UserTtp {
     //用户此ttp总奖金
     private BigDecimal userTotalBouns;
 
+    //押金支付状态
+    private Integer payStatus;
+
+    private Integer leaveNotes;
+
     private Integer ttpSchedule;
 
     private Date updateTime;

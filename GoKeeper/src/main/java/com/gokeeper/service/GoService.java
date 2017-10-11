@@ -1,14 +1,17 @@
 package com.gokeeper.service;
 
-import com.gokeeper.dto.TtpDetailDto;
+import com.gokeeper.VO.GoVo;
+
+import java.util.Date;
+import java.util.List;
 
 /**
- * Go页面的请求操作
+ * Go界面服务层
  * Created by Akk_Mac
- * Date: 2017/10/1 22:56
+ * Date: 2017/10/5 19:52
  */
 public interface GoService {
 
-    //发起一个ttp
-    TtpDetailDto create(TtpDetailDto ttpDetailDto);
+    //获取我的界面ttp列表
+    List<GoVo> getmyttplist(String userId, String currrentDate);
 }

@@ -71,6 +71,12 @@
             <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
 
+		<!--谷歌出的json转换工具-->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+
 
 	</dependencies>
 
