@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -21,6 +22,7 @@ import java.util.List;
  * Created by Akk_Mac
  * Date: 2017/10/6 20:56
  */
+@RestController
 @RequestMapping("/join")
 @Slf4j
 public class JoinController {
@@ -28,6 +30,7 @@ public class JoinController {
     @Autowired
     private JoinService joinService;
 
+    //加入列表展示
     @GetMapping(value = "/list")
     public ResultVO getallList(HttpServletRequest request){
 
@@ -36,4 +39,7 @@ public class JoinController {
 
         return ResultVOUtil.success(joinVoList);
     }
+
+    //加入功能的实现
+
 }

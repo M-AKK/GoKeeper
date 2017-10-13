@@ -9,7 +9,7 @@ import com.gokeeper.dataobject.UserRecord;
 import com.gokeeper.dataobject.UserTtp;
 import com.gokeeper.enums.*;
 import com.gokeeper.exception.TTpException;
-import com.gokeeper.repository.TTpRepository;
+import com.gokeeper.repository.TTpDetailRepository;
 import com.gokeeper.repository.UserInfoRepository;
 import com.gokeeper.repository.UserRecordRepository;
 import com.gokeeper.repository.UserTtpRepository;
@@ -20,7 +20,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import static com.gokeeper.utils.DateUtil.dateFormat2;
@@ -41,7 +40,7 @@ public class GoServiceImpl implements GoService{
     private UserTtpRepository userTtpRepository;
 
     @Autowired
-    private TTpRepository tTpRepository;
+    private TTpDetailRepository tTpDetailRepository;
 
     @Autowired
     private UserRecordRepository userRecordRepository;
@@ -65,7 +64,7 @@ public class GoServiceImpl implements GoService{
             goVo.setUserName(faqiuser.getUsername());
             goVo.setUserIcon(faqiuser.getUserIcon());
             //4.根据ttpId查找到对用ttp信息
-            TtpDetail ttpDetail = tTpRepository.findByTtpId(userTtp.getTtpId());
+            TtpDetail ttpDetail = tTpDetailRepository.findByTtpId(userTtp.getTtpId());
             goVo.setTtpName(ttpDetail.getTtpName());
             //返回时间需处理下格式,转换成"2017/10/01 19:00"的字符串
             goVo.setStartTime(dateFormat2(ttpDetail.getStartTime(), 0,16));

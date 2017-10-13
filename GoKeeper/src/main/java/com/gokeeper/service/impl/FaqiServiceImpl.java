@@ -6,7 +6,7 @@ import com.gokeeper.dataobject.UserTtp;
 import com.gokeeper.dto.TtpDetailDto;
 import com.gokeeper.enums.ResultEnum;
 import com.gokeeper.exception.TTpException;
-import com.gokeeper.repository.TTpRepository;
+import com.gokeeper.repository.TTpDetailRepository;
 import com.gokeeper.repository.UserRecordRepository;
 import com.gokeeper.repository.UserTtpRepository;
 import com.gokeeper.service.FaqiService;
@@ -34,7 +34,7 @@ import java.util.List;
 public class FaqiServiceImpl implements FaqiService {
 
     @Autowired
-    private TTpRepository tTpRepository;
+    private TTpDetailRepository tTpDetailRepository;
 
     @Autowired
     private UserTtpRepository userTtpRepository;
@@ -53,7 +53,7 @@ public class FaqiServiceImpl implements FaqiService {
         //设置起始每日奖金总额为0
         BigDecimal zeroBouns = new BigDecimal(BigInteger.ZERO);
 
-        //1.设置下订单id(是个随机，这里调用了根据时间产生6位随机数的方法)
+        //1.设置下订单id(是个随机，这里调用了根据时间产生16位随机数的方法)
         String ttpId = KeyUtil.genUniqueKey();
 
         //2.把剩下的属性再设置好,ttp详情入库
@@ -62,14 +62,14 @@ public class FaqiServiceImpl implements FaqiService {
         ttpDetailDto.setTtpStatus(0);
         TtpDetail ttpDetail = new TtpDetail();
         BeanUtils.copyProperties(ttpDetailDto, ttpDetail);
-        tTpRepository.save(ttpDetail);
+        tTpDetailRepository.save(ttpDetail);
 
         //3.user-ttp关联信息入库
         UserTtp userTtp = new UserTtp();
         userTtp.setUserTtpId(ttpId+ttpDetailDto.getUserId());//根据ttpid和userid生成
         userTtp.setUserId(ttpDetailDto.getUserId());
         userTtp.setTtpId(ttpId);
-        userTtp.setUserDayBouns(zeroBouns);
+        /*userTtp.setUserDayBouns(zeroBouns);*/
         userTtp.setUserTotalBouns(zeroBouns);//用户个人得到的总奖金，初始也为0
         userTtp.setPayStatus(0);
         userTtp.setTtpSchedule(0);//设置开始进度为0

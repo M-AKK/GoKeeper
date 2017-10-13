@@ -1,47 +1,42 @@
 package com.gokeeper.controller.api;
 
-import com.gokeeper.VO.GoVo;
 import com.gokeeper.VO.ResultVO;
+import com.gokeeper.dataobject.AllNews;
 import com.gokeeper.enums.ResultEnum;
 import com.gokeeper.exception.TTpException;
-import com.gokeeper.service.GoService;
-import com.gokeeper.service.UserService;
+import com.gokeeper.service.AllNewsService;
 import com.gokeeper.utils.ResultVOUtil;
 import com.mysql.jdbc.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.Date;
 import java.util.List;
 
 /**
- * Go界面控制层
  * Created by Akk_Mac
- * Date: 2017/10/5 19:30
+ * Date: 2017/10/13 18:23
  */
 @RestController
-@RequestMapping("/go")
+@RequestMapping("/msg")
 @Slf4j
-public class GoController {
+public class MessageController {
 
     @Autowired
-    private GoService goService;
-
+    private AllNewsService allNewsService;
 
     /**
-     * 获取Go(我的)界面默认list，主要展示自己参与的所有ttp
-     * @param currentDate 查询当天其他用户记录用
-     * @return ResultVO
+     * 主要在用户登录后用来显示需要显示的信息，默认显示所有信息，还需要改进
+     * @param request
+     * @return
      */
     @GetMapping(value = "/list")
-    public ResultVO faqilist(HttpServletRequest request,
-                             @RequestParam("currentDate") String currentDate){
+    public ResultVO list(HttpServletRequest request){
+
         //1.首先根据session获取userId
         HttpSession session = request.getSession();
         String userId = (String) session.getAttribute("userId");
@@ -50,7 +45,9 @@ public class GoController {
             throw new TTpException(ResultEnum.USER_ERROR);
         }
 
-        List<GoVo> goVoList = goService.getmyttplist(userId, currentDate);
-        return ResultVOUtil.success(goVoList);
+        List<AllNews> allNewsList = allNewsService.findAllByUserId(userId);
+
+        return ResultVOUtil.success(allNewsList);
     }
+
 }

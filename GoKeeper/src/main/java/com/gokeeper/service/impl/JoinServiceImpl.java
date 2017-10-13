@@ -4,7 +4,7 @@ import com.gokeeper.VO.JoinVo;
 import com.gokeeper.dataobject.TtpDetail;
 import com.gokeeper.dataobject.UserInfo;
 import com.gokeeper.enums.*;
-import com.gokeeper.repository.TTpRepository;
+import com.gokeeper.repository.TTpDetailRepository;
 import com.gokeeper.repository.UserInfoRepository;
 import com.gokeeper.repository.UserTtpRepository;
 import com.gokeeper.service.JoinService;
@@ -28,7 +28,7 @@ import static com.gokeeper.utils.DateUtil.dateFormat2;
 public class JoinServiceImpl implements JoinService {
 
     @Autowired
-    private TTpRepository tTpRepository;
+    private TTpDetailRepository tTpDetailRepository;
 
     @Autowired
     private UserInfoRepository userInfoRepository;
@@ -42,7 +42,7 @@ public class JoinServiceImpl implements JoinService {
         List<JoinVo> joinVoList = new ArrayList<>();
 
         //1.先查找所有公开ttp的详情信息
-        List<TtpDetail> openttpdetaillist = tTpRepository.findByIfOpen(1);
+        List<TtpDetail> openttpdetaillist = tTpDetailRepository.findByIfOpen(1);
         for(TtpDetail detail : openttpdetaillist) {
             JoinVo joinVo = new JoinVo();
             //2.根据userid查找userinfo
