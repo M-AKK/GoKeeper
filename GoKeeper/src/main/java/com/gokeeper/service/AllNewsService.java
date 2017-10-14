@@ -1,6 +1,7 @@
 package com.gokeeper.service;
 
 import com.gokeeper.dataobject.AllNews;
+import com.gokeeper.dataobject.UserTtp;
 
 import java.util.List;
 
@@ -16,4 +17,6 @@ public interface AllNewsService {
      * @return
      */
     List<AllNews> findAllByUserId(String userId);
+
+
 }

@@ -26,7 +26,7 @@ public class UserTtp {
     private String ttpId;
 
     //用户此ttp每日奖金，突然发现只用显示总奖金就行了
-    /*private BigDecimal userDayBouns;*/
+    private BigDecimal userDayBouns;
 
     //用户此ttp总奖金
     private BigDecimal userTotalBouns;

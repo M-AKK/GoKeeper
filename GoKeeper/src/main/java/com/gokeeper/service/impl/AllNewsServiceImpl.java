@@ -6,7 +6,6 @@ import com.gokeeper.service.AllNewsService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 /**
@@ -21,6 +20,7 @@ public class AllNewsServiceImpl implements AllNewsService {
     @Autowired
     private AllNewsRepository allNewsRepository;
 
+
     /**
      * 现在返回的是此用户所有的信息，下一步应该还需要做过滤判断处理
      * @param userId
@@ -30,4 +30,6 @@ public class AllNewsServiceImpl implements AllNewsService {
     public List<AllNews> findAllByUserId(String userId) {
         return allNewsRepository.findAllByUserId(userId);
     }
+
+
 }

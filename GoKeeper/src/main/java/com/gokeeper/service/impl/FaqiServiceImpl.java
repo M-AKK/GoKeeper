@@ -69,7 +69,7 @@ public class FaqiServiceImpl implements FaqiService {
         userTtp.setUserTtpId(ttpId+ttpDetailDto.getUserId());//根据ttpid和userid生成
         userTtp.setUserId(ttpDetailDto.getUserId());
         userTtp.setTtpId(ttpId);
-        /*userTtp.setUserDayBouns(zeroBouns);*/
+        userTtp.setUserDayBouns(zeroBouns);
         userTtp.setUserTotalBouns(zeroBouns);//用户个人得到的总奖金，初始也为0
         userTtp.setPayStatus(0);
         userTtp.setTtpSchedule(0);//设置开始进度为0

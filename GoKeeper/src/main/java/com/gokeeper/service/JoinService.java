@@ -1,6 +1,7 @@
 package com.gokeeper.service;
 
 import com.gokeeper.VO.JoinVo;
+import com.gokeeper.dataobject.UserTtp;
 
 import java.util.List;
 
@@ -13,4 +14,12 @@ public interface JoinService {
 
     //获取所有公开ttp的信息
     List<JoinVo> getOpenTtp();
+
+    /**
+     * user-ttp新增一个用户，就是新用户加入ttp
+     * @param userId
+     * @param ttpId
+     * @return
+     */
+    UserTtp attend(String userId, String ttpId);
 }

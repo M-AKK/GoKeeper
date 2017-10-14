@@ -38,6 +38,9 @@ public class AllNews {
     //状态，已读(0),未读(1);
     private Integer newsstatus;
 
+    //是否隐藏，0为公开，1为隐藏
+    private Integer hidden;
+
     //专门存放系统消息的字段
     private String content;
 
@@ -61,4 +64,7 @@ public class AllNews {
 
     //更新时间
     private Date updateTime;
+
+    //权重
+    private Integer weight;
 }

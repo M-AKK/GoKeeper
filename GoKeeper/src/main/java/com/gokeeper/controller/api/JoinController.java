@@ -9,9 +9,7 @@ import com.gokeeper.utils.ResultVOUtil;
 import com.mysql.jdbc.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -34,12 +32,33 @@ public class JoinController {
     @GetMapping(value = "/list")
     public ResultVO getallList(HttpServletRequest request){
 
-        //只返回公开的ttp
+        //返回所有公开的ttp
         List<JoinVo> joinVoList = joinService.getOpenTtp();
 
         return ResultVOUtil.success(joinVoList);
     }
 
     //加入功能的实现
+    @PostMapping(value = "/attend")
+    public ResultVO atttend(HttpServletRequest request,
+            @RequestParam("ttpId") String ttpId){
+
+        //1.接收需要加入的ttpId
+        //2.根据session查找用户id
+        HttpSession session = request.getSession();
+        String userId = (String) session.getAttribute("userId");
+        if(StringUtils.isNullOrEmpty(userId)){
+            log.error("【查询我参与的所有ttp】userId为空");
+            throw new TTpException(ResultEnum.USER_ERROR);
+        }
+
+        try{
+            joinService.attend(userId, ttpId);
+        } catch (TTpException e) {
+            return ResultVOUtil.error(e.getCode(), e.getMessage());
+        }
+
+        return ResultVOUtil.success();
+    }
 
 }
