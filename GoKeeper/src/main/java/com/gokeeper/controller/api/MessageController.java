@@ -1,7 +1,7 @@
 package com.gokeeper.controller.api;
 
+import com.gokeeper.VO.news.AllNewsVo;
 import com.gokeeper.VO.ResultVO;
-import com.gokeeper.dataobject.AllNews;
 import com.gokeeper.enums.ResultEnum;
 import com.gokeeper.exception.TTpException;
 import com.gokeeper.service.AllNewsService;
@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.List;
 
 /**
  * Created by Akk_Mac
@@ -45,9 +44,8 @@ public class MessageController {
             throw new TTpException(ResultEnum.USER_ERROR);
         }
 
-        List<AllNews> allNewsList = allNewsService.findAllByUserId(userId);
-
-        return ResultVOUtil.success(allNewsList);
+        AllNewsVo allNewsVo = allNewsService.findAllByUserId(userId);
+        return ResultVOUtil.success(allNewsVo);
     }
 
     

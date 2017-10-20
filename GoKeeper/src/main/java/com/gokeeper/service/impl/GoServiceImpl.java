@@ -65,6 +65,7 @@ public class GoServiceImpl implements GoService{
             goVo.setUserIcon(faqiuser.getUserIcon());
             //4.根据ttpId查找到对用ttp信息
             TtpDetail ttpDetail = tTpDetailRepository.findByTtpId(userTtp.getTtpId());
+            goVo.setTtpId(ttpDetail.getTtpId());
             goVo.setTtpName(ttpDetail.getTtpName());
             //返回时间需处理下格式,转换成"2017/10/01 19:00"的字符串
             goVo.setStartTime(dateFormat2(ttpDetail.getStartTime(), 0,16));
@@ -79,6 +80,8 @@ public class GoServiceImpl implements GoService{
             //5.录入userTtp表的信息
             goVo.setUserTotalBouns(userTtp.getUserTotalBouns());
             goVo.setTtpSchedule(userTtp.getTtpSchedule());
+            //TODO 不确定评判标准，先设置个便于测试
+            goVo.setHighAverage(AverageEnum.HIGH_AVERAGE.getMessage());
             goVo.setLeaveNotes(userTtp.getLeaveNotes());
             //6.根据userTtpId查找此ttp的用户记录表
             List<UserRecordVo> userRecordVoList = new ArrayList<>();

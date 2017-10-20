@@ -65,6 +65,7 @@ public class JoinServiceImpl implements JoinService {
             joinVo.setUsername(userInfo.getUsername());
             joinVo.setUserIcon(userInfo.getUserIcon());
             //设置ttp相关信息
+            joinVo.setTtpId(detail.getTtpId());
             joinVo.setTtpName(detail.getTtpName());
             joinVo.setTtpType(EnumUtil.getByCode(detail.getTtpType(), TtpTypeEnum.class).getMessage());
             joinVo.setCreateTime(dateFormat2(detail.getCreateTime(), 0,16));

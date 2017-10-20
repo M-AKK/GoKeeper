@@ -15,6 +15,8 @@ public class JoinVo {
 
     private String userIcon;
 
+    private String ttpId;
+
     private String ttpName;
 
     private String ttpType;

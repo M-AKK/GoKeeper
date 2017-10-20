@@ -19,6 +19,8 @@ public class GoVo {
     //发起人头像
     private String userIcon;
 
+    private String ttpId;
+
     private String ttpName;
 
     //ttp开始时间
@@ -31,6 +33,9 @@ public class GoVo {
 
     //ttp完成进度
     private Integer ttpSchedule;
+
+    //是否高于平均水平
+    private String highAverage;
 
     //ttp目标
     private String ttpTarget;

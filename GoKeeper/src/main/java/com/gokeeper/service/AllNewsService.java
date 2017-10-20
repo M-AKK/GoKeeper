@@ -1,9 +1,6 @@
 package com.gokeeper.service;
 
-import com.gokeeper.dataobject.AllNews;
-import com.gokeeper.dataobject.UserTtp;
-
-import java.util.List;
+import com.gokeeper.VO.news.AllNewsVo;
 
 /**
  * Created by Akk_Mac
@@ -12,11 +9,11 @@ import java.util.List;
 public interface AllNewsService {
 
     /**
-     * 根据用户id获取此用户拥有的所有消息
+     * 查找所有非隐藏消息
      * @param userId
      * @return
      */
-    List<AllNews> findAllByUserId(String userId);
+    AllNewsVo findAllOpenMsg(String userId, Integer hidden);
 
 
 }

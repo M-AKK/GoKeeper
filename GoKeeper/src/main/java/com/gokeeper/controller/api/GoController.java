@@ -33,7 +33,6 @@ public class GoController {
     @Autowired
     private GoService goService;
 
-
     /**
      * 获取Go(我的)界面默认list，主要展示自己参与的所有ttp
      * @param currentDate 查询当天其他用户记录用
@@ -53,4 +52,6 @@ public class GoController {
         List<GoVo> goVoList = goService.getmyttplist(userId, currentDate);
         return ResultVOUtil.success(goVoList);
     }
+
+
 }
