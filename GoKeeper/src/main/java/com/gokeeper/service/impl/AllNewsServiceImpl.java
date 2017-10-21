@@ -2,11 +2,15 @@ package com.gokeeper.service.impl;
 
 import com.gokeeper.VO.news.AllNewsVo;
 import com.gokeeper.VO.news.SystemNewsVo;
+import com.gokeeper.dataobject.InviteNews;
 import com.gokeeper.dataobject.SystemNews;
+import com.gokeeper.dataobject.TtpNews;
 import com.gokeeper.repository.InviteNewsRepository;
 import com.gokeeper.repository.SystemNewsRspository;
 import com.gokeeper.repository.TtpNewsRepository;
 import com.gokeeper.service.AllNewsService;
+import com.gokeeper.utils.Converter.NewsBeanZNewsDtoConverter;
+import com.gokeeper.utils.Converter.NewsDtoZNewsVoConverter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -45,25 +49,13 @@ public class AllNewsServiceImpl implements AllNewsService {
         AllNewsVo allNewsVo = new AllNewsVo();
         //1.转化系统消息到Vo对象
         List<SystemNews> systemNewsList = systemNewsRspository.findAllByUserIdAndHiddenOrderByUpdateTimeDesc(userId, hidden);
-        List<SystemNewsVo> systemNewsVoList = new ArrayList<>();
-        for(SystemNews systemNews : systemNewsList){
-            SystemNewsVo systemNewsVo = new SystemNewsVo();
-            systemNewsVo.setId(systemNews.getId());
-            systemNews.setUsername(systemNews.getUsername());
-            systemNews.setUserIcon(systemNews.getUserIcon());
-            systemNewsVo.setNewstype(systemNews.getNewstype());
-            systemNewsVo.setNewsname(systemNews.getNewsname());
-            systemNewsVo.setNewsstatus(systemNews.getNewsstatus());
-            systemNewsVo.setPreviewText(systemNews.getPreviewText());
-            systemNewsVo.setText(systemNews.getText());
-            systemNewsVo.setUpdateTime(dateFormat2(systemNews.getUpdateTime(), 0,16));
-            systemNews.setWeight(systemNews.getWeight());
-
-            systemNewsVoList.add(systemNewsVo);
-            allNewsVo.setSystemNewsList(systemNewsVoList);
-        }
+        List<TtpNews> ttpNewsList = ttpNewsRepository.findAllByUserIdAndHiddenOrderByUpdateTimeDesc(userId, hidden);
+        List<InviteNews> inviteNewsList = inviteNewsRepository.findAllByUserIdAndHiddenOrderByUpdateTimeDesc(userId, hidden);
         //2.转化ttp消息到Vo
         //3.转化邀请消息到对象
+        allNewsVo.setSystemNewsList(NewsDtoZNewsVoConverter.SystemNewsDtoZVoconvert(NewsBeanZNewsDtoConverter.SystemNewsZDtoconvert(systemNewsList)));
+        allNewsVo.setTtpNewsList(NewsDtoZNewsVoConverter.TtpNewsDtoZVoconvert(NewsBeanZNewsDtoConverter.TtpNewsZDtoconvert(ttpNewsList)));
+        allNewsVo.setInviteNewsList(NewsDtoZNewsVoConverter.InviteNewsDtoZVoconvert(NewsBeanZNewsDtoConverter.InviteNewsZDtoconvert(inviteNewsList)));
 
         return allNewsVo;
     }

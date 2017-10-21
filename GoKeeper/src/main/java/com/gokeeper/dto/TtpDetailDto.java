@@ -7,6 +7,7 @@ import com.gokeeper.dataobject.TtpDetail;
  * Created by Akk_Mac
  * Date: 2017/10/1 21:18
  */
-
 public class TtpDetailDto extends TtpDetail{
+
+
 }

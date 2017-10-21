@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
@@ -29,12 +30,12 @@ public class MessageController {
     private AllNewsService allNewsService;
 
     /**
-     * 主要在用户登录后用来显示需要显示的信息，默认显示所有信息，还需要改进
+     * 主要在用户登录后用来显示需要显示的信息，根据传值来判断显示
      * @param request
      * @return
      */
     @GetMapping(value = "/list")
-    public ResultVO list(HttpServletRequest request){
+    public ResultVO list(HttpServletRequest request, @RequestParam("hidden") Integer hidden){
 
         //1.首先根据session获取userId
         HttpSession session = request.getSession();
@@ -44,10 +45,8 @@ public class MessageController {
             throw new TTpException(ResultEnum.USER_ERROR);
         }
 
-        AllNewsVo allNewsVo = allNewsService.findAllByUserId(userId);
+        AllNewsVo allNewsVo = allNewsService.findAllOpenMsg(userId, hidden);
         return ResultVOUtil.success(allNewsVo);
     }
-
-    
 
 }

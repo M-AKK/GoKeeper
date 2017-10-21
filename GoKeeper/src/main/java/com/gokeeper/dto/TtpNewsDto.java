@@ -1,14 +1,16 @@
-package com.gokeeper.VO.news;
+package com.gokeeper.dto;
 
 import lombok.Data;
 
 import java.math.BigDecimal;
+import java.util.Date;
+
 /**
  * Created by Akk_Mac
- * Date: 2017/10/18 21:26
+ * Date: 2017/10/21 11:38
  */
 @Data
-public class TtpNewsVo {
+public class TtpNewsDto {
 
     private String id;
 
@@ -27,7 +29,7 @@ public class TtpNewsVo {
     private Integer newsstatus;
 
     //更新时间
-    private String updateTime;
+    private Date updateTime;
 
     private Integer weight;
 
