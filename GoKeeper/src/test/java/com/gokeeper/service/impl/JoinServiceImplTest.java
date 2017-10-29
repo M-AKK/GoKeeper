@@ -1,8 +1,7 @@
 package com.gokeeper.service.impl;
 
-import com.gokeeper.VO.JoinVo;
+import com.gokeeper.vo.JoinVo;
 import com.gokeeper.dataobject.UserTtp;
-import com.gokeeper.service.JoinService;
 import com.gokeeper.utils.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
@@ -13,8 +12,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -33,7 +30,7 @@ public class JoinServiceImplTest {
 
     @Test
     public void attend() throws Exception {
-        UserTtp result = joinService.attend("1110003","1507010749645346189");
+        UserTtp result = joinService.attend("1110001","1507010749645346189");
         log.info("【所有公开的ttp】result={}", JsonUtil.toJson(result));
         Assert.assertNotNull(result);
     }

@@ -16,9 +16,8 @@ import org.springframework.web.socket.server.HandshakeInterceptor;
 
 
 /**
- *
  * @ClassName: WebSocketConfig
- * @Description: websocket配置类
+ * @Description: websocket配置类,相当于websocket的controller
  * @author cheng
  * @date 2017年9月26日 上午10:45:45
  */

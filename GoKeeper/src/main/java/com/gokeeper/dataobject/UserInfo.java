@@ -1,9 +1,11 @@
 package com.gokeeper.dataobject;
 
 import lombok.Data;
+import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.Date;
 
 
 /**映射数据库的实体表
@@ -13,6 +15,7 @@ import javax.persistence.Id;
  */
 @Entity
 @Data
+@DynamicUpdate
 public class UserInfo {
 
     @Id
@@ -44,5 +47,11 @@ public class UserInfo {
 
     //头像
     private String userIcon;
+
+    //创建时间
+    private Date createTime;
+
+    //更新时间
+    private Date updateTime;
 
 }

@@ -42,11 +42,9 @@ public class InviteNews {
     private Integer hidden;
 
     //预览消息
-    private String preview_text;
+    private String previewText;
 
     private String ttpId;//此邀请ttp的Id
-
-    private String payUrl;//支付页面的直接跳转
 
     //更新时间
     private Date updateTime;

@@ -13,10 +13,6 @@ import java.math.BigDecimal;
 @Data
 public class TtpForm {
 
-    //token验证
-    @NotEmpty(message = "token必填")
-    private String token;
-
     //ttp名称
     @NotEmpty(message = "活动名称必填")
     private String ttpName;

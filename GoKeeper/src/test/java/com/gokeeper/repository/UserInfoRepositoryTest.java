@@ -1,6 +1,8 @@
 package com.gokeeper.repository;
 
 import com.gokeeper.dataobject.UserInfo;
+import com.gokeeper.utils.JsonUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,6 +14,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Slf4j
 public class UserInfoRepositoryTest {
 
     @Autowired
@@ -38,7 +41,14 @@ public class UserInfoRepositoryTest {
 
     @Test
     public void findByUsername() throws Exception {
-        UserInfo result = repository.findByUsername("admin");
+        UserInfo result = repository.findByUsername("akk");
+        Assert.assertNotNull(result);
+    }
+
+    @Test
+    public void findByPhonenumber() throws Exception {
+        UserInfo result = repository.findByPhonenumber("12345678910");
+        log.info("【用户信息】result={}", JsonUtil.toJson(result));
         Assert.assertNotNull(result);
     }
 

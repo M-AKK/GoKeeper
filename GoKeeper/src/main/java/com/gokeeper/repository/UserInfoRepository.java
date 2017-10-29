@@ -5,14 +5,29 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  * 用户登录Dao
- * Created by Akk_Mac
- * Date: 2017/9/28 23:12
+ * @author: Created by Akk_Mac
+ * @Date: 2017/9/28 23:12
  */
 public interface UserInfoRepository extends JpaRepository<UserInfo, String> {
 
-    //按用户名查找
+    /**
+     * 按用户名查找
+     * @param username
+     * @return
+     */
     UserInfo findByUsername(String username);
 
-    //按userId查找
+    /**
+     * 按userId查找
+     * @param userId
+     * @return
+     */
     UserInfo findByUserId(String userId);
+
+    /**
+     * 按手机号码查找
+     * @param phonenumber
+     * @return
+     */
+    UserInfo findByPhonenumber(String phonenumber);
 }

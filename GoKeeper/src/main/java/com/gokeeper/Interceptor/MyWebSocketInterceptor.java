@@ -2,12 +2,15 @@ package com.gokeeper.Interceptor;
 
 import java.util.Map;
 
+import com.gokeeper.dataobject.UserInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.http.server.ServletServerHttpRequest;
 import org.springframework.web.socket.WebSocketHandler;
 import org.springframework.web.socket.server.HandshakeInterceptor;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * 获取用户的sessio信息，存到map里面
@@ -28,9 +31,16 @@ public class MyWebSocketInterceptor implements HandshakeInterceptor {
     public boolean beforeHandshake(ServerHttpRequest request, ServerHttpResponse response, WebSocketHandler wsHandler,
                                    Map<String, Object> attributes) throws Exception {
 
-        log.info("xxx用户建立连接。。。");
+
         if (request instanceof ServletServerHttpRequest) {
-            String userId = ((ServletServerHttpRequest) request).getServletRequest().getParameter("userId");
+            ServletServerHttpRequest servletRequest  = (ServletServerHttpRequest) request;
+            HttpServletRequest httpRequest = servletRequest.getServletRequest();
+            //因为这里不能通过HttpSession获取到session的信息，所以通过前端的id来输入到weboscket的session中
+            //所以每个用户登陆的时候还是需要传递id，就是需要websocket的页面都要传一个userId
+           /* UserInfo userInfo = (UserInfo) httpRequest.getAttribute("userInfo");
+            String userId = userInfo.getUserId();*/
+            String userId = httpRequest.getParameter("userId");
+            log.info(userId + "用户建立连接。。。");
             attributes.put("userId", userId);
             log.info("用户唯一标识:" + userId);
         }

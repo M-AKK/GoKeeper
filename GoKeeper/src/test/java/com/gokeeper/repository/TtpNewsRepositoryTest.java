@@ -11,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -27,7 +28,8 @@ public class TtpNewsRepositoryTest {
     @Test
     public void save() throws Exception{
         TtpNews ttpNews = new TtpNews();
-        ttpNews.setId("abc1234");
+        ttpNews.setId("abc123455");
+        ttpNews.setTtpId("123123");
         ttpNews.setUserId("111001");
         ttpNews.setNewstype(2);
         ttpNews.setUsername("akk");
@@ -35,6 +37,8 @@ public class TtpNewsRepositoryTest {
         ttpNews.setNewsname("测试的系统消息");
         ttpNews.setNewsstatus(0);//未读消息
         ttpNews.setHidden(0);
+        ttpNews.setStartTime(new Date());
+        ttpNews.setFinishTime(new Date());
         ttpNews.setIfFinish(0);
         ttpNews.setFinishnums(0);
         ttpNews.setNofinishnums(0);

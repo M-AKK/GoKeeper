@@ -21,7 +21,7 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 @Slf4j
 public class WebSocketPushHandler extends TextWebSocketHandler {
 
-    private static final List<WebSocketSession> userList = new ArrayList<>();
+    private static final List<WebSocketSession> sessionsuserList = new ArrayList<>();
 
     /**
      * 用户进入系统监听
@@ -33,7 +33,7 @@ public class WebSocketPushHandler extends TextWebSocketHandler {
         for (String key : map.keySet()) {
             log.info("key:" + key + " and value:" + map.get(key));
         }
-        userList.add(session);
+        sessionsuserList.add(session);
     }
 
     /**
@@ -41,7 +41,11 @@ public class WebSocketPushHandler extends TextWebSocketHandler {
      */
     @Override
     protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
-        log.info("系统处理xxx用户的请求信息。。。");
+        Map<String, Object> map = session.getAttributes();
+        for (String key : map.keySet()) {
+            log.info("系统处理"+ map.get(key) +"用户的请求信息。。。");
+        }
+
     }
 
     /**
@@ -53,7 +57,7 @@ public class WebSocketPushHandler extends TextWebSocketHandler {
             session.close();
         }
         Map<String, Object> map = session.getAttributes();
-        userList.remove(session);
+        sessionsuserList.remove(session);
         log.info(map.values()+"用户退出系统。。。");
     }
 
@@ -61,8 +65,8 @@ public class WebSocketPushHandler extends TextWebSocketHandler {
      * 自定义函数
      * 给所有的在线用户发送消息
      */
-    public void sendMessagesToUsers(TextMessage message) {
-        for (WebSocketSession user : userList) {
+    public static void sendMessagesToUsers(TextMessage message) {
+        for (WebSocketSession user : sessionsuserList) {
             try {
                 // isOpen()在线就发送
                 if (user.isOpen()) {
@@ -80,12 +84,12 @@ public class WebSocketPushHandler extends TextWebSocketHandler {
      * 发送消息给指定的在线用户
      */
     public static void sendMessageToUser(String userId, TextMessage message) {
-        for (WebSocketSession user : userList) {
-            if (user.getAttributes().get("userId").equals(userId)) {
+        for (WebSocketSession usersession : sessionsuserList) {
+            if (usersession.getAttributes().get("userId").equals(userId)) {
                 try {
                     // isOpen()在线就发送
-                    if (user.isOpen()) {
-                        user.sendMessage(message);
+                    if (usersession.isOpen()) {
+                        usersession.sendMessage(message);
                     }
                 } catch (Exception e) {
                     e.printStackTrace();

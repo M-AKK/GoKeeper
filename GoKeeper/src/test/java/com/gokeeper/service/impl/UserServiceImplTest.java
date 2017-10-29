@@ -1,6 +1,6 @@
 package com.gokeeper.service.impl;
 
-import com.gokeeper.vo.news.AllNewsVo;
+import com.gokeeper.vo.UserInfoVo;
 import com.gokeeper.utils.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
@@ -13,16 +13,17 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Slf4j
-public class AllNewsServiceImplTest {
+public class UserServiceImplTest {
 
     @Autowired
-    private AllNewsServiceImpl allNewsService;
+    private UserServiceImpl userService;
 
     @Test
-    public void findAllOpenMsg() throws Exception {
-        AllNewsVo result = allNewsService.findAllOpenMsg("111001", 0);
-        log.info("【所有公开的消息】result={}", JsonUtil.toJson(result));
+    public void getUserByphone() throws Exception {
+        UserInfoVo result = userService.getUserByphone("12345678910");
+        log.info("【根据手机号查找用户】result={}", JsonUtil.toJson(result));
         Assert.assertNotNull(result);
+
     }
 
 }

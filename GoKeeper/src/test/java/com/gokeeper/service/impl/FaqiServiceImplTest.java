@@ -26,7 +26,7 @@ public class FaqiServiceImplTest {
         TtpDetailDto detailDto = new TtpDetailDto();
 
         detailDto.setUserId(USER_ID);
-        detailDto.setTtpName("测试ttp2");
+        detailDto.setTtpName("测试消息模板创建");
         detailDto.setTtpTarget(new Double(1));//一天一次
         detailDto.setLeaveNotesNums(5);
         detailDto.setAddress("北京路");
@@ -36,8 +36,8 @@ public class FaqiServiceImplTest {
         detailDto.setIfOpen(0);
         detailDto.setDeductionRation(20);
         detailDto.setTtpType(1);
-        detailDto.setStartTime(DateUtil.StringToDate("2017-10-1 21:08"));
-        detailDto.setFinishTime(DateUtil.StringToDate("2017-10-8 21:08"));
+        detailDto.setStartTime(DateUtil.StringToDate("2017-10-29 21:08"));
+        detailDto.setFinishTime(DateUtil.StringToDate("2017-11-8 21:08"));
 
         TtpDetail result = goService.create(detailDto);
         Assert.assertNotNull(result);

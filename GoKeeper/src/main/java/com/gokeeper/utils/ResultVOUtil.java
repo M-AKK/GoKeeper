@@ -1,6 +1,6 @@
 package com.gokeeper.utils;
 
-import com.gokeeper.VO.ResultVO;
+import com.gokeeper.vo.ResultVO;
 
 /**
  * 返回类型包装

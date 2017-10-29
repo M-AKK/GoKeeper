@@ -1,4 +1,4 @@
-package com.gokeeper.VO.news;
+package com.gokeeper.vo.news;
 
 import lombok.Data;
 
@@ -27,7 +27,7 @@ public class InviteNewsVo {
     private Integer newsstatus;
 
     //预览消息
-    private String preview_text;
+    private String previewText;
 
     private String ttpId;
 

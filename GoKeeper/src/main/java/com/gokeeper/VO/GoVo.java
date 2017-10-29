@@ -1,4 +1,4 @@
-package com.gokeeper.VO;
+package com.gokeeper.vo;
 
 import lombok.Data;
 
@@ -22,6 +22,9 @@ public class GoVo {
     private String ttpId;
 
     private String ttpName;
+
+    //ttp状态，准备开始、进行中、完结
+    private String ttpStatus;
 
     //ttp开始时间
     private String startTime;
@@ -66,4 +69,7 @@ public class GoVo {
 
     //同一个ttp其他人当天未完成记录表
     private List<OthersRecordVo> othersnofinishList;
+
+    //是否阅读状态，默认为已读，只有在是加入后发送为websocket模板时才改变属性值为0
+    private Integer newsStatus = 1;
 }

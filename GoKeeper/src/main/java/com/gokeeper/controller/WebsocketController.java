@@ -1,10 +1,17 @@
 package com.gokeeper.controller;
 
+import com.gokeeper.dataobject.InviteNews;
+import com.gokeeper.dataobject.SystemNews;
+import com.gokeeper.dataobject.UserInfo;
 import com.gokeeper.handler.WebSocketPushHandler;
+import com.gokeeper.service.WebSocketService;
+import com.gokeeper.utils.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.socket.TextMessage;
 
@@ -13,70 +20,71 @@ import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 /**
- * Created by Akk_Mac
- * Date: 2017/10/4 15:07
+ * 发送模板消息类
+ * @author Created by Akk_Mac
+ * @Date: 2017/10/4 15:07
  */
 @Controller
+@RequestMapping("/websocket")
 @Slf4j
 public class WebsocketController {
 
+    @Autowired
+    private WebSocketService webSocketService;
 
-    @RequestMapping("/websocket/login")
-    public ModelAndView login(HttpServletRequest request, Map<String, String> map) throws Exception {
+    //发送系统消息接口,留给后台管理使用，所以也是通过session获取userId
+    @PostMapping(value = "/systemnews")
+    public void sandSystemNews(@RequestParam("previewText") String previewText,
+                               @RequestParam("text") String text,
+                               HttpServletRequest request) {
+        //1.生成一条系统消息并入库
+        UserInfo userInfo = (UserInfo) request.getSession().getAttribute("userInfo");
+        SystemNews systemNews = webSocketService.createSystemNews(userInfo, previewText, text);
+
+        //2.调用websocket方法，发送消息
+        TextMessage t = new TextMessage(JsonUtil.toJson(systemNews));
+        WebSocketPushHandler.sendMessagesToUsers(t);
+    }
+
+    @PostMapping(value = "/go/invite")
+    public void sendInviteNews(@RequestParam("ttpId") String ttpId,
+                               @RequestParam("userId") String calluserId,
+                               //@RequestParam("faqiuserId") String faqiuserId,
+                               HttpServletRequest request){
+        //1.产生一条新消息并存入数据库
+        //1-1.根据session获取发起人userId
+        UserInfo userInfo = (UserInfo) request.getSession().getAttribute("userInfo");
+        InviteNews inviteNews = webSocketService.createInviteNews(ttpId, userInfo.getUserId());
+
+        //2.调用websocket方法，发送消息
+        TextMessage t = new TextMessage(JsonUtil.toJson(inviteNews));
+        WebSocketPushHandler.sendMessageToUser(calluserId, t);
+    }
+
+    @RequestMapping("/login")
+    public ModelAndView login(HttpServletRequest request, Map<String, Object> map) throws Exception {
         String username = request.getParameter("name");
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUsername("akk");
+        userInfo.setUserId("1110001");
         HttpSession session = request.getSession();
-        session.setAttribute("username", username);
+        session.setAttribute("userInfo", userInfo);
         //SocketSessionRegistry.registerSessionId(username, session.getId());
         //System.out.println("sessionid+1="+session.getId());
         //response.sendRedirect("/quicksand/jsp/websocket.jsp");
-        map.put("username", username);
+        map.put("userInfo", userInfo);
         return new ModelAndView("testwebsocket/tomweb", map);
     }
 
-    /*@RequestMapping("/websocket/send")
-    @ResponseBody
-    public String send(ServletRequest request) {
-        HttpServletRequest servletRequest = (HttpServletRequest) request;
-        HttpSession session = servletRequest.getSession();
-        String username = (String) session.getAttribute("SESSION_USERNAME");
-        System.out.println("send方法中有"+username+"  "+"sessionid="+session.getId());
-
-        webSocket.sendMessageToUser(session.getId(), "sessionid可以成功！");
-        return null;
-    }*/
-    /*@Autowired
-    private SimpMessagingTemplate messagingTemplate;
-
-    @Autowired
-    private SimpUserRegistry userRegistry;
-
-    //客户端只要订阅了/topic/subscribeTest主题，调用这个方法即可
-    @RequestMapping("/websocket/send")
-    public void guangbo() {
-
-        messagingTemplate.convertAndSend("/topic/subscribeTest", new ServerMessage("服务器主动推的数据"));
-    }
-
-    @RequestMapping("/websocket/sendone")
-    public void templateTest1() {
-        log.info("当前在线人数:" + userRegistry.getUserCount());
-        int i = 1;
-        for (SimpUser user : userRegistry.getUsers()) {
-            log.info("用户" + i++ + "---" + user);
-        }
-        //发送消息给指定用户
-        messagingTemplate.convertAndSendToUser("akk", "/queue/message", new ServerMessage("服务器主动推的数据"));
-    }*/
-
-    @RequestMapping("/websocket/test")
+    @RequestMapping("/test")
     public void sendone(HttpServletRequest request) {
         HttpSession session = request.getSession(false);
-        String username = (String) session.getAttribute("username");
-        System.out.println(username);
+        UserInfo userInfo = (UserInfo) session.getAttribute("userInfo");
+        System.out.println(userInfo.getUsername());
 
         TextMessage t = new TextMessage("传统方法成功");
 
-        WebSocketPushHandler.sendMessageToUser(username, t);
+        WebSocketPushHandler.sendMessageToUser(userInfo.getUserId(), t);
     }
 
 }

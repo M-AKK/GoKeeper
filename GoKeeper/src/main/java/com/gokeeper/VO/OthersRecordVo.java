@@ -1,4 +1,4 @@
-package com.gokeeper.VO;
+package com.gokeeper.vo;
 
 import lombok.Data;
 

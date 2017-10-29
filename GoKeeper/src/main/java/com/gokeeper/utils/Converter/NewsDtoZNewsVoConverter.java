@@ -1,11 +1,8 @@
-package com.gokeeper.utils.Converter;
+package com.gokeeper.utils.converter;
 
-import com.gokeeper.VO.news.InviteNewsVo;
-import com.gokeeper.VO.news.SystemNewsVo;
-import com.gokeeper.VO.news.TtpNewsVo;
-import com.gokeeper.dataobject.InviteNews;
-import com.gokeeper.dataobject.SystemNews;
-import com.gokeeper.dataobject.TtpNews;
+import com.gokeeper.vo.news.InviteNewsVo;
+import com.gokeeper.vo.news.SystemNewsVo;
+import com.gokeeper.vo.news.TtpNewsVo;
 import com.gokeeper.dto.InviteNewsDto;
 import com.gokeeper.dto.SystemNewsDto;
 import com.gokeeper.dto.TtpNewsDto;
@@ -17,12 +14,16 @@ import java.util.stream.Collectors;
 
 /**
  * 把Dto转换为Vo对象，也就是转化一下updateTime属性
- * Created by Akk_Mac
- * Date: 2017/10/21 19:12
+ * @author Created by Akk_Mac
+ * @Date: 2017/10/21 19:12
  */
 public class NewsDtoZNewsVoConverter {
 
-    //系统Bean转Dto
+    /**
+     * 系统Dto转Vo
+     * @param c
+     * @return
+     */
     public static SystemNewsVo SystemNewsDtoZVoconvert(SystemNewsDto c){
         SystemNewsVo result = new SystemNewsVo();
         BeanUtils.copyProperties(c, result);
@@ -36,11 +37,17 @@ public class NewsDtoZNewsVoConverter {
         ).collect(Collectors.toList());
     }
 
-    //TTPNEWS Bean转Dto
+    /**
+     * TTPNEWS Dto转Vo
+     * @param c
+     * @return
+     */
     public static TtpNewsVo TtpNewsDtoZVoconvert(TtpNewsDto c){
         TtpNewsVo result = new TtpNewsVo();
         BeanUtils.copyProperties(c, result);
         result.setUpdateTime(DateUtil.dateFormat2(c.getUpdateTime(), 0, 16));
+        result.setStarttime(DateUtil.dateFormat2(c.getStartTime(), 0, 16));
+        result.setFinishtime(DateUtil.dateFormat2(c.getFinishTime(), 0, 16));
         return result;
     }
 
@@ -50,7 +57,11 @@ public class NewsDtoZNewsVoConverter {
         ).collect(Collectors.toList());
     }
 
-    //邀请消息Bean转Dto
+    /**
+     * 邀请消息Dto转Vo
+     * @param c
+     * @return
+     */
     public static InviteNewsVo InviteNewsDtoZVoconvert(InviteNewsDto c){
         InviteNewsVo result = new InviteNewsVo();
         BeanUtils.copyProperties(c, result);

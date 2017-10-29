@@ -1,4 +1,4 @@
-package com.gokeeper.utils.Converter;
+package com.gokeeper.utils.converter;
 
 import com.gokeeper.dataobject.InviteNews;
 import com.gokeeper.dataobject.SystemNews;
@@ -13,12 +13,16 @@ import java.util.stream.Collectors;
 
 /**
  * news实体类转化到Dto对象，过滤掉不需要的字段
- * Created by Akk_Mac
- * Date: 2017/10/21 18:39
+ * @author Created by Akk_Mac
+ * @Date: 2017/10/21 18:39
  */
 public class NewsBeanZNewsDtoConverter {
 
-    //系统Bean转Dto
+    /**
+     * 系统Bean转Dto
+     * @param c
+     * @return
+     */
     public static SystemNewsDto SystemNewsZDtoconvert(SystemNews c){
         SystemNewsDto systemNewsDto = new SystemNewsDto();
         BeanUtils.copyProperties(c, systemNewsDto);
@@ -31,7 +35,11 @@ public class NewsBeanZNewsDtoConverter {
         ).collect(Collectors.toList());
     }
 
-    //TTPNEWS Bean转Dto
+    /**
+     * TTPNEWS Bean转Dto
+     * @param c
+     * @return
+     */
     public static TtpNewsDto TtpNewsZDtoconvert(TtpNews c){
         TtpNewsDto ttpNewsDto = new TtpNewsDto();
         BeanUtils.copyProperties(c, ttpNewsDto);
@@ -44,7 +52,11 @@ public class NewsBeanZNewsDtoConverter {
         ).collect(Collectors.toList());
     }
 
-    //邀请消息Bean转Dto
+    /**
+     * 邀请消息Bean转Dto
+     * @param c
+     * @return
+     */
     public static InviteNewsDto InviteNewsZDtoconvert(InviteNews c){
         InviteNewsDto inviteNewsDto = new InviteNewsDto();
         BeanUtils.copyProperties(c, inviteNewsDto);

@@ -1,7 +1,7 @@
 package com.gokeeper.controller.api;
 
-import com.gokeeper.VO.news.AllNewsVo;
-import com.gokeeper.VO.ResultVO;
+import com.gokeeper.vo.news.AllNewsVo;
+import com.gokeeper.vo.ResultVO;
 import com.gokeeper.enums.ResultEnum;
 import com.gokeeper.exception.TTpException;
 import com.gokeeper.service.AllNewsService;
@@ -18,8 +18,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
- * Created by Akk_Mac
- * Date: 2017/10/13 18:23
+ * @author:Created by Akk_Mac
+ * @Date: 2017/10/13 18:23
  */
 @RestController
 @RequestMapping("/msg")

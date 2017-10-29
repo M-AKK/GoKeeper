@@ -1,7 +1,7 @@
 package com.gokeeper.controller.api;
 
-import com.gokeeper.VO.JoinVo;
-import com.gokeeper.VO.ResultVO;
+import com.gokeeper.vo.JoinVo;
+import com.gokeeper.vo.ResultVO;
 import com.gokeeper.enums.ResultEnum;
 import com.gokeeper.exception.TTpException;
 import com.gokeeper.service.JoinService;
@@ -17,8 +17,8 @@ import java.util.List;
 
 /**
  * 加入界面控制层
- * Created by Akk_Mac
- * Date: 2017/10/6 20:56
+ * @author Created by Akk_Mac
+ * @Date: 2017/10/6 20:56
  */
 @RestController
 @RequestMapping("/join")
@@ -48,7 +48,7 @@ public class JoinController {
         HttpSession session = request.getSession();
         String userId = (String) session.getAttribute("userId");
         if(StringUtils.isNullOrEmpty(userId)){
-            log.error("【查询我参与的所有ttp】userId为空");
+            log.error("【user查询】userId为空");
             throw new TTpException(ResultEnum.USER_ERROR);
         }
 

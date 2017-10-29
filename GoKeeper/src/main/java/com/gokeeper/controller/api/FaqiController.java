@@ -1,6 +1,7 @@
 package com.gokeeper.controller.api;
 
-import com.gokeeper.VO.ResultVO;
+import com.gokeeper.vo.ResultVO;
+import com.gokeeper.dataobject.UserInfo;
 import com.gokeeper.dto.TtpDetailDto;
 import com.gokeeper.enums.ResultEnum;
 import com.gokeeper.exception.TTpException;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
@@ -42,15 +44,15 @@ public class FaqiController {
     //创建一个ttp订单
     @PostMapping(value = "/create")
     public ResultVO creat(@Valid TtpForm ttpForm,
-                          BindingResult bindingResult) throws Exception{
+                          BindingResult bindingResult, HttpServletRequest request) throws Exception{
         if(bindingResult.hasErrors()){
             log.error("【创建订单】 参数不正确, ttpForm={}", ttpForm);
             throw new TTpException(ResultEnum.PARAM_ERROR.getCode(),
                     bindingResult.getFieldError().getDefaultMessage());
         }
         //根据token获取userId,获取不到会返回错误
-        String userId = userService.getUserId(ttpForm.getToken());
-        if(StringUtils.isEmpty(userId)) {
+        UserInfo user = (UserInfo) request.getSession().getAttribute("user");
+        if(StringUtils.isEmpty(user.getUserId())) {
             log.warn("【登录校验】Redis中查不到tokenValue");
             throw new TTpException(ResultEnum.TOKEN_MISS);
         }
@@ -61,7 +63,7 @@ public class FaqiController {
         //设置开始时间和结束时间
         detailDto.setStartTime(DateUtil.StringToDate(ttpForm.getStartTime()));
         detailDto.setFinishTime(DateUtil.StringToDate(ttpForm.getFinishTime()));
-        detailDto.setUserId(userId);
+        detailDto.setUserId(user.getUserId());
         TtpDetailDto ttpDetailDto = faqiService.create(detailDto);
 
         Map<String, String> map = new HashMap<>();

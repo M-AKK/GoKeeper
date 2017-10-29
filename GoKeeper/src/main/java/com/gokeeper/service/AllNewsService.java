@@ -1,6 +1,6 @@
 package com.gokeeper.service;
 
-import com.gokeeper.VO.news.AllNewsVo;
+import com.gokeeper.vo.news.AllNewsVo;
 
 /**
  * Created by Akk_Mac

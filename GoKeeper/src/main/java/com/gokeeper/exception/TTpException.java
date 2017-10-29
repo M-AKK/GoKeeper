@@ -5,8 +5,8 @@ import lombok.Getter;
 
 /**
  * 抛出异常类，最后由一个拦截器拦截返回给前端错误信息
- * Created by Akk_Mac
- * Date: 2017/10/1 21:05
+ * @author:Created by Akk_Mac
+ * @Date: 2017/10/1 21:05
  */
 @Getter
 public class TTpException extends RuntimeException {
@@ -18,7 +18,11 @@ public class TTpException extends RuntimeException {
         this.code = resultEnum.getCode();
     }
 
-    //而这个是需要自己去填写code的新的meg，不一定是枚举中的模糊的说法，可以把具体的错误信息信使出来
+    /**
+     * 而这个是需要自己去填写code的新的meg，不一定是枚举中的模糊的说法，可以把具体的错误信息信使出来,一般是系统异常
+     * @param code
+     * @param message
+     */
     public TTpException(Integer code, String message) {
         super(message);
         this.code = code;

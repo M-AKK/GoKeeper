@@ -45,7 +45,7 @@ public class SystemNewsRspositoryTest {
 
     @Test
     public void findAllByUserIdAndHiddenOrdeOrderByUpdateTimeDesc() throws Exception{
-        List<SystemNews> result = rspository.findAllByUserIdAndHiddenOrderByUpdateTimeDesc("111001", 0);
+        List<SystemNews> result = rspository.findAllByHiddenOrderByUpdateTimeDesc(0);
         log.info("【公开的系统消息ByuserId】result={}", JsonUtil.toJson(result));
         Assert.assertNotNull(result);
 

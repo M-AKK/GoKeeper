@@ -1,9 +1,8 @@
 package com.gokeeper.handler;
 
-import com.gokeeper.VO.ResultVO;
+import com.gokeeper.vo.ResultVO;
 import com.gokeeper.exception.TTpException;
 import com.gokeeper.utils.ResultVOUtil;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;

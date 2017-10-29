@@ -1,22 +1,19 @@
 package com.gokeeper.service.impl;
 
-import com.gokeeper.VO.JoinVo;
-import com.gokeeper.dataobject.TtpDetail;
-import com.gokeeper.dataobject.UserInfo;
-import com.gokeeper.dataobject.UserRecord;
-import com.gokeeper.dataobject.UserTtp;
+import com.gokeeper.dataobject.*;
+import com.gokeeper.handler.WebSocketPushHandler;
+import com.gokeeper.repository.*;
+import com.gokeeper.utils.JsonUtil;
+import com.gokeeper.vo.JoinVo;
 import com.gokeeper.enums.*;
 import com.gokeeper.exception.TTpException;
-import com.gokeeper.repository.TTpDetailRepository;
-import com.gokeeper.repository.UserInfoRepository;
-import com.gokeeper.repository.UserRecordRepository;
-import com.gokeeper.repository.UserTtpRepository;
 import com.gokeeper.service.JoinService;
 import com.gokeeper.utils.DateUtil;
 import com.gokeeper.utils.EnumUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.socket.TextMessage;
 
 import javax.transaction.Transactional;
 import java.math.BigDecimal;
@@ -29,8 +26,8 @@ import static com.gokeeper.utils.DateUtil.dateFormat2;
 
 /**
  * joinservice具体实现
- * Created by Akk_Mac
- * Date: 2017/10/7 09:45
+ * @author:Created by Akk_Mac
+ * @Date: 2017/10/7 09:45
  */
 @Service
 @Slf4j
@@ -47,6 +44,9 @@ public class JoinServiceImpl implements JoinService {
 
     @Autowired
     private UserRecordRepository userRecordRepository;
+
+    @Autowired
+    private TtpNewsRepository ttpNewsRepository;
 
     /**
      * 加入界面列表展示
@@ -71,7 +71,7 @@ public class JoinServiceImpl implements JoinService {
             joinVo.setCreateTime(dateFormat2(detail.getCreateTime(), 0,16));
             joinVo.setStartTime(dateFormat2(detail.getStartTime(), 0,16));
             joinVo.setFinishTime(dateFormat2(detail.getFinishTime(), 0, 16));
-            joinVo.setTtpTarget(TtpTargetEnum.runenum(detail.getTtpTarget()));
+            joinVo.setTtpTarget(TtpTargetTemplate.runenum(detail.getTtpTarget()));
             joinVo.setJoinMoney(detail.getJoinMoney());
             joinVo.setAllMoney(detail.getAllMoney());
             //设置当前参与总人数
@@ -90,20 +90,32 @@ public class JoinServiceImpl implements JoinService {
      * @param ttpId
      * @return
      */
+    @Override
     @Transactional//事务管理，一旦失败就回滚
     public UserTtp attend(String userId, String ttpId){
+        //1.判断此用户是否重复加入此ttp
+        List<UserTtp> userTtpList = userTtpRepository.findByUserId(userId);
+        for(UserTtp userTtp : userTtpList) {
+            if(ttpId.equals(userTtp.getTtpId())){
+                throw new TTpException(ResultEnum.USER_JOIN_REPEAT);
+            }
+        }
+
         //设置起始每日奖金总额为0
         BigDecimal zeroBouns = new BigDecimal(BigInteger.ZERO);
 
-        //生成user-ttp关联表信息
+        //2.生成user-ttp关联表信息
         UserTtp userTtp = new UserTtp();
-        userTtp.setUserTtpId(ttpId+userId);//根据ttpid和userid生成
+        //根据ttpid和userid生成
+        userTtp.setUserTtpId(ttpId+userId);
         userTtp.setUserId(userId);
         userTtp.setTtpId(ttpId);
         userTtp.setUserDayBouns(zeroBouns);
-        userTtp.setUserTotalBouns(zeroBouns);//用户个人得到的总奖金，初始也为0
+        //用户个人得到的总奖金，初始也为0
+        userTtp.setUserTotalBouns(zeroBouns);
         userTtp.setPayStatus(0);
-        userTtp.setTtpSchedule(0);//设置开始进度为0
+        //设置开始进度为0
+        userTtp.setTtpSchedule(0);
         userTtpRepository.save(userTtp);
         //查找ttpDetail信息
         TtpDetail ttpDetail = tTpDetailRepository.findByTtpId(ttpId);
@@ -123,6 +135,38 @@ public class JoinServiceImpl implements JoinService {
             log.error("【日期转换出问题】");
             throw new TTpException(ResultEnum.CREATE_ERROR);
         }
+
+        /**TODO 消息推送2：
+         当用户点击加入此ttp按钮后点击下一步时到达支付页面之前，后台会有个消息推送为:
+         发送ttp消息模板：你成功加入xxttp，请在活动时间(time)开始前缴纳启动金：支付链接
+         用户只有在创建后没有支付的情况下看到这条消息，如果用户继续支付成功就会看到不一样的消息
+         接下来要写支付成功后修改对应ttp消息的方法
+         */
+        //1.创建ttp消息模板
+        TtpNews ttpNews = new TtpNews();
+        //ttpNews的id就是user-ttp的id，一条用户ttp对应一条模板
+        ttpNews.setId(ttpId+userId);
+        ttpNews.setTtpId(ttpId);
+        ttpNews.setUserId(userId);
+        ttpNews.setNewstype(NewsStatusEnum.NO_READ.getCode());
+        UserInfo userInfo = userInfoRepository.findByUserId(userId);
+        ttpNews.setUsername(userInfo.getUsername());
+        ttpNews.setUserIcon(userInfo.getUserIcon());
+        ttpNews.setNewsname(ttpDetail.getTtpName());
+        ttpNews.setNewsstatus(NewsStatusEnum.NO_READ.getCode());
+        ttpNews.setStartTime(ttpDetail.getStartTime());
+        ttpNews.setFinishTime(ttpDetail.getFinishTime());
+        ttpNews.setPreviewText(NewsTemplate.joinTtpNews(ttpNews.getNewsname(), DateUtil.dateFormat2(ttpNews.getStartTime(), 0 ,16)));
+        //设置为公开
+        ttpNews.setHidden(1);
+        //权重设置为1
+        ttpNews.setWeight(1);
+        //新的ttpnews入库
+        ttpNewsRepository.save(ttpNews);
+
+        //2.调用websocket方法，发送消息，还不知道需不需要，因为不知道如果用户在别的页面这个消息会不会刷新，如果不会就不用发其实
+        TextMessage t = new TextMessage(JsonUtil.toJson(ttpNews));
+        WebSocketPushHandler.sendMessageToUser(ttpNews.getUserId(), t);
 
         return userTtp;
     }

@@ -8,7 +8,7 @@ Welcome<br/><input id="text" type="text"/>
 <button onclick="send()">发送消息</button>
 <hr/>
 <button onclick="closeWebSocket()">关闭WebSocket连接</button>
-<input id="hide" type="text" style="display:none" value=${username} />
+<input id="hide" type="text" style="display:none" value=${userInfo.userId} />
 <hr/>
 <div id="message"></div>
 </body>

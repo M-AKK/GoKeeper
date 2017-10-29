@@ -31,9 +31,9 @@ public class inviteNewsRepositoryTest {
         inviteNews.setNewsname("邀请消息2号");
         inviteNews.setNewsstatus(0);
         inviteNews.setHidden(0);
-        inviteNews.setPreview_text("这是邀请信息测试");
+        inviteNews.setPreviewText("这是邀请信息测试");
         inviteNews.setTtpId("1507010749645346189");
-        inviteNews.setPayUrl("/1507010749645346189");//支付页面url的部分，还需改进
+        //inviteNews.setPayUrl("/1507010749645346189");//支付页面url的部分，还需改进
         inviteNews.setWeight(1);
         InviteNews result = repository.save(inviteNews);
         log.info("【邀请消息】result={}", JsonUtil.toJson(result));

@@ -1,4 +1,4 @@
-package com.gokeeper.VO.news;
+package com.gokeeper.vo.news;
 
 import lombok.Data;
 

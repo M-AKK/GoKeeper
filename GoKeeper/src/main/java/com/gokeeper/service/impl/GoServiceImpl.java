@@ -1,8 +1,8 @@
 package com.gokeeper.service.impl;
 
-import com.gokeeper.VO.GoVo;
-import com.gokeeper.VO.OthersRecordVo;
-import com.gokeeper.VO.UserRecordVo;
+import com.gokeeper.vo.GoVo;
+import com.gokeeper.vo.OthersRecordVo;
+import com.gokeeper.vo.UserRecordVo;
 import com.gokeeper.dataobject.TtpDetail;
 import com.gokeeper.dataobject.UserInfo;
 import com.gokeeper.dataobject.UserRecord;
@@ -26,8 +26,8 @@ import static com.gokeeper.utils.DateUtil.dateFormat2;
 
 /**
  * Go（我的）界面具体操作
- * Created by Akk_Mac
- * Date: 2017/10/6 09:07
+ * @author Created by Akk_Mac
+ * @Date: 2017/10/6 09:07
  */
 @Service
 @Slf4j
@@ -67,11 +67,12 @@ public class GoServiceImpl implements GoService{
             TtpDetail ttpDetail = tTpDetailRepository.findByTtpId(userTtp.getTtpId());
             goVo.setTtpId(ttpDetail.getTtpId());
             goVo.setTtpName(ttpDetail.getTtpName());
+            goVo.setTtpStatus(EnumUtil.getByCode(ttpDetail.getTtpStatus(), TtpStatusEnum.class).getMessage());
             //返回时间需处理下格式,转换成"2017/10/01 19:00"的字符串
             goVo.setStartTime(dateFormat2(ttpDetail.getStartTime(), 0,16));
             goVo.setFinishTime(dateFormat2(ttpDetail.getFinishTime(), 0,16));
             //输入目标数，返回对应结果
-            goVo.setTtpTarget(TtpTargetEnum.runenum(ttpDetail.getTtpTarget()));
+            goVo.setTtpTarget(TtpTargetTemplate.runenum(ttpDetail.getTtpTarget()));
             goVo.setJoinMoney(ttpDetail.getJoinMoney());
             goVo.setLeaveNotesNums(ttpDetail.getLeaveNotesNums());
             goVo.setIfQuit(EnumUtil.getByCode(ttpDetail.getIfQuit(), IfQuitEnum.class).getMessage());
@@ -111,13 +112,13 @@ public class GoServiceImpl implements GoService{
                         throw new TTpException(ResultEnum.USER_ERROR);
                     }
                     //再根据userTtpId信息查找到此用户对应的ttp的所有完成记录，形参为当天日期，查询当天完成记录情况
-                    if(userRecord.getDayStatus() == DayStatusEnum.FINIS.getCode()){
+                    if(userRecord.getDayStatus().equals(DayStatusEnum.FINIS.getCode())){
                         //说明完成了，设置finishTime录入list
                         othersRecordVo.setDayStatus(dateFormat2(
                                 (userRecord.getUpdateTime()),
                                 11, 16));
                         othersRecordVoList.add(othersRecordVo);
-                    } else if(userRecord.getDayStatus() == DayStatusEnum.QINGJIA.getCode()) {
+                    } else if(userRecord.getDayStatus().equals(DayStatusEnum.QINGJIA.getCode())) {
                         //请假，设置finishTime为具体信息
                         othersRecordVo.setDayStatus(EnumUtil.getByCode(DayStatusEnum.QINGJIA.getCode(), DayStatusEnum.class).getMessage());
                         othersRecordVoList1.add(othersRecordVo);
