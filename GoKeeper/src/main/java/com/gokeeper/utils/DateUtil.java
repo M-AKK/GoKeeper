@@ -4,20 +4,24 @@ import java.text.*;
 import java.util.*;
 
 /**
- * Created by Akk_Mac
- * Date: 2017/10/2 12:48
+ * @author: Created by Akk_Mac
+ * @Date: 2017/10/2 12:48
  */
 
 public class DateUtil {
 
     public static void main(String[] args)throws Exception{
-        List<String> result = getBetweenDates(DateUtil.StringToDate("2017-10-1 21:08"),DateUtil.StringToDate("2017-10-8 21:08"));
+        /*List<String> result = getBetweenDates(DateUtil.StringToDate("2017-10-1 21:08"),DateUtil.StringToDate("2017-10-8 21:08"));
         for(int i=0; i<result.size(); i++){
             System.out.println(result.get(i));
         }
 
         String str = dateFormat2(DateUtil.StringToDate("2017-10-1 21:08"), 11,16);//16或者10
-        System.out.println(str);
+        System.out.println(str);*/
+
+        Date currentTime = new Date();
+        String s = DateUtil.dateFormat2(currentTime, 0, 10);
+        System.out.println(s);
     }
 
     /**
@@ -46,31 +50,31 @@ public class DateUtil {
     }
 
     /**
-     * 将"2015-08-31 21:08"型字符串转化为Date
+     * 将"2015/08/31 21:08"型字符串转化为Date
      * @param str
      * @return
      * @throws ParseException
      */
     public static Date StringToDate(String str) throws ParseException{
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd HH:mm");
         Date date = (Date) formatter.parse(str);
         return date;
     }
 
     /**
-     * 将"2015-08-31"型字符串转化为Date
+     * 将"2015/08/31"型字符串转化为Date
      * @param str
      * @return
      * @throws ParseException
      */
     public static Date StringToDate1(String str) throws ParseException{
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd");
         Date date = (Date) formatter.parse(str);
         return date;
     }
 
     /**
-     * 获取两个日期之间的所有日期（yyyy-MM-dd）
+     * 获取两个日期之间的所有日期（yyyy/MM/dd）
      * @Description 传入date，传出string
      * @param begin
      * @param end
@@ -80,7 +84,7 @@ public class DateUtil {
      */
     public static List<String> getBetweenDates(Date begin, Date end) throws ParseException{
         List<String> result = new ArrayList<>();
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.CHINA);
+        SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd", Locale.CHINA);
         Calendar tempStart = Calendar.getInstance();
         tempStart.setTime(begin);
         while(begin.getTime()<=end.getTime()){

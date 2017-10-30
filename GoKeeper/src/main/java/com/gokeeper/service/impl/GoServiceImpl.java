@@ -26,7 +26,7 @@ import static com.gokeeper.utils.DateUtil.dateFormat2;
 
 /**
  * Go（我的）界面具体操作
- * @author Created by Akk_Mac
+ * @author: Created by Akk_Mac
  * @Date: 2017/10/6 09:07
  */
 @Service
@@ -106,14 +106,14 @@ public class GoServiceImpl implements GoService{
                 if(userInfo != null){
                     //设置username
                     othersRecordVo.setUsername(userInfo.getUsername());
-                    UserRecord userRecord = userRecordRepository.getfinishList(userTtp1.getUserTtpId(), currentDate);
+                    UserRecord userRecord = userRecordRepository.findByUserRecordId(userTtp1.getUserTtpId()+currentDate);
                     if(userRecord == null){
                         log.error("【查询我参与的所有ttp】userRecord为空 result={}",userTtp1.getUserTtpId());
                         throw new TTpException(ResultEnum.USER_ERROR);
                     }
                     //再根据userTtpId信息查找到此用户对应的ttp的所有完成记录，形参为当天日期，查询当天完成记录情况
                     if(userRecord.getDayStatus().equals(DayStatusEnum.FINIS.getCode())){
-                        //说明完成了，设置finishTime录入list
+                        //说明完成了，显示信息为21：00，设置finishTime录入list
                         othersRecordVo.setDayStatus(dateFormat2(
                                 (userRecord.getUpdateTime()),
                                 11, 16));

@@ -29,8 +29,8 @@ public class UserRecordRepositoryTest {
 
     @Test
     public void getdayStatus() throws Exception {
-        UserRecord result = repository.getfinishList("15070107496453461891110001", "2017-10-1");
-        System.out.println("更新时间"+result.getUpdateTime());
+        UserRecord result = repository.findByUserRecordId("15070107496453461891110001"+"2017-10-01");
+        System.out.println("更新时间:"+result.getUpdateTime());
         Assert.assertNotNull(result);
     }
 

@@ -24,36 +24,57 @@ public class TtpNews {
 
     private String ttpId;
 
-    //消息拥有者id
+    /**
+     * 消息拥有者id
+     */
     private String userId;
 
-    //消息类型
+    /**
+     * ttp状态
+     */
+    private Integer ttpStatus;
+
+    /**
+     * 消息类型
+     */
     private Integer newstype;
 
-    //发起人name
+    /**
+     * 发起人name
+     */
     private String username;
 
-    //发起人头像
+    /**
+     * 发起人头像
+     */
     private String userIcon;
 
     private String newsname;
 
-    //状态，已读(0),未读(1);
+    /**
+     * 状态，已读(0),未读(1);
+     */
     private Integer newsstatus;
 
     private String previewText;
 
-    //是否隐藏，0为公开，1为隐藏
+    /**
+     * 是否隐藏，0为公开，1为隐藏
+     */
     private Integer hidden;
 
-    //更新时间
+    /**
+     * 更新时间
+     */
     private Date updateTime;
 
     private Date startTime;
 
     private Date finishTime;
 
-    //是否完成
+    /**
+     * 是否完成
+     */
     private Integer ifFinish;
 
     private Integer finishnums;

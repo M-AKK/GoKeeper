@@ -3,8 +3,8 @@ package com.gokeeper.enums;
 import lombok.Getter;
 
 /**
- * Created by Akk_Mac
- * Date: 2017/10/23 19:11
+ * @author: Created by Akk_Mac
+ * @Date: 2017/10/23 19:11
  */
 @Getter
 public enum NewsStatusEnum implements CodeEnum {

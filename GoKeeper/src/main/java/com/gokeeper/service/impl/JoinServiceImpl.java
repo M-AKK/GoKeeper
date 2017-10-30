@@ -125,7 +125,7 @@ public class JoinServiceImpl implements JoinService {
             List<String> datelist = DateUtil.getBetweenDates(ttpDetail.getStartTime(), ttpDetail.getFinishTime());
             for(int i=0; i<datelist.size(); i++){
                 UserRecord userRecord = new UserRecord();
-                userRecord.setUserRecordId(ttpId + datelist.get(i));
+                userRecord.setUserRecordId(userTtp.getUserTtpId() + datelist.get(i));
                 userRecord.setUserTtpId(userTtp.getUserTtpId());
                 userRecord.setDays(DateUtil.StringToDate1(datelist.get(i)));
                 userRecord.setDayStatus(0);
@@ -145,9 +145,10 @@ public class JoinServiceImpl implements JoinService {
         //1.创建ttp消息模板
         TtpNews ttpNews = new TtpNews();
         //ttpNews的id就是user-ttp的id，一条用户ttp对应一条模板
-        ttpNews.setId(ttpId+userId);
+        ttpNews.setId(userTtp.getUserTtpId());
         ttpNews.setTtpId(ttpId);
         ttpNews.setUserId(userId);
+        ttpNews.setTtpStatus(TtpStatusEnum.READY.getCode());
         ttpNews.setNewstype(NewsStatusEnum.NO_READ.getCode());
         UserInfo userInfo = userInfoRepository.findByUserId(userId);
         ttpNews.setUsername(userInfo.getUsername());

@@ -20,6 +20,7 @@ public enum ResultEnum implements CodeEnum {
     CHECK_USER(1002, "查找不到该用户"),
     USER_REPEAT(1003, "此手机号被多用户使用"),
     USER_JOIN_REPEAT(1004, "用户已经参加ttp,不能重复加入"),
+    DATE_ERROE(3, "日期转换出错"),
     ;
 
     private Integer code;

@@ -43,8 +43,8 @@ public class TTpDetailRepositoryTest {
         detailDto.setDeductionRation(20);
         detailDto.setTtpType(1);
         detailDto.setTtpStatus(0);
-        detailDto.setStartTime(DateUtil.StringToDate("2017-10-1 21:08"));
-        detailDto.setFinishTime(DateUtil.StringToDate("2017-10-8 21:08"));
+        detailDto.setStartTime(DateUtil.StringToDate("2017/10/1 21:08"));
+        detailDto.setFinishTime(DateUtil.StringToDate("2017/10/8 21:08"));
 
         TtpDetail result = repository.save(detailDto);
         Assert.assertNotNull(result);

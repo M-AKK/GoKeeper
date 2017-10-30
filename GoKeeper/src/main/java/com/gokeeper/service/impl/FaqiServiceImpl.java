@@ -88,11 +88,11 @@ public class FaqiServiceImpl implements FaqiService {
 
         //4.创建此ttp的用户完成情况记录表
         try{
-            //根据开始时间和结束时间算出中间日期
+            //根据开始时间和结束时间算出中间日期，如果是聚餐类只有一天则会算出当天日期
             List<String> datelist = DateUtil.getBetweenDates(ttpDetailDto.getStartTime(), ttpDetailDto.getFinishTime());
             for(int i=0; i<datelist.size(); i++){
                 UserRecord userRecord = new UserRecord();
-                userRecord.setUserRecordId(ttpId + datelist.get(i));
+                userRecord.setUserRecordId(userTtp.getUserTtpId() + datelist.get(i));
                 userRecord.setUserTtpId(userTtp.getUserTtpId());
                 userRecord.setDays(DateUtil.StringToDate1(datelist.get(i)));
                 userRecord.setDayStatus(0);
@@ -115,6 +115,7 @@ public class FaqiServiceImpl implements FaqiService {
         ttpNews.setId(userTtp.getUserTtpId());
         ttpNews.setTtpId(ttpId);
         ttpNews.setUserId(ttpDetailDto.getUserId());
+        ttpNews.setTtpStatus(TtpStatusEnum.READY.getCode());
         ttpNews.setNewstype(NewsStatusEnum.NO_READ.getCode());
         UserInfo userInfo = userInfoRepository.findByUserId(ttpDetailDto.getUserId());
         ttpNews.setUsername(userInfo.getUsername());

@@ -24,7 +24,7 @@ public class GoServiceImplTest {
     @Test
     public void getmyttplist() throws Exception {
 
-        List<GoVo> result = goService.getmyttplist("1110001", "2017-10-1");
+        List<GoVo> result = goService.getmyttplist("1110001", "2017/10/1");
         log.info("【Go界面信息展示，包括详情页面的信息】 result={}", JsonUtil.toJson(result));
         Assert.assertNotNull(result);
     }

@@ -14,23 +14,38 @@ public class TtpNewsVo {
 
     private String ttpId;
 
-    //消息类型
+    /**
+     * ttp状态
+     */
+    private Integer ttpStatus;
+
+    /**
+     * 消息类型
+     */
     private Integer newstype;
 
-    //发起人name
+    /**
+     * 发起人name
+     */
     private String username;
 
-    //发起人头像
+    /**
+     * 发起人头像
+     */
     private String userIcon;
 
     private String newsname;
 
-    //状态，已读(0),未读(1);
+    /**
+     * 状态，已读(0),未读(1);
+     */
     private Integer newsstatus;
 
     private String previewText;
 
-    //更新时间
+    /**
+     * 更新时间
+     */
     private String updateTime;
 
     private Integer weight;
@@ -39,7 +54,9 @@ public class TtpNewsVo {
 
     private String finishtime;
 
-    //是否完成
+    /**
+     * 是否完成
+     */
     private Integer ifFinish;
 
     private Integer finishnums;

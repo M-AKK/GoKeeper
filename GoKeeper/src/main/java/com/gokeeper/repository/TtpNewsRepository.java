@@ -25,4 +25,11 @@ public interface TtpNewsRepository extends JpaRepository<TtpNews, String> {
      * @return
      */
     List<TtpNews> findByTtpId(String ttpId);
+
+    /**
+     * 查找某一条ttp的一个用户的消息模板，因为每个用户的消息模板信息不一样，需要单独设置
+     * @param id
+     * @return
+     */
+    TtpNews findById(String id);
 }
