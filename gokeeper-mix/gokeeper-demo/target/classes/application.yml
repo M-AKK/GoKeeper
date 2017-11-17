@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: akk6881385
+    url: jdbc:mysql://127.0.0.1/gokeeper?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  #配置了这个就不会返回为NULL的参数
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: 115.159.35.121
+    port: 6379
+server:
+  port: 8080
+
+
+wechat:
+  mpAppId: wx8b20c44179a091b4
+  mpAppSecret: de419bbffabaa12840f16c5035391a7f
+  mchId: 1488013852
+  mchKey: uxNWYgnY95q9ieTAggUmMelvqNrhzylf
+  keyPath: C:\SoftWare\Weixin\apiclient_cert.p12
+  notifyUrl: http://www.akakakaka.cn:8080/sell/pay/notify
+
+projectUrl:
+  wechatMpAuthorize: http://www.akakakaka.cn:8080
+  sell: http://www.akakakaka.cn:8080
+
+#网易云短信模板配置
+gokeeper.validate.code.sms.length: 6
+gokeeper.validate.code.sms.servlerUrl: https://api.netease.im/sms/sendcode.action
+gokeeper.validate.code.sms.appKey: 51ad4b74fc6ff15a70e979388f5efe3f
+gokeeper.validate.code.sms.appSecret: eb6234912bfd
+gokeeper.validate.code.sms.templateid: 3147096

@@ -1,0 +1,17 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.gokeeper.core.properties.SecurityProperties",
+      "name": "gokeeper.validate",
+      "type": "com.gokeeper.core.properties.SecurityProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.gokeeper.core.properties.SecurityProperties",
+      "name": "gokeeper.validate.code",
+      "type": "com.gokeeper.core.properties.ValidateCodeProperties"
+    }
+  ]
+}

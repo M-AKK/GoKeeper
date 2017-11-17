@@ -1,0 +1,480 @@
+2017-11-15 15:40:00,677 - HV000001: Hibernate Validator 5.3.5.Final
+2017-11-15 15:40:05,569 - Starting GoKeeperApplication on Akk-mbp.local with PID 6938 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix)
+2017-11-15 15:40:05,570 - No active profile set, falling back to default profiles: default
+2017-11-15 15:40:05,615 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@443118b0: startup date [Wed Nov 15 15:40:05 CST 2017]; root of context hierarchy
+2017-11-15 15:40:06,157 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 15:40:06,229 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 15:40:06,251 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.InviteNewsRepository.
+2017-11-15 15:40:06,252 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpDetailRepository.
+2017-11-15 15:40:06,252 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-11-15 15:40:06,253 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpNewsRepository.
+2017-11-15 15:40:06,255 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-11-15 15:40:06,256 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.SystemNewsRspository.
+2017-11-15 15:40:06,256 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpTypeRepository.
+2017-11-15 15:40:06,257 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-11-15 15:40:06,794 - Tomcat initialized with port(s): 8080 (http)
+2017-11-15 15:40:06,802 - Starting service [Tomcat]
+2017-11-15 15:40:06,803 - Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-11-15 15:40:06,867 - Initializing Spring embedded WebApplicationContext
+2017-11-15 15:40:06,867 - Root WebApplicationContext: initialization completed in 1252 ms
+2017-11-15 15:40:06,973 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-11-15 15:40:06,976 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-11-15 15:40:06,977 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-11-15 15:40:06,977 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-11-15 15:40:06,977 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-11-15 15:40:07,441 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-11-15 15:40:07,450 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-11-15 15:40:07,487 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-11-15 15:40:07,488 - HHH000206: hibernate.properties not found
+2017-11-15 15:40:07,489 - HHH000021: Bytecode provider name : javassist
+2017-11-15 15:40:07,514 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-15 15:40:07,593 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-11-15 15:40:07,952 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 15:40:13,317 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-11-15 15:40:13,360 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-11-15 15:40:13,360 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-11-15 15:40:13,577 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@443118b0: startup date [Wed Nov 15 15:40:05 CST 2017]; root of context hierarchy
+2017-11-15 15:40:13,632 - Mapped "{[/login/sms]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.UserLogin.sms(java.lang.String)
+2017-11-15 15:40:13,634 - Mapped "{[/websocket/systemnews],methods=[POST]}" onto public void com.gokeeper.controller.WebsocketController.sandSystemNews(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-15 15:40:13,635 - Mapped "{[/websocket/go/invite],methods=[POST]}" onto public void com.gokeeper.controller.WebsocketController.sendInviteNews(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-15 15:40:13,635 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception
+2017-11-15 15:40:13,635 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-11-15 15:40:13,636 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2017-11-15 15:40:13,637 - Mapped "{[/ttp/alltype],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.FaqiController.findAllType()
+2017-11-15 15:40:13,637 - Mapped "{[/go/list],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.GoController.faqilist(javax.servlet.http.HttpServletRequest,java.lang.String)
+2017-11-15 15:40:13,638 - Mapped "{[/join/attend],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.atttend(javax.servlet.http.HttpServletRequest,java.lang.String)
+2017-11-15 15:40:13,638 - Mapped "{[/join/list],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.getallList(javax.servlet.http.HttpServletRequest)
+2017-11-15 15:40:13,638 - Mapped "{[/msg/list],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.list(javax.servlet.http.HttpServletRequest,java.lang.Integer)
+2017-11-15 15:40:13,639 - Mapped "{[/user/getUserByPhone],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.UserController.getUserByPhone(java.lang.String)
+2017-11-15 15:40:13,640 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-11-15 15:40:13,641 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-11-15 15:40:13,663 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-15 15:40:13,663 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-15 15:40:13,677 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-11-15 15:40:13,694 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-15 15:40:13,963 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-11-15 15:40:14,088 - Registering beans for JMX exposure on startup
+2017-11-15 15:40:14,095 - Starting beans in phase 2147483647
+2017-11-15 15:40:14,109 - Initializing ProtocolHandler ["http-nio-8080"]
+2017-11-15 15:40:14,116 - Starting ProtocolHandler ["http-nio-8080"]
+2017-11-15 15:40:14,134 - Using a shared selector for servlet write/read
+2017-11-15 15:40:14,146 - Tomcat started on port(s): 8080 (http)
+2017-11-15 15:40:14,150 - Started GoKeeperApplication in 23.886 seconds (JVM running for 34.402)
+2017-11-15 15:40:20,026 - HHH000397: Using ASTQueryTranslatorFactory
+2017-11-15 15:40:36,023 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@443118b0: startup date [Wed Nov 15 15:40:05 CST 2017]; root of context hierarchy
+2017-11-15 15:40:36,025 - Stopping beans in phase 2147483647
+2017-11-15 15:40:36,026 - Unregistering JMX-exposed beans on shutdown
+2017-11-15 15:40:36,027 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-11-15 15:40:36,029 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 18:10:56,434 - HV000001: Hibernate Validator 5.3.5.Final
+2017-11-15 18:11:01,333 - Starting GoKeeperApplication on Akk-mbp.local with PID 7083 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix)
+2017-11-15 18:11:01,334 - No active profile set, falling back to default profiles: default
+2017-11-15 18:11:01,364 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3eb25e1a: startup date [Wed Nov 15 18:11:01 CST 2017]; root of context hierarchy
+2017-11-15 18:11:01,918 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 18:11:01,997 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 18:11:02,020 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.InviteNewsRepository.
+2017-11-15 18:11:02,021 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpDetailRepository.
+2017-11-15 18:11:02,022 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-11-15 18:11:02,022 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpNewsRepository.
+2017-11-15 18:11:02,023 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-11-15 18:11:02,023 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.SystemNewsRspository.
+2017-11-15 18:11:02,023 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpTypeRepository.
+2017-11-15 18:11:02,024 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-11-15 18:11:02,216 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-15 18:11:02,603 - Tomcat initialized with port(s): 8080 (http)
+2017-11-15 18:11:02,614 - Starting service [Tomcat]
+2017-11-15 18:11:02,615 - Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-11-15 18:11:02,693 - Initializing Spring embedded WebApplicationContext
+2017-11-15 18:11:02,693 - Root WebApplicationContext: initialization completed in 1329 ms
+2017-11-15 18:11:02,799 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-11-15 18:11:02,802 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-11-15 18:11:02,802 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-11-15 18:11:02,802 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-11-15 18:11:02,802 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-11-15 18:11:03,248 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-11-15 18:11:03,259 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-11-15 18:11:03,327 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-11-15 18:11:03,328 - HHH000206: hibernate.properties not found
+2017-11-15 18:11:03,329 - HHH000021: Bytecode provider name : javassist
+2017-11-15 18:11:03,366 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-15 18:11:03,473 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-11-15 18:11:03,929 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 18:11:09,327 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'validateCodeController': Unsatisfied dependency expressed through field 'validateCodeProcessors'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'smsCodeProcessor': Unsatisfied dependency expressed through field 'validateCodeGenerators'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'smsCodeGenerator': Unsatisfied dependency expressed through field 'SmsCodeSender'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'smsCodeSender' defined in class path resource [com/gokeeper/core/validate/code/ValidateCodeBeanConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.gokeeper.core.validate.sms.SmsCodeSender]: Factory method 'smsCodeSender' threw exception; nested exception is java.lang.NullPointerException
+2017-11-15 18:11:09,329 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 18:11:09,332 - Stopping service [Tomcat]
+2017-11-15 18:11:09,343 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-11-15 18:26:09,326 - HV000001: Hibernate Validator 5.3.5.Final
+2017-11-15 18:26:14,221 - Starting GoKeeperApplication on Akk-mbp.local with PID 7098 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix)
+2017-11-15 18:26:14,223 - No active profile set, falling back to default profiles: default
+2017-11-15 18:26:14,254 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6743e411: startup date [Wed Nov 15 18:26:14 CST 2017]; root of context hierarchy
+2017-11-15 18:26:14,784 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 18:26:14,860 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 18:26:14,884 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.InviteNewsRepository.
+2017-11-15 18:26:14,885 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpDetailRepository.
+2017-11-15 18:26:14,885 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-11-15 18:26:14,885 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpNewsRepository.
+2017-11-15 18:26:14,886 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-11-15 18:26:14,886 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.SystemNewsRspository.
+2017-11-15 18:26:14,887 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpTypeRepository.
+2017-11-15 18:26:14,887 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-11-15 18:26:15,066 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-15 18:26:15,448 - Tomcat initialized with port(s): 8080 (http)
+2017-11-15 18:26:15,457 - Starting service [Tomcat]
+2017-11-15 18:26:15,457 - Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-11-15 18:26:15,535 - Initializing Spring embedded WebApplicationContext
+2017-11-15 18:26:15,536 - Root WebApplicationContext: initialization completed in 1283 ms
+2017-11-15 18:26:15,638 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-11-15 18:26:15,641 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-11-15 18:26:15,641 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-11-15 18:26:15,641 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-11-15 18:26:15,641 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-11-15 18:26:16,066 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-11-15 18:26:16,075 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-11-15 18:26:16,111 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-11-15 18:26:16,112 - HHH000206: hibernate.properties not found
+2017-11-15 18:26:16,113 - HHH000021: Bytecode provider name : javassist
+2017-11-15 18:26:16,136 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-15 18:26:16,216 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-11-15 18:26:16,572 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 18:26:21,916 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'validateCodeController': Unsatisfied dependency expressed through field 'validateCodeProcessors'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'smsCodeProcessor': Unsatisfied dependency expressed through field 'validateCodeGenerators'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'smsCodeGenerator': Unsatisfied dependency expressed through field 'SmsCodeSender'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'smsCodeSender' defined in class path resource [com/gokeeper/core/validate/code/ValidateCodeBeanConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.gokeeper.core.validate.sms.SmsCodeSender]: Factory method 'smsCodeSender' threw exception; nested exception is java.lang.NullPointerException
+2017-11-15 18:26:21,917 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 18:26:21,921 - Stopping service [Tomcat]
+2017-11-15 18:26:21,932 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-11-15 18:40:55,341 - HV000001: Hibernate Validator 5.3.5.Final
+2017-11-15 18:41:00,245 - Starting GoKeeperApplication on Akk-mbp.local with PID 7115 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix)
+2017-11-15 18:41:00,250 - No active profile set, falling back to default profiles: default
+2017-11-15 18:41:00,281 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6743e411: startup date [Wed Nov 15 18:41:00 CST 2017]; root of context hierarchy
+2017-11-15 18:41:00,819 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 18:41:00,891 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 18:41:00,915 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.InviteNewsRepository.
+2017-11-15 18:41:00,916 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpDetailRepository.
+2017-11-15 18:41:00,916 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-11-15 18:41:00,917 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpNewsRepository.
+2017-11-15 18:41:00,917 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-11-15 18:41:00,917 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.SystemNewsRspository.
+2017-11-15 18:41:00,918 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpTypeRepository.
+2017-11-15 18:41:00,918 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-11-15 18:41:01,097 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-15 18:41:01,475 - Tomcat initialized with port(s): 8080 (http)
+2017-11-15 18:41:01,484 - Starting service [Tomcat]
+2017-11-15 18:41:01,484 - Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-11-15 18:41:01,562 - Initializing Spring embedded WebApplicationContext
+2017-11-15 18:41:01,563 - Root WebApplicationContext: initialization completed in 1282 ms
+2017-11-15 18:41:01,667 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-11-15 18:41:01,670 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-11-15 18:41:01,671 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-11-15 18:41:01,671 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-11-15 18:41:01,671 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-11-15 18:41:02,104 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-11-15 18:41:02,115 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-11-15 18:41:02,153 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-11-15 18:41:02,154 - HHH000206: hibernate.properties not found
+2017-11-15 18:41:02,155 - HHH000021: Bytecode provider name : javassist
+2017-11-15 18:41:02,194 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-15 18:41:02,269 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-11-15 18:41:02,662 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 18:41:08,033 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'validateCodeController': Unsatisfied dependency expressed through field 'imageCodeGenerator'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'smsCodeGenerator': Unsatisfied dependency expressed through field 'SmsCodeSender'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'smsCodeSender' defined in class path resource [com/gokeeper/core/validate/code/ValidateCodeBeanConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.gokeeper.core.validate.sms.SmsCodeSender]: Factory method 'smsCodeSender' threw exception; nested exception is java.lang.NullPointerException
+2017-11-15 18:41:08,035 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 18:41:08,040 - Stopping service [Tomcat]
+2017-11-15 18:41:08,051 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-11-15 18:53:22,398 - HV000001: Hibernate Validator 5.3.5.Final
+2017-11-15 18:53:27,298 - Starting GoKeeperApplication on Akk-mbp.local with PID 7153 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix)
+2017-11-15 18:53:27,300 - No active profile set, falling back to default profiles: default
+2017-11-15 18:53:27,329 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e92efc3: startup date [Wed Nov 15 18:53:27 CST 2017]; root of context hierarchy
+2017-11-15 18:53:27,875 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 18:53:27,973 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 18:53:28,007 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.InviteNewsRepository.
+2017-11-15 18:53:28,008 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpDetailRepository.
+2017-11-15 18:53:28,009 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-11-15 18:53:28,010 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpNewsRepository.
+2017-11-15 18:53:28,011 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-11-15 18:53:28,012 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.SystemNewsRspository.
+2017-11-15 18:53:28,013 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpTypeRepository.
+2017-11-15 18:53:28,013 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-11-15 18:53:28,198 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-15 18:53:28,570 - Tomcat initialized with port(s): 8060 (http)
+2017-11-15 18:53:28,580 - Starting service [Tomcat]
+2017-11-15 18:53:28,580 - Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-11-15 18:53:28,670 - Initializing Spring embedded WebApplicationContext
+2017-11-15 18:53:28,671 - Root WebApplicationContext: initialization completed in 1342 ms
+2017-11-15 18:53:28,770 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-11-15 18:53:28,774 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-11-15 18:53:28,775 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-11-15 18:53:28,775 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-11-15 18:53:28,775 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-11-15 18:53:29,211 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-11-15 18:53:29,220 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-11-15 18:53:29,264 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-11-15 18:53:29,265 - HHH000206: hibernate.properties not found
+2017-11-15 18:53:29,266 - HHH000021: Bytecode provider name : javassist
+2017-11-15 18:53:29,294 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-15 18:53:29,369 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-11-15 18:53:29,765 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 18:53:35,141 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'validateCodeController': Unsatisfied dependency expressed through field 'imageCodeGenerator'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'smsCodeGenerator': Unsatisfied dependency expressed through field 'SmsCodeSender'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'smsCodeSender' defined in class path resource [com/gokeeper/core/validate/code/ValidateCodeBeanConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.gokeeper.core.validate.sms.SmsCodeSender]: Factory method 'smsCodeSender' threw exception; nested exception is java.lang.NullPointerException
+2017-11-15 18:53:35,143 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 18:53:35,147 - Stopping service [Tomcat]
+2017-11-15 18:53:35,158 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-11-15 18:55:05,014 - HV000001: Hibernate Validator 5.3.5.Final
+2017-11-15 18:55:09,915 - Starting GoKeeperApplication on Akk-mbp.local with PID 7155 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix)
+2017-11-15 18:55:09,917 - No active profile set, falling back to default profiles: default
+2017-11-15 18:55:09,946 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e92efc3: startup date [Wed Nov 15 18:55:09 CST 2017]; root of context hierarchy
+2017-11-15 18:55:10,485 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 18:55:10,559 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 18:55:10,582 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.InviteNewsRepository.
+2017-11-15 18:55:10,583 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpDetailRepository.
+2017-11-15 18:55:10,583 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-11-15 18:55:10,584 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpNewsRepository.
+2017-11-15 18:55:10,584 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-11-15 18:55:10,584 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.SystemNewsRspository.
+2017-11-15 18:55:10,585 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpTypeRepository.
+2017-11-15 18:55:10,585 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-11-15 18:55:10,761 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-15 18:55:11,122 - Tomcat initialized with port(s): 8060 (http)
+2017-11-15 18:55:11,130 - Starting service [Tomcat]
+2017-11-15 18:55:11,130 - Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-11-15 18:55:11,212 - Initializing Spring embedded WebApplicationContext
+2017-11-15 18:55:11,213 - Root WebApplicationContext: initialization completed in 1267 ms
+2017-11-15 18:55:11,308 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-11-15 18:55:11,311 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-11-15 18:55:11,311 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-11-15 18:55:11,312 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-11-15 18:55:11,312 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-11-15 18:55:11,719 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-11-15 18:55:11,729 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-11-15 18:55:11,775 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-11-15 18:55:11,776 - HHH000206: hibernate.properties not found
+2017-11-15 18:55:11,777 - HHH000021: Bytecode provider name : javassist
+2017-11-15 18:55:11,804 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-15 18:55:11,876 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-11-15 18:55:12,248 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 18:55:17,583 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'validateCodeController': Unsatisfied dependency expressed through field 'imageCodeGenerator'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.gokeeper.core.validate.code.ValidateCodeGenerator' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2017-11-15 18:55:17,584 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 18:55:17,588 - Stopping service [Tomcat]
+2017-11-15 18:55:17,600 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-11-15 18:57:02,369 - HV000001: Hibernate Validator 5.3.5.Final
+2017-11-15 18:57:07,268 - Starting GoKeeperApplication on Akk-mbp.local with PID 7157 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix)
+2017-11-15 18:57:07,269 - No active profile set, falling back to default profiles: default
+2017-11-15 18:57:07,298 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e92efc3: startup date [Wed Nov 15 18:57:07 CST 2017]; root of context hierarchy
+2017-11-15 18:57:07,850 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 18:57:07,923 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 18:57:07,947 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.InviteNewsRepository.
+2017-11-15 18:57:07,948 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpDetailRepository.
+2017-11-15 18:57:07,949 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-11-15 18:57:07,949 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpNewsRepository.
+2017-11-15 18:57:07,949 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-11-15 18:57:07,950 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.SystemNewsRspository.
+2017-11-15 18:57:07,950 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpTypeRepository.
+2017-11-15 18:57:07,950 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-11-15 18:57:08,131 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-15 18:57:08,523 - Tomcat initialized with port(s): 8060 (http)
+2017-11-15 18:57:08,532 - Starting service [Tomcat]
+2017-11-15 18:57:08,533 - Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-11-15 18:57:08,619 - Initializing Spring embedded WebApplicationContext
+2017-11-15 18:57:08,620 - Root WebApplicationContext: initialization completed in 1322 ms
+2017-11-15 18:57:08,713 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-11-15 18:57:08,716 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-11-15 18:57:08,716 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-11-15 18:57:08,716 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-11-15 18:57:08,717 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-11-15 18:57:09,135 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-11-15 18:57:09,143 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-11-15 18:57:09,181 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-11-15 18:57:09,182 - HHH000206: hibernate.properties not found
+2017-11-15 18:57:09,182 - HHH000021: Bytecode provider name : javassist
+2017-11-15 18:57:09,205 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-15 18:57:09,270 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-11-15 18:57:09,633 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 18:57:14,962 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'validateCodeController': Unsatisfied dependency expressed through field 'smsCodeGenerator'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'smsCodeGenerator': Unsatisfied dependency expressed through field 'SmsCodeSender'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'smsCodeSender' defined in class path resource [com/gokeeper/core/validate/code/ValidateCodeBeanConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.gokeeper.core.validate.sms.SmsCodeSender]: Factory method 'smsCodeSender' threw exception; nested exception is java.lang.NullPointerException
+2017-11-15 18:57:14,964 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 18:57:14,969 - Stopping service [Tomcat]
+2017-11-15 18:57:14,980 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-11-15 18:58:39,251 - HV000001: Hibernate Validator 5.3.5.Final
+2017-11-15 18:58:44,159 - Starting GoKeeperApplication on Akk-mbp.local with PID 7159 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix)
+2017-11-15 18:58:44,160 - No active profile set, falling back to default profiles: default
+2017-11-15 18:58:44,189 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e92efc3: startup date [Wed Nov 15 18:58:44 CST 2017]; root of context hierarchy
+2017-11-15 18:58:44,723 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 18:58:44,797 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 18:58:44,827 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.InviteNewsRepository.
+2017-11-15 18:58:44,829 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpDetailRepository.
+2017-11-15 18:58:44,829 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-11-15 18:58:44,830 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpNewsRepository.
+2017-11-15 18:58:44,830 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-11-15 18:58:44,830 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.SystemNewsRspository.
+2017-11-15 18:58:44,831 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpTypeRepository.
+2017-11-15 18:58:44,831 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-11-15 18:58:45,027 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-15 18:58:45,400 - Tomcat initialized with port(s): 8060 (http)
+2017-11-15 18:58:45,409 - Starting service [Tomcat]
+2017-11-15 18:58:45,409 - Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-11-15 19:01:28,738 - Initializing Spring embedded WebApplicationContext
+2017-11-15 19:01:28,738 - Root WebApplicationContext: initialization completed in 164549 ms
+2017-11-15 19:01:28,869 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-11-15 19:01:28,872 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-11-15 19:01:28,873 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-11-15 19:01:28,873 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-11-15 19:01:28,873 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-11-15 19:01:29,337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-11-15 19:01:29,348 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-11-15 19:01:29,395 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-11-15 19:01:29,396 - HHH000206: hibernate.properties not found
+2017-11-15 19:01:29,397 - HHH000021: Bytecode provider name : javassist
+2017-11-15 19:01:29,422 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-15 19:01:29,502 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-11-15 19:01:29,951 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 19:01:35,402 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'smsCodeProcessor': Unsatisfied dependency expressed through field 'validateCodeGenerators'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.util.Map<java.lang.String, com.gokeeper.core.validate.code.ValidateCodeGenerator>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2017-11-15 19:01:35,404 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 19:01:35,409 - Stopping service [Tomcat]
+2017-11-15 19:01:35,425 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-11-15 19:26:33,002 - HV000001: Hibernate Validator 5.3.5.Final
+2017-11-15 19:26:37,906 - Starting GoKeeperApplication on Akk-mbp.local with PID 7211 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix)
+2017-11-15 19:26:37,907 - No active profile set, falling back to default profiles: default
+2017-11-15 19:26:37,938 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e92efc3: startup date [Wed Nov 15 19:26:37 CST 2017]; root of context hierarchy
+2017-11-15 19:26:38,512 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 19:26:38,592 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 19:26:38,619 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.InviteNewsRepository.
+2017-11-15 19:26:38,620 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpDetailRepository.
+2017-11-15 19:26:38,620 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-11-15 19:26:38,620 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpNewsRepository.
+2017-11-15 19:26:38,621 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-11-15 19:26:38,621 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.SystemNewsRspository.
+2017-11-15 19:26:38,622 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpTypeRepository.
+2017-11-15 19:26:38,622 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-11-15 19:26:38,818 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-15 19:26:39,205 - Tomcat initialized with port(s): 8060 (http)
+2017-11-15 19:26:39,214 - Starting service [Tomcat]
+2017-11-15 19:26:39,215 - Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-11-15 19:26:39,301 - Initializing Spring embedded WebApplicationContext
+2017-11-15 19:26:39,301 - Root WebApplicationContext: initialization completed in 1363 ms
+2017-11-15 19:26:39,404 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-11-15 19:26:39,408 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-11-15 19:26:39,408 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-11-15 19:26:39,409 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-11-15 19:26:39,409 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-11-15 19:26:39,837 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-11-15 19:26:39,846 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-11-15 19:26:39,888 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-11-15 19:26:39,889 - HHH000206: hibernate.properties not found
+2017-11-15 19:26:39,890 - HHH000021: Bytecode provider name : javassist
+2017-11-15 19:26:39,921 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-15 19:26:39,999 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-11-15 19:26:40,407 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 19:26:45,780 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'validateCodeController': Unsatisfied dependency expressed through field 'smsCodeGenerator'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'smsCodeGenerator': Unsatisfied dependency expressed through field 'SmsCodeSender'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'smsCodeSender' defined in class path resource [com/gokeeper/core/validate/code/ValidateCodeBeanConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.gokeeper.core.validate.sms.SmsCodeSender]: Factory method 'smsCodeSender' threw exception; nested exception is java.lang.NullPointerException
+2017-11-15 19:26:45,781 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 19:26:45,786 - Stopping service [Tomcat]
+2017-11-15 19:26:45,797 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-11-15 19:36:27,161 - HV000001: Hibernate Validator 5.3.5.Final
+2017-11-15 19:36:32,059 - Starting GoKeeperApplication on Akk-mbp.local with PID 7341 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix)
+2017-11-15 19:36:32,061 - No active profile set, falling back to default profiles: default
+2017-11-15 19:36:32,090 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e92efc3: startup date [Wed Nov 15 19:36:32 CST 2017]; root of context hierarchy
+2017-11-15 19:36:32,621 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 19:36:32,690 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 19:36:32,711 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.InviteNewsRepository.
+2017-11-15 19:36:32,712 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpDetailRepository.
+2017-11-15 19:36:32,712 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-11-15 19:36:32,713 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpNewsRepository.
+2017-11-15 19:36:32,713 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-11-15 19:36:32,713 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.SystemNewsRspository.
+2017-11-15 19:36:32,714 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpTypeRepository.
+2017-11-15 19:36:32,714 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-11-15 19:36:32,880 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-15 19:36:33,262 - Tomcat initialized with port(s): 8060 (http)
+2017-11-15 19:36:33,270 - Starting service [Tomcat]
+2017-11-15 19:36:33,271 - Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-11-15 19:36:33,354 - Initializing Spring embedded WebApplicationContext
+2017-11-15 19:36:33,354 - Root WebApplicationContext: initialization completed in 1264 ms
+2017-11-15 19:36:33,449 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-11-15 19:36:33,452 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-11-15 19:36:33,452 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-11-15 19:36:33,452 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-11-15 19:36:33,452 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-11-15 19:36:33,858 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-11-15 19:36:33,867 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-11-15 19:36:33,904 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-11-15 19:36:33,905 - HHH000206: hibernate.properties not found
+2017-11-15 19:36:33,906 - HHH000021: Bytecode provider name : javassist
+2017-11-15 19:36:33,929 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-15 19:36:34,003 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-11-15 19:36:34,370 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 19:36:39,701 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultSmsCodeSender' defined in file [/Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix/gokeeper-app/target/classes/com/gokeeper/core/validate/sms/DefaultSmsCodeSender.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.gokeeper.core.validate.sms.DefaultSmsCodeSender]: Constructor threw exception; nested exception is java.lang.NullPointerException
+2017-11-15 19:36:39,703 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 19:36:39,707 - Stopping service [Tomcat]
+2017-11-15 19:36:39,717 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-11-15 19:43:54,563 - HV000001: Hibernate Validator 5.3.5.Final
+2017-11-15 19:43:59,465 - Starting GoKeeperApplication on Akk-mbp.local with PID 7352 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix)
+2017-11-15 19:43:59,466 - No active profile set, falling back to default profiles: default
+2017-11-15 19:43:59,495 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e92efc3: startup date [Wed Nov 15 19:43:59 CST 2017]; root of context hierarchy
+2017-11-15 19:44:00,039 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 19:44:00,108 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-15 19:44:00,132 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.InviteNewsRepository.
+2017-11-15 19:44:00,132 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpDetailRepository.
+2017-11-15 19:44:00,133 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-11-15 19:44:00,133 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpNewsRepository.
+2017-11-15 19:44:00,133 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-11-15 19:44:00,134 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.SystemNewsRspository.
+2017-11-15 19:44:00,134 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpTypeRepository.
+2017-11-15 19:44:00,134 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-11-15 19:44:00,306 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-15 19:44:00,687 - Tomcat initialized with port(s): 8060 (http)
+2017-11-15 19:44:00,696 - Starting service [Tomcat]
+2017-11-15 19:44:00,697 - Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-11-15 19:44:00,780 - Initializing Spring embedded WebApplicationContext
+2017-11-15 19:44:00,780 - Root WebApplicationContext: initialization completed in 1285 ms
+2017-11-15 19:44:00,874 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-11-15 19:44:00,877 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-11-15 19:44:00,877 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-11-15 19:44:00,877 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-11-15 19:44:00,878 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-11-15 19:44:01,283 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-11-15 19:44:01,292 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-11-15 19:44:01,330 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-11-15 19:44:01,331 - HHH000206: hibernate.properties not found
+2017-11-15 19:44:01,332 - HHH000021: Bytecode provider name : javassist
+2017-11-15 19:44:01,355 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-15 19:44:01,428 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-11-15 19:44:01,814 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 19:44:07,131 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultSmsCodeSender' defined in file [/Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix/gokeeper-app/target/classes/com/gokeeper/core/validate/sms/DefaultSmsCodeSender.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.gokeeper.core.validate.sms.DefaultSmsCodeSender]: Constructor threw exception; nested exception is java.lang.NullPointerException
+2017-11-15 19:44:07,133 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-11-15 19:44:07,137 - Stopping service [Tomcat]
+2017-11-15 19:44:07,148 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
