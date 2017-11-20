@@ -1,0 +1,3 @@
+2017-11-20 20:23:59,233 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't.join_money BETWEEN 1100 AND 1500 AND UNIX_TIMESTAMP(t.start_time) > UNIX_TIMES' at line 1
+2017-11-20 20:39:26,201 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't.join_money BETWEEN 1100 AND 1500 AND t.start_time > '2017-11-20 07:00:00' AND ' at line 1
+2017-11-20 20:46:07,397 - Unknown column 't' in 'field list'

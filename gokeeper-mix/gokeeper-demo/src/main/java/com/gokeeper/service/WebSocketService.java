@@ -16,7 +16,7 @@ public interface WebSocketService {
      * @param userId 发起人userId
      * @return
      */
-    InviteNews createInviteNews(String ttpId, String userId);
+    InviteNews createInviteNews(String ttpId, String userId, String calluserId);
 
     SystemNews createSystemNews(UserInfo userInfo, String previewText, String text);
 

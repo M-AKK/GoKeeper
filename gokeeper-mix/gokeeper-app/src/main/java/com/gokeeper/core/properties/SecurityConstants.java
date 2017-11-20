@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.gokeeper.core.properties;
 
 /**
@@ -33,7 +30,7 @@ public interface SecurityConstants {
 	/**
 	 * 默认的手机验证码登录请求处理url
 	 */
-	public static final String DEFAULT_LOGIN_PROCESSING_URL_MOBILE = "/login/authentication/mobile";
+	public static final String DEFAULT_LOGIN_PROCESSING_URL_MOBILE = "/gokeeper/login/authentication/mobile";
 	/**
 	 * 默认登录页面
 	 * 

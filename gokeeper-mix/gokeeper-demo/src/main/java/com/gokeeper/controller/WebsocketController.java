@@ -1,5 +1,6 @@
 package com.gokeeper.controller;
 
+import com.gokeeper.constant.UserInfoConstant;
 import com.gokeeper.dataobject.InviteNews;
 import com.gokeeper.dataobject.SystemNews;
 import com.gokeeper.dataobject.UserInfo;
@@ -38,8 +39,8 @@ public class WebsocketController {
                                @RequestParam("text") String text,
                                HttpServletRequest request) {
         //1.生成一条系统消息并入库
-        UserInfo userInfo = (UserInfo) request.getSession().getAttribute("userInfo");
-        SystemNews systemNews = webSocketService.createSystemNews(userInfo, previewText, text);
+        UserInfo user = (UserInfo) request.getSession().getAttribute(UserInfoConstant.USER_INFO);
+        SystemNews systemNews = webSocketService.createSystemNews(user, previewText, text);
 
         //2.调用websocket方法，发送消息
         TextMessage t = new TextMessage(JsonUtil.toJson(systemNews));
@@ -49,12 +50,11 @@ public class WebsocketController {
     @PostMapping(value = "/go/invite")
     public void sendInviteNews(@RequestParam("ttpId") String ttpId,
                                @RequestParam("userId") String calluserId,
-                               //@RequestParam("faqiuserId") String faqiuserId,
                                HttpServletRequest request){
         //1.产生一条新消息并存入数据库
         //1-1.根据session获取发起人userId
-        UserInfo userInfo = (UserInfo) request.getSession().getAttribute("userInfo");
-        InviteNews inviteNews = webSocketService.createInviteNews(ttpId, userInfo.getUserId());
+        UserInfo user = (UserInfo) request.getSession().getAttribute(UserInfoConstant.USER_INFO);
+        InviteNews inviteNews = webSocketService.createInviteNews(ttpId, user.getUserId(), calluserId);
 
         //2.调用websocket方法，发送消息
         TextMessage t = new TextMessage(JsonUtil.toJson(inviteNews));

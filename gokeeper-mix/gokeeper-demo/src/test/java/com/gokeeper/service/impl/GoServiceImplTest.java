@@ -1,5 +1,6 @@
 package com.gokeeper.service.impl;
 
+import com.gokeeper.vo.GoPreVo;
 import com.gokeeper.vo.GoVo;
 import com.gokeeper.utils.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -12,7 +13,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Slf4j
@@ -23,8 +23,20 @@ public class GoServiceImplTest {
 
     @Test
     public void getmyttplist() throws Exception {
+        String userId = "1511062482311815587";
+        String currentDate = "2017/11/20";
+        List<GoPreVo> result = goService.getMyTtpList(userId, currentDate);
+        log.info("【Go界面预览信息展示】 result={}", JsonUtil.toJson(result));
+        Assert.assertNotNull(result);
+    }
 
-        List<GoVo> result = goService.getmyttplist("1110001", "2017/10/1");
+    @Test
+    public void getMyOneTtp() throws Exception {
+        String ttpId = "1511067222354347556";
+        String userId = "1511062482311815587";
+        String currentDate = "2017/11/20";
+
+        GoVo result = goService.getMyOneTtp(ttpId, userId, currentDate);
         log.info("【Go界面信息展示，包括详情页面的信息】 result={}", JsonUtil.toJson(result));
         Assert.assertNotNull(result);
     }

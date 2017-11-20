@@ -28,8 +28,8 @@ public interface TtpNewsRepository extends JpaRepository<TtpNews, String> {
 
     /**
      * 查找某一条ttp的一个用户的消息模板，因为每个用户的消息模板信息不一样，需要单独设置
-     * @param id
+     * @param userTtpId
      * @return
      */
-    TtpNews findById(String id);
+    TtpNews findByUserTtpId(String userTtpId);
 }

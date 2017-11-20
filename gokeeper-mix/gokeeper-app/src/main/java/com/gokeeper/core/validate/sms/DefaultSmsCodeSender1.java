@@ -22,7 +22,7 @@ import java.util.List;
 @author: Created by Akk_Mac
 @Date: Nov 13, 2017 4:39:57 PM
 **/
-@Component("smsCodeSender")
+/*@Component("smsCodeSender")*/
 public class DefaultSmsCodeSender1 implements SmsCodeSender {
 
     @Autowired

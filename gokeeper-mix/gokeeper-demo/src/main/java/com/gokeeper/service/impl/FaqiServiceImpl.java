@@ -2,10 +2,7 @@ package com.gokeeper.service.impl;
 
 import com.gokeeper.dataobject.*;
 import com.gokeeper.dto.TtpDetailDto;
-import com.gokeeper.enums.NewsStatusEnum;
-import com.gokeeper.enums.NewsTemplate;
-import com.gokeeper.enums.ResultEnum;
-import com.gokeeper.enums.TtpStatusEnum;
+import com.gokeeper.enums.*;
 import com.gokeeper.exception.TTpException;
 import com.gokeeper.handler.WebSocketPushHandler;
 import com.gokeeper.repository.*;
@@ -63,13 +60,14 @@ public class FaqiServiceImpl implements FaqiService {
         //设置起始每日奖金总额为0
         BigDecimal zeroBouns = new BigDecimal(BigInteger.ZERO);
 
-        //1.设置下订单id(是个随机，这里调用了根据时间产生16位随机数的方法)
+        //1.设置下订单id(是个随机，这里调用了根据时间产生32位随机数的方法)
         String ttpId = KeyUtil.genUniqueKey();
 
         //2.把剩下的属性再设置好,ttp详情入库
         ttpDetailDto.setTtpId(ttpId);
         ttpDetailDto.setAllMoney(ttpDetailDto.getJoinMoney());
         ttpDetailDto.setTtpStatus(TtpStatusEnum.READY.getCode());
+
         TtpDetail ttpDetail = new TtpDetail();
         BeanUtils.copyProperties(ttpDetailDto, ttpDetail);
         tTpDetailRepository.save(ttpDetail);
@@ -97,7 +95,7 @@ public class FaqiServiceImpl implements FaqiService {
                 userRecord.setUserRecordId(userTtp.getUserTtpId() + datelist.get(i));
                 userRecord.setUserTtpId(userTtp.getUserTtpId());
                 userRecord.setDays(DateUtil.StringToDate1(datelist.get(i)));
-                userRecord.setDayStatus(0);
+                userRecord.setDayStatus(DayStatusEnum.NO_FINISH.getCode());
                 userRecordRepository.save(userRecord);
             }
         } catch(ParseException e) {
@@ -114,11 +112,11 @@ public class FaqiServiceImpl implements FaqiService {
         //1.创建ttp消息模板
         TtpNews ttpNews = new TtpNews();
         //ttpNews的id就是user-ttp的id，一条用户ttp对应一条模板
-        ttpNews.setId(userTtp.getUserTtpId());
+        ttpNews.setUserTtpId(userTtp.getUserTtpId());
         ttpNews.setTtpId(ttpId);
         ttpNews.setUserId(ttpDetailDto.getUserId());
         ttpNews.setTtpStatus(TtpStatusEnum.READY.getCode());
-        ttpNews.setNewstype(NewsStatusEnum.NO_READ.getCode());
+        ttpNews.setNewstype(NewsTypeEnum.TTP.getCode());
         UserInfo userInfo = userInfoRepository.findByUserId(ttpDetailDto.getUserId());
         ttpNews.setUsername(userInfo.getUsername());
         ttpNews.setUserIcon(userInfo.getUserIcon());
@@ -128,7 +126,7 @@ public class FaqiServiceImpl implements FaqiService {
         ttpNews.setFinishTime(ttpDetailDto.getFinishTime());
         ttpNews.setPreviewText(NewsTemplate.createTtpNews(ttpNews.getNewsname(), DateUtil.dateFormat2(ttpNews.getStartTime(), 0 ,16)));
         //设置为公开
-        ttpNews.setHidden(1);
+        ttpNews.setHidden(IfOpenEnum.YES.getCode());
         //权重设置为1
         ttpNews.setWeight(1);
         //新的ttpnews入库

@@ -45,9 +45,9 @@ public class SmsCodeGenerator implements ValidateCodeGenerator {
 		String code = RandomStringUtils.randomNumeric(securityProperties.getCode().getSms().getLength());
         String paramName = SecurityConstants.DEFAULT_PARAMETER_NAME_MOBILE;
 		String mobile = ServletRequestUtils.getRequiredStringParameter(request.getRequest(), paramName);
-		String wycode = smsCodeSender.send(mobile, code);
+		//String wycode = smsCodeSender.send(mobile, code);
         //这是验证码首次生成，计时在这里开始
-		return new ValidateCode(wycode, securityProperties.getCode().getSms().getExpireIn());
+		return new ValidateCode(code, securityProperties.getCode().getSms().getExpireIn());
 	}
 
 

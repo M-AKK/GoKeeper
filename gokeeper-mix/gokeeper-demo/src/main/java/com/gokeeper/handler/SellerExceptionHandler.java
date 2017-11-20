@@ -1,8 +1,9 @@
 package com.gokeeper.handler;
 
 import com.gokeeper.core.validate.code.ValidateCodeException;
+import com.gokeeper.exception.SellerAuthorizeException;
 import com.gokeeper.exception.TTpException;
-import com.gokeeper.utils.ResultVOUtil;
+import com.gokeeper.utils.ResultVoUtil;
 import com.gokeeper.vo.ResultVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -17,23 +18,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Slf4j
 public class SellerExceptionHandler {
 
-   /* @Autowired
-    private ProjectUrlConfig projectUrlConfig;*/
-
     //拦截登录异常
     //登录界面地址：http://ynfywtq.hk1.mofasuidao.cn/sell/seller/login
-    /*@ExceptionHandler(value = SellerAuthorizeException.class)
-    public ModelAndView handlerAuthorizeException() {
-        return new ModelAndView("redirect:"
-        .concat(projectUrlConfig.getSell())
-        .concat("/sell/seller/login"));
-    }*/
+    @ExceptionHandler(value = SellerAuthorizeException.class)
+    @ResponseBody
+    public ResultVO handlerAuthorizeException() {
+        return ResultVoUtil.error(404, "用户还未登录，请先进行登录操作。");
+    }
 
     @ExceptionHandler(value = TTpException.class)
     @ResponseBody//直接在这里返回给前端
     //@ResponseStatus(HttpStatus.ACCEPTED)可以改变返回的status值,一些特殊项目可能需要(银行项目)
     public ResultVO handlerTtpException(TTpException e) {
-        return ResultVOUtil.error(e.getCode(), e.getMessage());
+        return ResultVoUtil.error(e.getCode(), e.getMessage());
     }
 
 
@@ -43,6 +40,6 @@ public class SellerExceptionHandler {
     public ResultVO handlerValidateCodeException(ValidateCodeException e) {
         log.info("handlerValidateCodeException调用成功："+e.getMessage());
 
-        return ResultVOUtil.error(e.getCode(), e.getMessage());
+        return ResultVoUtil.error(e.getCode(), e.getMessage());
     }
 }

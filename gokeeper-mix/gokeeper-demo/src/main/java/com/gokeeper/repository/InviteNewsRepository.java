@@ -17,4 +17,11 @@ public interface InviteNewsRepository extends JpaRepository<InviteNews, String> 
      * @return
      */
     List<InviteNews> findAllByUserIdAndHiddenOrderByUpdateTimeDesc(String userId, Integer hidden);
+
+    /**
+     * 查找某一条邀请消息
+     * @param id
+     * @return
+     */
+    InviteNews findById(String id);
 }

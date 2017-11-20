@@ -30,4 +30,18 @@ public interface UserInfoRepository extends JpaRepository<UserInfo, String> {
      * @return
      */
     UserInfo findByPhonenumber(String phonenumber);
+
+    /**
+     * 按QQid查找
+     * @param qqOpenid
+     * @return
+     */
+    UserInfo findByQqOpenid(String qqOpenid);
+
+    /**
+     * 微信的openid
+     * @param wxOpenid
+     * @return
+     */
+    UserInfo findByWxOpenid(String wxOpenid);
 }

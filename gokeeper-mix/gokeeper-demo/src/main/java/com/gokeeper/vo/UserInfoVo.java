@@ -12,18 +12,36 @@ public class UserInfoVo {
 
     private String userId;
 
+    //微信openid
+    private String wxOpenid;
+
     //手机号码
     private String phonenumber;
+
+    //微博key
+    private String weiboId;
+
+    //QQid
+    private String qqOpenid;
 
     //用户名
     private String username;
 
-    //真实姓名
-    private String realname;
+    //密码
+    private String password;
 
-    //性别
-    private Integer sex;
+    //生日
+    private String birthday;
+
+    //性别，默认为男
+    private Integer sex = 0;
+
+    //所属地点
+    private String city;
 
     //头像
     private String userIcon;
+
+    //用户等级
+    private String level = "0级赏金猎人";
 }

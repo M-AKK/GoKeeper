@@ -9,6 +9,7 @@ import com.gokeeper.service.JoinService;
 import com.gokeeper.utils.DateUtil;
 import com.gokeeper.utils.EnumUtil;
 import com.gokeeper.utils.JsonUtil;
+import com.gokeeper.vo.JoinPreVo;
 import com.gokeeper.vo.JoinVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,39 +54,44 @@ public class JoinServiceImpl implements JoinService {
      * @return
      */
     @Override
-    public List<JoinVo> getOpenTtp() {
-        List<JoinVo> joinVoList = new ArrayList<>();
-
+    public List<JoinPreVo> getOpenTtp() {
         //1.先查找所有公开ttp的详情信息
-        List<TtpDetail> openttpdetaillist = tTpDetailRepository.findByIfOpen(1);
-        for(TtpDetail detail : openttpdetaillist) {
-            JoinVo joinVo = new JoinVo();
-            //2.根据userid查找userinfo
-            UserInfo userInfo = userInfoRepository.findByUserId(detail.getUserId());
-            joinVo.setUsername(userInfo.getUsername());
-            joinVo.setUserIcon(userInfo.getUserIcon());
-            //设置ttp相关信息
-            joinVo.setTtpId(detail.getTtpId());
-            joinVo.setTtpName(detail.getTtpName());
-            joinVo.setTtpType(EnumUtil.getByCode(detail.getTtpType(), TtpTypeEnum.class).getMessage());
-            joinVo.setCreateTime(dateFormat2(detail.getCreateTime(), 0,16));
-            joinVo.setStartTime(dateFormat2(detail.getStartTime(), 0,16));
-            joinVo.setFinishTime(dateFormat2(detail.getFinishTime(), 0, 16));
-            //TODO 输入目标数，返回对应结果,现在假定运动类ttp才有目标
-            if(detail.getTtpType().equals(TtpTypeEnum.SPORTS.getCode())){
-                joinVo.setTtpTarget(TtpTargetTemplate.runenum(detail.getTtpTarget()));
-            }
+        List<TtpDetail> openttpdetaillist = tTpDetailRepository.findByIfOpen(IfOpenEnum.YES.getCode());
+        List<JoinPreVo> joinPreVoList = getjoinPreVoList(openttpdetaillist);
+        return joinPreVoList;
+    }
 
-            joinVo.setJoinMoney(detail.getJoinMoney());
-            joinVo.setAllMoney(detail.getAllMoney());
-            //设置当前参与总人数
-            joinVo.setJoinPeopleNums(userTtpRepository.findByTtpId(detail.getTtpId()).size());
-            joinVo.setLeaveNotesNums(detail.getLeaveNotesNums());
-            joinVo.setIfJoin(EnumUtil.getByCode(detail.getIfJoin(), IfJoinEnum.class).getMessage());
-            joinVo.setIfQuit(EnumUtil.getByCode(detail.getIfQuit(), IfQuitEnum.class).getMessage());
-            joinVoList.add(joinVo);
+    @Override
+    public JoinVo getOneTtp(String ttpId){
+        //1.首先查找对应ttp详情信息
+        TtpDetail detail = tTpDetailRepository.findByTtpId(ttpId);
+        JoinVo joinVo = new JoinVo();
+
+        //2.根据userid查找userinfo
+        UserInfo userInfo = userInfoRepository.findByUserId(detail.getUserId());
+        joinVo.setUsername(userInfo.getUsername());
+        joinVo.setUserIcon(userInfo.getUserIcon());
+        //设置ttp相关信息
+        joinVo.setTtpId(detail.getTtpId());
+        joinVo.setTtpName(detail.getTtpName());
+        joinVo.setTtpType(EnumUtil.getByCode(detail.getTtpType(), TtpTypeEnum.class).getMessage());
+        joinVo.setCreateTime(dateFormat2(detail.getCreateTime(), 0,16));
+        joinVo.setStartTime(dateFormat2(detail.getStartTime(), 0,16));
+        joinVo.setFinishTime(dateFormat2(detail.getFinishTime(), 0, 16));
+        //TODO 输入目标数，返回对应结果,现在假定运动类ttp才有目标
+        if(detail.getTtpType().equals(TtpTypeEnum.SPORTS.getCode())){
+            joinVo.setTtpTarget(TtpTargetTemplate.runenum(detail.getTtpTarget()));
         }
-        return joinVoList;
+
+        joinVo.setJoinMoney(detail.getJoinMoney());
+        joinVo.setAllMoney(detail.getAllMoney());
+        //设置当前参与总人数
+        joinVo.setJoinPeopleNums(userTtpRepository.findByTtpId(detail.getTtpId()).size());
+        joinVo.setLeaveNotesNums(detail.getLeaveNotesNums());
+        joinVo.setIfJoin(EnumUtil.getByCode(detail.getIfJoin(), IfJoinEnum.class).getMessage());
+        joinVo.setIfQuit(EnumUtil.getByCode(detail.getIfQuit(), IfQuitEnum.class).getMessage());
+
+        return joinVo;
     }
 
     /**
@@ -132,7 +138,7 @@ public class JoinServiceImpl implements JoinService {
                 userRecord.setUserRecordId(userTtp.getUserTtpId() + datelist.get(i));
                 userRecord.setUserTtpId(userTtp.getUserTtpId());
                 userRecord.setDays(DateUtil.StringToDate1(datelist.get(i)));
-                userRecord.setDayStatus(0);
+                userRecord.setDayStatus(DayStatusEnum.NO_FINISH.getCode());
                 userRecordRepository.save(userRecord);
             }
         } catch(ParseException e) {
@@ -174,5 +180,32 @@ public class JoinServiceImpl implements JoinService {
         WebSocketPushHandler.sendMessageToUser(ttpNews.getUserId(), t);
 
         return userTtp;
+    }
+
+
+    private List<JoinPreVo> getjoinPreVoList(List<TtpDetail> openttpdetaillist) {
+        List<JoinPreVo> joinPreVoList = new ArrayList<>();
+        for(TtpDetail detail : openttpdetaillist) {
+            JoinPreVo joinPreVo = new JoinPreVo();
+            //2.根据userid查找userinfo
+            UserInfo userInfo = userInfoRepository.findByUserId(detail.getUserId());
+            joinPreVo.setUsername(userInfo.getUsername());
+            joinPreVo.setUserIcon(userInfo.getUserIcon());
+            //设置ttp相关信息
+            joinPreVo.setTtpId(detail.getTtpId());
+            joinPreVo.setTtpName(detail.getTtpName());
+            joinPreVo.setTtpType(EnumUtil.getByCode(detail.getTtpType(), TtpTypeEnum.class).getMessage());
+            joinPreVo.setCreateTime(dateFormat2(detail.getCreateTime(), 0,16));
+
+            //TODO 输入目标数，返回对应结果,现在假定运动类ttp才有目标
+            if(detail.getTtpType().equals(TtpTypeEnum.SPORTS.getCode())){
+                joinPreVo.setTtpTarget(TtpTargetTemplate.runenum(detail.getTtpTarget()));
+            }
+            joinPreVo.setAllMoney(detail.getAllMoney());
+            //设置当前参与总人数
+            joinPreVo.setJoinPeopleNums(userTtpRepository.findByTtpId(detail.getTtpId()).size());
+            joinPreVoList.add(joinPreVo);
+        }
+        return joinPreVoList;
     }
 }

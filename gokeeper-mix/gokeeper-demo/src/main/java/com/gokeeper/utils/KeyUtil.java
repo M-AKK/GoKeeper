@@ -22,8 +22,8 @@ public class KeyUtil {
         return System.currentTimeMillis() + String.valueOf(number);
     }
 
-    //下面就是实现为数据库获取一个唯一的主键id的代码
 
+    //下面就是实现为数据库获取一个唯一的主键id的代码
     /**
      * 获得一个UUID
      * @return String UUID

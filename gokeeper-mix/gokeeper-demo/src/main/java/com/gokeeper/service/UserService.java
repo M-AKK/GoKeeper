@@ -10,19 +10,30 @@ import com.gokeeper.vo.UserInfoVo;
 public interface UserService {
 
     /**
-     * 根据token获取UserId
-     * @param token
-     * @return
-     */
-    String getUserId(String token);
-
-    /**
      * 根据手机号查找用户，发邀请时查找用户使用
      * @param phonenumber
      * @return
      */
     UserInfoVo getUserByphone(String phonenumber);
 
+    /**
+     * 根据userID查找用户
+     * @param userId
+     * @return
+     */
+    UserInfoVo getuserById(String userId);
 
+    /**
+     * 登录判断和保存用户
+     * @param userInfo
+     * @return
+     */
     UserInfo loginAndSave(UserInfo userInfo);
+
+    /**
+     * 修改并保存用户信息
+     * @param userInfo
+     * @return
+     */
+    UserInfo modifyUser(UserInfo userInfo);
 }

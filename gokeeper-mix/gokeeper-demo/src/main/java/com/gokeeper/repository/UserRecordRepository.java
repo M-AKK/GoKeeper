@@ -10,7 +10,7 @@ import java.util.List;
  * @author Created by Akk_Mac
  * @Date: 2017/10/3 13:05
  */
-public interface UserRecordRepository extends JpaRepository<UserRecord, String> {
+public interface UserRecordRepository extends JpaRepository<UserRecord, Integer> {
 
     /**
      * 根据userTtpId查找所有此ttp的所有记录

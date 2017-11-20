@@ -17,7 +17,6 @@ import java.util.Map;
  * @author cheng
  * @date 2017年9月26日 上午10:31:30
  */
-
 @Slf4j
 public class MyWebSocketInterceptor implements HandshakeInterceptor {
 
@@ -38,9 +37,8 @@ public class MyWebSocketInterceptor implements HandshakeInterceptor {
            /* UserInfo userInfo = (UserInfo) httpRequest.getAttribute("userInfo");
             String userId = userInfo.getUserId();*/
             String userId = httpRequest.getParameter("userId");
-            log.info(userId + "用户建立连接。。。");
+            log.info(userId + "用户建立连接");
             attributes.put("userId", userId);
-            log.info("用户唯一标识:" + userId);
         }
         return true;
     }

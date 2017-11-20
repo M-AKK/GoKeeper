@@ -4,12 +4,14 @@ import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
 
 /**
  * 用户记录实体表
- * Created by Akk_Mac
+ * @author Created by Akk_Mac
  * Date: 2017/10/3 12:43
  */
 @Entity
@@ -18,6 +20,9 @@ import java.util.Date;
 public class UserRecord {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
     private String userRecordId;
 
     private String userTtpId;

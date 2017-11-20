@@ -15,7 +15,7 @@ public class SmsCodeProperties {
 	/**
 	 * 要处理的url
 	 */
-	private String url = "";
+	private String url = "/gokeeper/login/authentication/mobile";
 
     /**
      * 发送验证码的请求路径URL

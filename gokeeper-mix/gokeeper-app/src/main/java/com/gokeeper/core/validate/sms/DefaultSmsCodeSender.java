@@ -17,8 +17,6 @@ public class DefaultSmsCodeSender implements SmsCodeSender {
 	public String send(String mobile, String code) {
 		// TODO Auto-generated method stub
 		System.out.println("向手机" + mobile + "发送短信验证码:" + code);
-
-		System.out.println(securityProperties.getCode().getSms().getLength());
 		return null;
 	}
 

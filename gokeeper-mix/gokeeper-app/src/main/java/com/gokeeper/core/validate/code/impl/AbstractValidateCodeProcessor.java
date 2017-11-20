@@ -74,6 +74,7 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
 	 * @param validateCode
 	 */
 	private void save(ServletWebRequest request, C validateCode) {
+        log.info("保存验证码到session："+getSessionKey(request));
         sessionStrategy.setAttribute(request, getSessionKey(request), validateCode);
 	}
 
@@ -84,6 +85,7 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
      * @return
      */
     private String getSessionKey(ServletWebRequest request) {
+
         return SESSION_KEY_PREFIX + getValidateCodeType(request).toString().toUpperCase();
     }
 
@@ -113,7 +115,6 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
 
         ValidateCodeType processorType = getValidateCodeType(request);
         String sessionKey = getSessionKey(request);
-
         C codeInSession = (C) sessionStrategy.getAttribute(request, sessionKey);
 
         String codeInRequest;

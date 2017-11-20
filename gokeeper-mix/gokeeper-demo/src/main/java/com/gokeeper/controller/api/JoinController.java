@@ -1,18 +1,18 @@
 package com.gokeeper.controller.api;
 
-import com.gokeeper.enums.ResultEnum;
+import com.gokeeper.constant.UserInfoConstant;
+import com.gokeeper.dataobject.UserInfo;
 import com.gokeeper.exception.TTpException;
 import com.gokeeper.service.JoinService;
-import com.gokeeper.utils.ResultVOUtil;
+import com.gokeeper.utils.ResultVoUtil;
+import com.gokeeper.vo.JoinPreVo;
 import com.gokeeper.vo.JoinVo;
 import com.gokeeper.vo.ResultVO;
-import com.mysql.jdbc.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -28,37 +28,37 @@ public class JoinController {
     @Autowired
     private JoinService joinService;
 
-    //加入列表展示
-    @GetMapping(value = "/list")
-    public ResultVO getallList(HttpServletRequest request){
-
+    //加入预览列表展示
+    @GetMapping
+    public ResultVO getAllList(){
         //返回所有公开的ttp
-        List<JoinVo> joinVoList = joinService.getOpenTtp();
+        List<JoinPreVo> joinPreVoList = joinService.getOpenTtp();
+        return ResultVoUtil.success(joinPreVoList);
+    }
 
-        return ResultVOUtil.success(joinVoList);
+    //加入界面某个ttp详情
+    @GetMapping(value = "/{ttpId}")
+    public ResultVO getOneTtp(@PathVariable("ttpId") String ttpId) {
+        JoinVo result = joinService.getOneTtp(ttpId);
+        return ResultVoUtil.success(result);
     }
 
     //加入功能的实现
-    @PostMapping(value = "/attend")
+    @PostMapping(value = "/{ttpId}")
     public ResultVO atttend(HttpServletRequest request,
-                            @RequestParam("ttpId") String ttpId){
-
+                            @PathVariable("ttpId") String ttpId){
         //1.接收需要加入的ttpId
         //2.根据session查找用户id
-        HttpSession session = request.getSession();
-        String userId = (String) session.getAttribute("userId");
-        if(StringUtils.isNullOrEmpty(userId)){
-            log.error("【user查询】userId为空");
-            throw new TTpException(ResultEnum.USER_ERROR);
-        }
+        //根据seesion获取userId
+        UserInfo user = (UserInfo) request.getSession().getAttribute(UserInfoConstant.USER_INFO);
 
         try{
-            joinService.attend(userId, ttpId);
+            joinService.attend(user.getUserId(), ttpId);
         } catch (TTpException e) {
-            return ResultVOUtil.error(e.getCode(), e.getMessage());
+            return ResultVoUtil.error(e.getCode(), e.getMessage());
         }
 
-        return ResultVOUtil.success();
+        return ResultVoUtil.success();
     }
 
 }

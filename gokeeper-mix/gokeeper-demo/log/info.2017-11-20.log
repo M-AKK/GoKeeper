@@ -1,0 +1,647 @@
+2017-11-20 14:19:05,286 - HV000001: Hibernate Validator 5.3.5.Final
+2017-11-20 14:19:10,032 - Starting FaqiServiceImplTest on Akk-mbp.local with PID 14316 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix/gokeeper-demo)
+2017-11-20 14:19:10,034 - No active profile set, falling back to default profiles: default
+2017-11-20 14:19:10,061 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@f58853c: startup date [Mon Nov 20 14:19:10 CST 2017]; root of context hierarchy
+2017-11-20 14:19:10,672 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-20 14:19:10,775 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-20 14:19:10,809 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.InviteNewsRepository.
+2017-11-20 14:19:10,809 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpDetailRepository.
+2017-11-20 14:19:10,810 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-11-20 14:19:10,810 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpNewsRepository.
+2017-11-20 14:19:10,811 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-11-20 14:19:10,811 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.SystemNewsRspository.
+2017-11-20 14:19:10,811 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpTypeRepository.
+2017-11-20 14:19:10,812 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-11-20 14:19:11,158 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-20 14:19:12,155 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-11-20 14:19:12,173 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-11-20 14:19:12,314 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-11-20 14:19:12,318 - HHH000206: hibernate.properties not found
+2017-11-20 14:19:12,319 - HHH000021: Bytecode provider name : javassist
+2017-11-20 14:19:12,358 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-20 14:19:12,472 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-11-20 14:19:12,938 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-11-20 14:19:13,621 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-11-20 14:19:13,679 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-11-20 14:19:13,679 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-11-20 14:19:14,177 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@f58853c: startup date [Mon Nov 20 14:19:10 CST 2017]; root of context hierarchy
+2017-11-20 14:19:14,246 - Mapped "{[/session],methods=[DELETE]}" onto public void com.gokeeper.controller.SessionController.signOut(javax.servlet.http.HttpServletRequest)
+2017-11-20 14:19:14,250 - Mapped "{[/login/authentication/mobile],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.sms(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 14:19:14,250 - Mapped "{[/login/authentication/oicq],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.oicqlogin(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 14:19:14,251 - Mapped "{[/login/authentication/weixin],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.weixinlogin(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 14:19:14,254 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception
+2017-11-20 14:19:14,254 - Mapped "{[/websocket/systemnews],methods=[POST]}" onto public void com.gokeeper.controller.WebsocketController.sandSystemNews(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 14:19:14,254 - Mapped "{[/websocket/go/invite],methods=[POST]}" onto public void com.gokeeper.controller.WebsocketController.sendInviteNews(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 14:19:14,255 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-11-20 14:19:14,255 - Mapped "{[/ttp/alltype],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.FaqiController.findAllType()
+2017-11-20 14:19:14,255 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2017-11-20 14:19:14,256 - Mapped "{[/go/{ttpId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.GoController.getOne(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 14:19:14,256 - Mapped "{[/go],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.GoController.goList(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 14:19:14,257 - Mapped "{[/join/{ttpId}],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.atttend(javax.servlet.http.HttpServletRequest,java.lang.String)
+2017-11-20 14:19:14,258 - Mapped "{[/join],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.getAllList()
+2017-11-20 14:19:14,258 - Mapped "{[/join/{ttpId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.getOneTtp(java.lang.String)
+2017-11-20 14:19:14,260 - Mapped "{[/msg],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.list(java.lang.Integer,javax.servlet.http.HttpServletRequest)
+2017-11-20 14:19:14,260 - Mapped "{[/msg/{msgId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.getOneNew(java.lang.String)
+2017-11-20 14:19:14,260 - Mapped "{[/msg/{msgId}],methods=[DELETE]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.deleteOneMsg(java.lang.String)
+2017-11-20 14:19:14,261 - Mapped "{[/msg/{msgId}],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.dingOneMsg(java.lang.String)
+2017-11-20 14:19:14,261 - Mapped "{[/user/getUserByPhone],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.UserController.getUserByPhone(java.lang.String)
+2017-11-20 14:19:14,262 - Mapped "{[/code/{type}],methods=[GET]}" onto public void com.gokeeper.core.validate.code.ValidateCodeController.createCode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.lang.Exception
+2017-11-20 14:19:14,263 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-11-20 14:19:14,263 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-11-20 14:19:14,298 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 14:19:14,299 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 14:19:14,313 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-11-20 14:19:14,333 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 14:19:14,387 - Adding welcome page: ServletContext resource [/index.html]
+2017-11-20 14:19:19,739 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-11-20 14:19:19,952 - Starting beans in phase 2147483647
+2017-11-20 14:19:19,967 - Started FaqiServiceImplTest in 25.463 seconds (JVM running for 26.218)
+2017-11-20 14:19:20,026 - HHH000397: Using ASTQueryTranslatorFactory
+2017-11-20 14:19:20,138 - ttp创建结果， result=TtpDetail(ttpId=1511158760023554369, userId=1511091449434479239, ttpName=测试消息模板创建, ttpTarget=1.0, leaveNotesNums=5, address=北京路, joinMoney=1200, allMoney=1200, ifQuit=0, ifJoin=0, ifOpen=0, deductionRation=20, ttpType=1, ttpStatus=1, createTime=null, startTime=Mon Nov 20 08:00:00 CST 2017, finishTime=Mon Nov 27 10:00:00 CST 2017)
+2017-11-20 14:19:20,142 - Closing org.springframework.web.context.support.GenericWebApplicationContext@f58853c: startup date [Mon Nov 20 14:19:10 CST 2017]; root of context hierarchy
+2017-11-20 14:19:20,144 - Stopping beans in phase 2147483647
+2017-11-20 14:19:20,147 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-11-20 14:19:20,150 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-11-20 20:23:44,834 - HV000001: Hibernate Validator 5.3.5.Final
+2017-11-20 20:23:49,572 - Starting TTpDetailRepositoryTest on Akk-mbp.local with PID 15433 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix/gokeeper-demo)
+2017-11-20 20:23:49,573 - No active profile set, falling back to default profiles: default
+2017-11-20 20:23:49,600 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@448c8166: startup date [Mon Nov 20 20:23:49 CST 2017]; root of context hierarchy
+2017-11-20 20:23:50,251 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-20 20:23:50,355 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-20 20:23:50,393 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.InviteNewsRepository.
+2017-11-20 20:23:50,394 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpDetailRepository.
+2017-11-20 20:23:50,394 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-11-20 20:23:50,395 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpNewsRepository.
+2017-11-20 20:23:50,395 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-11-20 20:23:50,396 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.SystemNewsRspository.
+2017-11-20 20:23:50,396 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpTypeRepository.
+2017-11-20 20:23:50,397 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-11-20 20:23:50,734 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-20 20:23:51,687 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-11-20 20:23:51,707 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-11-20 20:23:51,773 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-11-20 20:23:51,775 - HHH000206: hibernate.properties not found
+2017-11-20 20:23:51,776 - HHH000021: Bytecode provider name : javassist
+2017-11-20 20:23:51,828 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-20 20:23:52,007 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-11-20 20:23:52,446 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-11-20 20:23:52,933 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-11-20 20:23:52,984 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-11-20 20:23:52,984 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-11-20 20:23:53,459 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@448c8166: startup date [Mon Nov 20 20:23:49 CST 2017]; root of context hierarchy
+2017-11-20 20:23:53,529 - Mapped "{[/session],methods=[DELETE]}" onto public void com.gokeeper.controller.SessionController.signOut(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:23:53,531 - Mapped "{[/login/authentication/mobile],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.sms(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:23:53,532 - Mapped "{[/login/authentication/oicq],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.oicqlogin(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:23:53,532 - Mapped "{[/login/authentication/weixin],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.weixinlogin(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:23:53,534 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception
+2017-11-20 20:23:53,535 - Mapped "{[/websocket/systemnews],methods=[POST]}" onto public void com.gokeeper.controller.WebsocketController.sandSystemNews(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:23:53,535 - Mapped "{[/websocket/go/invite],methods=[POST]}" onto public void com.gokeeper.controller.WebsocketController.sendInviteNews(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:23:53,535 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:23:53,536 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2017-11-20 20:23:53,536 - Mapped "{[/ttp/alltype],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.FaqiController.findAllType()
+2017-11-20 20:23:53,537 - Mapped "{[/go/{ttpId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.GoController.getOne(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:23:53,537 - Mapped "{[/go],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.GoController.goList(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:23:53,538 - Mapped "{[/join/{ttpId}],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.atttend(javax.servlet.http.HttpServletRequest,java.lang.String)
+2017-11-20 20:23:53,538 - Mapped "{[/join],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.getAllList()
+2017-11-20 20:23:53,538 - Mapped "{[/join/{ttpId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.getOneTtp(java.lang.String)
+2017-11-20 20:23:53,540 - Mapped "{[/msg],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.list(java.lang.Integer,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:23:53,540 - Mapped "{[/msg/{msgId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.getOneNew(java.lang.String)
+2017-11-20 20:23:53,540 - Mapped "{[/msg/{msgId}],methods=[DELETE]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.deleteOneMsg(java.lang.String)
+2017-11-20 20:23:53,540 - Mapped "{[/msg/{msgId}],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.dingOneMsg(java.lang.String)
+2017-11-20 20:23:53,541 - Mapped "{[/search],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SearchController.search(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2017-11-20 20:23:53,542 - Mapped "{[/setting],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.modifyUser(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:23:53,542 - Mapped "{[/setting],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.getUserSetting(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:23:53,542 - Mapped "{[/setting/qq/binding],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.qqBinDing(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:23:53,542 - Mapped "{[/setting/qq/unbundling],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.qqUnBundling(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:23:53,543 - Mapped "{[/setting/wx/binding],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.wxBinDing(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:23:53,543 - Mapped "{[/setting/wx/unbundling],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.wxUnBundling(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:23:53,543 - Mapped "{[/user/getUserByPhone],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.UserController.getUserByPhone(java.lang.String)
+2017-11-20 20:23:53,544 - Mapped "{[/code/{type}],methods=[GET]}" onto public void com.gokeeper.core.validate.code.ValidateCodeController.createCode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.lang.Exception
+2017-11-20 20:23:53,545 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:23:53,545 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-11-20 20:23:53,572 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 20:23:53,572 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 20:23:53,587 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-11-20 20:23:53,607 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 20:23:53,645 - Adding welcome page: ServletContext resource [/index.html]
+2017-11-20 20:23:58,955 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-11-20 20:23:59,093 - Starting beans in phase 2147483647
+2017-11-20 20:23:59,108 - Started TTpDetailRepositoryTest in 25.06 seconds (JVM running for 25.799)
+2017-11-20 20:23:59,233 - SQL Error: 1064, SQLState: 42000
+2017-11-20 20:23:59,251 - Closing org.springframework.web.context.support.GenericWebApplicationContext@448c8166: startup date [Mon Nov 20 20:23:49 CST 2017]; root of context hierarchy
+2017-11-20 20:23:59,253 - Stopping beans in phase 2147483647
+2017-11-20 20:23:59,259 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-11-20 20:23:59,263 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-11-20 20:37:19,948 - HV000001: Hibernate Validator 5.3.5.Final
+2017-11-20 20:37:24,684 - Starting TTpDetailRepositoryTest on Akk-mbp.local with PID 15465 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix/gokeeper-demo)
+2017-11-20 20:37:24,688 - No active profile set, falling back to default profiles: default
+2017-11-20 20:37:24,718 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@448c8166: startup date [Mon Nov 20 20:37:24 CST 2017]; root of context hierarchy
+2017-11-20 20:37:25,372 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-20 20:37:25,481 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-20 20:37:25,519 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.InviteNewsRepository.
+2017-11-20 20:37:25,520 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpDetailRepository.
+2017-11-20 20:37:25,521 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-11-20 20:37:25,521 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpNewsRepository.
+2017-11-20 20:37:25,522 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-11-20 20:37:25,522 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.SystemNewsRspository.
+2017-11-20 20:37:25,523 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpTypeRepository.
+2017-11-20 20:37:25,523 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-11-20 20:37:25,868 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-20 20:37:26,720 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-11-20 20:37:26,734 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-11-20 20:37:26,789 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-11-20 20:37:26,791 - HHH000206: hibernate.properties not found
+2017-11-20 20:37:26,792 - HHH000021: Bytecode provider name : javassist
+2017-11-20 20:37:26,843 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-20 20:37:27,014 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-11-20 20:37:27,479 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-11-20 20:37:27,969 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-11-20 20:37:28,020 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-11-20 20:37:28,020 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-11-20 20:37:28,466 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@448c8166: startup date [Mon Nov 20 20:37:24 CST 2017]; root of context hierarchy
+2017-11-20 20:37:28,538 - Mapped "{[/session],methods=[DELETE]}" onto public void com.gokeeper.controller.SessionController.signOut(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:37:28,541 - Mapped "{[/login/authentication/mobile],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.sms(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:37:28,542 - Mapped "{[/login/authentication/oicq],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.oicqlogin(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:37:28,542 - Mapped "{[/login/authentication/weixin],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.weixinlogin(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:37:28,544 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception
+2017-11-20 20:37:28,544 - Mapped "{[/websocket/systemnews],methods=[POST]}" onto public void com.gokeeper.controller.WebsocketController.sandSystemNews(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:37:28,545 - Mapped "{[/websocket/go/invite],methods=[POST]}" onto public void com.gokeeper.controller.WebsocketController.sendInviteNews(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:37:28,545 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:37:28,546 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2017-11-20 20:37:28,546 - Mapped "{[/ttp/alltype],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.FaqiController.findAllType()
+2017-11-20 20:37:28,547 - Mapped "{[/go],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.GoController.goList(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:37:28,547 - Mapped "{[/go/{ttpId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.GoController.getOne(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:37:28,548 - Mapped "{[/join/{ttpId}],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.atttend(javax.servlet.http.HttpServletRequest,java.lang.String)
+2017-11-20 20:37:28,548 - Mapped "{[/join],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.getAllList()
+2017-11-20 20:37:28,549 - Mapped "{[/join/{ttpId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.getOneTtp(java.lang.String)
+2017-11-20 20:37:28,551 - Mapped "{[/msg],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.list(java.lang.Integer,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:37:28,551 - Mapped "{[/msg/{msgId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.getOneNew(java.lang.String)
+2017-11-20 20:37:28,551 - Mapped "{[/msg/{msgId}],methods=[DELETE]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.deleteOneMsg(java.lang.String)
+2017-11-20 20:37:28,551 - Mapped "{[/msg/{msgId}],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.dingOneMsg(java.lang.String)
+2017-11-20 20:37:28,552 - Mapped "{[/search],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SearchController.search(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2017-11-20 20:37:28,553 - Mapped "{[/setting],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.modifyUser(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:37:28,553 - Mapped "{[/setting],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.getUserSetting(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:37:28,553 - Mapped "{[/setting/qq/binding],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.qqBinDing(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:37:28,554 - Mapped "{[/setting/qq/unbundling],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.qqUnBundling(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:37:28,554 - Mapped "{[/setting/wx/binding],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.wxBinDing(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:37:28,554 - Mapped "{[/setting/wx/unbundling],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.wxUnBundling(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:37:28,555 - Mapped "{[/user/getUserByPhone],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.UserController.getUserByPhone(java.lang.String)
+2017-11-20 20:37:28,555 - Mapped "{[/code/{type}],methods=[GET]}" onto public void com.gokeeper.core.validate.code.ValidateCodeController.createCode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.lang.Exception
+2017-11-20 20:37:28,556 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:37:28,557 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-11-20 20:37:28,581 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 20:37:28,581 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 20:37:28,595 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-11-20 20:37:28,620 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 20:37:28,662 - Adding welcome page: ServletContext resource [/index.html]
+2017-11-20 20:37:34,007 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-11-20 20:37:34,151 - Starting beans in phase 2147483647
+2017-11-20 20:37:34,167 - Started TTpDetailRepositoryTest in 25.0 seconds (JVM running for 25.739)
+2017-11-20 20:37:34,229 - Closing org.springframework.web.context.support.GenericWebApplicationContext@448c8166: startup date [Mon Nov 20 20:37:24 CST 2017]; root of context hierarchy
+2017-11-20 20:37:34,234 - Stopping beans in phase 2147483647
+2017-11-20 20:37:34,240 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-11-20 20:37:34,244 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-11-20 20:39:11,876 - HV000001: Hibernate Validator 5.3.5.Final
+2017-11-20 20:39:16,628 - Starting TTpDetailRepositoryTest on Akk-mbp.local with PID 15480 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix/gokeeper-demo)
+2017-11-20 20:39:16,630 - No active profile set, falling back to default profiles: default
+2017-11-20 20:39:16,661 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@448c8166: startup date [Mon Nov 20 20:39:16 CST 2017]; root of context hierarchy
+2017-11-20 20:39:17,290 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-20 20:39:17,393 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-20 20:39:17,427 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.InviteNewsRepository.
+2017-11-20 20:39:17,428 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpDetailRepository.
+2017-11-20 20:39:17,428 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-11-20 20:39:17,429 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpNewsRepository.
+2017-11-20 20:39:17,429 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-11-20 20:39:17,430 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.SystemNewsRspository.
+2017-11-20 20:39:17,431 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpTypeRepository.
+2017-11-20 20:39:17,431 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-11-20 20:39:17,783 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-20 20:39:18,599 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-11-20 20:39:18,613 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-11-20 20:39:18,688 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-11-20 20:39:18,690 - HHH000206: hibernate.properties not found
+2017-11-20 20:39:18,691 - HHH000021: Bytecode provider name : javassist
+2017-11-20 20:39:18,729 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-20 20:39:18,937 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-11-20 20:39:19,408 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-11-20 20:39:19,877 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-11-20 20:39:19,931 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-11-20 20:39:19,932 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-11-20 20:39:20,388 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@448c8166: startup date [Mon Nov 20 20:39:16 CST 2017]; root of context hierarchy
+2017-11-20 20:39:20,455 - Mapped "{[/session],methods=[DELETE]}" onto public void com.gokeeper.controller.SessionController.signOut(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:39:20,457 - Mapped "{[/login/authentication/mobile],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.sms(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:39:20,458 - Mapped "{[/login/authentication/oicq],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.oicqlogin(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:39:20,458 - Mapped "{[/login/authentication/weixin],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.weixinlogin(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:39:20,460 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception
+2017-11-20 20:39:20,460 - Mapped "{[/websocket/systemnews],methods=[POST]}" onto public void com.gokeeper.controller.WebsocketController.sandSystemNews(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:39:20,461 - Mapped "{[/websocket/go/invite],methods=[POST]}" onto public void com.gokeeper.controller.WebsocketController.sendInviteNews(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:39:20,461 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:39:20,462 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2017-11-20 20:39:20,462 - Mapped "{[/ttp/alltype],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.FaqiController.findAllType()
+2017-11-20 20:39:20,463 - Mapped "{[/go/{ttpId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.GoController.getOne(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:39:20,463 - Mapped "{[/go],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.GoController.goList(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:39:20,465 - Mapped "{[/join],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.getAllList()
+2017-11-20 20:39:20,465 - Mapped "{[/join/{ttpId}],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.atttend(javax.servlet.http.HttpServletRequest,java.lang.String)
+2017-11-20 20:39:20,465 - Mapped "{[/join/{ttpId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.getOneTtp(java.lang.String)
+2017-11-20 20:39:20,468 - Mapped "{[/msg],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.list(java.lang.Integer,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:39:20,468 - Mapped "{[/msg/{msgId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.getOneNew(java.lang.String)
+2017-11-20 20:39:20,468 - Mapped "{[/msg/{msgId}],methods=[DELETE]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.deleteOneMsg(java.lang.String)
+2017-11-20 20:39:20,468 - Mapped "{[/msg/{msgId}],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.dingOneMsg(java.lang.String)
+2017-11-20 20:39:20,469 - Mapped "{[/search],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SearchController.search(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2017-11-20 20:39:20,471 - Mapped "{[/setting],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.modifyUser(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:39:20,471 - Mapped "{[/setting],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.getUserSetting(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:39:20,471 - Mapped "{[/setting/qq/binding],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.qqBinDing(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:39:20,471 - Mapped "{[/setting/qq/unbundling],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.qqUnBundling(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:39:20,471 - Mapped "{[/setting/wx/binding],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.wxBinDing(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:39:20,471 - Mapped "{[/setting/wx/unbundling],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.wxUnBundling(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:39:20,472 - Mapped "{[/user/getUserByPhone],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.UserController.getUserByPhone(java.lang.String)
+2017-11-20 20:39:20,472 - Mapped "{[/code/{type}],methods=[GET]}" onto public void com.gokeeper.core.validate.code.ValidateCodeController.createCode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.lang.Exception
+2017-11-20 20:39:20,474 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:39:20,474 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-11-20 20:39:20,498 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 20:39:20,498 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 20:39:20,513 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-11-20 20:39:20,536 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 20:39:20,574 - Adding welcome page: ServletContext resource [/index.html]
+2017-11-20 20:39:25,915 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-11-20 20:39:26,061 - Starting beans in phase 2147483647
+2017-11-20 20:39:26,076 - Started TTpDetailRepositoryTest in 24.928 seconds (JVM running for 25.602)
+2017-11-20 20:39:26,200 - SQL Error: 1064, SQLState: 42000
+2017-11-20 20:39:26,218 - Closing org.springframework.web.context.support.GenericWebApplicationContext@448c8166: startup date [Mon Nov 20 20:39:16 CST 2017]; root of context hierarchy
+2017-11-20 20:39:26,220 - Stopping beans in phase 2147483647
+2017-11-20 20:39:26,224 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-11-20 20:39:26,226 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-11-20 20:45:52,514 - HV000001: Hibernate Validator 5.3.5.Final
+2017-11-20 20:45:57,263 - Starting TTpDetailRepositoryTest on Akk-mbp.local with PID 15506 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix/gokeeper-demo)
+2017-11-20 20:45:57,264 - No active profile set, falling back to default profiles: default
+2017-11-20 20:45:57,291 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@448c8166: startup date [Mon Nov 20 20:45:57 CST 2017]; root of context hierarchy
+2017-11-20 20:45:57,990 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-20 20:45:58,101 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-20 20:45:58,142 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.InviteNewsRepository.
+2017-11-20 20:45:58,143 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpDetailRepository.
+2017-11-20 20:45:58,143 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-11-20 20:45:58,144 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpNewsRepository.
+2017-11-20 20:45:58,145 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-11-20 20:45:58,145 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.SystemNewsRspository.
+2017-11-20 20:45:58,146 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpTypeRepository.
+2017-11-20 20:45:58,146 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-11-20 20:45:58,526 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-20 20:45:59,517 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-11-20 20:45:59,532 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-11-20 20:45:59,601 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-11-20 20:45:59,603 - HHH000206: hibernate.properties not found
+2017-11-20 20:45:59,604 - HHH000021: Bytecode provider name : javassist
+2017-11-20 20:45:59,636 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-20 20:45:59,814 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-11-20 20:46:00,286 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-11-20 20:46:00,879 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-11-20 20:46:00,953 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-11-20 20:46:00,953 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-11-20 20:46:01,539 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@448c8166: startup date [Mon Nov 20 20:45:57 CST 2017]; root of context hierarchy
+2017-11-20 20:46:01,605 - Mapped "{[/session],methods=[DELETE]}" onto public void com.gokeeper.controller.SessionController.signOut(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:46:01,610 - Mapped "{[/login/authentication/mobile],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.sms(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:46:01,611 - Mapped "{[/login/authentication/oicq],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.oicqlogin(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:46:01,611 - Mapped "{[/login/authentication/weixin],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.weixinlogin(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:46:01,617 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception
+2017-11-20 20:46:01,617 - Mapped "{[/websocket/systemnews],methods=[POST]}" onto public void com.gokeeper.controller.WebsocketController.sandSystemNews(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:46:01,617 - Mapped "{[/websocket/go/invite],methods=[POST]}" onto public void com.gokeeper.controller.WebsocketController.sendInviteNews(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:46:01,617 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:46:01,618 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2017-11-20 20:46:01,619 - Mapped "{[/ttp/alltype],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.FaqiController.findAllType()
+2017-11-20 20:46:01,620 - Mapped "{[/go/{ttpId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.GoController.getOne(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:46:01,620 - Mapped "{[/go],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.GoController.goList(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:46:01,622 - Mapped "{[/join/{ttpId}],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.atttend(javax.servlet.http.HttpServletRequest,java.lang.String)
+2017-11-20 20:46:01,622 - Mapped "{[/join],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.getAllList()
+2017-11-20 20:46:01,623 - Mapped "{[/join/{ttpId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.getOneTtp(java.lang.String)
+2017-11-20 20:46:01,626 - Mapped "{[/msg],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.list(java.lang.Integer,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:46:01,626 - Mapped "{[/msg/{msgId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.getOneNew(java.lang.String)
+2017-11-20 20:46:01,627 - Mapped "{[/msg/{msgId}],methods=[DELETE]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.deleteOneMsg(java.lang.String)
+2017-11-20 20:46:01,627 - Mapped "{[/msg/{msgId}],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.dingOneMsg(java.lang.String)
+2017-11-20 20:46:01,627 - Mapped "{[/search],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SearchController.search(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2017-11-20 20:46:01,630 - Mapped "{[/setting],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.modifyUser(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:46:01,630 - Mapped "{[/setting],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.getUserSetting(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:46:01,631 - Mapped "{[/setting/qq/binding],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.qqBinDing(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:46:01,631 - Mapped "{[/setting/qq/unbundling],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.qqUnBundling(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:46:01,631 - Mapped "{[/setting/wx/binding],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.wxBinDing(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:46:01,631 - Mapped "{[/setting/wx/unbundling],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.wxUnBundling(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:46:01,632 - Mapped "{[/user/getUserByPhone],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.UserController.getUserByPhone(java.lang.String)
+2017-11-20 20:46:01,633 - Mapped "{[/code/{type}],methods=[GET]}" onto public void com.gokeeper.core.validate.code.ValidateCodeController.createCode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.lang.Exception
+2017-11-20 20:46:01,635 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:46:01,635 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-11-20 20:46:01,661 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 20:46:01,661 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 20:46:01,675 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-11-20 20:46:01,702 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 20:46:01,765 - Adding welcome page: ServletContext resource [/index.html]
+2017-11-20 20:46:07,104 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-11-20 20:46:07,249 - Starting beans in phase 2147483647
+2017-11-20 20:46:07,264 - Started TTpDetailRepositoryTest in 25.497 seconds (JVM running for 26.191)
+2017-11-20 20:46:07,396 - SQL Error: 1054, SQLState: 42S22
+2017-11-20 20:46:07,419 - Closing org.springframework.web.context.support.GenericWebApplicationContext@448c8166: startup date [Mon Nov 20 20:45:57 CST 2017]; root of context hierarchy
+2017-11-20 20:46:07,422 - Stopping beans in phase 2147483647
+2017-11-20 20:46:07,427 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-11-20 20:46:07,429 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-11-20 20:48:20,399 - HV000001: Hibernate Validator 5.3.5.Final
+2017-11-20 20:48:25,123 - Starting TTpDetailRepositoryTest on Akk-mbp.local with PID 15547 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix/gokeeper-demo)
+2017-11-20 20:48:25,127 - No active profile set, falling back to default profiles: default
+2017-11-20 20:48:25,154 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@448c8166: startup date [Mon Nov 20 20:48:25 CST 2017]; root of context hierarchy
+2017-11-20 20:48:25,805 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-20 20:48:25,924 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-20 20:48:25,959 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.InviteNewsRepository.
+2017-11-20 20:48:25,959 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpDetailRepository.
+2017-11-20 20:48:25,960 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-11-20 20:48:25,960 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpNewsRepository.
+2017-11-20 20:48:25,961 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-11-20 20:48:25,961 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.SystemNewsRspository.
+2017-11-20 20:48:25,961 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpTypeRepository.
+2017-11-20 20:48:25,962 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-11-20 20:48:26,291 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-20 20:48:27,101 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-11-20 20:48:27,119 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-11-20 20:48:27,186 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-11-20 20:48:27,187 - HHH000206: hibernate.properties not found
+2017-11-20 20:48:27,188 - HHH000021: Bytecode provider name : javassist
+2017-11-20 20:48:27,226 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-20 20:48:27,406 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-11-20 20:48:27,854 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-11-20 20:48:28,337 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-11-20 20:48:28,393 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-11-20 20:48:28,394 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-11-20 20:48:28,924 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@448c8166: startup date [Mon Nov 20 20:48:25 CST 2017]; root of context hierarchy
+2017-11-20 20:48:29,022 - Mapped "{[/session],methods=[DELETE]}" onto public void com.gokeeper.controller.SessionController.signOut(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:48:29,025 - Mapped "{[/login/authentication/mobile],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.sms(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:48:29,025 - Mapped "{[/login/authentication/oicq],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.oicqlogin(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:48:29,025 - Mapped "{[/login/authentication/weixin],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.weixinlogin(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:48:29,028 - Mapped "{[/websocket/systemnews],methods=[POST]}" onto public void com.gokeeper.controller.WebsocketController.sandSystemNews(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:48:29,028 - Mapped "{[/websocket/go/invite],methods=[POST]}" onto public void com.gokeeper.controller.WebsocketController.sendInviteNews(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:48:29,028 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:48:29,028 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception
+2017-11-20 20:48:29,029 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2017-11-20 20:48:29,029 - Mapped "{[/ttp/alltype],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.FaqiController.findAllType()
+2017-11-20 20:48:29,029 - Mapped "{[/go],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.GoController.goList(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:48:29,030 - Mapped "{[/go/{ttpId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.GoController.getOne(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:48:29,031 - Mapped "{[/join/{ttpId}],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.atttend(javax.servlet.http.HttpServletRequest,java.lang.String)
+2017-11-20 20:48:29,031 - Mapped "{[/join],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.getAllList()
+2017-11-20 20:48:29,031 - Mapped "{[/join/{ttpId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.getOneTtp(java.lang.String)
+2017-11-20 20:48:29,034 - Mapped "{[/msg],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.list(java.lang.Integer,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:48:29,034 - Mapped "{[/msg/{msgId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.getOneNew(java.lang.String)
+2017-11-20 20:48:29,034 - Mapped "{[/msg/{msgId}],methods=[DELETE]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.deleteOneMsg(java.lang.String)
+2017-11-20 20:48:29,034 - Mapped "{[/msg/{msgId}],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.dingOneMsg(java.lang.String)
+2017-11-20 20:48:29,034 - Mapped "{[/search],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SearchController.search(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2017-11-20 20:48:29,036 - Mapped "{[/setting],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.modifyUser(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:48:29,037 - Mapped "{[/setting],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.getUserSetting(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:48:29,037 - Mapped "{[/setting/qq/binding],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.qqBinDing(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:48:29,037 - Mapped "{[/setting/qq/unbundling],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.qqUnBundling(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:48:29,037 - Mapped "{[/setting/wx/binding],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.wxBinDing(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:48:29,038 - Mapped "{[/setting/wx/unbundling],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.wxUnBundling(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:48:29,038 - Mapped "{[/user/getUserByPhone],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.UserController.getUserByPhone(java.lang.String)
+2017-11-20 20:48:29,039 - Mapped "{[/code/{type}],methods=[GET]}" onto public void com.gokeeper.core.validate.code.ValidateCodeController.createCode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.lang.Exception
+2017-11-20 20:48:29,040 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:48:29,041 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-11-20 20:48:29,065 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 20:48:29,065 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 20:48:29,079 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-11-20 20:48:29,098 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 20:48:29,139 - Adding welcome page: ServletContext resource [/index.html]
+2017-11-20 20:48:34,467 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-11-20 20:48:34,608 - Starting beans in phase 2147483647
+2017-11-20 20:48:34,624 - Started TTpDetailRepositoryTest in 25.04 seconds (JVM running for 25.768)
+2017-11-20 20:48:34,739 - 【高级搜索】result=[]
+2017-11-20 20:48:34,744 - Closing org.springframework.web.context.support.GenericWebApplicationContext@448c8166: startup date [Mon Nov 20 20:48:25 CST 2017]; root of context hierarchy
+2017-11-20 20:48:34,747 - Stopping beans in phase 2147483647
+2017-11-20 20:48:34,752 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-11-20 20:48:34,756 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-11-20 20:53:17,468 - HV000001: Hibernate Validator 5.3.5.Final
+2017-11-20 20:53:22,196 - Starting TTpDetailRepositoryTest on Akk-mbp.local with PID 15562 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix/gokeeper-demo)
+2017-11-20 20:53:22,197 - No active profile set, falling back to default profiles: default
+2017-11-20 20:53:22,223 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@448c8166: startup date [Mon Nov 20 20:53:22 CST 2017]; root of context hierarchy
+2017-11-20 20:53:22,868 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-20 20:53:22,970 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-20 20:53:23,007 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.InviteNewsRepository.
+2017-11-20 20:53:23,008 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpDetailRepository.
+2017-11-20 20:53:23,009 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-11-20 20:53:23,009 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpNewsRepository.
+2017-11-20 20:53:23,010 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-11-20 20:53:23,010 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.SystemNewsRspository.
+2017-11-20 20:53:23,011 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpTypeRepository.
+2017-11-20 20:53:23,011 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-11-20 20:53:23,347 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-20 20:53:24,257 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-11-20 20:53:24,277 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-11-20 20:53:24,367 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-11-20 20:53:24,368 - HHH000206: hibernate.properties not found
+2017-11-20 20:53:24,370 - HHH000021: Bytecode provider name : javassist
+2017-11-20 20:53:24,413 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-20 20:53:24,588 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-11-20 20:53:25,039 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-11-20 20:53:25,522 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-11-20 20:53:25,574 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-11-20 20:53:25,575 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-11-20 20:53:26,008 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@448c8166: startup date [Mon Nov 20 20:53:22 CST 2017]; root of context hierarchy
+2017-11-20 20:53:26,075 - Mapped "{[/session],methods=[DELETE]}" onto public void com.gokeeper.controller.SessionController.signOut(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:53:26,078 - Mapped "{[/login/authentication/mobile],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.sms(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:53:26,078 - Mapped "{[/login/authentication/oicq],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.oicqlogin(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:53:26,078 - Mapped "{[/login/authentication/weixin],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.weixinlogin(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:53:26,081 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception
+2017-11-20 20:53:26,081 - Mapped "{[/websocket/systemnews],methods=[POST]}" onto public void com.gokeeper.controller.WebsocketController.sandSystemNews(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:53:26,081 - Mapped "{[/websocket/go/invite],methods=[POST]}" onto public void com.gokeeper.controller.WebsocketController.sendInviteNews(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:53:26,081 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:53:26,082 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2017-11-20 20:53:26,082 - Mapped "{[/ttp/alltype],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.FaqiController.findAllType()
+2017-11-20 20:53:26,083 - Mapped "{[/go/{ttpId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.GoController.getOne(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:53:26,084 - Mapped "{[/go],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.GoController.goList(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:53:26,085 - Mapped "{[/join/{ttpId}],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.atttend(javax.servlet.http.HttpServletRequest,java.lang.String)
+2017-11-20 20:53:26,085 - Mapped "{[/join],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.getAllList()
+2017-11-20 20:53:26,085 - Mapped "{[/join/{ttpId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.getOneTtp(java.lang.String)
+2017-11-20 20:53:26,087 - Mapped "{[/msg],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.list(java.lang.Integer,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:53:26,087 - Mapped "{[/msg/{msgId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.getOneNew(java.lang.String)
+2017-11-20 20:53:26,087 - Mapped "{[/msg/{msgId}],methods=[DELETE]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.deleteOneMsg(java.lang.String)
+2017-11-20 20:53:26,088 - Mapped "{[/msg/{msgId}],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.dingOneMsg(java.lang.String)
+2017-11-20 20:53:26,088 - Mapped "{[/search],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SearchController.search(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2017-11-20 20:53:26,090 - Mapped "{[/setting],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.modifyUser(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:53:26,091 - Mapped "{[/setting],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.getUserSetting(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:53:26,091 - Mapped "{[/setting/qq/binding],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.qqBinDing(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:53:26,091 - Mapped "{[/setting/qq/unbundling],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.qqUnBundling(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:53:26,091 - Mapped "{[/setting/wx/binding],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.wxBinDing(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 20:53:26,092 - Mapped "{[/setting/wx/unbundling],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.wxUnBundling(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:53:26,092 - Mapped "{[/user/getUserByPhone],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.UserController.getUserByPhone(java.lang.String)
+2017-11-20 20:53:26,093 - Mapped "{[/code/{type}],methods=[GET]}" onto public void com.gokeeper.core.validate.code.ValidateCodeController.createCode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.lang.Exception
+2017-11-20 20:53:26,094 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-11-20 20:53:26,095 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-11-20 20:53:26,117 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 20:53:26,117 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 20:53:26,132 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-11-20 20:53:26,156 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 20:53:26,201 - Adding welcome page: ServletContext resource [/index.html]
+2017-11-20 20:53:31,520 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-11-20 20:53:31,657 - Starting beans in phase 2147483647
+2017-11-20 20:53:31,680 - Started TTpDetailRepositoryTest in 24.98 seconds (JVM running for 25.692)
+2017-11-20 20:53:31,828 - 【高级搜索】result=[
+  {
+    "ttpId": "1511067222354347556",
+    "userId": "1511062482311815587",
+    "ttpName": "测试消息模板创建",
+    "ttpTarget": 1.0,
+    "leaveNotesNums": 5,
+    "address": "北京路",
+    "joinMoney": 1200.00,
+    "allMoney": 1200.00,
+    "ifQuit": 0,
+    "ifJoin": 0,
+    "ifOpen": 1,
+    "deductionRation": 20,
+    "ttpType": 1,
+    "ttpStatus": 2,
+    "createTime": "Nov 19, 2017 12:53:42 PM",
+    "startTime": "Nov 20, 2017 8:00:00 AM",
+    "finishTime": "Nov 27, 2017 10:00:00 AM"
+  },
+  {
+    "ttpId": "1511158760023554369",
+    "userId": "1511091449434479239",
+    "ttpName": "测试消息模板创建",
+    "ttpTarget": 1.0,
+    "leaveNotesNums": 5,
+    "address": "北京路",
+    "joinMoney": 1200.00,
+    "allMoney": 1200.00,
+    "ifQuit": 0,
+    "ifJoin": 0,
+    "ifOpen": 1,
+    "deductionRation": 20,
+    "ttpType": 1,
+    "ttpStatus": 2,
+    "createTime": "Nov 20, 2017 2:19:20 PM",
+    "startTime": "Nov 20, 2017 8:00:00 AM",
+    "finishTime": "Nov 27, 2017 10:00:00 AM"
+  }
+]
+2017-11-20 20:53:31,833 - Closing org.springframework.web.context.support.GenericWebApplicationContext@448c8166: startup date [Mon Nov 20 20:53:22 CST 2017]; root of context hierarchy
+2017-11-20 20:53:31,836 - Stopping beans in phase 2147483647
+2017-11-20 20:53:31,840 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-11-20 20:53:31,844 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-11-20 21:09:11,644 - HV000001: Hibernate Validator 5.3.5.Final
+2017-11-20 21:09:16,370 - Starting TTpDetailRepositoryTest on Akk-mbp.local with PID 15605 (started by Akk_Mac in /Users/Akk_mac/E_pan/IntelliJidea Project File/SpringIO项目/gokeeper-mix/gokeeper-demo)
+2017-11-20 21:09:16,372 - No active profile set, falling back to default profiles: default
+2017-11-20 21:09:16,401 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@15d49048: startup date [Mon Nov 20 21:09:16 CST 2017]; root of context hierarchy
+2017-11-20 21:09:17,068 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-20 21:09:17,180 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-20 21:09:17,219 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.InviteNewsRepository.
+2017-11-20 21:09:17,220 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TTpDetailRepository.
+2017-11-20 21:09:17,220 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserRecordRepository.
+2017-11-20 21:09:17,221 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpNewsRepository.
+2017-11-20 21:09:17,221 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserTtpRepository.
+2017-11-20 21:09:17,221 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.SystemNewsRspository.
+2017-11-20 21:09:17,222 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.TtpTypeRepository.
+2017-11-20 21:09:17,222 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gokeeper.repository.UserInfoRepository.
+2017-11-20 21:09:17,590 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-11-20 21:09:18,902 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-11-20 21:09:18,934 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-11-20 21:09:19,077 - HHH000412: Hibernate Core {5.0.12.Final}
+2017-11-20 21:09:19,078 - HHH000206: hibernate.properties not found
+2017-11-20 21:09:19,080 - HHH000021: Bytecode provider name : javassist
+2017-11-20 21:09:19,133 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-20 21:09:19,311 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-11-20 21:09:19,792 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-11-20 21:09:20,295 - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2017-11-20 21:09:20,350 - Mapped URL path [/webSocketServer] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2017-11-20 21:09:20,350 - Mapped URL path [/sockjs/webSocketServer/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-11-20 21:09:20,837 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@15d49048: startup date [Mon Nov 20 21:09:16 CST 2017]; root of context hierarchy
+2017-11-20 21:09:20,908 - Mapped "{[/session],methods=[DELETE]}" onto public void com.gokeeper.controller.SessionController.signOut(javax.servlet.http.HttpServletRequest)
+2017-11-20 21:09:20,912 - Mapped "{[/login/authentication/mobile],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.sms(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 21:09:20,912 - Mapped "{[/login/authentication/oicq],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.oicqlogin(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 21:09:20,913 - Mapped "{[/login/authentication/weixin],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.UserLogin.weixinlogin(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 21:09:20,915 - Mapped "{[/websocket/systemnews],methods=[POST]}" onto public void com.gokeeper.controller.WebsocketController.sandSystemNews(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 21:09:20,915 - Mapped "{[/websocket/go/invite],methods=[POST]}" onto public void com.gokeeper.controller.WebsocketController.sendInviteNews(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 21:09:20,915 - Mapped "{[/websocket/test]}" onto public void com.gokeeper.controller.WebsocketController.sendone(javax.servlet.http.HttpServletRequest)
+2017-11-20 21:09:20,916 - Mapped "{[/websocket/login]}" onto public org.springframework.web.servlet.ModelAndView com.gokeeper.controller.WebsocketController.login(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception
+2017-11-20 21:09:20,917 - Mapped "{[/ttp/create],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.FaqiController.creat(com.gokeeper.form.TtpForm,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2017-11-20 21:09:20,918 - Mapped "{[/ttp/alltype],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.FaqiController.findAllType()
+2017-11-20 21:09:20,920 - Mapped "{[/go/{ttpId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.GoController.getOne(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 21:09:20,921 - Mapped "{[/go],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.GoController.goList(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 21:09:20,922 - Mapped "{[/join/{ttpId}],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.atttend(javax.servlet.http.HttpServletRequest,java.lang.String)
+2017-11-20 21:09:20,923 - Mapped "{[/join],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.getAllList()
+2017-11-20 21:09:20,923 - Mapped "{[/join/{ttpId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.JoinController.getOneTtp(java.lang.String)
+2017-11-20 21:09:20,925 - Mapped "{[/msg],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.list(java.lang.Integer,javax.servlet.http.HttpServletRequest)
+2017-11-20 21:09:20,925 - Mapped "{[/msg/{msgId}],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.getOneNew(java.lang.String)
+2017-11-20 21:09:20,925 - Mapped "{[/msg/{msgId}],methods=[DELETE]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.deleteOneMsg(java.lang.String)
+2017-11-20 21:09:20,925 - Mapped "{[/msg/{msgId}],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.MessageController.dingOneMsg(java.lang.String)
+2017-11-20 21:09:20,926 - Mapped "{[/search],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SearchController.search(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2017-11-20 21:09:20,928 - Mapped "{[/setting],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.modifyUser(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 21:09:20,928 - Mapped "{[/setting],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.getUserSetting(javax.servlet.http.HttpServletRequest)
+2017-11-20 21:09:20,928 - Mapped "{[/setting/qq/binding],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.qqBinDing(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 21:09:20,928 - Mapped "{[/setting/qq/unbundling],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.qqUnBundling(javax.servlet.http.HttpServletRequest)
+2017-11-20 21:09:20,928 - Mapped "{[/setting/wx/binding],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.wxBinDing(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-20 21:09:20,929 - Mapped "{[/setting/wx/unbundling],methods=[POST]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.SettingController.wxUnBundling(javax.servlet.http.HttpServletRequest)
+2017-11-20 21:09:20,929 - Mapped "{[/user/getUserByPhone],methods=[GET]}" onto public com.gokeeper.vo.ResultVO com.gokeeper.controller.api.UserController.getUserByPhone(java.lang.String)
+2017-11-20 21:09:20,929 - Mapped "{[/code/{type}],methods=[GET]}" onto public void com.gokeeper.core.validate.code.ValidateCodeController.createCode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.lang.Exception
+2017-11-20 21:09:20,931 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-11-20 21:09:20,931 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-11-20 21:09:20,954 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 21:09:20,954 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 21:09:20,968 - Detected @ExceptionHandler methods in sellerExceptionHandler
+2017-11-20 21:09:20,990 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-20 21:09:21,029 - Adding welcome page: ServletContext resource [/index.html]
+2017-11-20 21:09:26,382 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-11-20 21:09:26,532 - Starting beans in phase 2147483647
+2017-11-20 21:09:26,551 - Started TTpDetailRepositoryTest in 25.932 seconds (JVM running for 26.721)
+2017-11-20 21:09:26,826 - 【money高级搜索】result=[
+  {
+    "ttpId": "1511067222354347556",
+    "userId": "1511062482311815587",
+    "ttpName": "测试消息模板创建",
+    "ttpTarget": 1.0,
+    "leaveNotesNums": 5,
+    "address": "北京路",
+    "joinMoney": 1200.00,
+    "allMoney": 1200.00,
+    "ifQuit": 0,
+    "ifJoin": 0,
+    "ifOpen": 1,
+    "deductionRation": 20,
+    "ttpType": 1,
+    "ttpStatus": 2,
+    "createTime": "Nov 19, 2017 12:53:42 PM",
+    "startTime": "Nov 20, 2017 8:00:00 AM",
+    "finishTime": "Nov 27, 2017 10:00:00 AM"
+  },
+  {
+    "ttpId": "1511158760023554369",
+    "userId": "1511091449434479239",
+    "ttpName": "测试消息模板创建",
+    "ttpTarget": 1.0,
+    "leaveNotesNums": 5,
+    "address": "北京路",
+    "joinMoney": 1200.00,
+    "allMoney": 1200.00,
+    "ifQuit": 0,
+    "ifJoin": 0,
+    "ifOpen": 1,
+    "deductionRation": 20,
+    "ttpType": 1,
+    "ttpStatus": 2,
+    "createTime": "Nov 20, 2017 2:19:20 PM",
+    "startTime": "Nov 20, 2017 8:00:00 AM",
+    "finishTime": "Nov 27, 2017 10:00:00 AM"
+  }
+]
+2017-11-20 21:09:26,831 - Closing org.springframework.web.context.support.GenericWebApplicationContext@15d49048: startup date [Mon Nov 20 21:09:16 CST 2017]; root of context hierarchy
+2017-11-20 21:09:26,833 - Stopping beans in phase 2147483647
+2017-11-20 21:09:26,839 - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2017-11-20 21:09:26,842 - Closing JPA EntityManagerFactory for persistence unit 'default'

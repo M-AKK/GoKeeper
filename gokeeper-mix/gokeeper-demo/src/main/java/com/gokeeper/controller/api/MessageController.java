@@ -1,18 +1,17 @@
 package com.gokeeper.controller.api;
 
+import com.gokeeper.constant.UserInfoConstant;
+import com.gokeeper.dataobject.UserInfo;
 import com.gokeeper.service.AllNewsService;
-import com.gokeeper.utils.ResultVOUtil;
+import com.gokeeper.utils.ResultVoUtil;
 import com.gokeeper.vo.ResultVO;
 import com.gokeeper.vo.news.AllNewsVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  * @author:Created by Akk_Mac
@@ -31,19 +30,36 @@ public class MessageController {
      * @param request
      * @return
      */
-    @GetMapping(value = "/list")
-    public ResultVO list(HttpServletRequest request, @RequestParam("hidden") Integer hidden){
+    @GetMapping
+    public ResultVO list(@RequestParam("hidden") Integer hidden,
+                         HttpServletRequest request){
 
         //1.首先根据session获取userId
-        HttpSession session = request.getSession();
-        /*String userId = (String) session.getAttribute("userId");
-        if(StringUtils.isNullOrEmpty(userId)){
-            log.error("【查询我参与的所有ttp】userId为空");
-            throw new TTpException(ResultEnum.USER_ERROR);
-        }*/
+        //UserInfo user = (UserInfo) request.getSession().getAttribute(UserInfoConstant.USER_INFO);
+        //log.info("查询所有消息，userid="+user.getUserId());
+        List<AllNewsVo> allNewsVo = allNewsService.findAllOpenMsg("1511091449434479239", hidden);
+        return ResultVoUtil.success(allNewsVo);
+    }
 
-        AllNewsVo allNewsVo = allNewsService.findAllOpenMsg("1110001", hidden);
-        return ResultVOUtil.success(allNewsVo);
+    @GetMapping(value = "/{msgId}")
+    public ResultVO getOneNew(@PathVariable("msgId") String msgId) {
+
+        Object result = allNewsService.getOneMsg(msgId);
+        return ResultVoUtil.success(result);
+    }
+
+    @DeleteMapping(value = "/{msgId}")
+    public ResultVO deleteOneMsg(@PathVariable("msgId") String msgId) {
+        //改变这条消息的hidden属性即可
+        //TODO 删除失败是否判断？
+        Object result = allNewsService.deleteOneMsg(msgId);
+        return ResultVoUtil.success();
+    }
+
+    @PostMapping(value = "/{msgId}")
+    public ResultVO dingOneMsg(@PathVariable("msgId") String msgId) {
+        Object result = allNewsService.dingOneMsg(msgId);
+        return ResultVoUtil.success();
     }
 
 }

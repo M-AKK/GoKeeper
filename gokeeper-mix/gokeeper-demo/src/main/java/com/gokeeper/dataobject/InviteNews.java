@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import java.util.Date;
 
 /**
- * Created by Akk_Mac
+ * @author Created by Akk_Mac
  * Date: 2017/10/13 18:44
  */
 @Entity
@@ -22,6 +22,8 @@ public class InviteNews {
 
     //消息拥有者id
     private String userId;
+
+    private String callUserId;
 
     //消息类型
     private Integer newstype;

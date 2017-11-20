@@ -1,4 +1,4 @@
-package com.gokeeper.controller.api;
+package com.gokeeper.controller.scheduled;
 
 import com.gokeeper.dataobject.TtpDetail;
 import com.gokeeper.dataobject.TtpNews;
@@ -79,7 +79,7 @@ public class ScheduledTest {
                 }
                 //4.单独设置每个用户的个人消息属性
                 for(UserTtp userTtp : userTtpList) {
-                    TtpNews ttpNews = ttpNewsRepository.findById(userTtp.getUserTtpId());
+                    TtpNews ttpNews = ttpNewsRepository.findByUserTtpId(userTtp.getUserTtpId());
                     //5.新消息要重新改变news的状态为未读
                     ttpNews.setNewsstatus(NewsStatusEnum.NO_READ.getCode());
                     UserRecord userRecord = userRecordRepository.findByUserRecordId(userTtp.getUserTtpId()+today);
@@ -120,24 +120,27 @@ public class ScheduledTest {
             Date currentTime = new Date();
             //2.如果处于进行时状态时
             if(currentTime.after(startTime) && currentTime.before(finishTime)) {
-                //改变ttp状态
-                ttpDetail.setTtpStatus(TtpStatusEnum.WORKING.getCode());
-                tTpDetailRepository.save(ttpDetail);
-                //3.转换返回给前端的消息模板
-                List<TtpNews> ttpNewsList = ttpNewsRepository.findByTtpId(ttpDetail.getTtpId());
-                for(TtpNews ttpNews : ttpNewsList) {
-                    //4.把ttpNews的状态和预览消息改变，前端如果判断status就可以改变样式了
-                    ttpNews.setTtpStatus(TtpStatusEnum.WORKING.getCode());
-                    ttpNews.setPreviewText("");
-                    //4.存入初始化有值的ttpNews
-                    TtpNews result = createTtpNews(ttpNews);
-                    ttpNewsRepository.save(result);
-                    //6.调用websocket方法，发送消息，还不知道需不需要，因为不知道如果用户在别的页面这个消息会不会刷新，如果不会就不用发其实
-                    TextMessage t = new TextMessage(JsonUtil.toJson(listTtpNewsZttpNews(result)));
-                    WebSocketPushHandler.sendMessageToUser(ttpNews.getUserId(), t);
+                //检查ttp状态是否已经改变为进行时
+                if(!ttpDetail.getTtpStatus().equals(TtpStatusEnum.WORKING.getCode())) {
+                    //改变ttp状态
+                    ttpDetail.setTtpStatus(TtpStatusEnum.WORKING.getCode());
+                    tTpDetailRepository.save(ttpDetail);
+                    //3.转换返回给前端的消息模板
+                    List<TtpNews> ttpNewsList = ttpNewsRepository.findByTtpId(ttpDetail.getTtpId());
+                    for(TtpNews ttpNews : ttpNewsList) {
+                        //4.把ttpNews的状态和预览消息改变，前端如果判断status就可以改变样式了
+                        ttpNews.setTtpStatus(TtpStatusEnum.WORKING.getCode());
+                        ttpNews.setPreviewText("");
+                        //4.存入初始化有值的ttpNews
+                        TtpNews result = createTtpNews(ttpNews);
+                        ttpNewsRepository.save(result);
+                        //6.调用websocket方法，发送消息，还不知道需不需要，因为不知道如果用户在别的页面这个消息会不会刷新，如果不会就不用发其实
+                        TextMessage t = new TextMessage(JsonUtil.toJson(listTtpNewsZttpNews(result)));
+                        WebSocketPushHandler.sendMessageToUser(ttpNews.getUserId(), t);
 
+                    }
+                    log.info("状态转变为进行时态,{}",ttpDetail.getTtpName());
                 }
-                log.info("系统时间小于ttp开始时间,{},{}",currentTime,startTime);
             }
         }
 

@@ -1,0 +1,13 @@
+2017-11-19 11:07:22,249 - 【查询我参与的所有ttp】userRecord为空 result=15070107496453461891110001
+2017-11-19 11:10:52,552 - 【查询我参与的所有ttp】userRecord为空 result=15070107496453461891110001
+2017-11-19 11:13:13,383 - 【查询我参与的所有ttp】userRecord为空 result=15070107496453461891110003
+2017-11-19 11:28:48,568 - Data truncation: Data too long for column 'user_ttp_id' at row 1
+2017-11-19 11:30:26,551 - Data truncation: Data too long for column 'user_ttp_id' at row 1
+2017-11-19 11:37:31,311 - Data truncation: Data too long for column 'user_ttp_id' at row 1
+2017-11-19 11:40:19,512 - Data truncation: Data too long for column 'user_ttp_id' at row 1
+2017-11-19 11:44:40,142 - Data truncation: Data too long for column 'user_ttp_id' at row 1
+2017-11-19 11:48:35,624 - Data truncation: Data too long for column 'user_ttp_id' at row 1
+2017-11-19 12:49:08,374 - Data truncation: Data too long for column 'user_ttp_id' at row 1
+2017-11-19 12:52:25,543 - Data truncation: Data too long for column 'user_ttp_id' at row 1
+2017-11-19 13:13:14,342 - 【查询我参与的所有ttp】userRecord为空 result=15110672223543475561511062482311815587
+2017-11-19 13:15:07,015 - 【查询我参与的所有ttp】userRecord为空 result=15110672223543475561511062482311815587

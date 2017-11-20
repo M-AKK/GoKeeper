@@ -18,4 +18,11 @@ public interface SystemNewsRspository extends JpaRepository<SystemNews, String> 
      */
     List<SystemNews> findAllByHiddenOrderByUpdateTimeDesc(Integer hidden);
 
+    /**
+     * 根据id查询一条msg
+     * @param msgId
+     * @return
+     */
+    SystemNews findById(String msgId);
+
 }

@@ -1,6 +1,8 @@
 package com.gokeeper.repository;
 
 import com.gokeeper.dataobject.TtpDetail;
+import com.gokeeper.enums.IfOpenEnum;
+import com.gokeeper.enums.TtpTypeEnum;
 import com.gokeeper.utils.DateUtil;
 import com.gokeeper.utils.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -12,7 +14,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
+
+import static com.gokeeper.utils.DateUtil.StringToDate2;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -58,6 +63,29 @@ public class TTpDetailRepositoryTest {
         Assert.assertNotNull(result);
     }
 
+    @Test
+    public void highsSelect() throws Exception {
+        Integer ifOpen = IfOpenEnum.YES.getCode();
+        Integer ttpType = TtpTypeEnum.SPORTS.getCode();
+        BigDecimal minMoney = new BigDecimal(1100);
+        BigDecimal maxMoney = new BigDecimal(1500);
+        Date startTime = StringToDate2("2017/11/20 07:00:00");
+        Date finishTime = StringToDate2("2017/11/27 11:00:00");
+        List<TtpDetail> result = repository.highsSearch(ifOpen, ttpType, minMoney, maxMoney, startTime, finishTime);
+        log.info("【高级搜索】result={}", JsonUtil.toJson(result));
+        Assert.assertNotNull(result);
+    }
+
+    @Test
+    public void moneySearch() throws Exception {
+        Integer ifOpen = IfOpenEnum.YES.getCode();
+        Integer ttpType = TtpTypeEnum.SPORTS.getCode();
+        BigDecimal minMoney = new BigDecimal(1100);
+        BigDecimal maxMoney = new BigDecimal(1500);
+        List<TtpDetail> result = repository.moneySearch(ifOpen, ttpType, minMoney, maxMoney);
+        log.info("【money高级搜索】result={}", JsonUtil.toJson(result));
+        Assert.assertNotNull(result);
+    }
 
 
 }

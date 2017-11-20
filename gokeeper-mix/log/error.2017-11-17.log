@@ -1285,7 +1285,7 @@ com.gokeeper.core.validate.code.ValidateCodeException: 验证码不存在
 	at java.lang.Thread.run(Thread.java:748)
 2017-11-17 20:59:59,989 - Unexpected error occurred in scheduled task.
 java.lang.NullPointerException: null
-	at com.gokeeper.controller.api.ScheduledTest.sandDaysTtpNews(ScheduledTest.java:72)
+	at com.gokeeper.controller.scheduled.ScheduledTest.sandDaysTtpNews(ScheduledTest.java:72)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Slf4j
@@ -20,7 +22,7 @@ public class AllNewsServiceImplTest {
 
     @Test
     public void findAllOpenMsg() throws Exception {
-        AllNewsVo result = allNewsService.findAllOpenMsg("111001", 0);
+        List<AllNewsVo> result = allNewsService.findAllOpenMsg("1511062482311815587", 0);
         log.info("【所有公开的消息】result={}", JsonUtil.toJson(result));
         Assert.assertNotNull(result);
     }

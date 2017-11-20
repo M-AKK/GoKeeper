@@ -2,7 +2,11 @@ package com.gokeeper.repository;
 
 import com.gokeeper.dataobject.TtpDetail;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
+import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -20,8 +24,64 @@ public interface TTpDetailRepository extends JpaRepository<TtpDetail, String> {
 
     /**
      * 获取所有公开的ttp
-     * @param ifopen
+     * @param ifOpen
      * @return
      */
-    List<TtpDetail> findByIfOpen(int ifopen);
+    List<TtpDetail> findByIfOpen(Integer ifOpen);
+
+    /**
+     * 获取公开并且相应类型的ttp
+     * @param ifOpen
+     * @param ttpType
+     * @return
+     */
+    List<TtpDetail> findByIfOpenAndTtpType(Integer ifOpen, Integer ttpType);
+
+    /**
+     * 全条件搜索
+     * @param ifOpen
+     * @param ttpType
+     * @param minMoeny
+     * @param maxMoeny
+     * @param startTime
+     * @param finishTime
+     * @return
+     */
+    @Query(value="SELECT * FROM ttp_detail t WHERE t.if_open = :ifOpen AND t.ttp_type = :ttpType AND t.join_money BETWEEN :minMoeny AND :maxMoeny AND t.start_time > :startTime AND t.finish_time < :finishTime", nativeQuery = true)
+    List<TtpDetail> highsSearch(@Param("ifOpen") Integer ifOpen,
+                                @Param("ttpType") Integer ttpType,
+                                @Param("minMoeny") BigDecimal minMoeny,
+                                @Param("maxMoeny") BigDecimal maxMoeny,
+                                @Param("startTime") Date startTime,
+                                @Param("finishTime") Date finishTime);
+
+    /**
+     * 主要按金额范围查找
+     * @param ifOpen
+     * @param ttpType
+     * @param minMoeny
+     * @param maxMoeny
+     * @return
+     */
+    @Query(value = "SELECT * FROM ttp_detail t WHERE t.if_open = :ifOpen AND t.ttp_type = :ttpType AND t.join_money BETWEEN :minMoeny AND :maxMoeny", nativeQuery = true)
+    List<TtpDetail> moneySearch(@Param("ifOpen") Integer ifOpen,
+            @Param("ttpType") Integer ttpType,
+            @Param("minMoeny") BigDecimal minMoeny,
+            @Param("maxMoeny") BigDecimal maxMoeny
+            );
+
+    /**
+     * 主要按活动时间查找
+     * @param ifOpen
+     * @param ttpType
+     * @param startTime
+     * @param finishTime
+     * @return
+     */
+    @Query(value="SELECT * FROM ttp_detail t WHERE t.if_open = :ifOpen AND t.ttp_type = :ttpType AND t.start_time > :startTime AND t.finish_time < :finishTime", nativeQuery = true)
+    List<TtpDetail> timeSearch(@Param("ifOpen") Integer ifOpen,
+                               @Param("ttpType") Integer ttpType,
+                               @Param("startTime") Date startTime,
+                               @Param("finishTime") Date finishTime);
+
 }

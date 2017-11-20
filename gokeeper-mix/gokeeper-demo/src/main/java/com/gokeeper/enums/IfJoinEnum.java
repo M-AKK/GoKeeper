@@ -9,8 +9,8 @@ import lombok.Getter;
 @Getter
 public enum IfJoinEnum implements CodeEnum {
 
-    YES(0, "允许中途加入"),
-    NO(1, "不允许中途加入"),
+    YES(1, "允许中途加入"),
+    NO(0, "不允许中途加入"),
     ;
 
     private Integer code;

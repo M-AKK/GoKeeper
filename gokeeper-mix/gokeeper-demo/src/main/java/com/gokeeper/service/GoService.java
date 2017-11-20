@@ -1,5 +1,6 @@
 package com.gokeeper.service;
 
+import com.gokeeper.vo.GoPreVo;
 import com.gokeeper.vo.GoVo;
 
 import java.util.List;
@@ -14,8 +15,16 @@ public interface GoService {
     /**
      * 获取我的界面ttp列表
      * @param userId
-     * @param currrentDate
+     * @param currentDate
      * @return
      */
-    List<GoVo> getmyttplist(String userId, String currrentDate);
+    List<GoPreVo> getMyTtpList(String userId, String currentDate);
+
+    /**
+     * 查找用户某一条参与的ttp信息
+     * @param ttpId
+     * @param currentDate
+     * @return
+     */
+    GoVo getMyOneTtp(String ttpId, String userId, String currentDate);
 }

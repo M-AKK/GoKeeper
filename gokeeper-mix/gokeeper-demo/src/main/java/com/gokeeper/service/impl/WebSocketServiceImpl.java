@@ -5,6 +5,7 @@ import com.gokeeper.dataobject.SystemNews;
 import com.gokeeper.dataobject.TtpDetail;
 import com.gokeeper.dataobject.UserInfo;
 import com.gokeeper.enums.NewsStatusEnum;
+import com.gokeeper.enums.NewsTypeEnum;
 import com.gokeeper.exception.TTpException;
 import com.gokeeper.repository.InviteNewsRepository;
 import com.gokeeper.repository.SystemNewsRspository;
@@ -42,14 +43,20 @@ public class WebSocketServiceImpl implements WebSocketService {
     @Autowired
     private SystemNewsRspository systemNewsRspository;
 
+    /**
+     * 创建一个邀请消息
+     * @param ttpId 邀请的ttpId
+     * @param userId 发起人userId
+     * @return
+     */
     @Override
     @Transactional//save的事务
-    public InviteNews createInviteNews(String ttpId, String userId) {
+    public InviteNews createInviteNews(String ttpId, String userId, String calluserId) {
         InviteNews result = new InviteNews();
         //获取消息的唯一id
-        String uuid = KeyUtil.getUUID();
+        String uuid = KeyUtil.genUniqueKey();
         result.setId(uuid);
-        result.setNewstype(3);
+        result.setNewstype(NewsTypeEnum.INVITE.getCode());
         //1.首先根据发起人userId查找发起人信息
         UserInfo userInfo = userInfoRepository.findByUserId(userId);
         if(userInfo == null) {
@@ -57,6 +64,8 @@ public class WebSocketServiceImpl implements WebSocketService {
             throw new TTpException(CHECK_USER);
         }
         result.setUserId(userInfo.getUserId());
+        //设置目标用户id
+        result.setCallUserId(calluserId);
         result.setUsername(userInfo.getUsername());
         result.setUserIcon(userInfo.getUserIcon());
 
@@ -89,14 +98,14 @@ public class WebSocketServiceImpl implements WebSocketService {
     @Transactional
     public SystemNews createSystemNews(UserInfo userInfo, String previewText, String text) {
         //获取消息的唯一id
-        String uuid = KeyUtil.getUUID();
+        String uuid = KeyUtil.genUniqueKey();
 
         SystemNews systemNews = new SystemNews();
         systemNews.setId(uuid);
         systemNews.setUserId(userInfo.getUserId());
         systemNews.setUsername(userInfo.getUsername());
         systemNews.setUserIcon(userInfo.getUserIcon());
-        systemNews.setNewstype(1);
+        systemNews.setNewstype(NewsTypeEnum.SYSTEM.getCode());
         systemNews.setNewsname("系统公告");
         systemNews.setNewsstatus(NewsStatusEnum.NO_READ.getCode());
         systemNews.setHidden(0);

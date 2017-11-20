@@ -15,6 +15,8 @@ public class TtpNewsDto {
 
     private String id;
 
+    private String userTtpId;
+
     private String ttpId;
 
     /**

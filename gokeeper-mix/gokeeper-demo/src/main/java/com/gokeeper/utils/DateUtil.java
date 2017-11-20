@@ -75,6 +75,18 @@ public class DateUtil {
     }
 
     /**
+     * 将"2015/08/31 21:08:00"型字符串转化为Date
+     * @param str
+     * @return
+     * @throws ParseException
+     */
+    public static Date StringToDate2(String str) throws ParseException{
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        Date date = (Date) formatter.parse(str);
+        return date;
+    }
+
+    /**
      * 获取两个日期之间的所有日期（yyyy/MM/dd）
      * @Description 传入date，传出string
      * @param begin

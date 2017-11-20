@@ -1,5 +1,6 @@
 package com.gokeeper.service.impl;
 
+import com.gokeeper.vo.JoinPreVo;
 import com.gokeeper.vo.JoinVo;
 import com.gokeeper.dataobject.UserTtp;
 import com.gokeeper.utils.JsonUtil;
@@ -23,7 +24,7 @@ public class JoinServiceImplTest {
 
     @Test
     public void getOpenTtp() throws Exception {
-        List<JoinVo> result = joinService.getOpenTtp();
+        List<JoinPreVo> result = joinService.getOpenTtp();
         log.info("【所有公开的ttp】result={}", JsonUtil.toJson(result));
         Assert.assertNotNull(result);
     }

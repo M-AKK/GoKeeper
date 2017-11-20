@@ -20,6 +20,7 @@ import java.util.Map;
  * @author: Created by Akk_Mac
  * @Date: 2017/11/17 20:41
  */
+//这是拦截所有url
 @Component
 @Slf4j
 public class ValidateCodeInterceptor implements HandlerInterceptor {
@@ -42,22 +43,23 @@ public class ValidateCodeInterceptor implements HandlerInterceptor {
     private ValidateCodeProcessorHolder validateCodeProcessorHolder;
 
 
-
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
         urlMap.put(SecurityConstants.DEFAULT_LOGIN_PROCESSING_URL_MOBILE, ValidateCodeType.SMS);
         addUrlToMap(securityProperties.getCode().getSms().getUrl(), ValidateCodeType.SMS);
         ValidateCodeType type = urlMap.get(httpServletRequest.getRequestURI());
-        log.info("校验请求(" + httpServletRequest.getRequestURI() + ")中的验证码,验证码类型" + type);
-        try {
-            validateCodeProcessorHolder.findValidateCodeProcessor(type)
-                    .validate(new ServletWebRequest(httpServletRequest, httpServletResponse));
-            log.info("验证码校验通过");
-        } catch (ValidateCodeException exception) {
-            //注入handler来捕获，否则throw Exception在filter是捕获不道德，handler只能捕获Controller的异常。
-            throw new ValidateCodeException(exception.getCode(), exception.getMessage());
-            //validateCodeExceptionHandler.handlerValidateCodeException(exception);
-
+        log.info("type是不是null？"+type+"URI"+httpServletRequest.getRequestURI());
+        if(type != null) {
+            log.info("校验请求(" + httpServletRequest.getRequestURI() + ")中的验证码,验证码类型" + type);
+            try {
+                validateCodeProcessorHolder.findValidateCodeProcessor(type)
+                        .validate(new ServletWebRequest(httpServletRequest, httpServletResponse));
+                log.info("验证码校验通过");
+                return true;
+            } catch (ValidateCodeException exception) {
+                //注入handler来捕获，否则throw Exception在filter是捕获不到的，handler只能捕获Controller的异常。
+                throw new ValidateCodeException(exception.getCode(), exception.getMessage());
+            }
         }
         //要继续调用controller处理器的方法
         return true;

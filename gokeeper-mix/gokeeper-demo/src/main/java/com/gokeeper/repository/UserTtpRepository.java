@@ -10,7 +10,7 @@ import java.util.List;
  * @author: Created by Akk_Mac
  * @Date: 2017/10/3 11:43
  */
-public interface UserTtpRepository extends JpaRepository<UserTtp, String> {
+public interface UserTtpRepository extends JpaRepository<UserTtp, Integer> {
 
     /**
      * 根据userId查找所有参与的ttp
@@ -25,4 +25,11 @@ public interface UserTtpRepository extends JpaRepository<UserTtp, String> {
      * @return List<UserTtp>
      */
     List<UserTtp> findByTtpId(String TtpId);
+
+    /**
+     * 根据userTtpId查找某条userTtp信息
+     * @param userTtpId
+     * @return
+     */
+    UserTtp findByUserTtpId(String userTtpId);
 }

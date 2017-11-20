@@ -9,8 +9,8 @@ import lombok.Getter;
 @Getter
 public enum IfQuitEnum implements CodeEnum {
 
-    YES(0, "允许中途退出"),
-    NO(1, "不允许中途退出"),
+    YES(1, "允许中途退出"),
+    NO(0, "不允许中途退出"),
     ;
 
     private Integer code;

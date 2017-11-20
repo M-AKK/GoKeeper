@@ -3,7 +3,7 @@ package com.gokeeper.controller.api;
 import com.gokeeper.enums.ResultEnum;
 import com.gokeeper.service.UserService;
 import com.gokeeper.utils.JsonUtil;
-import com.gokeeper.utils.ResultVOUtil;
+import com.gokeeper.utils.ResultVoUtil;
 import com.gokeeper.vo.ResultVO;
 import com.gokeeper.vo.UserInfoVo;
 import lombok.extern.slf4j.Slf4j;
@@ -38,9 +38,9 @@ public class UserController {
         UserInfoVo userInfoVo = userService.getUserByphone(phonenumber);
         if(userInfoVo!=null){
             log.info("【根据phone查找user】result={}", JsonUtil.toJson(userInfoVo));
-            return ResultVOUtil.success(userInfoVo);
+            return ResultVoUtil.success(userInfoVo);
         } else {
-            return ResultVOUtil.error(ResultEnum.CHECK_USER.getCode(), ResultEnum.CHECK_USER.getMessage());
+            return ResultVoUtil.error(ResultEnum.CHECK_USER.getCode(), ResultEnum.CHECK_USER.getMessage());
         }
 
     }
