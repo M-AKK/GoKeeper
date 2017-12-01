@@ -44,46 +44,46 @@ public class ValidateCodeController {
 		//validateCodeProcessors.get(type + "CodeProcessor").create(new ServletWebRequest(request, response));
 	}
 
-	/*
-	 * public static final String SESSION_KEY = "SESSION_KEY_IMAGE_CODE_";
-	 *
-	 * //操作session private SessionStrategy sessionStrategy = new
-	 * HttpSessionSessionStrategy();
-	 *
-	 * //生成验证码的接口注入
-	 *
-	 * @Autowired private ValidateCodeGenerator imageCodeGenerator;
-	 *
-	 * //生成短信验证码的接口注入
-	 *
-	 * @Autowired private ValidateCodeGenerator smsCodeGenerator;
-	 *
-	 * private SmsCodeSender smsCodeSender;
-	 *
-	 *
-	 * //发送图形验证码
-	 *
-	 * @GetMapping("/code/image") public void createCode(HttpServletRequest request,
-	 * HttpServletResponse response) throws Exception { //传入request来生成图形验证码
-	 * ImageCode imagecode = (ImageCode) imageCodeGenerator.generate(new
-	 * ServletWebRequest(request)); sessionStrategy.setAttribute(new
-	 * ServletWebRequest(request), SESSION_KEY, imagecode); //写入到输出流中
-	 * ImageIO.write(imagecode.getImage(), "JPEG", response.getOutputStream()); }
-	 *
-	 * //发送短信验证码
-	 *
-	 * @GetMapping("/code/sms") public void createSmsCode(HttpServletRequest
-	 * request, HttpServletResponse response) throws Exception { //传入request来生成短信验证码
-	 * ValidateCode smscode = (ValidateCode) smsCodeGenerator.generate(new
-	 * ServletWebRequest(request)); sessionStrategy.setAttribute(new
-	 * ServletWebRequest(request), SESSION_KEY, smscode);
-	 *
-	 * //getRequiredStringParameter：接收一个必写请求，mobile String mobile =
-	 * ServletRequestUtils.getRequiredStringParameter(request, "mobile"); //短信服务商发送
-	 * smsCodeSender.sand(mobile, smscode.getCode());
-	 *
-	 * }
-	 */
+/*
+//	 * public static final String SESSION_KEY = "SESSION_KEY_IMAGE_CODE_";
+//	 *
+//	 * //操作session private SessionStrategy sessionStrategy = new
+//	 * HttpSessionSessionStrategy();
+//	 *
+//	 * //生成验证码的接口注入
+//	 *
+//	 * @Autowired private ValidateCodeGenerator imageCodeGenerator;
+//	 *
+//	 * //生成短信验证码的接口注入
+//	 *
+//	 * @Autowired private ValidateCodeGenerator smsCodeGenerator;
+//	 *
+//	 * private SmsCodeSender smsCodeSender;
+//	 *
+//	 *
+//	 * //发送图形验证码
+//	 *
+//	 * @GetMapping("/code/image") public void createCode(HttpServletRequest request,
+//	 * HttpServletResponse response) throws Exception { //传入request来生成图形验证码
+//	 * ImageCode imagecode = (ImageCode) imageCodeGenerator.generate(new
+//	 * ServletWebRequest(request)); sessionStrategy.setAttribute(new
+//	 * ServletWebRequest(request), SESSION_KEY, imagecode); //写入到输出流中
+//	 * ImageIO.write(imagecode.getImage(), "JPEG", response.getOutputStream()); }
+//	 *
+//	 * //发送短信验证码
+//	 *
+//	 * @GetMapping("/code/sms") public void createSmsCode(HttpServletRequest
+//	 * request, HttpServletResponse response) throws Exception { //传入request来生成短信验证码
+//	 * ValidateCode smscode = (ValidateCode) smsCodeGenerator.generate(new
+//	 * ServletWebRequest(request)); sessionStrategy.setAttribute(new
+//	 * ServletWebRequest(request), SESSION_KEY, smscode);
+//	 *
+//	 * //getRequiredStringParameter：接收一个必写请求，mobile String mobile =
+//	 * ServletRequestUtils.getRequiredStringParameter(request, "mobile"); //短信服务商发送
+//	 * smsCodeSender.sand(mobile, smscode.getCode());
+//	 *
+//	 * }
+*/
 
 
 

@@ -85,6 +85,9 @@ public class TtpNews {
 
     private Integer nofinishnums;
 
+    //剩余假条
+    private Integer leaveNotes;
+
     private Integer leavenums;
 
     private BigDecimal userDayBouns;

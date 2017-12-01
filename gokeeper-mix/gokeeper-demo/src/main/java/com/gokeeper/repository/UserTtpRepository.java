@@ -13,12 +13,11 @@ import java.util.List;
 public interface UserTtpRepository extends JpaRepository<UserTtp, Integer> {
 
     /**
-     * 根据userId查找所有参与的ttp
+     * 根据userId查找所有参与的ttp并按时间排序
      * @param userId
      * @return List<UserTtp>
      */
-    List<UserTtp> findByUserId(String userId);
-
+    List<UserTtp> findByUserIdOrderByUpdateTimeDesc(String userId);
     /**
      * 根据ttpId查找所有参与此ttp的用户
      * @param TtpId
@@ -32,4 +31,18 @@ public interface UserTtpRepository extends JpaRepository<UserTtp, Integer> {
      * @return
      */
     UserTtp findByUserTtpId(String userTtpId);
+
+    /**
+     * 根据订单查找
+     * @param orderId
+     * @return
+     */
+    UserTtp findByOrderId(String orderId);
+
+    /**
+     * 根据用户id查找此用户参与的ttp
+     * @param userId
+     * @return
+     */
+    List<UserTtp> findByUserId(String userId);
 }

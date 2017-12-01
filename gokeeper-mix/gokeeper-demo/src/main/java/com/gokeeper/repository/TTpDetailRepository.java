@@ -23,11 +23,13 @@ public interface TTpDetailRepository extends JpaRepository<TtpDetail, String> {
     TtpDetail findByTtpId(String ttpId);
 
     /**
-     * 获取所有公开的ttp
+     * 获取所有公开并且ttp状态不是完结按创建时间进行排序的ttp
      * @param ifOpen
+     * @param ttpStatus
      * @return
      */
-    List<TtpDetail> findByIfOpen(Integer ifOpen);
+    @Query(value = "SELECT * FROM ttp_detail t WHERE t.if_open = ?1 AND t.ttp_status != ?2 ORDER BY t.create_time DESC ", nativeQuery = true)
+    List<TtpDetail> findByIfOpen(Integer ifOpen, Integer ttpStatus);
 
     /**
      * 获取公开并且相应类型的ttp

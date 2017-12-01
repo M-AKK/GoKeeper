@@ -33,7 +33,7 @@ public class UserInfo {
     private String qqOpenid;
 
     //用户名
-    private String username;
+    private String username = "默认用户名";
 
     //密码
     private String password;

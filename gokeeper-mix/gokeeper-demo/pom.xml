@@ -32,15 +32,28 @@
             <scope>test</scope>
         </dependency>
 
+        <!--廖老师自己写的支付SDK-->
+        <dependency>
+            <groupId>cn.springboot</groupId>
+            <artifactId>best-pay-sdk</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+
     </dependencies>
 
-    <!-- 可以按照springmaven的规则进行打包 -->
+
     <build>
         <plugins>
+            <!-- 默认打包规则：可以按照springmaven的规则进行打包 -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>1.3.3.RELEASE</version>
+                <configuration>
+                    <!-- 指定该Main Class为全局的唯一入口 -->
+                    <mainClass>com.gokeeper.GoKeeperApplication</mainClass>
+                    <layout>ZIP</layout>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
@@ -49,8 +62,19 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- 默认跳过Test -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.4.2</version>
+                <configuration>
+
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+
         </plugins>
-        <finalName>demo</finalName>
+        <finalName>gokeeperdemo</finalName>
     </build>
 
 

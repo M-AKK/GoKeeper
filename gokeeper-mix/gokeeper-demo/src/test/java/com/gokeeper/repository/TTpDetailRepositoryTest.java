@@ -58,7 +58,7 @@ public class TTpDetailRepositoryTest {
 
     @Test
     public void findByIfOpen() throws Exception {
-        List<TtpDetail> result = repository.findByIfOpen(1);
+        List<TtpDetail> result = repository.findByIfOpen(1, 3);
         log.info("【所有公开的ttp】result={}", JsonUtil.toJson(result));
         Assert.assertNotNull(result);
     }

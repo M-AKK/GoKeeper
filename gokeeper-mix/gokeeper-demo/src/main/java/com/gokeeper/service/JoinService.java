@@ -33,4 +33,11 @@ public interface JoinService {
      * @return
      */
     UserTtp attend(String userId, String ttpId);
+
+    /**
+     * 修改ttp的支付状态
+     * @param userTtp
+     * @return
+     */
+    UserTtp paid(UserTtp userTtp);
 }

@@ -1,6 +1,7 @@
 package com.gokeeper.service;
 
 import com.gokeeper.dataobject.TtpType;
+import com.gokeeper.dataobject.UserTtp;
 import com.gokeeper.dto.TtpDetailDto;
 
 import java.util.List;
@@ -24,4 +25,10 @@ public interface FaqiService {
      * @return
      */
     List<TtpType> findAllType();
+
+    /**
+     * 取消一个user参加的ttp，相当于退出
+     * @return
+     */
+    UserTtp canel(UserTtp userTtp, String currentDate);
 }

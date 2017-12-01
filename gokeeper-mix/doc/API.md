@@ -43,7 +43,7 @@ GET /gokeeper/msg
 ```
 参数
 ```
-hidden: 0   //0查找所有公开消息，1查询所有隐藏消息
+hidden: 1   //1查找所有公开消息，0查询所有隐藏消息
 ```
 返回
 ```
@@ -81,7 +81,7 @@ hidden: 0   //0查找所有公开消息，1查询所有隐藏消息
                   "ifFinish": 1, //是否完成：0未完成，1完成，2请假
                   "finishnums": 4, //"完成人数"
                   "nofinishnums": 5 //未完成人数
-                  "leavesnums": 5,  //请假人数
+                  "leavenums": 5,  //请假人数
                   "userDayBouns": 4.0,  //奖金变化数量
                   "userTotalBouns": 4.0,  //奖金总数
                   "previewText": "预览信息"
@@ -254,7 +254,7 @@ currentDate: "2017/10/01" //当前时间，字符串即可，格式要正确
     "msg": "成功",
     "data": [
         {
-            "username": "安吉丽娜",
+            "userName": "安吉丽娜",
             "userIcon": "www.akaka.cn/icon.jpg",
             "ttpId": "abc1223", //隐藏字段，邀请好友时传递
             "ttpName": "100天疯狂跑",
@@ -262,8 +262,7 @@ currentDate: "2017/10/01" //当前时间，字符串即可，格式要正确
             "userTotalBouns": 350,
             "highAverage": "高于", //这里后台直接返还高/低，前端只用做拼接工作即可，减少压力
     //待定   "rank": 1,  //在一个ttp中
-            "userCurrentRecord": "dayStatus": "完成" //用户当天完成状态             
-            "newsStatus": 1   //默认为1未读，为0时说明是websocket信息需要改变css
+            "userCurrentRecord": "完成" //用户当天完成状态             
         }]
 }
 ```
@@ -291,11 +290,12 @@ currentDate: "2017/10/01" //字符串即可,格式要正确
             "userIcon": "www.akaka.cn/icon.jpg",
             "ttpId": "abc1223", //隐藏字段，邀请好友时传递
             "ttpName": "100天疯狂跑",
-            "ttpStatus": "准备开始",  //进行中、完结
+            "ttpStatus": 1,  //1准备开始，2进行中，3完结，4中途退出
             "startTime": "2017/10/01 18:00",   //开始时间精确到分
             "finishTime": "2017/10/08 18:00"         //结束时间
             "userTotalBouns": 350,
-    //待定   "ttpSchedule": 25,  //完成进度
+            "ttpSchedule": 25,  //完成进度
+            "faqiType": 1, //1, "集体出资";2, "独立出资"
             "highAverage": "高于", //这里后台直接返还高/低，前端只用做拼接工作即可，减少压力
     //待定   "rank": 1,  //在一个ttp中
             "ttpTarget": "每日跑3公里",  //现只有运动类ttp有这个
@@ -305,7 +305,7 @@ currentDate: "2017/10/01" //字符串即可,格式要正确
             "ifQuit": "允许中途退出", 
             "ifJoin": "允许中途加入",
             "ifOpen": "公开", 
-            "userCurrentRecord": "dayStatus": "完成" //用户当天完成状态
+            "userCurrentRecord": "完成" //用户当天完成状态
             "userRecordList": [
               {//不止一天
                   "days": 2017/10/01,  //记录的时间
@@ -322,7 +322,6 @@ currentDate: "2017/10/01" //字符串即可,格式要正确
                   "username": "李子安",
                   "dayStatus": "请假/null"
             }],
-            "newsStatus": 1   //默认为1未读，为0时说明是websocket信息需要改变css
         }]
 }
 ```
@@ -349,6 +348,7 @@ GET /gokeeper/join
       "ttpId": "abc123",  //隐藏字段，点击加入时传递给后端使用
       "ttpType": "运动",  //建议只显示最大的分类
       "createTime": "2017/10/01 17:00", //创建时间
+      "startTime": "2017/10/01 17:00", //开始时间
       "ttpTarget": "每日跑3公里",        //建议放在详情页面，现只有运动类有
       "allMoney": 1001,   //当前ttp奖金总额
       "joinPeopleNums": 100, //当前已加入人数
@@ -360,6 +360,7 @@ GET /gokeeper/join
       "ttpId": "abc123",  //隐藏字段，点击加入时传递给后端使用
       "ttpType": "生活-聚餐",
       "createTime": "2017/10/01 17:00", //创建时间
+      "startTime": "2017/10/01 17:00", //开始时间
       //"ttpTarget": "",        //此活动就没有明确目标为空
       "allMoney": 1001,   //当前ttp奖金总额
       "joinPeopleNums": 100, //当前已加入人数
@@ -514,14 +515,12 @@ GET /gokeeper/setting
     "code": 0,
     "msg": "成功",
     "data": [{
-        "userId": "123",
-        "wxOpenId": "wnasfsdafasd",  //微信openid
+        "wxOpenid": "wnasfsdafasd",  //微信openid
         "phonenumber": "12124132124, //手机号
         "weiboId": "1111111111", //微博id
-        "qqOpenId": "2222222222,  //QQopenId
+        "qqOpenid": "2222222222,  //QQopenId
         "username": "akk",  //用户名
-        "password": "123",  //密码
-        "birthday": "阿卡卡", //真实姓名
+        "birthday": "2017/10/01", 
         "sex": "1" //女
         "city": "孝感",
         "userIcon": "www.akkaka.cm?1.jpg", //用户头像
@@ -629,6 +628,27 @@ POST /gokeeper/setting/wx/unbundling
     "data": []
 }
 ```
+
+###支付订单
+
+重定向到：/gokeeper/wxpay/create
+
+###注销
+```
+DELETE /gokeeper/session
+```
+
+参数
+```
+```
+
+返回
+```
+{
+}
+```
+
+###支付订单
 
 
 

@@ -68,7 +68,9 @@ public class TtpNewsDto {
 
     private Integer nofinishnums;
 
-    private Integer leavesnums;
+    private Integer leaveNotes;
+
+    private Integer leavenums;
 
     private BigDecimal userDayBouns;
 

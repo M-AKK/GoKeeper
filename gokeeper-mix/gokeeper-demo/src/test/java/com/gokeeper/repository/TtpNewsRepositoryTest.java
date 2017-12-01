@@ -28,14 +28,17 @@ public class TtpNewsRepositoryTest {
     @Test
     public void save() throws Exception{
         TtpNews ttpNews = new TtpNews();
-        ttpNews.setId("abc123455");
+        ttpNews.setId("5646");
+        ttpNews.setUserTtpId("sdfa1212");
         ttpNews.setTtpId("123123");
         ttpNews.setUserId("111001");
+        ttpNews.setTtpStatus(1);
         ttpNews.setNewstype(2);
         ttpNews.setUsername("akk");
         ttpNews.setUserIcon("www.akaka.cn/1.jpg");
         ttpNews.setNewsname("测试的系统消息");
         ttpNews.setNewsstatus(0);//未读消息
+        ttpNews.setPreviewText("哈哈哈哈哈");
         ttpNews.setHidden(0);
         ttpNews.setStartTime(new Date());
         ttpNews.setFinishTime(new Date());

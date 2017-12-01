@@ -17,5 +17,5 @@ public class UserRecordVo {
     /**
      * 完成状态
      */
-    private String dayStatus;
+    private Integer dayStatus;
 }

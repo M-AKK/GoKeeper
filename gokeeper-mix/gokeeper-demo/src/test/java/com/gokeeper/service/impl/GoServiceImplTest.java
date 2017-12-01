@@ -32,9 +32,9 @@ public class GoServiceImplTest {
 
     @Test
     public void getMyOneTtp() throws Exception {
-        String ttpId = "1511067222354347556";
-        String userId = "1511062482311815587";
-        String currentDate = "2017/11/20";
+        String ttpId = "1511424137588587249";
+        String userId = "1511091449434479239";
+        String currentDate = "2017/11/23";
 
         GoVo result = goService.getMyOneTtp(ttpId, userId, currentDate);
         log.info("【Go界面信息展示，包括详情页面的信息】 result={}", JsonUtil.toJson(result));

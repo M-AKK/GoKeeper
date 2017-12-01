@@ -23,6 +23,13 @@ public enum ResultEnum implements CodeEnum {
     USER_JOIN_REPEAT(1004, "用户已经参加ttp,不能重复加入"),
     USER_MODIFY_ERROR(1005, "用户保存失败"),
     DATE_ERROE(3, "日期转换出错"),
+
+
+    ORDER_NOT_EXIST(10, "TTP不存在"),
+    WXPAY_NOTIFY_MONEY_VERIFY_ERROR(11, "微信支付异步通知金额校验不通过"),
+    ORDER_STATUS_ERROR(12, "TTP状态不正确"),
+    ORDER_PAY_STATUS_ERROR(13, "TTP支付状态出错"),
+    ORDER_UPDATE_FAIL(14, "TTP更新失败"),
     ;
 
     private Integer code;

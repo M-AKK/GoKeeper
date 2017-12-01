@@ -14,67 +14,86 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="gokeeper-mix" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TTpDetailRepositoryTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/test/java/com/gokeeper/repository/TTpDetailRepositoryTest.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gokeeper-core/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="79" column="24" lean-forward="true" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
+            <state relative-caret-position="-503">
+              <caret line="18" column="60" lean-forward="false" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TTpDetailRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/repository/TTpDetailRepository.java">
+      <file leaf-file-name="JoinServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/JoinServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="76" column="23" lean-forward="true" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
-              <folding>
-                <marker date="1511183945098" expanded="true" signature="1079:1268" ph="select user.... user" />
-                <marker date="1511183945098" expanded="true" signature="1864:1991" ph="SELECT * FRO... ttp_detail" />
-                <marker date="1511183945098" expanded="true" signature="2403:2543" ph="SELECT * FRO... ttp_detail" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/SearchServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="224">
+              <caret line="60" column="29" lean-forward="false" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/SearchController.java">
+      <file leaf-file-name="UserLogin.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/UserLogin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+            <state relative-caret-position="1030">
+              <caret line="96" column="28" lean-forward="true" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/SearchService.java">
+      <file leaf-file-name="WebSocketServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/WebSocketServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WxPayServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/WxPayServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logback-spring.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/resources/logback-spring.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gokeeper-demo/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DateUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/utils/DateUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-14">
-              <caret line="64" column="7" lean-forward="true" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
+              <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -85,9 +104,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit4 Test Class" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -96,6 +116,11 @@
       <find>code</find>
       <find>securityProperties配置的url展示</find>
       <find>currentDate</find>
+      <find>保留</find>
+      <find>验证码</find>
+      <find>sms</find>
+      <find>预览消息</find>
+      <find>type是不是null</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -106,57 +131,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/repository/SystemNewsRspository.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/repository/InviteNewsRepository.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/test/java/com/gokeeper/service/impl/GoServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/repository/TtpNewsRepository.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/FaqiController.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/utils/SortDate.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/test/java/com/gokeeper/service/impl/AllNewsServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/AllNewsService.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/code/impl/AbstractValidateCodeProcessor.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/dataobject/UserRecord.java" />
-        <option value="$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/properties/SecurityConstants.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/UserLogin.java" />
-        <option value="$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/code/ValidateCodeFilter.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/scheduled/ScheduledTest.java" />
-        <option value="$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/properties/SmsCodeProperties.java" />
-        <option value="$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/code/ValidateCodeInterceptor.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/handler/SellerExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/sms/DefaultSmsCodeSender1.java" />
-        <option value="$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/sms/SmsCodeGenerator.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/PayServiceImpl.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/WxPayController.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/dataobject/TtpDetail.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/vo/UserRecordVo.java" />
         <option value="$PROJECT_DIR$/gokeeper-demo/src/test/java/com/gokeeper/service/impl/FaqiServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/aspect/SellerAuthorizeAspect.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/NewsTypeEnum.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/FaqiServiceImpl.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/test/java/com/gokeeper/service/impl/GoServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/dataobject/UserTtp.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/AliPayService.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/vo/UserInfoVo.java" />
+        <option value="$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/sms/SmsCodeGenerator.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/repository/UserTtpRepository.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/utils/DateUtil.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/vo/GoPreVo.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/form/TtpForm.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/vo/JoinPreVo.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/JoinServiceImpl.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/SearchServiceImpl.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/vo/JoinVo.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/dataobject/UserInfo.java" />
+        <option value="$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/sms/DefaultSmsCodeSender1.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/SettingController.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/FaqiController.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/JoinController.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/UserController.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/repository/TTpDetailRepository.java" />
+        <option value="$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/code/ValidateCodeController.java" />
+        <option value="$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/code/ValidateCodeInterceptor.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/test/java/com/gokeeper/repository/TtpNewsRepositoryTest.java" />
         <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/WebSocketServiceImpl.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/config/WebConfig.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/MessageController.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/Filter/CorsFilter.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/filter/CorsFilter.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/GoController.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/utils/converter/NewsDtoZNewsVoConverter.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/NewsTemplate.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/dataobject/TtpNews.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/scheduled/ScheduledTest.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/dto/TtpNewsDto.java" />
         <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/vo/news/TtpNewsVo.java" />
         <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/vo/news/AllNewsVo.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/vo/UserInfoVo.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/UserService.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/ResultEnum.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/SettingController.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/test/java/com/gokeeper/repository/UserInfoRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/dto/TtpNewsDto.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/test/java/com/gokeeper/service/impl/AllNewsServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/vo/GoVo.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/GoServiceImpl.java" />
         <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/AllNewsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/dataobject/UserInfo.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/SearchService.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/JoinServiceImpl.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/IfJoinEnum.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/IfOpenEnum.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/IfQuitEnum.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/NewsStatusEnum.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/utils/DateUtil.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/test/java/com/gokeeper/repository/TTpDetailRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/repository/TTpDetailRepository.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/SearchServiceImpl.java" />
-        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/SearchController.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/MessageController.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/aspect/SellerAuthorizeAspect.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/filter/CorsFilter.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/FaqiServiceImpl.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/UserLogin.java" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/resources/logback-spring.xml" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/SessionController.java" />
       </list>
     </option>
   </component>
@@ -181,10 +206,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1237" />
-    <option name="height" value="825" />
+    <option name="width" value="1440" />
+    <option name="height" value="824" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -270,6 +295,63 @@
             <path>
               <item name="gokeeper-mix" type="b2602c69:ProjectViewProjectNode" />
               <item name="gokeeper-mix" type="462c0819:PsiDirectoryNode" />
+              <item name="gokeeper-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="gokeeper" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="validate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gokeeper-mix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gokeeper-mix" type="462c0819:PsiDirectoryNode" />
+              <item name="gokeeper-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="gokeeper" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="validate" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gokeeper-mix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gokeeper-mix" type="462c0819:PsiDirectoryNode" />
+              <item name="gokeeper-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="gokeeper" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="validate" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gokeeper-mix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gokeeper-mix" type="462c0819:PsiDirectoryNode" />
+              <item name="gokeeper-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="gokeeper" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="validate" type="462c0819:PsiDirectoryNode" />
+              <item name="sms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gokeeper-mix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gokeeper-mix" type="462c0819:PsiDirectoryNode" />
+              <item name="gokeeper-core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gokeeper-mix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gokeeper-mix" type="462c0819:PsiDirectoryNode" />
               <item name="gokeeper-demo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -332,28 +414,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="gokeeper" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gokeeper-mix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gokeeper-mix" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper" type="462c0819:PsiDirectoryNode" />
-              <item name="constant" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gokeeper-mix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gokeeper-mix" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -389,74 +449,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="gokeeper" type="462c0819:PsiDirectoryNode" />
-              <item name="dataobject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gokeeper-mix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gokeeper-mix" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gokeeper-mix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gokeeper-mix" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gokeeper-mix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gokeeper-mix" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gokeeper-mix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gokeeper-mix" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gokeeper-mix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gokeeper-mix" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gokeeper-mix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gokeeper-mix" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper" type="462c0819:PsiDirectoryNode" />
-              <item name="vo" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gokeeper-mix" type="b2602c69:ProjectViewProjectNode" />
@@ -471,45 +464,9 @@
               <item name="gokeeper-mix" type="462c0819:PsiDirectoryNode" />
               <item name="gokeeper-demo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gokeeper-mix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gokeeper-mix" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gokeeper-mix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gokeeper-mix" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gokeeper-mix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gokeeper-mix" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gokeeper-mix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gokeeper-mix" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="gokeeper" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -520,7 +477,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="Lombok plugin" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
@@ -535,21 +492,28 @@
     <property name="SearchEverywhereHistoryKey" value="defaultSmsCodeSender&#9;null&#9;null" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.gokeeper.repository" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.gokeeper.utils" />
+      <recent name="com.gokeeper.service.impl" />
+      <recent name="com.gokeeper.config" />
       <recent name="com.gokeeper.exception" />
       <recent name="com.gokeeper.aspect" />
-      <recent name="com.gokeeper.controller" />
-      <recent name="com.gokeeper.core.validate.code.vo" />
-      <recent name="com.gokeeper.core.validate.code.handler" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/gokeeper-demo/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/gokeeper-demo/src/main/resources" />
       <recent name="$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/code" />
       <recent name="$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/sms" />
       <recent name="$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/code/impl" />
-      <recent name="$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/properties" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -564,7 +528,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TTpDetailRepositoryTest.moneySearch">
+  <component name="RunManager" selected="Spring Boot.GoKeeperApplication">
     <configuration name="AllNewsServiceImplTest.findAllOpenMsg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -590,7 +554,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="FaqiServiceImplTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AllNewsServiceImplTest.getOneMsg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.gokeeper.service.impl.*" />
@@ -601,8 +565,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.gokeeper.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.gokeeper.service.impl.FaqiServiceImplTest" />
-      <option name="METHOD_NAME" value="create" />
+      <option name="MAIN_CLASS_NAME" value="com.gokeeper.service.impl.AllNewsServiceImplTest" />
+      <option name="METHOD_NAME" value="getOneMsg" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -622,19 +586,38 @@
       <module name="gokeeper-demo" />
       <envs />
     </configuration>
-    <configuration name="GoServiceImplTest.getmyttplist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NewsTemplate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.gokeeper.service.impl.*" />
+          <option name="PATTERN" value="com.gokeeper.enums.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.gokeeper.enums.NewsTemplate" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="gokeeper-demo" />
+      <envs />
+    </configuration>
+    <configuration name="SystemNewsRspositoryTest.findAllByUserIdAndHiddenOrdeOrderByUpdateTimeDesc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.gokeeper.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="gokeeper-demo" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.gokeeper.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.gokeeper.service.impl.GoServiceImplTest" />
-      <option name="METHOD_NAME" value="getmyttplist" />
+      <option name="PACKAGE_NAME" value="com.gokeeper.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.gokeeper.repository.SystemNewsRspositoryTest" />
+      <option name="METHOD_NAME" value="findAllByUserIdAndHiddenOrdeOrderByUpdateTimeDesc" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -647,7 +630,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="TTpDetailRepositoryTest.highsSelect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TtpNewsRepositoryTest.save" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.gokeeper.repository.*" />
@@ -658,33 +641,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.gokeeper.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.gokeeper.repository.TTpDetailRepositoryTest" />
-      <option name="METHOD_NAME" value="highsSelect" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="TTpDetailRepositoryTest.moneySearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.gokeeper.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="gokeeper-demo" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.gokeeper.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.gokeeper.repository.TTpDetailRepositoryTest" />
-      <option name="METHOD_NAME" value="moneySearch" />
+      <option name="MAIN_CLASS_NAME" value="com.gokeeper.repository.TtpNewsRepositoryTest" />
+      <option name="METHOD_NAME" value="save" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -778,21 +736,46 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Spring Boot.GoKeeperApplication" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.FaqiServiceImplTest.create" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.GoServiceImplTest.getmyttplist" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.AllNewsServiceImplTest.findAllOpenMsg" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TTpDetailRepositoryTest.highsSelect" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.TTpDetailRepositoryTest.moneySearch" />
+    <configuration name="maven打包" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/gokeeper-demo" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+    </configuration>
+    <list size="7">
+      <item index="0" class="java.lang.String" itemvalue="Maven.maven打包" />
+      <item index="1" class="java.lang.String" itemvalue="Spring Boot.GoKeeperApplication" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SystemNewsRspositoryTest.findAllByUserIdAndHiddenOrdeOrderByUpdateTimeDesc" />
+      <item index="3" class="java.lang.String" itemvalue="Application.NewsTemplate" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TtpNewsRepositoryTest.save" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.AllNewsServiceImplTest.findAllOpenMsg" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.AllNewsServiceImplTest.getOneMsg" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TTpDetailRepositoryTest.moneySearch" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TTpDetailRepositoryTest.highsSelect" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.FaqiServiceImplTest.create" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.AllNewsServiceImplTest.findAllOpenMsg" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.GoServiceImplTest.getmyttplist" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.AllNewsServiceImplTest.getOneMsg" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.AllNewsServiceImplTest.findAllOpenMsg" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TtpNewsRepositoryTest.save" />
+        <item index="3" class="java.lang.String" itemvalue="Application.NewsTemplate" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SystemNewsRspositoryTest.findAllByUserIdAndHiddenOrdeOrderByUpdateTimeDesc" />
       </list>
     </recent_temporary>
   </component>
@@ -810,52 +793,52 @@
       <option name="presentableId" value="Default" />
       <updated>1510729927721</updated>
       <workItem from="1510729931342" duration="21571000" />
-      <workItem from="1510819520586" duration="123476000" />
+      <workItem from="1510819520586" duration="280195000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AllNewsServiceImplTest_findAllOpenMsg - 2017.11.19 at 16h 43m 56s.xml">
+    <history-entry file="AllNewsServiceImplTest_findAllOpenMsg - 2017.11.26 at 21h 32m 01s.xml">
       <configuration name="AllNewsServiceImplTest.findAllOpenMsg" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllNewsServiceImplTest_findAllOpenMsg - 2017.11.19 at 16h 45m 16s.xml">
+    <history-entry file="AllNewsServiceImplTest_findAllOpenMsg - 2017.11.26 at 21h 33m 20s.xml">
       <configuration name="AllNewsServiceImplTest.findAllOpenMsg" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FaqiServiceImplTest_create - 2017.11.20 at 14h 19m 20s.xml">
-      <configuration name="FaqiServiceImplTest.create" configurationId="JUnit" />
+    <history-entry file="AllNewsServiceImplTest_findAllOpenMsg - 2017.11.26 at 21h 52m 46s.xml">
+      <configuration name="AllNewsServiceImplTest.findAllOpenMsg" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TTpDetailRepositoryTest_highsSelect - 2017.11.20 at 20h 23m 59s.xml">
-      <configuration name="TTpDetailRepositoryTest.highsSelect" configurationId="JUnit" />
+    <history-entry file="AllNewsServiceImplTest_getOneMsg - 2017.11.27 at 16h 11m 04s.xml">
+      <configuration name="AllNewsServiceImplTest.getOneMsg" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TTpDetailRepositoryTest_highsSelect - 2017.11.20 at 20h 37m 34s.xml">
-      <configuration name="TTpDetailRepositoryTest.highsSelect" configurationId="JUnit" />
+    <history-entry file="AllNewsServiceImplTest_getOneMsg - 2017.11.27 at 16h 13m 13s.xml">
+      <configuration name="AllNewsServiceImplTest.getOneMsg" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TTpDetailRepositoryTest_highsSelect - 2017.11.20 at 20h 39m 26s.xml">
-      <configuration name="TTpDetailRepositoryTest.highsSelect" configurationId="JUnit" />
+    <history-entry file="AllNewsServiceImplTest_getOneMsg - 2017.11.27 at 16h 15m 31s.xml">
+      <configuration name="AllNewsServiceImplTest.getOneMsg" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TTpDetailRepositoryTest_highsSelect - 2017.11.20 at 20h 46m 07s.xml">
-      <configuration name="TTpDetailRepositoryTest.highsSelect" configurationId="JUnit" />
+    <history-entry file="AllNewsServiceImplTest_getOneMsg - 2017.11.27 at 16h 17m 20s.xml">
+      <configuration name="AllNewsServiceImplTest.getOneMsg" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TTpDetailRepositoryTest_highsSelect - 2017.11.20 at 20h 48m 34s.xml">
-      <configuration name="TTpDetailRepositoryTest.highsSelect" configurationId="JUnit" />
+    <history-entry file="SystemNewsRspositoryTest_findAllByUserIdAndHiddenOrdeOrderByUpdateTimeDesc - 2017.11.24 at 15h 08m 51s.xml">
+      <configuration name="SystemNewsRspositoryTest.findAllByUserIdAndHiddenOrdeOrderByUpdateTimeDesc" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TTpDetailRepositoryTest_highsSelect - 2017.11.20 at 20h 53m 32s.xml">
-      <configuration name="TTpDetailRepositoryTest.highsSelect" configurationId="JUnit" />
+    <history-entry file="TtpNewsRepositoryTest_save - 2017.11.26 at 20h 54m 25s.xml">
+      <configuration name="TtpNewsRepositoryTest.save" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TTpDetailRepositoryTest_moneySearch - 2017.11.20 at 21h 09m 27s.xml">
-      <configuration name="TTpDetailRepositoryTest.moneySearch" configurationId="JUnit" />
+    <history-entry file="TtpNewsRepositoryTest_save - 2017.11.26 at 21h 08m 27s.xml">
+      <configuration name="TtpNewsRepositoryTest.save" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145047000" />
+    <option name="totallyTimeSpent" value="301766000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="824" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="824" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24821173" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -869,15 +852,15 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32921812" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31550068" sideWeight="0.49427754" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23462088" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21959943" sideWeight="0.4951989" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23462088" sideWeight="0.5048011" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -928,215 +911,87 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/test/java/com/gokeeper/repository/UserInfoRepositoryTest.java">
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/test/java/com/gokeeper/service/impl/AllNewsServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/dataobject/TtpNews.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/vo/news/TtpNewsVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/dto/TtpNewsDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/utils/converter/NewsBeanZNewsDtoConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/vo/GoPreVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/vo/GoVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/vo/JoinVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/vo/OthersRecordVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/vo/ResultVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/vo/UserRecordVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/vo/UserInfoVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/dataobject/UserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-383">
-          <caret line="23" column="44" lean-forward="true" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/UserLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="88" column="61" lean-forward="false" selection-start-line="88" selection-start-column="61" selection-end-line="88" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/SettingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/JoinService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/JoinServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="180" column="0" lean-forward="true" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/repository/InviteNewsRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        <state relative-caret-position="272">
+          <caret line="31" column="24" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/repository/SystemNewsRspository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        <state relative-caret-position="330">
+          <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/repository/TtpNewsRepository.java">
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/vo/GoVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        <state relative-caret-position="278">
+          <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/repository/TtpTypeRepository.java">
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/FaqiTypeEnum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        <state relative-caret-position="195">
+          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/repository/UserRecordRepository.java">
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/vo/JoinPreVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="69">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/repository/UserTtpRepository.java">
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/filter/CorsFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="159">
+          <caret line="21" column="63" lean-forward="false" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/AverageEnum.java">
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/handler/SellerExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/SecurityCoreConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-518">
+          <caret line="37" column="7" lean-forward="false" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/config/WechatAccountConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/code/ValidateCodeType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
@@ -1144,7 +999,175 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/CodeEnum.java">
+    <entry file="file://$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/code/impl/AbstractValidateCodeProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-448">
+          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/sms/SmsCodeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/sms/SmsCodeProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/sms/DefaultSmsCodeSender1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="75" column="50" lean-forward="true" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/code/ValidateCodeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/code/ValidateCodeFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="123" column="27" lean-forward="false" selection-start-line="123" selection-start-column="27" selection-end-line="123" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/code/ValidateCodeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/code/ValidateCodeProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/code/ValidateCodeProcessorHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-app/src/main/java/com/gokeeper/core/validate/code/ValidateCodeInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="50" column="26" lean-forward="false" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/FaqiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="55" column="25" lean-forward="true" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/GoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/JoinController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/MessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="57" column="26" lean-forward="false" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/SearchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/SettingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="46" column="19" lean-forward="true" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="38" column="29" lean-forward="true" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/WxPayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="40" column="51" lean-forward="true" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/scheduled/ScheduledTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="117" column="56" lean-forward="true" selection-start-line="117" selection-start-column="56" selection-end-line="117" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/WebsocketController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="36" column="39" lean-forward="true" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/AliPayService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
@@ -1152,192 +1175,146 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/DayStatusEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/IfJoinEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/IfQuitEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/NewsStatusEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/NewsTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/NewsTypeEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/TtpStatusEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/TtpTargetTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/TtpTypeEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/text/ParseException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="49" column="6" lean-forward="false" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/IfOpenEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/AllNewsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="48" column="27" lean-forward="false" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
-          <folding>
-            <element signature="method#ListSort#0;class#AllNewsServiceImpl#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/WebSocketServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="87" column="28" lean-forward="true" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
+        <state relative-caret-position="242">
+          <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/WebsocketController.java">
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/FaqiServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="56" column="57" lean-forward="false" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
+        <state relative-caret-position="203">
+          <caret line="81" column="30" lean-forward="true" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/scheduled/ScheduledTest.java">
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/GoServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-127">
-          <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        <state relative-caret-position="266">
+          <caret line="153" column="42" lean-forward="false" selection-start-line="153" selection-start-column="42" selection-end-line="153" selection-end-column="42" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/MessageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="39" column="56" lean-forward="true" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/utils/DateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="64" column="7" lean-forward="true" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/enums/ResultEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/test/java/com/gokeeper/repository/TTpDetailRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="79" column="24" lean-forward="true" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/repository/TTpDetailRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="76" column="23" lean-forward="true" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
-          <folding>
-            <marker date="1511183945098" expanded="true" signature="1079:1268" ph="select user.... user" />
-            <marker date="1511183945098" expanded="true" signature="1864:1991" ph="SELECT * FRO... ttp_detail" />
-            <marker date="1511183945098" expanded="true" signature="2403:2543" ph="SELECT * FRO... ttp_detail" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/SearchServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="300">
+          <caret line="42" column="48" lean-forward="false" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/SearchService.java">
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/WebSocketServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/WxPayServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/resources/logback-spring.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-core/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-503">
+          <caret line="18" column="60" lean-forward="false" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/GoKeeperApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/service/impl/JoinServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="60" column="29" lean-forward="false" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/api/SearchController.java">
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/constant/UserInfoConstant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        <state relative-caret-position="210">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/constant/RedisConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/aspect/SellerAuthorizeAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/SessionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokeeper-demo/src/main/java/com/gokeeper/controller/UserLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1030">
+          <caret line="96" column="28" lean-forward="true" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1394,12 +1371,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>gokeeper-app</last-edited>
+          <last-edited>gokeeper-mix</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1418,5 +1394,8 @@
         </settings>
       </state>
     </states>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="" />
   </component>
 </project>

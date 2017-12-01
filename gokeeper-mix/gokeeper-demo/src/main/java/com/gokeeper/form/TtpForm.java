@@ -14,11 +14,10 @@ import java.math.BigDecimal;
 public class TtpForm {
 
     //ttp名称
-    @NotEmpty(message = "活动名称必填")
     private String ttpName;
 
     //ttp目标(非必填，某些ttp才有)
-    private Float ttpTarget;
+    private String ttpTarget;
 
     //活动地点(非必填，某些活动才有)
     private String address;
@@ -27,7 +26,6 @@ public class TtpForm {
     private Integer leaveNotesNums;
 
     //加入保险金额
-    @NotEmpty(message = "押金必填")
     private BigDecimal joinMoney;
 
     //是否中途退出
@@ -50,5 +48,15 @@ public class TtpForm {
 
     //结束时间
     private String finishTime;
+
+    //出资方式
+    private Integer faqiType;
+
+    //自己是否参加
+    private Integer joinSelf;
+
+    //独立出资时的发起金额
+    private BigDecimal joinSelfMoney;
+
 
 }

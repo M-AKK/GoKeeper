@@ -3,6 +3,7 @@ package com.gokeeper.service.impl;
 import com.gokeeper.dataobject.InviteNews;
 import com.gokeeper.dataobject.SystemNews;
 import com.gokeeper.dataobject.TtpNews;
+import com.gokeeper.enums.NewsStatusEnum;
 import com.gokeeper.repository.InviteNewsRepository;
 import com.gokeeper.repository.SystemNewsRspository;
 import com.gokeeper.repository.TtpNewsRepository;
@@ -51,14 +52,13 @@ public class AllNewsServiceImpl implements AllNewsService {
         //1.转化系统消息到Vo对象
         List<SystemNews> systemNewsList = systemNewsRspository.findAllByHiddenOrderByUpdateTimeDesc(hidden);
         List<TtpNews> ttpNewsList = ttpNewsRepository.findAllByUserIdAndHiddenOrderByUpdateTimeDesc(userId, hidden);
-
         List<InviteNews> inviteNewsList = inviteNewsRepository.findAllByUserIdAndHiddenOrderByUpdateTimeDesc(userId, hidden);
         //2.转化ttp消息到Vo
         //3.转化邀请消息到对象
         List<SystemNewsVo> systemNewsVoList = NewsDtoZNewsVoConverter.SystemNewsDtoZVoconvert(NewsBeanZNewsDtoConverter.SystemNewsZDtoconvert(systemNewsList));
         List<TtpNewsVo> ttpNewsVoList = NewsDtoZNewsVoConverter.TtpNewsDtoZVoconvert(NewsBeanZNewsDtoConverter.TtpNewsZDtoconvert(ttpNewsList));
-
         List<InviteNewsVo> inviteNewsVoList = NewsDtoZNewsVoConverter.InviteNewsDtoZVoconvert(NewsBeanZNewsDtoConverter.InviteNewsZDtoconvert(inviteNewsList));
+
         List<AllNewsVo> allMsgList = new ArrayList<>();
         for(SystemNewsVo systemNewsVo : systemNewsVoList) {
             AllNewsVo allNewsVo1 = new AllNewsVo();
@@ -77,7 +77,6 @@ public class AllNewsServiceImpl implements AllNewsService {
         }
         //对allMsgList按时间进行排序
         ListSort(allMsgList);
-
         return allMsgList;
     }
 
@@ -114,9 +113,14 @@ public class AllNewsServiceImpl implements AllNewsService {
         SystemNews systemNews = systemNewsRspository.findById(msgId);
         TtpNews ttpNews = ttpNewsRepository.findByUserTtpId(msgId);
         if (systemNews != null) {
-            return NewsDtoZNewsVoConverter.SystemNewsDtoZVoconvert(NewsBeanZNewsDtoConverter.SystemNewsZDtoconvert(systemNews));
+            systemNews.setNewsstatus(NewsStatusEnum.YES_READ.getCode());
+            SystemNews result = systemNewsRspository.save(systemNews);
+            return NewsDtoZNewsVoConverter.SystemNewsDtoZVoconvert(NewsBeanZNewsDtoConverter.SystemNewsZDtoconvert(result));
         } else if(ttpNews != null ) {
-            return NewsDtoZNewsVoConverter.TtpNewsDtoZVoconvert(NewsBeanZNewsDtoConverter.TtpNewsZDtoconvert(ttpNews));
+            ttpNews.setNewsstatus(NewsStatusEnum.YES_READ.getCode());
+            TtpNews result = ttpNewsRepository.save(ttpNews);
+            //log.info("【数据库查询得到】"+JsonUtil.toJson(result));
+            return NewsDtoZNewsVoConverter.TtpNewsDtoZVoconvert(NewsBeanZNewsDtoConverter.TtpNewsZDtoconvert(result));
         }
         return null;
     }

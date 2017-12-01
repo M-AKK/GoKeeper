@@ -4,6 +4,7 @@ import com.gokeeper.constant.UserInfoConstant;
 import com.gokeeper.dataobject.UserInfo;
 import com.gokeeper.exception.TTpException;
 import com.gokeeper.service.JoinService;
+import com.gokeeper.utils.JsonUtil;
 import com.gokeeper.utils.ResultVoUtil;
 import com.gokeeper.vo.JoinPreVo;
 import com.gokeeper.vo.JoinVo;
@@ -32,8 +33,9 @@ public class JoinController {
     @GetMapping
     public ResultVO getAllList(){
         //返回所有公开的ttp
-        List<JoinPreVo> joinPreVoList = joinService.getOpenTtp();
-        return ResultVoUtil.success(joinPreVoList);
+        List<JoinPreVo> result = joinService.getOpenTtp();
+        //log.info("【加入预览数据：】"+ JsonUtil.toJson(result));
+        return ResultVoUtil.success(result);
     }
 
     //加入界面某个ttp详情
@@ -51,11 +53,12 @@ public class JoinController {
         //2.根据session查找用户id
         //根据seesion获取userId
         UserInfo user = (UserInfo) request.getSession().getAttribute(UserInfoConstant.USER_INFO);
-
-        try{
-            joinService.attend(user.getUserId(), ttpId);
-        } catch (TTpException e) {
-            return ResultVoUtil.error(e.getCode(), e.getMessage());
+        if(user != null ) {
+            try{
+                joinService.attend(user.getUserId(), ttpId);
+            } catch (TTpException e) {
+                return ResultVoUtil.error(e.getCode(), e.getMessage());
+            }
         }
 
         return ResultVoUtil.success();

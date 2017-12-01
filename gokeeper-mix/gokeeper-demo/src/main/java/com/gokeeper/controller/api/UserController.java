@@ -42,7 +42,6 @@ public class UserController {
         } else {
             return ResultVoUtil.error(ResultEnum.CHECK_USER.getCode(), ResultEnum.CHECK_USER.getMessage());
         }
-
     }
 
 }

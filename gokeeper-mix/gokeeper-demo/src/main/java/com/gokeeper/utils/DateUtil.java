@@ -11,19 +11,20 @@ import java.util.*;
 
 public class DateUtil {
 
-    public static void main(String[] args)throws Exception{
-        /*List<String> result = getBetweenDates(DateUtil.StringToDate("2017-10-1 21:08"),DateUtil.StringToDate("2017-10-8 21:08"));
-        for(int i=0; i<result.size(); i++){
-            System.out.println(result.get(i));
-        }
-
-        String str = dateFormat2(DateUtil.StringToDate("2017-10-1 21:08"), 11,16);//16或者10
-        System.out.println(str);*/
-
-        Date currentTime = new Date();
-        String s = DateUtil.dateFormat2(currentTime, 0, 10);
-        System.out.println(s);
-    }
+//    public static void main(String[] args)throws Exception{
+//        /*List<String> result = getBetweenDates(DateUtil.StringToDate("2017-10-1 21:08"),DateUtil.StringToDate("2017-10-8 21:08"));
+//        for(int i=0; i<result.size(); i++){
+//            System.out.println(result.get(i));
+//        }
+//
+//        String str = dateFormat2(DateUtil.StringToDate("2017-10-1 21:08"), 11,16);//16或者10
+//        System.out.println(str);*/
+//
+//        /*Date currentTime = new Date();
+//        String s = DateUtil.dateFormat2(currentTime, 0, 10);
+//        System.out.println(s);*/
+//
+//    }
 
     /**
      * date类型进行格式化输出

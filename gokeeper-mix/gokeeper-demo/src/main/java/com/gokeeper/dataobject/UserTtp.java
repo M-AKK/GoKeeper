@@ -12,12 +12,13 @@ import java.util.Date;
 
 /**
  * ttp和user关联实体表
- * Created by Akk_Mac
+ * @author Created by Akk_Mac
  * Date: 2017/10/3 11:22
  */
 @Entity
 @Data
-@DynamicUpdate//动态更新，只要数据发生变化了，数据库的时间也会变
+//动态更新，只要数据发生变化了，数据库的时间也会变
+@DynamicUpdate
 public class UserTtp {
 
     @Id
@@ -30,16 +31,38 @@ public class UserTtp {
 
     private String ttpId;
 
-    //用户此ttp每日奖金，突然发现只用显示总奖金就行了
+    /**
+     * 用户此ttp每日奖金，突然发现只用显示总奖金就行了
+     */
     private BigDecimal userDayBouns;
 
-    //用户此ttp总奖金
+    /**
+     * 用户此ttp总奖金
+     */
     private BigDecimal userTotalBouns;
 
-    //押金支付状态
+    /**
+     * 订单号
+     */
+    private String orderId;
+
+    /**
+     * 支付方式
+     */
+    private String payType;
+
+    /**
+     * 支付状态
+     */
     private Integer payStatus;
 
-    private Integer leaveNotes;
+    /**
+     * 用户对应此ttp的状态
+     */
+    private Integer userTtpStatus;
+
+    //假条使用数量
+    private Integer leaveNotes = 0;
 
     private Integer ttpSchedule;
 

@@ -53,9 +53,9 @@ public class TtpNewsVo {
 
     private Integer weight;
 
-    private String starttime;
+    private String startTime;
 
-    private String finishtime;
+    private String finishTime;
 
     /**
      * 是否完成
@@ -66,7 +66,9 @@ public class TtpNewsVo {
 
     private Integer nofinishnums;
 
-    private Integer leavesnums;
+    private Integer leaveNotes;
+
+    private Integer leavenums;
 
     private BigDecimal userDayBouns;
 

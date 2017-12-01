@@ -14,9 +14,9 @@ import com.gokeeper.vo.JoinVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.socket.TextMessage;
 
-import javax.transaction.Transactional;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.text.ParseException;
@@ -55,8 +55,8 @@ public class JoinServiceImpl implements JoinService {
      */
     @Override
     public List<JoinPreVo> getOpenTtp() {
-        //1.先查找所有公开ttp的详情信息
-        List<TtpDetail> openttpdetaillist = tTpDetailRepository.findByIfOpen(IfOpenEnum.YES.getCode());
+        //1.获取所有公开并且ttp状态不是完结按创建时间进行排序的ttp
+        List<TtpDetail> openttpdetaillist = tTpDetailRepository.findByIfOpen(IfOpenEnum.YES.getCode(), TtpStatusEnum.FINISH.getCode());
         List<JoinPreVo> joinPreVoList = getjoinPreVoList(openttpdetaillist);
         return joinPreVoList;
     }
@@ -89,7 +89,7 @@ public class JoinServiceImpl implements JoinService {
         joinVo.setJoinPeopleNums(userTtpRepository.findByTtpId(detail.getTtpId()).size());
         joinVo.setLeaveNotesNums(detail.getLeaveNotesNums());
         joinVo.setIfJoin(EnumUtil.getByCode(detail.getIfJoin(), IfJoinEnum.class).getMessage());
-        joinVo.setIfQuit(EnumUtil.getByCode(detail.getIfQuit(), IfQuitEnum.class).getMessage());
+//        joinVo.setIfQuit(EnumUtil.getByCode(detail.getIfQuit(), IfQuitEnum.class).getMessage());
 
         return joinVo;
     }
@@ -104,7 +104,7 @@ public class JoinServiceImpl implements JoinService {
     @Transactional//事务管理，一旦失败就回滚
     public UserTtp attend(String userId, String ttpId){
         //1.判断此用户是否重复加入此ttp
-        List<UserTtp> userTtpList = userTtpRepository.findByUserId(userId);
+        List<UserTtp> userTtpList = userTtpRepository.findByUserIdOrderByUpdateTimeDesc(userId);
         for(UserTtp userTtp : userTtpList) {
             if(ttpId.equals(userTtp.getTtpId())){
                 throw new TTpException(ResultEnum.USER_JOIN_REPEAT);
@@ -113,11 +113,11 @@ public class JoinServiceImpl implements JoinService {
 
         //设置起始每日奖金总额为0
         BigDecimal zeroBouns = new BigDecimal(BigInteger.ZERO);
-
+        TtpDetail ttpDetail = tTpDetailRepository.findByTtpId(ttpId);
         //2.生成user-ttp关联表信息
         UserTtp userTtp = new UserTtp();
         //根据ttpid和userid生成
-        userTtp.setUserTtpId(ttpId+userId);
+        userTtp.setUserTtpId(userId+ttpId);
         userTtp.setUserId(userId);
         userTtp.setTtpId(ttpId);
         userTtp.setUserDayBouns(zeroBouns);
@@ -126,9 +126,10 @@ public class JoinServiceImpl implements JoinService {
         userTtp.setPayStatus(0);
         //设置开始进度为0
         userTtp.setTtpSchedule(0);
+        userTtp.setUserTtpStatus(ttpDetail.getTtpStatus());
         userTtpRepository.save(userTtp);
         //查找ttpDetail信息
-        TtpDetail ttpDetail = tTpDetailRepository.findByTtpId(ttpId);
+
         //用户记录表录入
         try{
             //根据开始时间和结束时间算出中间日期
@@ -155,7 +156,7 @@ public class JoinServiceImpl implements JoinService {
         //1.创建ttp消息模板
         TtpNews ttpNews = new TtpNews();
         //ttpNews的id就是user-ttp的id，一条用户ttp对应一条模板
-        ttpNews.setId(userTtp.getUserTtpId());
+        ttpNews.setUserTtpId(userTtp.getUserTtpId());
         ttpNews.setTtpId(ttpId);
         ttpNews.setUserId(userId);
         ttpNews.setTtpStatus(TtpStatusEnum.READY.getCode());
@@ -183,6 +184,35 @@ public class JoinServiceImpl implements JoinService {
     }
 
 
+    @Override
+    public UserTtp paid(UserTtp userTtp) {
+
+        TtpDetail ttpDetail = tTpDetailRepository.findByTtpId(userTtp.getTtpId());
+
+        //1.判断ttp状态是否为已完结
+        if(ttpDetail.getTtpStatus().equals(TtpStatusEnum.FINISH.getCode())) {
+            log.error("[TTP支付完成] TTP状态不正确，userTtpId={}, ttpStatus={}", userTtp.getUserTtpId(), ttpDetail.getTtpStatus());
+            throw new TTpException(ResultEnum.ORDER_STATUS_ERROR);
+        }
+
+        //2.判断支付状态
+        if(!userTtp.getPayStatus().equals(PayEnum.NO.getCode())){
+            log.error("[TTP支付完成] TTP支付状态不正确，userTtp={}", userTtp);
+            throw new TTpException(ResultEnum.ORDER_PAY_STATUS_ERROR);
+        }
+
+        //3.修改支付状态
+        userTtp.setPayStatus(PayEnum.YES.getCode());
+        UserTtp updateResult = userTtpRepository.save(userTtp);
+        if(updateResult == null){
+            log.error("[TTP支付成功] 更新失败， userTtp={}", userTtp);
+            throw new TTpException(ResultEnum.ORDER_UPDATE_FAIL);
+        }
+
+        return userTtp;
+    }
+
+    //加入预览信息查询后的转换方法
     private List<JoinPreVo> getjoinPreVoList(List<TtpDetail> openttpdetaillist) {
         List<JoinPreVo> joinPreVoList = new ArrayList<>();
         for(TtpDetail detail : openttpdetaillist) {
@@ -196,6 +226,7 @@ public class JoinServiceImpl implements JoinService {
             joinPreVo.setTtpName(detail.getTtpName());
             joinPreVo.setTtpType(EnumUtil.getByCode(detail.getTtpType(), TtpTypeEnum.class).getMessage());
             joinPreVo.setCreateTime(dateFormat2(detail.getCreateTime(), 0,16));
+            joinPreVo.setStartTime(dateFormat2(detail.getStartTime(), 0,16));
 
             //TODO 输入目标数，返回对应结果,现在假定运动类ttp才有目标
             if(detail.getTtpType().equals(TtpTypeEnum.SPORTS.getCode())){
@@ -208,4 +239,6 @@ public class JoinServiceImpl implements JoinService {
         }
         return joinPreVoList;
     }
+
+
 }

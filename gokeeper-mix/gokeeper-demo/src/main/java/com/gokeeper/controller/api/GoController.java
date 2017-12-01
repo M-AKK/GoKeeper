@@ -3,6 +3,7 @@ package com.gokeeper.controller.api;
 import com.gokeeper.constant.UserInfoConstant;
 import com.gokeeper.dataobject.UserInfo;
 import com.gokeeper.service.GoService;
+import com.gokeeper.utils.JsonUtil;
 import com.gokeeper.utils.ResultVoUtil;
 import com.gokeeper.vo.GoPreVo;
 import com.gokeeper.vo.GoVo;
@@ -35,20 +36,62 @@ public class GoController {
     @GetMapping
     public ResultVO goList(@RequestParam("currentDate") String currentDate,
                              HttpServletRequest request){
+        //log.info("【go界面的请求地址】"+request.getRequestURI());
         //根据seesion获取userId
         UserInfo user = (UserInfo) request.getSession().getAttribute(UserInfoConstant.USER_INFO);
-        List<GoPreVo> result = goService.getMyTtpList(user.getUserId(), currentDate);
-        return ResultVoUtil.success(result);
+        List<GoPreVo> result = null;
+        if(user != null) {
+            //log.info("【go界面的user登录】"+user.getUserId());
+            result = goService.getMyTtpList(user.getUserId(), currentDate);
+        }
+        if(result != null) {
+            if(result.size() != 0 ) {
+                //log.info("【GO界面数据】"+ JsonUtil.toJson(result));
+                return ResultVoUtil.success(result);
+            } else {
+                return ResultVoUtil.success();
+            }
+        }
+        return ResultVoUtil.success();
+
     }
 
+    /**
+     * 查询ttp详情
+     * @param ttpId
+     * @param currentDate
+     * @param request
+     * @return
+     */
     @GetMapping(value = "/{ttpId}")
     public ResultVO getOne(@PathVariable("ttpId") String ttpId,
                            @RequestParam("currentDate") String currentDate,
                            HttpServletRequest request) {
         //根据seesion获取userId
         UserInfo user = (UserInfo) request.getSession().getAttribute(UserInfoConstant.USER_INFO);
-        GoVo result = goService.getMyOneTtp(ttpId, user.getUserId(), currentDate);
+        GoVo result = null;
+        if(user != null) {
+            result = goService.getMyOneTtp(ttpId, user.getUserId(), currentDate);
+        }
         return ResultVoUtil.success(result);
+    }
+
+    /**
+     * 中途退出ttp操作
+     * @param ttpId
+     * @param currentDate
+     * @param request
+     * @return
+     */
+    @PostMapping(value = "/{ttpId}")
+    public ResultVO quit(@PathVariable("ttpId") String ttpId,
+                         @RequestParam("currentDate") String currentDate,
+                         HttpServletRequest request) {
+        //根据seesion获取userId
+        UserInfo user = (UserInfo) request.getSession().getAttribute(UserInfoConstant.USER_INFO);
+        goService.quit(user.getUserId(), ttpId, currentDate);
+        return ResultVoUtil.success();
+
     }
 
 

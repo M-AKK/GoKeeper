@@ -49,23 +49,28 @@ public class FaqiController {
         }
         //根据seesion获取userId
         UserInfo user = (UserInfo) request.getSession().getAttribute(UserInfoConstant.USER_INFO);
+        if(user != null) {
+            //把部分属性复制到Dto，并不会复制两个时间
+            TtpDetailDto detailDto = new TtpDetailDto();
+            BeanUtils.copyProperties(ttpForm,detailDto);
+            //设置开始时间和结束时间
+            detailDto.setStartTime(DateUtil.StringToDate(ttpForm.getStartTime()));
+            detailDto.setFinishTime(DateUtil.StringToDate(ttpForm.getFinishTime()));
+            detailDto.setUserId(user.getUserId());
+            detailDto.setTtpTarget(Double.valueOf(ttpForm.getTtpTarget()));
+            TtpDetailDto ttpDetailDto = faqiService.create(detailDto);
 
-        //把部分属性复制到Dto，并不会复制两个时间
-        TtpDetailDto detailDto = new TtpDetailDto();
-        BeanUtils.copyProperties(ttpForm,detailDto);
-        //设置开始时间和结束时间
-        detailDto.setStartTime(DateUtil.StringToDate(ttpForm.getStartTime()));
-        detailDto.setFinishTime(DateUtil.StringToDate(ttpForm.getFinishTime()));
-        detailDto.setUserId(user.getUserId());
-        TtpDetailDto ttpDetailDto = faqiService.create(detailDto);
+            Map<String, String> map = new HashMap<>();
+            map.put("ttpId", ttpDetailDto.getTtpId());
+            return ResultVoUtil.success(map);
+        }
+        return ResultVoUtil.success();
 
-        Map<String, String> map = new HashMap<>();
-        map.put("ttpId", ttpDetailDto.getTtpId());
-        return ResultVoUtil.success(map);
     }
 
     @GetMapping(value = "/alltype")
     public ResultVO findAllType(){
         return ResultVoUtil.success(faqiService.findAllType());
     }
+
 }

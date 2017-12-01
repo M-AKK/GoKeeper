@@ -48,7 +48,6 @@ public class ValidateCodeInterceptor implements HandlerInterceptor {
         urlMap.put(SecurityConstants.DEFAULT_LOGIN_PROCESSING_URL_MOBILE, ValidateCodeType.SMS);
         addUrlToMap(securityProperties.getCode().getSms().getUrl(), ValidateCodeType.SMS);
         ValidateCodeType type = urlMap.get(httpServletRequest.getRequestURI());
-        log.info("type是不是null？"+type+"URI"+httpServletRequest.getRequestURI());
         if(type != null) {
             log.info("校验请求(" + httpServletRequest.getRequestURI() + ")中的验证码,验证码类型" + type);
             try {

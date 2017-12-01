@@ -13,6 +13,8 @@ public enum TtpTypeEnum implements CodeEnum {
     SPORTS(1, "运动"),
 
     SOCIAL(2, "社交"),
+
+    LIFT(3, "生活"),
     ;
 
     private Integer code;

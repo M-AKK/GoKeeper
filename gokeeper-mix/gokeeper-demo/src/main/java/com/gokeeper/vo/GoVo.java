@@ -23,7 +23,9 @@ public class GoVo extends GoPreVo{
     /**
      * ttp完成进度
      */
-    private Integer ttpSchedule;
+    private String ttpSchedule = "0";
+
+    private Integer faqiType;
 
     /**
      * ttp目标

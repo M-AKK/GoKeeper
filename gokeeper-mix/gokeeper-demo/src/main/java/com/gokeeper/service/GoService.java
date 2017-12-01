@@ -1,5 +1,6 @@
 package com.gokeeper.service;
 
+import com.gokeeper.dataobject.UserTtp;
 import com.gokeeper.vo.GoPreVo;
 import com.gokeeper.vo.GoVo;
 
@@ -24,7 +25,16 @@ public interface GoService {
      * 查找用户某一条参与的ttp信息
      * @param ttpId
      * @param currentDate
-     * @return
+     * @return GoVo
      */
     GoVo getMyOneTtp(String ttpId, String userId, String currentDate);
+
+    /**
+     * 用户中途退出操作
+     * @param userId
+     * @param ttpId
+     * @param currentDate
+     * @return UserTtp
+     */
+    UserTtp quit(String userId, String ttpId, String currentDate);
 }

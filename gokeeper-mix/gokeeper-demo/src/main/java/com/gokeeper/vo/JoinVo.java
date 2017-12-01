@@ -11,8 +11,6 @@ import java.math.BigDecimal;
 @Data
 public class JoinVo extends JoinPreVo{
 
-    private String startTime;
-
     private String finishTime;
 
     private BigDecimal joinMoney;

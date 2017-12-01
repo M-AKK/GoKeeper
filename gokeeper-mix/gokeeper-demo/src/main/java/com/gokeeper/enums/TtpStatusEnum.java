@@ -8,6 +8,7 @@ import lombok.Getter;
  */
 @Getter
 public enum TtpStatusEnum implements CodeEnum {
+
     READY(1, "准备开始"),
 
     WORKING(2, "进行中"),

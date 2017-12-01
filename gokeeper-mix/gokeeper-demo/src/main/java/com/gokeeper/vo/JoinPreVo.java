@@ -26,6 +26,8 @@ public class JoinPreVo {
 
     private String createTime;
 
+    private String StartTime;
+
     private BigDecimal allMoney;
 
     private Integer joinPeopleNums;

@@ -16,8 +16,7 @@ import com.gokeeper.utils.KeyUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 
 import static com.gokeeper.enums.ResultEnum.CHECK_USER;
 import static com.gokeeper.enums.ResultEnum.TTP_MISS;
@@ -85,8 +84,8 @@ public class WebSocketServiceImpl implements WebSocketService {
         result.setPreviewText(previewText);
 
         result.setNewsstatus(NewsStatusEnum.NO_READ.getCode());
-        result.setHidden(0);
-        result.setWeight(0);
+        result.setHidden(NewsStatusEnum.NO_READ.getCode());
+        result.setWeight(1);
         result.setTtpId(ttpId);
 
         InviteNews inviteNews = inviteNewsRepository.save(result);
@@ -108,7 +107,7 @@ public class WebSocketServiceImpl implements WebSocketService {
         systemNews.setNewstype(NewsTypeEnum.SYSTEM.getCode());
         systemNews.setNewsname("系统公告");
         systemNews.setNewsstatus(NewsStatusEnum.NO_READ.getCode());
-        systemNews.setHidden(0);
+        systemNews.setHidden(NewsStatusEnum.NO_READ.getCode());
         systemNews.setPreviewText(previewText);
         systemNews.setText(text);
         systemNews.setWeight(1);

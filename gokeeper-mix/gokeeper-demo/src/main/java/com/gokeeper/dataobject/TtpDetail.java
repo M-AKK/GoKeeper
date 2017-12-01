@@ -34,12 +34,6 @@ public class TtpDetail {
 
     private String address;
 
-    //加入金额
-    private BigDecimal joinMoney;
-
-    //ttp的总奖金
-    private BigDecimal allMoney;
-
     //是否允许中途退出，0是不允许，1允许
     private Integer ifQuit;
 
@@ -52,8 +46,24 @@ public class TtpDetail {
     //扣减比例，默认为20(前端要判断为整数)
     private Integer deductionRation;
 
+    //加入金额
+    private BigDecimal joinMoney;
+
     //ttp类型
     private Integer ttpType;
+
+    //出资方式
+    private Integer faqiType;
+
+
+    //自己是否参加
+    private Integer joinSelf;
+
+    //独立出资时的发起金额
+    private BigDecimal joinSelfMoney;
+
+    //ttp的总奖金
+    private BigDecimal allMoney;
 
     //ttp状态(0,准备开始；1，进行中；2，完结)
     private Integer ttpStatus;

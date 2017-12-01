@@ -5,6 +5,7 @@ import com.gokeeper.dataobject.UserInfo;
 import com.gokeeper.enums.ResultEnum;
 import com.gokeeper.exception.TTpException;
 import com.gokeeper.service.UserService;
+import com.gokeeper.utils.JsonUtil;
 import com.gokeeper.utils.ResultVoUtil;
 import com.gokeeper.vo.ResultVO;
 import lombok.extern.slf4j.Slf4j;
@@ -35,10 +36,30 @@ public class UserLogin {
     public ResultVO sms(@RequestParam("phonenumber") String phonenumber,
                         @RequestParam("smsCode") String smsCode,
                         HttpServletRequest httpServletRequest) {
-        log.info("短信登录的uri："+httpServletRequest.getRequestURI());
         //验证处理已经由Filter做了，如果验证失败会有提示
         //1.接收手机号
         //2.判断此用户是否已经注册，如果已经注册，存入他的信息到session，没有注册就创建一个新用户保存到数据库，并设置到session
+        UserInfo userInfo = new UserInfo();
+        userInfo.setPhonenumber(phonenumber);
+        userInfo.setUsername(phonenumber);
+        userInfo.setUserIcon(UserInfoConstant.DEFAULT_USER_ICON);
+        UserInfo result = userService.loginAndSave(userInfo);
+        if(result != null) {
+            //创建session对象
+            HttpSession session = httpServletRequest.getSession();
+            //把用户数据保存在session域对象中
+            session.setAttribute(UserInfoConstant.USER_INFO, result);
+            return ResultVoUtil.success(result);
+        } else {
+            throw new TTpException(ResultEnum.CREATE_ERROR);
+        }
+    }
+
+    @GetMapping("/authentication/oldmobile")
+    public ResultVO oldsms(@RequestParam("phonenumber") String phonenumber,
+                        HttpServletRequest httpServletRequest) {
+        //1.接收手机号
+        //TODO 2.判断此用户是否已经注册，如果已经注册，存入他的信息到session,如果本地存储被修改就登录不上，有安全漏洞
         UserInfo userInfo = new UserInfo();
         userInfo.setPhonenumber(phonenumber);
         userInfo.setUsername(phonenumber);
@@ -69,8 +90,10 @@ public class UserLogin {
         userInfo.setUserIcon(userIcon);
         userInfo.setSex(sex);
         userInfo.setCity(city);
+        //log.info("【谁登陆了：】"+qqOpenid+" "+username+" "+userIcon+" "+sex);
 
         UserInfo result = userService.loginAndSave(userInfo);
+        //log.info("【登录信息】："+ JsonUtil.toJson(result));
         if(result != null) {
             //创建session对象
             HttpSession session = httpServletRequest.getSession();
@@ -95,7 +118,7 @@ public class UserLogin {
         userInfo.setUserIcon(userIcon);
         userInfo.setSex(sex);
         userInfo.setCity(city);
-
+        log.info("【谁登陆了：】"+wxOpenid+" "+username+" "+userIcon+" "+sex);
         UserInfo result = userService.loginAndSave(userInfo);
         if(result != null) {
             //创建session对象

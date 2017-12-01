@@ -46,8 +46,8 @@ public class NewsDtoZNewsVoConverter {
         TtpNewsVo result = new TtpNewsVo();
         BeanUtils.copyProperties(c, result);
         result.setUpdateTime(DateUtil.dateFormat2(c.getUpdateTime(), 0, 16));
-        result.setStarttime(DateUtil.dateFormat2(c.getStartTime(), 0, 16));
-        result.setFinishtime(DateUtil.dateFormat2(c.getFinishTime(), 0, 16));
+        result.setStartTime(DateUtil.dateFormat2(c.getStartTime(), 0, 16));
+        result.setFinishTime(DateUtil.dateFormat2(c.getFinishTime(), 0, 16));
         return result;
     }
 

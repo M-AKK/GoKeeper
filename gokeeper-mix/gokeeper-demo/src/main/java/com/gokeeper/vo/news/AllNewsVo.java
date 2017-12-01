@@ -68,6 +68,8 @@ public class AllNewsVo {
 
     private Integer nofinishnums;
 
+    private Integer leaveNotes;
+
     private Integer leavesnums;
 
     private BigDecimal userDayBouns;

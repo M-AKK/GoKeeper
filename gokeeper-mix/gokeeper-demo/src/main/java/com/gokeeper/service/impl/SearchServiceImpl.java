@@ -87,7 +87,7 @@ public class SearchServiceImpl implements SearchService {
         return null;
     }
 
-    //查询后的转换方法
+    //加入预览信息查询后的转换方法
     private List<JoinPreVo> getjoinPreVoList(List<TtpDetail> openttpdetaillist) {
         List<JoinPreVo> joinPreVoList = new ArrayList<>();
         for(TtpDetail detail : openttpdetaillist) {
@@ -101,6 +101,7 @@ public class SearchServiceImpl implements SearchService {
             joinPreVo.setTtpName(detail.getTtpName());
             joinPreVo.setTtpType(EnumUtil.getByCode(detail.getTtpType(), TtpTypeEnum.class).getMessage());
             joinPreVo.setCreateTime(dateFormat2(detail.getCreateTime(), 0,16));
+            joinPreVo.setStartTime(dateFormat2(detail.getStartTime(), 0,16));
 
             //TODO 输入目标数，返回对应结果,现在假定运动类ttp才有目标
             if(detail.getTtpType().equals(TtpTypeEnum.SPORTS.getCode())){

@@ -28,7 +28,7 @@ public class GoPreVo {
     /**
      * ttp状态，准备开始、进行中、完结
      */
-    private String ttpStatus;
+    private Integer ttpStatus;
 
     /**
      * 用户获得的总奖金
@@ -45,8 +45,5 @@ public class GoPreVo {
      */
     private String userCurrentRecord;
 
-    /**
-     * 是否阅读状态，默认为已读，只有在是加入后发送为websocket模板时才改变属性值为0
-     */
-    private Integer newsStatus = 1;
+
 }

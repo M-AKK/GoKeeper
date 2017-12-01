@@ -19,8 +19,8 @@ import javax.servlet.http.HttpSession;
  * @author Created by Akk_Mac
  * Date: 2017/8/30 上午11:05
  */
-/*@Aspect
-@Component*/
+@Aspect
+@Component
 @Slf4j
 public class SellerAuthorizeAspect {
 
@@ -37,24 +37,10 @@ public class SellerAuthorizeAspect {
         //1. 查询session
         HttpSession session = request.getSession(false);
         if(session == null) {
-            log.warn("【登录校验】" + request.getRequestURI() + "的session为空");
+            //log.warn("【登录校验】" + request.getRequestURI() + "的session为空");
             throw new SellerAuthorizeException();
         }
 
     }
 
-
-    //ProceedingJoinPoint包含的是你当前拦截的方法的信息的对象
-    /*@Around("execution(* com.gokeeper.controller.api.*.*(..))")
-    public void handleControllerMethod(ProceedingJoinPoint pjp) throws Throwable {
-
-        ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-        HttpServletRequest request = attributes.getRequest();
-        //1. 查询session
-        HttpSession session = request.getSession(false);
-        if(session == null) {
-            log.warn("【登录校验】" + request.getRequestURI() + "的session为空");
-            throw new SellerAuthorizeException();
-        }
-    }*/
 }

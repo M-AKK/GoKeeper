@@ -10,8 +10,6 @@ import lombok.Data;
 @Data
 public class UserInfoVo {
 
-    private String userId;
-
     //微信openid
     private String wxOpenid;
 
@@ -26,9 +24,6 @@ public class UserInfoVo {
 
     //用户名
     private String username;
-
-    //密码
-    private String password;
 
     //生日
     private String birthday;

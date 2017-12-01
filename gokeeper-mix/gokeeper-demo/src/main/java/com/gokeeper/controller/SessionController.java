@@ -1,5 +1,6 @@
 package com.gokeeper.controller;
 
+import com.gokeeper.constant.UserInfoConstant;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,16 +13,16 @@ import javax.servlet.http.HttpSession;
  * @author akk
  */
 @Controller
-@RequestMapping("/session")
+@RequestMapping("/sessionout")
 public class SessionController {
 
 	/**
 	 * 退出系统
 	 */
-	@RequestMapping(method = RequestMethod.DELETE)
+	@RequestMapping(method = RequestMethod.POST)
 	public void signOut(HttpServletRequest httpServletRequest) {
 		//得到session对象
 		HttpSession session = httpServletRequest.getSession(false);
-		session.invalidate();
+		session.removeAttribute(UserInfoConstant.USER_INFO);
 	}
 }

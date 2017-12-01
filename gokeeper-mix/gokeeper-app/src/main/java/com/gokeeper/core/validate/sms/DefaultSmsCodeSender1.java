@@ -1,6 +1,7 @@
 package com.gokeeper.core.validate.sms;
 
 import com.gokeeper.core.properties.SecurityProperties;
+import lombok.extern.slf4j.Slf4j;
 import net.sf.json.JSONObject;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -22,20 +23,15 @@ import java.util.List;
 @author: Created by Akk_Mac
 @Date: Nov 13, 2017 4:39:57 PM
 **/
-/*@Component("smsCodeSender")*/
+@Component("smsCodeSender")
+@Slf4j
 public class DefaultSmsCodeSender1 implements SmsCodeSender {
 
     @Autowired
     private SecurityProperties securityProperties;
 
-
     //随机数
     private static final String NONCE="123456";
-
-    /*public static void main(String[] args) throws Exception {
-        //send("17671732167", "123456");
-
-    }*/
 
 	@Override
 	public String send(String MOBILE, String code) throws Exception{
@@ -75,7 +71,9 @@ public class DefaultSmsCodeSender1 implements SmsCodeSender {
          * 2.具体的code有问题的可以参考官网的Code状态表
          */
 		String result= EntityUtils.toString(response.getEntity(), "utf-8");
+
 		JSONObject jsonObject = JSONObject.fromObject(result);
+		log.info("【短信验证码返回状态：】result={}", result);
 		String code1 = (String) jsonObject.get("obj");
 		return code1;
 	}

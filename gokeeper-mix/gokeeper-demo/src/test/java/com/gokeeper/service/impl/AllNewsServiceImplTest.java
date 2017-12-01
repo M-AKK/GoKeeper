@@ -1,5 +1,6 @@
 package com.gokeeper.service.impl;
 
+import com.gokeeper.dataobject.TtpNews;
 import com.gokeeper.vo.news.AllNewsVo;
 import com.gokeeper.utils.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -22,8 +23,15 @@ public class AllNewsServiceImplTest {
 
     @Test
     public void findAllOpenMsg() throws Exception {
-        List<AllNewsVo> result = allNewsService.findAllOpenMsg("1511062482311815587", 0);
+        List<AllNewsVo> result = allNewsService.findAllOpenMsg("1511689558867877911", 1);
         log.info("【所有公开的消息】result={}", JsonUtil.toJson(result));
+        Assert.assertNotNull(result);
+    }
+
+    @Test
+    public void getOneMsg() throws Exception {
+        Object result = allNewsService.getOneMsg("15117037645393815271511700393182467058");
+        log.info("【某条公开的消息】result={}", JsonUtil.toJson(result));
         Assert.assertNotNull(result);
     }
 

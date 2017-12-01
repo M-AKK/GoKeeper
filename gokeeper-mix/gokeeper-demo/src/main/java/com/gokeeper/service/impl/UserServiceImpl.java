@@ -67,7 +67,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserInfoVo getuserById(String userId) {
         UserInfoVo result = new UserInfoVo();
-
         UserInfo userInfo = userInfoRepository.findByUserId(userId);
         if(userInfo == null) {
             throw new TTpException(ResultEnum.CHECK_USER);
