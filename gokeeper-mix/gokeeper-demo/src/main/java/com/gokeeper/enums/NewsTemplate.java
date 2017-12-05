@@ -50,4 +50,8 @@ public class NewsTemplate {
     public static String noPayTtpNews() {
         return "活动已开始，还未支付，支付成功才能参加活动";
     }
+
+    public static String finishTtpNews() { return "活动已正式完结，奖金将由发起人确认后到账，发起人若忘记确认，系统将在24小时后自动处理"; }
+
+    public static String quitTtpNews() {  return "您已成功退出活动，加入金马上返还";  }
 }

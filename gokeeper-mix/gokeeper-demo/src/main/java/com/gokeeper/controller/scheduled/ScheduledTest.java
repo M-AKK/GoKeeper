@@ -61,6 +61,7 @@ public class ScheduledTest {
         List<TtpDetail> ttpDetailList = tTpDetailRepository.findAll();
         for(TtpDetail ttpDetail : ttpDetailList) {
             int finishnums=0,nofinishnums=0,leavenums=0;
+
             if(ttpDetail.getTtpStatus().equals(TtpStatusEnum.WORKING.getCode())) {
                 //2.判断如果此ttp状态在进行中，查找出此user-ttp关联列表，就是知道哪些用户参与此ttp，依次设置对应消息模板
                 List<UserTtp> userTtpList = userTtpRepository.findByTtpId(ttpDetail.getTtpId());
@@ -77,37 +78,36 @@ public class ScheduledTest {
                 }
                 //4.单独设置每个用户的个人消息属性
                 for(UserTtp userTtp : userTtpList) {
-                    TtpNews ttpNews = ttpNewsRepository.findByUserTtpId(userTtp.getUserTtpId());
-                    //5.新消息要重新改变news的状态为未读
-                    ttpNews.setNewsstatus(NewsStatusEnum.NO_READ.getCode());
-                    UserRecord userRecord = userRecordRepository.findByUserRecordId(userTtp.getUserTtpId()+today);
-                    //是否完成：直接按照数据库的记录设置就行了
-                    ttpNews.setIfFinish(userRecord.getDayStatus());
-                    //完成人数
-                    ttpNews.setFinishnums(finishnums);
-                    ttpNews.setNofinishnums(nofinishnums);
-                    ttpNews.setLeaveNotes(ttpDetail.getLeaveNotesNums()-userTtp.getLeaveNotes());
-                    ttpNews.setLeavenums(leavenums);
-                    ttpNews.setUserDayBouns(userTtp.getUserDayBouns());
-                    ttpNews.setUserTotalBouns(userTtp.getUserTotalBouns());
-                    //6.新消息入库
-                    ttpNewsRepository.save(ttpNews);
-                    //7.转化消息类型为Vo并发送websocket
-                    //调用websocket方法，发送消息，还不知道需不需要，因为不知道如果用户在别的页面这个消息会不会刷新，如果不会就不用发其实
-                    TextMessage t = new TextMessage(JsonUtil.toJson(listTtpNewsZttpNews(ttpNews)));
-                    WebSocketPushHandler.sendMessageToUser(ttpNews.getUserId(), t);
+                    if(userTtp.getUserTtpStatus().equals(UserTtpStatusEnum.WORKING.getCode())) {
+                        TtpNews ttpNews = ttpNewsRepository.findByUserTtpId(userTtp.getUserTtpId());
+                        //5.新消息要重新改变news的状态为未读
+                        ttpNews.setNewsstatus(NewsStatusEnum.NO_READ.getCode());
+                        ttpNews.setTtpStatus(userTtp.getUserTtpStatus());
+                        UserRecord userRecord = userRecordRepository.findByUserRecordId(userTtp.getUserTtpId()+today);
+                        //是否完成：直接按照数据库的记录设置就行了
+                        ttpNews.setIfFinish(userRecord.getDayStatus());
+                        //完成人数
+                        ttpNews.setFinishnums(finishnums);
+                        ttpNews.setNofinishnums(nofinishnums);
+                        ttpNews.setLeaveNotes(ttpDetail.getLeaveNotesNums()-userTtp.getLeaveNotes());
+                        ttpNews.setLeavenums(leavenums);
+                        ttpNews.setUserDayBouns(userTtp.getUserDayBouns());
+                        ttpNews.setUserTotalBouns(userTtp.getUserTotalBouns());
+                        //6.新消息入库
+                        ttpNewsRepository.save(ttpNews);
+                        //7.转化消息类型为Vo并发送websocket
+                        //调用websocket方法，发送消息，还不知道需不需要，因为不知道如果用户在别的页面这个消息会不会刷新，如果不会就不用发其实
+                        TextMessage t = new TextMessage(JsonUtil.toJson(listTtpNewsZttpNews(ttpNews)));
+                        WebSocketPushHandler.sendMessageToUser(ttpNews.getUserId(), t);
+                    }
                 }
-
-
             }
         }
-
-
     }
 
     @Scheduled(cron = "*/10 * * * * ?")  //每10秒执行一次
     /**
-     * 检测是否为进行中，每10秒进行检测，如果系统当前时间>=startTime，就把ttp状态从准备开始改变为进行中
+     * 检测ttp状态是否改变为  进行时/完结/用户退出
      */
     public void updateTtpStatus() {
         //1.查找所有ttp详情
@@ -120,48 +120,40 @@ public class ScheduledTest {
             Date currentTime = new Date();
             //2.如果处于进行时状态时
             if(currentTime.after(startTime) && currentTime.before(finishTime)) {
-                //检查ttp状态是否已经改变为进行时
-                if(!ttpDetail.getTtpStatus().equals(TtpStatusEnum.WORKING.getCode())) {
-                    //改变ttp状态
+                    //2-1.改变ttp状态
                     ttpDetail.setTtpStatus(TtpStatusEnum.WORKING.getCode());
                     tTpDetailRepository.save(ttpDetail);
-                    //改变userTtpStatus状态
+                    //2-2.改变userTtpStatus状态
                     List<UserTtp> userTtpList = userTtpRepository.findByTtpId(ttpDetail.getTtpId());
                     for(UserTtp userTtp : userTtpList) {
                         //3.判断活动开始了后，用户的支付状态
                         if(userTtp.getPayStatus().equals(PayEnum.YES.getCode())) {
                             userTtp.setUserTtpStatus(UserTtpStatusEnum.WORKING.getCode());
                             userTtpRepository.save(userTtp);
-                            TtpNews ttpNews = ttpNewsRepository.findByUserTtpId(userTtp.getUserTtpId());
-                            //4.把ttpNews的状态和预览消息改变，前端如果判断status就可以改变样式了
-                            ttpNews.setTtpStatus(TtpStatusEnum.WORKING.getCode());
-                            ttpNews.setPreviewText(NewsTemplate.dayTtpNews());
-                            //4.存入初始化有值的ttpNews
-                            TtpNews result = createTtpNews(ttpNews);
-                            ttpNewsRepository.save(result);
-                            //6.调用websocket方法，发送消息，还不知道需不需要，因为不知道如果用户在别的页面这个消息会不会刷新，如果不会就不用发其实
-                            TextMessage t = new TextMessage(JsonUtil.toJson(listTtpNewsZttpNews(result)));
-                            WebSocketPushHandler.sendMessageToUser(ttpNews.getUserId(), t);
-
+                        //未支付：
                         } else if(userTtp.getPayStatus().equals(PayEnum.NO.getCode())) {
-
                             TtpNews ttpNews = ttpNewsRepository.findByUserTtpId(userTtp.getUserTtpId());
                             //4.把ttpNews的状态和预览消息改变，前端如果判断status就可以改变样式了
                             ttpNews.setPreviewText(NewsTemplate.noPayTtpNews());
-                            //4.存入初始化有值的ttpNews
+                            //5.存入初始化有值的ttpNews
                             TtpNews result = createTtpNews(ttpNews);
-                            log.info("【活动开始用户未支付】"+JsonUtil.toJson(result));
                             ttpNewsRepository.save(result);
-                            //6.调用websocket方法，发送消息，还不知道需不需要，因为不知道如果用户在别的页面这个消息会不会刷新，如果不会就不用发其实
-                            TextMessage t = new TextMessage(JsonUtil.toJson(listTtpNewsZttpNews(result)));
-                            WebSocketPushHandler.sendMessageToUser(ttpNews.getUserId(), t);
                         }
-
                     }
+            } /*3.到达完结状态*/
+                else if(currentTime.after(finishTime)) {
+                    //2-1.改变ttp状态
+                    ttpDetail.setTtpStatus(TtpStatusEnum.FINISH.getCode());
+                    tTpDetailRepository.save(ttpDetail);
+                    //2-2.改变userTtpStatus状态
+                    List<UserTtp> userTtpList = userTtpRepository.findByTtpId(ttpDetail.getTtpId());
+                    for(UserTtp userTtp : userTtpList) {
+                        //3.首先发送消息模板
+                        userTtp.setUserTtpStatus(UserTtpStatusEnum.FINISH.getCode());
+                        userTtpRepository.save(userTtp);
                 }
             }
         }
-
     }
 
     @Scheduled(cron = "*/10 * * * * ?")  //每10秒执行一次
@@ -171,8 +163,6 @@ public class ScheduledTest {
     public void updateTtpStatus2() {
 
     }
-
-
 
     /**
      * 将TtpNews部分新属性改变并返回，减小方法体容量
@@ -207,4 +197,5 @@ public class ScheduledTest {
         //由于是list，默认调用第一条消息
         return ttpNewsVoList.get(0);
     }
+
 }

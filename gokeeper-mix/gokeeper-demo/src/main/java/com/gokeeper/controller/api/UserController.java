@@ -27,15 +27,15 @@ public class UserController {
     private UserService userService;
 
     /**
-     * 根据手机号查找用户信息，邀请是搜索用户使用
-     * @param phonenumber
+     * 模糊查找用户信息，邀请是搜索用户使用
+     * @param searchmap
      * @return
      */
     @GetMapping(value = "/getUserByPhone")
-    public ResultVO getUserByPhone(@RequestParam("phonenumber") String phonenumber){
-        System.out.println(phonenumber);
+    public ResultVO getUserByPhone(@RequestParam("searchmap") String searchmap){
+        System.out.println(searchmap);
         //根据phone查找用户信息
-        UserInfoVo userInfoVo = userService.getUserByphone(phonenumber);
+        UserInfoVo userInfoVo = userService.getUserByphone(searchmap);
         if(userInfoVo!=null){
             log.info("【根据phone查找user】result={}", JsonUtil.toJson(userInfoVo));
             return ResultVoUtil.success(userInfoVo);

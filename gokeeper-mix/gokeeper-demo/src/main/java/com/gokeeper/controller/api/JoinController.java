@@ -4,7 +4,6 @@ import com.gokeeper.constant.UserInfoConstant;
 import com.gokeeper.dataobject.UserInfo;
 import com.gokeeper.exception.TTpException;
 import com.gokeeper.service.JoinService;
-import com.gokeeper.utils.JsonUtil;
 import com.gokeeper.utils.ResultVoUtil;
 import com.gokeeper.vo.JoinPreVo;
 import com.gokeeper.vo.JoinVo;

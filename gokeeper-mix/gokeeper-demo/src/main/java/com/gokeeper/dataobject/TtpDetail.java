@@ -35,13 +35,13 @@ public class TtpDetail {
     private String address;
 
     //是否允许中途退出，0是不允许，1允许
-    private Integer ifQuit;
+    private Integer ifQuit = 0;
 
-    //是否允许中途加入
-    private Integer ifJoin;
+    //是否允许中途加入,0默认不允许
+    private Integer ifJoin = 1;
 
-    //是否公开
-    private Integer ifOpen;
+    //是否公开,1默认不公开
+    private Integer ifOpen = 1;
 
     //扣减比例，默认为20(前端要判断为整数)
     private Integer deductionRation;
@@ -54,7 +54,6 @@ public class TtpDetail {
 
     //出资方式
     private Integer faqiType;
-
 
     //自己是否参加
     private Integer joinSelf;
@@ -75,5 +74,11 @@ public class TtpDetail {
 
     //ttp结束时间
     private Date finishTime;
+
+    //监督人userId
+    private String supervisionperson;
+
+    //被监督人userId
+    private String besupervisionperson;
 
 }

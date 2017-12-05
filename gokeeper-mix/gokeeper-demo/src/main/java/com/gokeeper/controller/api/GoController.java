@@ -2,6 +2,8 @@ package com.gokeeper.controller.api;
 
 import com.gokeeper.constant.UserInfoConstant;
 import com.gokeeper.dataobject.UserInfo;
+import com.gokeeper.dataobject.UserTtp;
+import com.gokeeper.enums.ResultEnum;
 import com.gokeeper.service.GoService;
 import com.gokeeper.utils.JsonUtil;
 import com.gokeeper.utils.ResultVoUtil;
@@ -77,13 +79,33 @@ public class GoController {
     }
 
     /**
+     * 确认完成操作
+     * @param ttpId
+     * @param currentDate
+     * @param request
+     * @return
+     */
+    @PostMapping(value = "/finish/{ttpId}")
+    public ResultVO finish(@PathVariable("ttpId") String ttpId,
+                           @RequestParam("currentDate") String currentDate,
+                           HttpServletRequest request) {
+        //根据seesion获取userId
+        UserInfo user = (UserInfo) request.getSession().getAttribute(UserInfoConstant.USER_INFO);
+        UserTtp userTtp = goService.finish(user.getUserId(), ttpId, currentDate);
+        if(userTtp != null) {
+            return ResultVoUtil.success();
+        }
+        return ResultVoUtil.error(ResultEnum.TTP_QUIT_ERROR.getCode(), ResultEnum.TTP_QUIT_ERROR.getMessage());
+    }
+
+    /**
      * 中途退出ttp操作
      * @param ttpId
      * @param currentDate
      * @param request
      * @return
      */
-    @PostMapping(value = "/{ttpId}")
+    @PostMapping(value = "/quit/{ttpId}")
     public ResultVO quit(@PathVariable("ttpId") String ttpId,
                          @RequestParam("currentDate") String currentDate,
                          HttpServletRequest request) {

@@ -27,11 +27,10 @@ public class UserServiceImpl implements UserService {
     private UserInfoRepository userInfoRepository;
 
     @Override
-    public UserInfoVo getUserByphone(String phonenumber) {
+    public UserInfoVo getUserByphone(String searchmap) {
         UserInfoVo result = new UserInfoVo();
         try {
-            UserInfo userInfo = userInfoRepository.findByPhonenumber(phonenumber);
-
+            UserInfo userInfo = userInfoRepository.findByPhonenumber(searchmap);
             if(userInfo != null) {
                 log.info("【根据phone查找user成功】result={}", JsonUtil.toJson(userInfo));
                 BeanUtils.copyProperties(userInfo, result);

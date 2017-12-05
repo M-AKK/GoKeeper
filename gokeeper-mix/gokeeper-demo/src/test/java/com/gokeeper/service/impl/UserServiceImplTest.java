@@ -20,8 +20,8 @@ public class UserServiceImplTest {
 
     @Test
     public void getUserByphone() throws Exception {
-        UserInfoVo result = userService.getUserByphone("12345678910");
-        log.info("【根据手机号查找用户】result={}", JsonUtil.toJson(result));
+        UserInfoVo result = userService.getUserByphone("176");
+        log.info("【模糊查找用户】result={}", JsonUtil.toJson(result));
         Assert.assertNotNull(result);
 
     }

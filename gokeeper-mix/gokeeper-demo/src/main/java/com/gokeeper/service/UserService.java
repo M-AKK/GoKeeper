@@ -11,10 +11,10 @@ public interface UserService {
 
     /**
      * 根据手机号查找用户，发邀请时查找用户使用
-     * @param phonenumber
+     * @param searchmap
      * @return
      */
-    UserInfoVo getUserByphone(String phonenumber);
+    UserInfoVo getUserByphone(String searchmap);
 
     /**
      * 根据userID查找用户

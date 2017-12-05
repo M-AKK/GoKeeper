@@ -193,6 +193,10 @@ ttpType: 1 //根据用户的点击系统默认选择类型
 faqiType: 1   //出资方式(1:集体出资；2:独立出资)
 joinSelf: 1  //是否自己参加，1为默认自己参加
 joinSelfMoney: 1000 //独立出资时的发起金额
+/******以下属于创建人为监督方式ttp的新元素******/
+supervisionperson: userId, //监督人
+besupervisionperson: userId, //被监督人
+
 ```
 
 返回
@@ -309,7 +313,7 @@ currentDate: "2017/10/01" //字符串即可,格式要正确
             "userRecordList": [
               {//不止一天
                   "days": 2017/10/01,  //记录的时间
-                  "dayStatus": "完成" //完成状态
+                  "dayStatus": 0 //完成状态:0未完成；1完成；2请假
               }
             ],
             "othersfinishList": [     //当天其他人的完成记录
@@ -320,9 +324,56 @@ currentDate: "2017/10/01" //字符串即可,格式要正确
             "othersnofinishList": [
               {
                   "username": "李子安",
-                  "dayStatus": "请假/null"
+                  "dayStatus": "2/null"
             }],
+            "supervisionperson": "监督人username",
+            "besupervisionperson": "被监督人username",
+            "beuserRecordList": [
+            {
+                  "days": 2017/10/01,  //记录的时间
+                  "dayStatus": "1 //完成状态
+              }]
         }]
+}
+```
+
+###Go界面完成功能
+```
+POST /gokeeper/finish/{ttpId}
+```
+
+参数
+```
+ttpId: "123123"
+currentDate: "2017/10/01"
+```
+
+返回
+```
+{
+  "code": 0,
+  "msg": "成功",  //自己重新写成功的显示消息
+  "data": []
+}
+```
+
+###Go界面中途退出功能
+```
+POST /gokeeper/quit/{ttpId}
+```
+
+参数
+```
+ttpId: "123123"
+currentDate: "2017/10/01"
+```
+
+返回
+```
+{
+  "code": 0,
+  "msg": "成功",  //自己重新写成功的显示消息
+  "data": []
 }
 ```
 
@@ -456,7 +507,7 @@ GET /gokeeper/user/getUserByPhone
 
 参数
 ```
-phonenumber: "17671732167"  //邀请的好友的手机号(通过手机号查询邀请好友id)
+searchmap: "17671732167"或"用户名"  //输入手机号和用户名
 ```
 
 返回

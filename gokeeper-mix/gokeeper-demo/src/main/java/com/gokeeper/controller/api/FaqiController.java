@@ -55,7 +55,11 @@ public class FaqiController {
             BeanUtils.copyProperties(ttpForm,detailDto);
             //设置开始时间和结束时间
             detailDto.setStartTime(DateUtil.StringToDate(ttpForm.getStartTime()));
-            detailDto.setFinishTime(DateUtil.StringToDate(ttpForm.getFinishTime()));
+            if(ttpForm.getFinishTime()!=null) {
+                detailDto.setFinishTime(DateUtil.StringToDate(ttpForm.getFinishTime()));
+            } else {
+                detailDto.setFinishTime(DateUtil.StringToDate("2099/08/31 21:08"));
+            }
             detailDto.setUserId(user.getUserId());
             detailDto.setTtpTarget(Double.valueOf(ttpForm.getTtpTarget()));
             TtpDetailDto ttpDetailDto = faqiService.create(detailDto);

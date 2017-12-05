@@ -77,5 +77,17 @@ public class GoVo extends GoPreVo{
      */
     private List<OthersRecordVo> othersnofinishList;
 
+    /**
+     * 监督人username
+     */
+    private String supervisionperson;
+
+    /**
+     * 被监督人username
+     */
+    private String besupervisionperson;
+
+    private List<UserRecordVo> beuserRecordList;
+
 
 }

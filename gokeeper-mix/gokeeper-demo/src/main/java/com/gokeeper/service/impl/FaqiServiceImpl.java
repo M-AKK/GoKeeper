@@ -173,17 +173,17 @@ public class FaqiServiceImpl implements FaqiService {
         } else {
             orderAmount = ttpDetail.getJoinSelfMoney();
         }
-
+        //3.如果活动还未开始，返还所有加入金额
         if(ttpDetail.getTtpStatus().equals(TtpStatusEnum.READY) && userTtp.getPayStatus().equals(PayEnum.YES)) {
-            //如果活动还未开始，返还所有加入金额
-            //3.判断支付方式和支付状态是否为已支付
+
+            //4.判断支付方式和支付状态是否为已支付
             if(userTtp.getPayType().equals(BestPayTypeEnum.WXPAY_H5.getCode()) && userTtp.getPayStatus().equals(PayEnum.YES.getCode())) {
                 wxPayService.refund(userTtp, orderAmount);
             }
             return userTtp;
 
         } else if(ttpDetail.getTtpStatus().equals(TtpStatusEnum.WORKING) && userTtp.getPayStatus().equals(PayEnum.YES)) {
-            //如果活动已经开始，则需要根据当前时间来判断返还的金额
+            //5.如果活动已经开始，则需要根据当前时间来判断返还的金额
             long allTime = (ttpDetail.getStartTime().getTime() - ttpDetail.getFinishTime().getTime()) / (86400 * 1000);
             long finishTime = (System.currentTimeMillis() - ttpDetail.getStartTime().getTime()) / (86400 * 1000);
             double bili = finishTime * 1.0 / allTime;

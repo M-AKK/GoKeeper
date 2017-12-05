@@ -30,6 +30,7 @@ public enum ResultEnum implements CodeEnum {
     ORDER_STATUS_ERROR(12, "TTP状态不正确"),
     ORDER_PAY_STATUS_ERROR(13, "TTP支付状态出错"),
     ORDER_UPDATE_FAIL(14, "TTP更新失败"),
+    TTP_QUIT_ERROR(15, "TTP退出失败"),
     ;
 
     private Integer code;

@@ -1,15 +1,10 @@
 package com.gokeeper.service.impl;
 
-import com.gokeeper.dataobject.TtpDetail;
-import com.gokeeper.dataobject.UserInfo;
-import com.gokeeper.dataobject.UserRecord;
-import com.gokeeper.dataobject.UserTtp;
+import com.gokeeper.dataobject.*;
 import com.gokeeper.enums.*;
 import com.gokeeper.exception.TTpException;
-import com.gokeeper.repository.TTpDetailRepository;
-import com.gokeeper.repository.UserInfoRepository;
-import com.gokeeper.repository.UserRecordRepository;
-import com.gokeeper.repository.UserTtpRepository;
+import com.gokeeper.handler.WebSocketPushHandler;
+import com.gokeeper.repository.*;
 import com.gokeeper.service.FaqiService;
 import com.gokeeper.service.GoService;
 import com.gokeeper.utils.DateUtil;
@@ -22,6 +17,7 @@ import com.gokeeper.vo.UserRecordVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.socket.TextMessage;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -31,6 +27,10 @@ import java.util.Date;
 import java.util.Formatter;
 import java.util.List;
 
+import static com.gokeeper.controller.scheduled.ScheduledTest.createTtpNews;
+import static com.gokeeper.controller.scheduled.ScheduledTest.listTtpNewsZttpNews;
+import static com.gokeeper.enums.NewsTemplate.quitTtpNews;
+import static com.gokeeper.utils.DateUtil.StringToDate1;
 import static com.gokeeper.utils.DateUtil.dateFormat2;
 
 /**
@@ -56,6 +56,10 @@ public class GoServiceImpl implements GoService{
 
     @Autowired
     private FaqiService faqiService;
+
+    @Autowired
+    private TtpNewsRepository ttpNewsRepository;
+
 
 
     @Override
@@ -113,7 +117,7 @@ public class GoServiceImpl implements GoService{
                     List<UserRecord> userRecordList = userRecordRepository.findByUserTtpId(userTtp.getUserTtpId());
                     for(UserRecord userRecord : userRecordList){
                         try {
-                            if(DateUtil.StringToDate1(currentDate).equals(userRecord.getDays())) {
+                            if(StringToDate1(currentDate).equals(userRecord.getDays())) {
                                 goPreVo.setUserCurrentRecord(EnumUtil.getByCode(userRecord.getDayStatus(), DayStatusEnum.class).getMessage());
                             }
                         } catch (ParseException e) {
@@ -164,8 +168,12 @@ public class GoServiceImpl implements GoService{
         goVo.setIfJoin(EnumUtil.getByCode(ttpDetail.getIfJoin(), IfJoinEnum.class).getMessage());
         goVo.setIfOpen(EnumUtil.getByCode(ttpDetail.getIfOpen(), IfOpenEnum.class).getMessage());
         //5.录入userTtp表的信息
-
         goVo.setLeaveNotes(userTtp.getLeaveNotes());
+        //9.判断是不是互相监督类型的ttp
+        if(ttpDetail.getSupervisionperson()!=null) {
+            goVo.setSupervisionperson(userInfoRepository.findByUserId(ttpDetail.getSupervisionperson()).getUsername());
+            goVo.setBesupervisionperson(userInfoRepository.findByUserId(ttpDetail.getBesupervisionperson()).getUsername());
+        }
         //如果ttp状态在进行中时才进行用户记录查询操作，否则不查询
         if (userTtp.getUserTtpStatus().equals(TtpStatusEnum.WORKING.getCode())) {
             long allTime = (ttpDetail.getFinishTime().getTime() - ttpDetail.getStartTime().getTime()) / (86400 * 1000);
@@ -203,11 +211,34 @@ public class GoServiceImpl implements GoService{
                 userRecordVoList.add(userRecordVo);
             }
             goVo.setUserRecordList(userRecordVoList);
+
+            //10.判读是否是监督人的go详情页面，需重新构建展示信息
+            if(userId.equals(ttpDetail.getSupervisionperson())) {
+                List<UserRecordVo> userRecordVoList1 = new ArrayList<>();
+                try {
+                    Date currentDate1 = StringToDate1(currentDate);
+                    for(UserRecord userRecord : userRecordList){
+                        //如果当前时间大于获取时间，就得到，也就是只获取前一天的数据，但是数据库默认的时间为0点，所以还是能获取到当天的，所以需要前端遍历的时候减1
+                        if(userRecord.getDays().before(currentDate1)) {
+                            UserRecordVo userRecordVo = new UserRecordVo();
+                            userRecordVo.setDays(dateFormat2(userRecord.getDays(), 5, 10));
+                            userRecordVo.setDayStatus(userRecord.getDayStatus());
+                            userRecordVoList1.add(userRecordVo);
+                        }
+                    }
+                    //设置数据到监督人的go详情列表
+                    goVo.setBeuserRecordList(userRecordVoList1);
+                } catch (Exception e) {
+                    throw new TTpException(ResultEnum.DATE_ERROE);
+                }
+
+            }
+
             //7.根据ttpId查到所有参加此ttp的用户
             List<OthersRecordVo> othersRecordVoList = new ArrayList<>();
             List<OthersRecordVo> othersRecordVoList1 = new ArrayList<>();
             List<UserTtp> userTtpList1 = userTtpRepository.findByTtpId(userTtp.getTtpId());
-            //依次遍历参加了此ttp的userTtp信息
+            //8.依次遍历参加了此ttp的userTtp信息
             for(UserTtp userTtp1 : userTtpList1){
                 OthersRecordVo othersRecordVo = new OthersRecordVo();
                 //根据userId查询到其中一个用户的userInfo信息，并设置一条OthersRecordVo信息
@@ -215,7 +246,7 @@ public class GoServiceImpl implements GoService{
                 if(userInfo != null){
                     //设置username
                     othersRecordVo.setUsername(userInfo.getUsername());
-                    log.info("查询用户记录："+userTtp1.getUserTtpId()+currentDate);
+
                     UserRecord userRecord = userRecordRepository.findByUserRecordId(userTtp1.getUserTtpId()+currentDate);
                     //再根据userTtpId信息查找到此用户对应的ttp的所有完成记录，形参为当天日期，查询当天完成记录情况
                     if(userRecord.getDayStatus().equals(DayStatusEnum.FINIS.getCode())){
@@ -246,6 +277,23 @@ public class GoServiceImpl implements GoService{
     }
 
     @Override
+    public UserTtp finish(String userId, String ttpId, String currentDate) {
+        //1.查询此userTtp信息
+        String userTtpId = userId+ttpId;
+        UserTtp userTtp = userTtpRepository.findByUserTtpId(userTtpId);
+        if(userTtp == null) {
+            log.error("【取消订单】 查不到该订单，userTtpId={}", userTtp.getUserTtpId());
+            throw new TTpException(ResultEnum.ORDER_NOT_EXIST);
+        }
+        String userRecordId = userTtpId+currentDate;
+        UserRecord userRecord = userRecordRepository.findByUserRecordId(userRecordId);
+        //TODO,系统后台判断用户是否完成，现在无法判断只能直接改变为完成状态
+        userRecord.setDayStatus(DayStatusEnum.FINIS.getCode());
+        userRecordRepository.save(userRecord);
+        return userTtp;
+    }
+
+    @Override
     public UserTtp quit(String userId, String ttpId, String currentDate) {
         //1.查询此userTtp信息
         String userTtpId = userId+ttpId;
@@ -254,8 +302,17 @@ public class GoServiceImpl implements GoService{
             log.error("【取消订单】 查不到该订单，userTtpId={}", userTtp.getUserTtpId());
             throw new TTpException(ResultEnum.ORDER_NOT_EXIST);
         }
-
-        return faqiService.canel(userTtp, currentDate);
+        //2.发起退款
+        faqiService.canel(userTtp, currentDate);
+        //3.发送中途退出的websocket消息
+        TtpNews ttpNews = ttpNewsRepository.findByUserTtpId(userTtp.getUserTtpId());
+        ttpNews.setPreviewText(quitTtpNews());
+        TtpNews result = createTtpNews(ttpNews);
+        ttpNewsRepository.save(result);
+        //调用websocket方法，发送消息，还不知道需不需要，因为不知道如果用户在别的页面这个消息会不会刷新，如果不会就不用发其实
+        TextMessage t = new TextMessage(JsonUtil.toJson(listTtpNewsZttpNews(result)));
+        WebSocketPushHandler.sendMessageToUser(ttpNews.getUserId(), t);
+        return null;
 
     }
 

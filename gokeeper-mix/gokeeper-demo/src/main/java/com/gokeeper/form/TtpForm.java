@@ -58,5 +58,12 @@ public class TtpForm {
     //独立出资时的发起金额
     private BigDecimal joinSelfMoney;
 
+    /***************以下是人工监督类ttp特殊元素****************/
+    //监督人userId
+    private String supervisionperson;
+
+    //被监督人userId
+    private String besupervisionperson;
+
 
 }

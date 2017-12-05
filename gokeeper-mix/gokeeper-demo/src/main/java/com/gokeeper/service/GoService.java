@@ -37,4 +37,6 @@ public interface GoService {
      * @return UserTtp
      */
     UserTtp quit(String userId, String ttpId, String currentDate);
+
+    UserTtp finish(String userId, String ttpId, String currentDate);
 }
