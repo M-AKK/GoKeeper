@@ -128,16 +128,19 @@ public class ScheduledTest {
                     for(UserTtp userTtp : userTtpList) {
                         //3.判断活动开始了后，用户的支付状态
                         if(userTtp.getPayStatus().equals(PayEnum.YES.getCode())) {
+                            userTtp.setUserTtpStatus(ttpDetail.getTtpStatus());
+                            TtpNews ttpNews = ttpNewsRepository.findByUserTtpId(userTtp.getUserTtpId());
+                            ttpNews.setTtpStatus(UserTtpStatusEnum.WORKING.getCode());
+                            ttpNews.setPreviewText(NewsTemplate.payTtpNews(ttpDetail.getTtpName()));
+                            ttpNewsRepository.save(ttpNews);
                             userTtp.setUserTtpStatus(UserTtpStatusEnum.WORKING.getCode());
                             userTtpRepository.save(userTtp);
                         //未支付：
                         } else if(userTtp.getPayStatus().equals(PayEnum.NO.getCode())) {
-                            TtpNews ttpNews = ttpNewsRepository.findByUserTtpId(userTtp.getUserTtpId());
                             //4.把ttpNews的状态和预览消息改变，前端如果判断status就可以改变样式了
+                            TtpNews ttpNews = ttpNewsRepository.findByUserTtpId(userTtp.getUserTtpId());
                             ttpNews.setPreviewText(NewsTemplate.noPayTtpNews());
-                            //5.存入初始化有值的ttpNews
-                            TtpNews result = createTtpNews(ttpNews);
-                            ttpNewsRepository.save(result);
+                            ttpNewsRepository.save(ttpNews);
                         }
                     }
             } /*3.到达完结状态*/
@@ -149,6 +152,11 @@ public class ScheduledTest {
                     List<UserTtp> userTtpList = userTtpRepository.findByTtpId(ttpDetail.getTtpId());
                     for(UserTtp userTtp : userTtpList) {
                         //3.首先发送消息模板
+                        TtpNews ttpNews = ttpNewsRepository.findByUserTtpId(userTtp.getUserTtpId());
+                        ttpNews.setTtpStatus(UserTtpStatusEnum.FINISH.getCode());
+                        ttpNews.setPreviewText(NewsTemplate.finishTtpNews());
+                        //5.存入初始化有值的ttpNews
+                        ttpNewsRepository.save(ttpNews);
                         userTtp.setUserTtpStatus(UserTtpStatusEnum.FINISH.getCode());
                         userTtpRepository.save(userTtp);
                 }
@@ -170,8 +178,6 @@ public class ScheduledTest {
      * @return
      */
     public static TtpNews createTtpNews(TtpNews ttpNews) {
-        //新消息要重新改变news的状态为未读
-        ttpNews.setNewsstatus(NewsStatusEnum.NO_READ.getCode());
         //初始化设置为未完成
         ttpNews.setIfFinish(DayStatusEnum.NO_FINISH.getCode());
         ttpNews.setFinishnums(0);

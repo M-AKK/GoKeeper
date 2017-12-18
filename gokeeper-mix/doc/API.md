@@ -258,11 +258,13 @@ currentDate: "2017/10/01" //当前时间，字符串即可，格式要正确
     "msg": "成功",
     "data": [
         {
+            "userId": "123",
             "userName": "安吉丽娜",
             "userIcon": "www.akaka.cn/icon.jpg",
             "ttpId": "abc1223", //隐藏字段，邀请好友时传递
             "ttpName": "100天疯狂跑",
-            "ttpStatus": "准备开始",  //进行中、完结           
+            "ttpStatus": "准备开始",  //进行中、完结     
+            "ttpType": 1, //活动类型，1，运动；2，社交，；3，生活      
             "userTotalBouns": 350,
             "highAverage": "高于", //这里后台直接返还高/低，前端只用做拼接工作即可，减少压力
     //待定   "rank": 1,  //在一个ttp中
@@ -290,10 +292,13 @@ currentDate: "2017/10/01" //字符串即可,格式要正确
     "msg": "成功",
     "data": [
         {
+            "userId": "123",
             "username": "安吉丽娜",
             "userIcon": "www.akaka.cn/icon.jpg",
+            "address"
             "ttpId": "abc1223", //隐藏字段，邀请好友时传递
             "ttpName": "100天疯狂跑",
+            "ttpType": 1, //活动类型，1，运动；2，社交，；3，生活    
             "ttpStatus": 1,  //1准备开始，2进行中，3完结，4中途退出
             "startTime": "2017/10/01 18:00",   //开始时间精确到分
             "finishTime": "2017/10/08 18:00"         //结束时间
@@ -376,6 +381,27 @@ currentDate: "2017/10/01"
   "data": []
 }
 ```
+
+###Go界面请假退出功能
+```
+POST /gokeeper/dayoff/{ttpId}
+```
+
+参数
+```
+ttpId: "123123"
+currentDate: "2017/10/01"
+```
+
+返回
+```
+{
+  "code": 0,
+  "msg": "成功",  //自己重新写成功的显示消息
+  "data": []
+}
+```
+
 
 ###加入界面预览ttp信息(所有公开ttp)
 ```
@@ -502,7 +528,7 @@ finishTime: "2017/11/21 11:11"
 首先点击邀请后，进行查询好友(手机号),显示好友，点击邀请后显示请求已发送
 1.查找好友
 ```
-GET /gokeeper/user/getUserByPhone
+GET /gokeeper/user/SUser
 ```
 
 参数
@@ -516,6 +542,7 @@ searchmap: "17671732167"或"用户名"  //输入手机号和用户名
     "code": 0,
     "msg": "成功",
     "data": [{
+      "userId": "asfas",
       username: "akk",
       userIcon: "www.akaka.cn/1.jpg"
     }]

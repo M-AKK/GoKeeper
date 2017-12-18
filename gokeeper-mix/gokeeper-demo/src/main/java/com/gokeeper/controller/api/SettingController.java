@@ -59,8 +59,18 @@ public class SettingController {
         return ResultVoUtil.success(result);
     }
 
+    /**
+     * 保存用户信息
+     * @param username
+     * @param sex
+     * @param birthday
+     * @param city
+     * @param phonenumber
+     * @param request
+     * @return
+     */
     @PostMapping
-    public ResultVO modifyUser( /*@RequestParam("userIcon") String userIcon,*/
+    public ResultVO modifyUser( @RequestParam("userIcon") String userIcon,
                                 @RequestParam("username") String username,
                                 @RequestParam("sex") Integer sex,
                                 @RequestParam("birthday") String birthday,
@@ -76,7 +86,7 @@ public class SettingController {
         user.setBirthday(birthday);
         user.setPhonenumber(phonenumber);
         user.setCity(city);
-        /*user.setUserIcon(userIcon);*/
+        user.setUserIcon(userIcon);
         UserInfo result = null;
         if(user != null) {
             result  = userService.modifyUser(user);

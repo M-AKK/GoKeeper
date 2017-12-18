@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Slf4j
@@ -20,7 +22,7 @@ public class UserServiceImplTest {
 
     @Test
     public void getUserByphone() throws Exception {
-        UserInfoVo result = userService.getUserByphone("176");
+        List<UserInfoVo> result = userService.getUserByphone("176");
         log.info("【模糊查找用户】result={}", JsonUtil.toJson(result));
         Assert.assertNotNull(result);
 

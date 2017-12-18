@@ -24,7 +24,6 @@ import javax.servlet.http.HttpSession;
 @Slf4j
 public class SellerAuthorizeAspect {
 
-
     //拦截除了登录登出之外的操作,这是设置拦截范围
     @Pointcut("execution(* com.gokeeper.controller.api.*.*(..))")
     public void verify(){}

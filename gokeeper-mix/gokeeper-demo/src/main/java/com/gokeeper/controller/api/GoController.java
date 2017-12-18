@@ -1,6 +1,7 @@
 package com.gokeeper.controller.api;
 
 import com.gokeeper.constant.UserInfoConstant;
+import com.gokeeper.dataobject.InviteNews;
 import com.gokeeper.dataobject.UserInfo;
 import com.gokeeper.dataobject.UserTtp;
 import com.gokeeper.enums.ResultEnum;
@@ -44,8 +45,9 @@ public class GoController {
         List<GoPreVo> result = null;
         if(user != null) {
             //log.info("【go界面的user登录】"+user.getUserId());
-            result = goService.getMyTtpList(user.getUserId(), currentDate);
+            //result = goService.getMyTtpList(user.getUserId(), currentDate);
         }
+        result = goService.getMyTtpList("1511784128937964511", currentDate);
         if(result != null) {
             if(result.size() != 0 ) {
                 //log.info("【GO界面数据】"+ JsonUtil.toJson(result));
@@ -75,6 +77,7 @@ public class GoController {
         if(user != null) {
             result = goService.getMyOneTtp(ttpId, user.getUserId(), currentDate);
         }
+        //result = goService.getMyOneTtp(ttpId, "1511784128937964511", currentDate);
         return ResultVoUtil.success(result);
     }
 
@@ -95,7 +98,27 @@ public class GoController {
         if(userTtp != null) {
             return ResultVoUtil.success();
         }
-        return ResultVoUtil.error(ResultEnum.TTP_QUIT_ERROR.getCode(), ResultEnum.TTP_QUIT_ERROR.getMessage());
+        return ResultVoUtil.error(ResultEnum.ORDER_UPDATE_FAIL.getCode(), ResultEnum.ORDER_UPDATE_FAIL.getMessage());
+    }
+
+    /**
+     * 请假
+     * @param ttpId
+     * @param currentDate
+     * @param request
+     * @return
+     */
+    @PostMapping(value = "/dayoff/{ttpId}")
+    public ResultVO dayoff(@PathVariable("ttpId") String ttpId,
+                           @RequestParam("currentDate") String currentDate,
+                           HttpServletRequest request) {
+        //根据seesion获取userId
+        UserInfo user = (UserInfo) request.getSession().getAttribute(UserInfoConstant.USER_INFO);
+        UserTtp userTtp = goService.finish(user.getUserId(), ttpId, currentDate);
+        if(userTtp != null) {
+            return ResultVoUtil.success();
+        }
+        return ResultVoUtil.error(ResultEnum.TTP_DAYOFF_ERRPR.getCode(), ResultEnum.TTP_DAYOFF_ERRPR.getMessage());
     }
 
     /**
@@ -115,6 +138,5 @@ public class GoController {
         return ResultVoUtil.success();
 
     }
-
 
 }

@@ -34,12 +34,11 @@ public class NewsTemplate {
     /**
      * 这是支付成功后的ttp消息
      * @param newsname
-     * @param startTime
      * @return
      */
-    public static String payTtpNews(String newsname, String startTime) {
-        return "你已成功支付" + newsname + "活动" + "，" +
-                "活动将在:" +  startTime + "开始";
+    public static String payTtpNews(String newsname) {
+        return "你已正式参加" + newsname + "活动" + "，" +"点击查看活动详情";
+
     }
 
 

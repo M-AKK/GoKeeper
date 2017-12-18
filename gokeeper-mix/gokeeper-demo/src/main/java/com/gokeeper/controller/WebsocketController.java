@@ -54,7 +54,7 @@ public class WebsocketController {
         //1.产生一条新消息并存入数据库
         //1-1.根据session获取发起人userId
         UserInfo user = (UserInfo) request.getSession().getAttribute(UserInfoConstant.USER_INFO);
-        InviteNews inviteNews = webSocketService.createInviteNews(ttpId, user.getUserId(), calluserId);
+        InviteNews inviteNews = webSocketService.createInviteNews(ttpId, calluserId, user.getUserId());
 
         //2.调用websocket方法，发送消息
         TextMessage t = new TextMessage(JsonUtil.toJson(inviteNews));

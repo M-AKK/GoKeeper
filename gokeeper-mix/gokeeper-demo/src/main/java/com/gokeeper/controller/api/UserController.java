@@ -1,5 +1,6 @@
 package com.gokeeper.controller.api;
 
+import com.gokeeper.dataobject.UserInfo;
 import com.gokeeper.enums.ResultEnum;
 import com.gokeeper.service.UserService;
 import com.gokeeper.utils.JsonUtil;
@@ -12,6 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * 用户信息操作类
@@ -31,13 +34,13 @@ public class UserController {
      * @param searchmap
      * @return
      */
-    @GetMapping(value = "/getUserByPhone")
+    @GetMapping(value = "/SUser")
     public ResultVO getUserByPhone(@RequestParam("searchmap") String searchmap){
         System.out.println(searchmap);
         //根据phone查找用户信息
-        UserInfoVo userInfoVo = userService.getUserByphone(searchmap);
+        List<UserInfoVo> userInfoVo = userService.getUserByphone(searchmap);
         if(userInfoVo!=null){
-            log.info("【根据phone查找user】result={}", JsonUtil.toJson(userInfoVo));
+            //log.info("【根据phone查找user】result={}", JsonUtil.toJson(userInfoVo));
             return ResultVoUtil.success(userInfoVo);
         } else {
             return ResultVoUtil.error(ResultEnum.CHECK_USER.getCode(), ResultEnum.CHECK_USER.getMessage());

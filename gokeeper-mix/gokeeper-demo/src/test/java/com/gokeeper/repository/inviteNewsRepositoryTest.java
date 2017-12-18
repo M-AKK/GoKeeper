@@ -42,7 +42,7 @@ public class inviteNewsRepositoryTest {
 
     @Test
     public void findAllByUserIdAndHiddenOrderByUpdateTimeDesc() throws Exception{
-        List<InviteNews> result = repository.findAllByUserIdAndHiddenOrderByUpdateTimeDesc("1110001", 0);
+        List<InviteNews> result = repository.findAllByUserIdAndHiddenOrderByUpdateTimeDesc("1511868873980290512", 0);
         log.info("【邀请消息查询By UserIdAndHidden】result={}", JsonUtil.toJson(result));
         Assert.assertNotNull(result);
 

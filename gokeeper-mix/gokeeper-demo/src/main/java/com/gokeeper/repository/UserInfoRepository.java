@@ -5,6 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import java.util.List;
+
 /**
  * 用户登录Dao
  * @author: Created by Akk_Mac
@@ -27,12 +29,19 @@ public interface UserInfoRepository extends JpaRepository<UserInfo, String> {
     UserInfo findByUserId(String userId);
 
     /**
+     * 查找by手机号
+     * @param searchmap
+     * @return
+     */
+    UserInfo findByPhonenumber(@Param("searchmap") String searchmap);
+
+    /**
      * 模糊查找
      * @param searchmap
      * @return
      */
     @Query(value = "SELECT * FROM user_info u WHERE u.phonenumber LIKE CONCAT('%',:searchmap,'%') OR u.username LIKE CONCAT('%',:searchmap,'%') limit 1", nativeQuery = true)
-    UserInfo findByPhonenumber(@Param("searchmap") String searchmap);
+    List<UserInfo> searchUser(@Param("searchmap") String searchmap);
 
     /**
      * 按QQid查找

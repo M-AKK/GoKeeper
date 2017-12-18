@@ -7,7 +7,6 @@ import com.gokeeper.handler.WebSocketPushHandler;
 import com.gokeeper.repository.*;
 import com.gokeeper.service.FaqiService;
 import com.gokeeper.service.GoService;
-import com.gokeeper.utils.DateUtil;
 import com.gokeeper.utils.EnumUtil;
 import com.gokeeper.utils.JsonUtil;
 import com.gokeeper.vo.GoPreVo;
@@ -77,13 +76,14 @@ public class GoServiceImpl implements GoService{
             GoPreVo goPreVo = new GoPreVo();
             //3.根据userId查找到发起人信息
 
-
             //4.根据ttpId查找到对用ttp信息
             TtpDetail ttpDetail = tTpDetailRepository.findByTtpId(userTtp.getTtpId());
             UserInfo faqiuser = userInfoRepository.findByUserId(ttpDetail.getUserId());
+            goPreVo.setUserId(faqiuser.getUserId());
             goPreVo.setUserName(faqiuser.getUsername());
             goPreVo.setUserIcon(faqiuser.getUserIcon());
             goPreVo.setTtpId(ttpDetail.getTtpId());
+            goPreVo.setTtpType(ttpDetail.getTtpType());
             goPreVo.setTtpName(ttpDetail.getTtpName());
             //中途退出的状态来自userTtpStatus
             goPreVo.setTtpStatus(userTtp.getUserTtpStatus());
@@ -150,6 +150,8 @@ public class GoServiceImpl implements GoService{
         goVo.setUserIcon(faqiuser.getUserIcon());
         goVo.setTtpId(ttpDetail.getTtpId());
         goVo.setTtpName(ttpDetail.getTtpName());
+        goVo.setTtpType(ttpDetail.getTtpType());
+        goVo.setAddress(ttpDetail.getAddress());
         goVo.setFaqiType(ttpDetail.getFaqiType());
         goVo.setTtpStatus(userTtp.getUserTtpStatus());
         //返回时间需处理下格式,转换成"2017/10/01 19:00"的字符串
@@ -282,10 +284,16 @@ public class GoServiceImpl implements GoService{
         String userTtpId = userId+ttpId;
         UserTtp userTtp = userTtpRepository.findByUserTtpId(userTtpId);
         if(userTtp == null) {
-            log.error("【取消订单】 查不到该订单，userTtpId={}", userTtp.getUserTtpId());
+            log.error("【确定完成】 查不到该TTP，userTtpId={}", userTtp.getUserTtpId());
             throw new TTpException(ResultEnum.ORDER_NOT_EXIST);
         }
         String userRecordId = userTtpId+currentDate;
+        //判断是不是人工监督类活动
+        TtpDetail ttpDetail = tTpDetailRepository.findByTtpId(ttpId);
+        if(ttpDetail.getBesupervisionperson() != null) {
+            //切换为被监督人的当天记录数据
+            userRecordId = ttpDetail.getBesupervisionperson()+currentDate;
+        }
         UserRecord userRecord = userRecordRepository.findByUserRecordId(userRecordId);
         //TODO,系统后台判断用户是否完成，现在无法判断只能直接改变为完成状态
         userRecord.setDayStatus(DayStatusEnum.FINIS.getCode());
@@ -313,7 +321,28 @@ public class GoServiceImpl implements GoService{
         TextMessage t = new TextMessage(JsonUtil.toJson(listTtpNewsZttpNews(result)));
         WebSocketPushHandler.sendMessageToUser(ttpNews.getUserId(), t);
         return null;
-
     }
 
+    @Override
+    public UserTtp dayoff(String userId, String ttpId, String currentDate) {
+        //1.查询此userTtp信息
+        String userTtpId = userId+ttpId;
+        UserTtp userTtp = userTtpRepository.findByUserTtpId(userTtpId);
+        if(userTtp == null) {
+            log.error("【确定完成】 查不到该TTP，userTtpId={}", userTtp.getUserTtpId());
+            throw new TTpException(ResultEnum.ORDER_NOT_EXIST);
+        }
+        String userRecordId = userTtpId+currentDate;
+        //判断是不是人工监督类活动
+        TtpDetail ttpDetail = tTpDetailRepository.findByTtpId(ttpId);
+        if(ttpDetail.getBesupervisionperson() != null) {
+            //切换为被监督人的当天记录数据
+            userRecordId = ttpDetail.getBesupervisionperson()+currentDate;
+        }
+        UserRecord userRecord = userRecordRepository.findByUserRecordId(userRecordId);
+        //TODO,系统后台判断用户是否完成，现在无法判断只能直接改变为完成状态
+        userRecord.setDayStatus(DayStatusEnum.QINGJIA.getCode());
+        userRecordRepository.save(userRecord);
+        return userTtp;
+    }
 }

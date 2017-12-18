@@ -61,7 +61,9 @@ public class FaqiController {
                 detailDto.setFinishTime(DateUtil.StringToDate("2099/08/31 21:08"));
             }
             detailDto.setUserId(user.getUserId());
-            detailDto.setTtpTarget(Double.valueOf(ttpForm.getTtpTarget()));
+            if(ttpForm.getTtpTarget() != null) {
+                detailDto.setTtpTarget(Double.valueOf(ttpForm.getTtpTarget()));
+            }
             TtpDetailDto ttpDetailDto = faqiService.create(detailDto);
 
             Map<String, String> map = new HashMap<>();

@@ -18,7 +18,7 @@ Welcome<br/><input id="text" type="text"/>
     var id = document.getElementById("hide").value;
     //判断当前浏览器是否支持WebSocket
     if ('WebSocket' in window) {
-        websocket = new WebSocket("ws://localhost:8080/webSocketServer?userId="+id+"");
+        websocket = new WebSocket("ws://ynfywtq.hk1.mofasuidao.cn/gokeeper/webSocketServer?userId="+id+"");
     }
     else {
         alert('当前浏览器 Not support websocket')

@@ -90,7 +90,7 @@ public class UserLogin {
         userInfo.setUserIcon(userIcon);
         userInfo.setSex(sex);
         userInfo.setCity(city);
-        //log.info("【谁登陆了：】"+qqOpenid+" "+username+" "+userIcon+" "+sex);
+        log.info("【qq谁登陆了：】"+qqOpenid+" "+username+" "+userIcon+" "+sex);
 
         UserInfo result = userService.loginAndSave(userInfo);
         //log.info("【登录信息】："+ JsonUtil.toJson(result));

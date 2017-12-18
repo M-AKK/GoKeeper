@@ -3,6 +3,8 @@ package com.gokeeper.service;
 import com.gokeeper.dataobject.UserInfo;
 import com.gokeeper.vo.UserInfoVo;
 
+import java.util.List;
+
 /**
  * @author Created by Akk_Mac
  * Date: 2017/10/2 09:35
@@ -14,7 +16,7 @@ public interface UserService {
      * @param searchmap
      * @return
      */
-    UserInfoVo getUserByphone(String searchmap);
+    List<UserInfoVo> getUserByphone(String searchmap);
 
     /**
      * 根据userID查找用户

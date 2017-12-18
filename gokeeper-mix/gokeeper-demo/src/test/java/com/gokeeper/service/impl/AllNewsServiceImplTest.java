@@ -23,7 +23,7 @@ public class AllNewsServiceImplTest {
 
     @Test
     public void findAllOpenMsg() throws Exception {
-        List<AllNewsVo> result = allNewsService.findAllOpenMsg("1511689558867877911", 1);
+        List<AllNewsVo> result = allNewsService.findAllOpenMsg("1511868873980290512", 1);
         log.info("【所有公开的消息】result={}", JsonUtil.toJson(result));
         Assert.assertNotNull(result);
     }

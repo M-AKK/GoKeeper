@@ -50,7 +50,7 @@ public class WebSocketServiceImpl implements WebSocketService {
      */
     @Override
     @Transactional//save的事务
-    public InviteNews createInviteNews(String ttpId, String userId, String calluserId) {
+    public InviteNews createInviteNews(String ttpId, String calluserId, String userId) {
         InviteNews result = new InviteNews();
         //获取消息的唯一id
         String uuid = KeyUtil.genUniqueKey();
@@ -62,9 +62,9 @@ public class WebSocketServiceImpl implements WebSocketService {
             log.info("【查不到user信息】result={}");
             throw new TTpException(CHECK_USER);
         }
-        result.setUserId(userInfo.getUserId());
+        result.setUserId(calluserId);
         //设置目标用户id
-        result.setCallUserId(calluserId);
+        result.setCallUserId(userId);
         result.setUsername(userInfo.getUsername());
         result.setUserIcon(userInfo.getUserIcon());
 
@@ -79,12 +79,11 @@ public class WebSocketServiceImpl implements WebSocketService {
         //3.拼接预览消息
         String previewText = userInfo.getUsername()+"邀请您参加"+ttpDetail.getTtpName()+","+
                 "开始时间：" + ttpDetail.getStartTime()+","+
-                "地点：" + ttpDetail.getAddress() + "," +
                 "参加金额："+ ttpDetail.getJoinMoney();
         result.setPreviewText(previewText);
 
         result.setNewsstatus(NewsStatusEnum.NO_READ.getCode());
-        result.setHidden(NewsStatusEnum.NO_READ.getCode());
+        result.setHidden(1);
         result.setWeight(1);
         result.setTtpId(ttpId);
 

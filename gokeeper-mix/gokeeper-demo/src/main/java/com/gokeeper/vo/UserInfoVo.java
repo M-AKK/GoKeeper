@@ -10,6 +10,8 @@ import lombok.Data;
 @Data
 public class UserInfoVo {
 
+    private String userId;
+
     //微信openid
     private String wxOpenid;
 

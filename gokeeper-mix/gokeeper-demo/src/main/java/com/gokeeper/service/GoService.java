@@ -39,4 +39,6 @@ public interface GoService {
     UserTtp quit(String userId, String ttpId, String currentDate);
 
     UserTtp finish(String userId, String ttpId, String currentDate);
+
+    UserTtp dayoff(String userId, String ttpId, String currentDate);
 }

@@ -33,3 +33,9 @@ gokeeper.validate.code.sms.servlerUrl: https://api.netease.im/sms/sendcode.actio
 gokeeper.validate.code.sms.appKey: 6fa81bb20b837dcc69e1701bac1481fe
 gokeeper.validate.code.sms.appSecret: ae8e7fc59410
 gokeeper.validate.code.sms.templateid: 3131232
+
+adImage:
+  # 图片保存路径
+  savePath: img
+  # 图片访问URL
+  url: http://localhost:80/gokeeper/img/

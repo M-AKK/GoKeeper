@@ -14,6 +14,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.IncorrectResultSizeDataAccessException;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @Descrption: 用户操作类
  * @author: Created by Akk_Mac
@@ -27,13 +30,18 @@ public class UserServiceImpl implements UserService {
     private UserInfoRepository userInfoRepository;
 
     @Override
-    public UserInfoVo getUserByphone(String searchmap) {
-        UserInfoVo result = new UserInfoVo();
+    public List<UserInfoVo> getUserByphone(String searchmap) {
+        List<UserInfoVo> result = new ArrayList<>();
+
         try {
-            UserInfo userInfo = userInfoRepository.findByPhonenumber(searchmap);
+            List<UserInfo> userInfo = userInfoRepository.searchUser(searchmap);
             if(userInfo != null) {
-                log.info("【根据phone查找user成功】result={}", JsonUtil.toJson(userInfo));
-                BeanUtils.copyProperties(userInfo, result);
+                //log.info("【根据phone查找user成功】result={}", JsonUtil.toJson(userInfo));
+                for(UserInfo userInfo1 : userInfo) {
+                    UserInfoVo result1 = new UserInfoVo();
+                    BeanUtils.copyProperties(userInfo1, result1);
+                    result.add(result1);
+                }
             }
             return result;
         } catch (IncorrectResultSizeDataAccessException e) {

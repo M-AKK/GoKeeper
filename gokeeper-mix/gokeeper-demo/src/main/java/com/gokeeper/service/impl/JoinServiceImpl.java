@@ -160,8 +160,8 @@ public class JoinServiceImpl implements JoinService {
         ttpNews.setTtpId(ttpId);
         ttpNews.setUserId(userId);
         ttpNews.setTtpStatus(TtpStatusEnum.READY.getCode());
-        ttpNews.setNewstype(NewsStatusEnum.NO_READ.getCode());
-        UserInfo userInfo = userInfoRepository.findByUserId(userId);
+        ttpNews.setNewstype(ttpDetail.getTtpStatus());
+        UserInfo userInfo = userInfoRepository.findByUserId(ttpDetail.getUserId());
         ttpNews.setUsername(userInfo.getUsername());
         ttpNews.setUserIcon(userInfo.getUserIcon());
         ttpNews.setNewsname(ttpDetail.getTtpName());

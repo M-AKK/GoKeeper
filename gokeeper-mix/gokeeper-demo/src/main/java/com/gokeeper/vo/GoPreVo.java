@@ -11,6 +11,8 @@ import java.math.BigDecimal;
  */
 @Data
 public class GoPreVo {
+
+    private String userId;
     /**
      * 发起人name
      */
@@ -24,6 +26,10 @@ public class GoPreVo {
     private String ttpId;
 
     private String ttpName;
+
+    private Integer ttpType;
+
+    private String address;
 
     /**
      * ttp状态，准备开始、进行中、完结

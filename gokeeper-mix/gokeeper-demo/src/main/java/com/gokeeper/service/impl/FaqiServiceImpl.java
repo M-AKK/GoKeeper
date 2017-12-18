@@ -131,6 +131,15 @@ public class FaqiServiceImpl implements FaqiService {
             ttpNews.setStartTime(ttpDetailDto.getStartTime());
             ttpNews.setFinishTime(ttpDetailDto.getFinishTime());
             ttpNews.setUserTotalBouns(zeroBouns);
+            ttpNews.setIfFinish(DayStatusEnum.NO_FINISH.getCode());
+            ttpNews.setFinishnums(0);
+            ttpNews.setNofinishnums(0);
+            ttpNews.setLeaveNotes(0);
+            ttpNews.setLeavenums(0);
+            //今日奖金初始化为0
+            ttpNews.setUserDayBouns(new BigDecimal(0));
+            //用户获得总监金初始化为0
+            ttpNews.setUserTotalBouns(new BigDecimal(0));
             String preViewText = NewsTemplate.createTtpNews(ttpNews.getNewsname(), DateUtil.dateFormat2(ttpNews.getStartTime(), 0, 16));
             log.info("预览消息"+preViewText);
             ttpNews.setPreviewText(preViewText);

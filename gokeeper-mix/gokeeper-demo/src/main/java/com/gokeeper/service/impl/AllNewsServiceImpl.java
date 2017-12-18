@@ -53,6 +53,7 @@ public class AllNewsServiceImpl implements AllNewsService {
         List<SystemNews> systemNewsList = systemNewsRspository.findAllByHiddenOrderByUpdateTimeDesc(hidden);
         List<TtpNews> ttpNewsList = ttpNewsRepository.findAllByUserIdAndHiddenOrderByUpdateTimeDesc(userId, hidden);
         List<InviteNews> inviteNewsList = inviteNewsRepository.findAllByUserIdAndHiddenOrderByUpdateTimeDesc(userId, hidden);
+
         //2.转化ttp消息到Vo
         //3.转化邀请消息到对象
         List<SystemNewsVo> systemNewsVoList = NewsDtoZNewsVoConverter.SystemNewsDtoZVoconvert(NewsBeanZNewsDtoConverter.SystemNewsZDtoconvert(systemNewsList));
